@@ -32,9 +32,12 @@ public class AuthController {
         return authService.signUp(signUpRequestDto);
     }
 
+    //login / signin
     @PostMapping("/sign-in")
     public ResponseEntity<ApiResponseDTO<?>> signInUser(@RequestBody @Valid SignInRequestDto signInRequestDto) {
         return authService.signIn(signInRequestDto);
     }
+
+
 }
 

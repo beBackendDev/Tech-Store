@@ -23,20 +23,23 @@ public class JWTUtils {
     private static final Logger logger = LoggerFactory.getLogger(JWTUtils.class);
     @Value("${myapp.jwtSecret}")
     private String jwtSecret;
-    @Value("${myapp.jwtExpirationMs}")
-    private int jwtExpirationMs;
-
+    @Value("${myapp.jwtAccessTokenExpiration}")
+    private int jwtAccessTokenExpiration;
+    @Value("${myapp.jwtRefreshTokenExpiration}")
+    private int jwtRefreshTokenExpiration;
     //generate JWT token
     public String generateJwtToken(Authentication authentication) {
         UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
         return Jwts.builder()
                 .setSubject((userPrincipal.getUsername()))
                 .setIssuedAt(new Date())
-                .setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))
+                .setExpiration(new Date((new Date()).getTime() + jwtAccessTokenExpiration))
                 .signWith(key(), SignatureAlgorithm.HS256)
                 .compact();
     }
-
+    public String generateRefreshToken(Authentication authentication){
+        
+    }
     // private Key key() {
     //     return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
     // }

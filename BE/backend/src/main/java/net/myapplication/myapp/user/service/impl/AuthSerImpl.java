@@ -1,5 +1,6 @@
 package net.myapplication.myapp.user.service.impl;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -24,6 +25,8 @@ import net.myapplication.myapp.user.dto.SignInResponseDto;
 import net.myapplication.myapp.user.dto.SignUpRequestDto;
 import net.myapplication.myapp.user.entity.Role;
 import net.myapplication.myapp.user.entity.User;
+import net.myapplication.myapp.user.refreshtoken.entity.RefreshToken;
+import net.myapplication.myapp.user.repository.UserRepo;
 import net.myapplication.myapp.user.service.AuthService;
 import net.myapplication.myapp.user.service.JWTUtils;
 import net.myapplication.myapp.user.service.RoleFactory;
@@ -38,16 +41,19 @@ public class AuthSerImpl implements AuthService {
 
     private final RoleFactory roleFactory;
 
+    private final UserRepo userRepo;
+
     //login
     private final AuthenticationManager authenticationManager;
 
     private final JWTUtils jwtUtils;
 
     @Autowired
-    public AuthSerImpl(PasswordEncoder passwordEncoder, RoleFactory roleFactory, UserSer userService, AuthenticationManager authenticationManager, JWTUtils jwtUtils) {
+    public AuthSerImpl(PasswordEncoder passwordEncoder, RoleFactory roleFactory, UserSer userService, AuthenticationManager authenticationManager, JWTUtils jwtUtils, UserRepo userRepo) {
         this.passwordEncoder = passwordEncoder;
         this.roleFactory = roleFactory;
         this.userService = userService;
+        this.userRepo = userRepo;
         this.authenticationManager = authenticationManager;
         this.jwtUtils = jwtUtils;
     }
@@ -104,14 +110,36 @@ public class AuthSerImpl implements AuthService {
         // UsernamePasswordAuthenticationToken từ email và mật khẩu. 
         // Sau đó, sử dụng authenticationManager để xác thực thông tin này và trả về đối tượng Authentication
         Authentication authentication = authenticationManager.authenticate(
-            new UsernamePasswordAuthenticationToken(signInRequestDto.getEmail(), signInRequestDto.getPassword())
+                new UsernamePasswordAuthenticationToken(signInRequestDto.getEmail(), signInRequestDto.getPassword())
         );
         // (2): Đặt đối tượng Authentication vào SecurityContext để quản lý bảo mật cho session hiện tại.
         SecurityContextHolder.getContext().setAuthentication(authentication);
         // (3): Tạo một JSON Web Token (JWT) từ thông tin xác thực.
         String jwt = jwtUtils.generateJwtToken(authentication);
+
         // (4): Lấy thông tin chi tiết của người dùng từ đối tượng Authentication.
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+        // Khởi tạo RefreshToken
+        String refreshToken = jwtUtils.generateRefreshToken(authentication);
+        Long id = userDetails.getId();
+        User dbUser = 
+            userRepo
+                .findById(id)
+                .orElseThrow(
+                    () -> new RuntimeException("User not found with id: " + id)
+                );
+        RefreshToken refreshTokenEntity = 
+                RefreshToken.builder()
+                    .token(refreshToken)
+                    .user(dbUser)
+                    .deviceInfo("") // Thay thế bằng thông tin thiết bị thực tế nếu có
+                    .isRevoked(false)
+                    .expiryDate(
+                        LocalDateTime.now().plusSeconds(jwtUtils.getJwtRefreshTokenExpiration())
+                    )
+                    .build();
+                    refreshTokenRepo.save(refreshTokenEntity);
+                    
         // (5): Lấy danh sách các roles của người dùng và chuyển đổi từ set sang list.
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(item -> item.getAuthority())

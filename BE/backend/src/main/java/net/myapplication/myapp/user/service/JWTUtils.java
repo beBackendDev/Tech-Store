@@ -1,6 +1,7 @@
 package net.myapplication.myapp.user.service;
 
 import java.security.Key;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.slf4j.Logger;
@@ -15,10 +16,22 @@ import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.UnsupportedJwtException;
 import io.jsonwebtoken.security.Keys;
+import net.myapplication.myapp.user.entity.User;
+import net.myapplication.myapp.user.refreshtoken.entity.RefreshToken;
+import net.myapplication.myapp.user.refreshtoken.repository.RefreshTokenRepo;
+import net.myapplication.myapp.user.repository.UserRepo;
 import net.myapplication.myapp.user.service.impl.UserDetailsImpl;
 
 @Component
 public class JWTUtils {
+
+    private final UserRepo userRepo;
+    private final RefreshTokenRepo refreshTokenRepo;
+
+    public JWTUtils(UserRepo userRepo, RefreshTokenRepo refreshTokenRepo) {
+        this.userRepo = userRepo;
+        this.refreshTokenRepo = refreshTokenRepo;
+    }
 
     private static final Logger logger = LoggerFactory.getLogger(JWTUtils.class);
     @Value("${myapp.jwtSecret}")
@@ -27,6 +40,7 @@ public class JWTUtils {
     private int jwtAccessTokenExpiration;
     @Value("${myapp.jwtRefreshTokenExpiration}")
     private int jwtRefreshTokenExpiration;
+
     //generate JWT token
     public String generateJwtToken(Authentication authentication) {
         UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
@@ -37,9 +51,17 @@ public class JWTUtils {
                 .signWith(key(), SignatureAlgorithm.HS256)
                 .compact();
     }
-    public String generateRefreshToken(Authentication authentication){
-        
+    //generate JWT refresh token
+    public String generateRefreshToken(UserDetailsImpl userPrincipal) {
+        return Jwts.builder()
+                .setSubject((userPrincipal.getUsername()))
+                .setIssuedAt(new Date())
+                .setExpiration(new Date((new Date()).getTime() + jwtRefreshTokenExpiration))
+                .signWith(key(), SignatureAlgorithm.HS256)
+                .compact();
+   
     }
+
     // private Key key() {
     //     return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
     // }
@@ -69,4 +91,7 @@ public class JWTUtils {
 
         return false;
     }
+
+    //Refresh Token Service
+    
 }

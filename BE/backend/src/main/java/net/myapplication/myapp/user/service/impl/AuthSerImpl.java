@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -26,6 +27,8 @@ import net.myapplication.myapp.user.dto.SignUpRequestDto;
 import net.myapplication.myapp.user.entity.Role;
 import net.myapplication.myapp.user.entity.User;
 import net.myapplication.myapp.user.refreshtoken.entity.RefreshToken;
+import net.myapplication.myapp.user.refreshtoken.repository.RefreshTokenRepo;
+import net.myapplication.myapp.user.refreshtoken.service.RefreshTokenSer;
 import net.myapplication.myapp.user.repository.UserRepo;
 import net.myapplication.myapp.user.service.AuthService;
 import net.myapplication.myapp.user.service.JWTUtils;
@@ -35,7 +38,12 @@ import net.myapplication.myapp.user.service.UserSer;
 @Component
 public class AuthSerImpl implements AuthService {
 
+    @Value("${myapp.jwtRefreshTokenExpiration}")
+    private int jwtRefreshTokenExpiration;
+
     private final UserSer userService;
+
+    private final RefreshTokenSer refreshTokenService;
 
     private final PasswordEncoder passwordEncoder;
 
@@ -43,17 +51,28 @@ public class AuthSerImpl implements AuthService {
 
     private final UserRepo userRepo;
 
+    private final RefreshTokenRepo refreshTokenRepo;
+
     //login
     private final AuthenticationManager authenticationManager;
 
     private final JWTUtils jwtUtils;
 
     @Autowired
-    public AuthSerImpl(PasswordEncoder passwordEncoder, RoleFactory roleFactory, UserSer userService, AuthenticationManager authenticationManager, JWTUtils jwtUtils, UserRepo userRepo) {
+    public AuthSerImpl(PasswordEncoder passwordEncoder,
+            RoleFactory roleFactory,
+            UserSer userService,
+            AuthenticationManager authenticationManager,
+            JWTUtils jwtUtils,
+            UserRepo userRepo,
+            RefreshTokenRepo refreshTokenRepo, RefreshTokenSer refreshTokenService
+    ) {
+        this.refreshTokenService = refreshTokenService;
         this.passwordEncoder = passwordEncoder;
         this.roleFactory = roleFactory;
         this.userService = userService;
         this.userRepo = userRepo;
+        this.refreshTokenRepo = refreshTokenRepo;
         this.authenticationManager = authenticationManager;
         this.jwtUtils = jwtUtils;
     }
@@ -120,26 +139,20 @@ public class AuthSerImpl implements AuthService {
         // (4): Lấy thông tin chi tiết của người dùng từ đối tượng Authentication.
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         // Khởi tạo RefreshToken
-        String refreshToken = jwtUtils.generateRefreshToken(authentication);
+        String refreshToken = jwtUtils.generateRefreshToken(userDetails);
         Long id = userDetails.getId();
-        User dbUser = 
-            userRepo
-                .findById(id)
-                .orElseThrow(
-                    () -> new RuntimeException("User not found with id: " + id)
-                );
-        RefreshToken refreshTokenEntity = 
-                RefreshToken.builder()
-                    .token(refreshToken)
-                    .user(dbUser)
-                    .deviceInfo("") // Thay thế bằng thông tin thiết bị thực tế nếu có
-                    .isRevoked(false)
-                    .expiryDate(
-                        LocalDateTime.now().plusSeconds(jwtUtils.getJwtRefreshTokenExpiration())
-                    )
-                    .build();
-                    refreshTokenRepo.save(refreshTokenEntity);
-                    
+        User dbUser
+                = userRepo
+                        .findById(id)
+                        .orElseThrow(
+                                () -> new RuntimeException("User not found with id: " + id)
+                        );
+
+        refreshTokenService.saveRefreshToken(
+                dbUser,
+                refreshToken
+        );
+
         // (5): Lấy danh sách các roles của người dùng và chuyển đổi từ set sang list.
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(item -> item.getAuthority())

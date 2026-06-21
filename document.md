@@ -212,6 +212,9 @@ ______________BACKEND________________
 ## 2.2 Config DB (MySQL)
 
 ## 2.3 Detail Function
+
+sign in/up production:
+`https://chatgpt.com/s/t_6a381815bb4c81919f91e405213bf81d`
 ### 2.3.1 Register
 `Input validation:`
 

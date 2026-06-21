@@ -14,6 +14,8 @@ public interface AuthService {
     ResponseEntity<ApiResponseDTO<?>> signUp(SignUpRequestDto signUpRequestDto) 
                     throws UserAlreadyExistsException, RoleNotFoundException;
 
-    ResponseEntity<ApiResponseDTO<?>> signIn(SignInRequestDto signInRequestDto) ;             
+    ResponseEntity<ApiResponseDTO<?>> signIn(SignInRequestDto signInRequestDto) ;   
+    
+    // ResponseEntity<ApiResponseDTO<?>> refreshToken(RefreshTokenRequest request);
 }
 

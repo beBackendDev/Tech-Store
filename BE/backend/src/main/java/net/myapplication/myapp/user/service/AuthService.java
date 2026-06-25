@@ -3,6 +3,7 @@ package net.myapplication.myapp.user.service;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import jakarta.servlet.http.HttpServletResponse;
 import net.myapplication.myapp.common.ApiResponseDTO;
 import net.myapplication.myapp.exception.RoleNotFoundException;
 import net.myapplication.myapp.exception.UserAlreadyExistsException;
@@ -16,6 +17,8 @@ public interface AuthService {
 
     ResponseEntity<ApiResponseDTO<?>> signIn(SignInRequestDto signInRequestDto) ;   
     
-    // ResponseEntity<ApiResponseDTO<?>> refreshToken(RefreshTokenRequest request);
+    ResponseEntity<ApiResponseDTO<?>> refreshToken(String refreshToken, HttpServletResponse response);
+
+    ResponseEntity<ApiResponseDTO<?>> logout(String refreshToken, HttpServletResponse response);
 }
 

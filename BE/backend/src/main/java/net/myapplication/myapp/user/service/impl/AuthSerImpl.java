@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import net.myapplication.myapp.user.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import io.jsonwebtoken.Jwts;
+import jakarta.servlet.http.HttpServletResponse;
 import net.myapplication.myapp.common.ApiResponseDTO;
 import net.myapplication.myapp.enumpack.ResponseStatus;
 import net.myapplication.myapp.exception.RoleNotFoundException;
@@ -38,8 +41,7 @@ import net.myapplication.myapp.user.service.UserSer;
 @Component
 public class AuthSerImpl implements AuthService {
 
-    @Value("${myapp.jwtRefreshTokenExpiration}")
-    private int jwtRefreshTokenExpiration;
+    private final UserDetailsServiceImpl userDetailsServiceImpl;
 
     private final UserSer userService;
 
@@ -51,10 +53,10 @@ public class AuthSerImpl implements AuthService {
 
     private final UserRepo userRepo;
 
-    private final RefreshTokenRepo refreshTokenRepo;
-
     //login
     private final AuthenticationManager authenticationManager;
+
+    private final RefreshTokenRepo refreshTokenRepo;
 
     private final JWTUtils jwtUtils;
 
@@ -65,7 +67,9 @@ public class AuthSerImpl implements AuthService {
             AuthenticationManager authenticationManager,
             JWTUtils jwtUtils,
             UserRepo userRepo,
-            RefreshTokenRepo refreshTokenRepo, RefreshTokenSer refreshTokenService
+            RefreshTokenRepo refreshTokenRepo,
+            RefreshTokenSer refreshTokenService,
+            UserDetailsServiceImpl userDetailsServiceImpl
     ) {
         this.refreshTokenService = refreshTokenService;
         this.passwordEncoder = passwordEncoder;
@@ -75,6 +79,7 @@ public class AuthSerImpl implements AuthService {
         this.refreshTokenRepo = refreshTokenRepo;
         this.authenticationManager = authenticationManager;
         this.jwtUtils = jwtUtils;
+        this.userDetailsServiceImpl = userDetailsServiceImpl;
     }
 
     @Override
@@ -133,11 +138,11 @@ public class AuthSerImpl implements AuthService {
         );
         // (2): Đặt đối tượng Authentication vào SecurityContext để quản lý bảo mật cho session hiện tại.
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        // (3): Tạo một JSON Web Token (JWT) từ thông tin xác thực.
-        String jwt = jwtUtils.generateJwtToken(authentication);
 
-        // (4): Lấy thông tin chi tiết của người dùng từ đối tượng Authentication.
+        // (3): Lấy thông tin chi tiết của người dùng từ đối tượng Authentication.
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+        // (4): Tạo một JSON Web Token (JWT) từ thông tin xác thực.
+        String jwt = jwtUtils.generateJwtToken(userDetails);
         // Khởi tạo RefreshToken
         String refreshToken = jwtUtils.generateRefreshToken(userDetails);
         Long id = userDetails.getId();
@@ -159,7 +164,8 @@ public class AuthSerImpl implements AuthService {
                 .collect(Collectors.toList());
         // (6): Khởi tạo đối tượng SignInResponseDto để trả về kết quả cho client.
         SignInResponseDto sighInResponseDto = SignInResponseDto.builder()
-                .token(jwt)
+                .accessToken(jwt)
+                .refreshToken(refreshToken) //tam thoi
                 .id(userDetails.getId())
                 .username(userDetails.getUsername())
                 .email(userDetails.getEmail())
@@ -173,5 +179,77 @@ public class AuthSerImpl implements AuthService {
                         .response(sighInResponseDto)
                         .build()
         );
+    }
+
+    @Override
+    public ResponseEntity<ApiResponseDTO<?>> refreshToken(String refreshToken, HttpServletResponse response) {
+        RefreshToken tokenEntity
+                = refreshTokenService
+                        .verifyToken(refreshToken);
+        String username
+                = jwtUtils.getUserNameFromJwtToken(refreshToken);
+
+        UserDetailsImpl userDetails
+                = (UserDetailsImpl) userDetailsServiceImpl.
+                        loadUserByUsername(username);
+        String newAccessToken
+                = jwtUtils.generateJwtToken(userDetails);
+
+        //revoked old refreshToken
+        tokenEntity.setRevoked(true);
+        refreshTokenRepo.save(
+                tokenEntity
+        );
+
+        String newRefreshToken
+                = jwtUtils.generateRefreshToken(
+                        userDetails
+                );
+        refreshTokenService.saveRefreshToken(
+                tokenEntity.getUser(),
+                newRefreshToken
+        );
+        //ghi vao cookie
+
+        //tra ve SignInResponseDTO
+        List<String> roles
+                = userDetails.getAuthorities()
+                        .stream()
+                        .map(
+                                authority
+                                -> authority.getAuthority()
+                        )
+                        .toList();
+        SignInResponseDto dto
+                = SignInResponseDto.builder()
+                        .accessToken(newAccessToken)
+                        .refreshToken(newRefreshToken)
+                        .id(userDetails.getId())
+                        .username(userDetails.getUsername())
+                        .email(userDetails.getEmail())
+                        .roles(roles)
+                        .build();
+        return ResponseEntity.ok(
+                ApiResponseDTO.builder()
+                        .status("SUCCESS")
+                        .message("Token refreshed")
+                        .response(dto)
+                        .build()
+        );
+    }
+
+    @Override
+    public ResponseEntity<ApiResponseDTO<?>> logout(String refreshToken, HttpServletResponse response) {
+        //revoke refresh token
+        refreshTokenService
+                .revokeToken(refreshToken);
+
+        return ResponseEntity.ok(
+                ApiResponseDTO.builder()
+                        .status("SUCCESS")
+                        .message("Logout successful")
+                        .build()
+        );
+
     }
 }

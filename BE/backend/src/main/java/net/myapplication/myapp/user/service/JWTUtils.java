@@ -51,10 +51,20 @@ public class JWTUtils {
                 .signWith(key(), SignatureAlgorithm.HS256)
                 .compact();
     }
+
+    //
+        public String generateJwtToken(UserDetailsImpl userPrincipal) {
+        return Jwts.builder()
+                .setSubject((userPrincipal.getEmail()))
+                .setIssuedAt(new Date())
+                .setExpiration(new Date((new Date()).getTime() + jwtAccessTokenExpiration))
+                .signWith(key(), SignatureAlgorithm.HS256)
+                .compact();
+    }
     //generate JWT refresh token
     public String generateRefreshToken(UserDetailsImpl userPrincipal) {
         return Jwts.builder()
-                .setSubject((userPrincipal.getUsername()))
+                .setSubject((userPrincipal.getEmail()))
                 .setIssuedAt(new Date())
                 .setExpiration(new Date((new Date()).getTime() + jwtRefreshTokenExpiration))
                 .signWith(key(), SignatureAlgorithm.HS256)

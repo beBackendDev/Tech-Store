@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor 
 @NoArgsConstructor
 
-public class RefreshTokenDTO {
+public class RefreshTokenRequest {
     private String refreshToken;
 }

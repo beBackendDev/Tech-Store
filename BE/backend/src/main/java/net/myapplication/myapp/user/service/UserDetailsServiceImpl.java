@@ -13,6 +13,7 @@ import net.myapplication.myapp.user.service.impl.UserDetailsImpl;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
+
     @Autowired
     UserRepo userRepository;
 

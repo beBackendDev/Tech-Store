@@ -1,14 +1,11 @@
 package net.myapplication.myapp.user.service.impl;
 
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import net.myapplication.myapp.user.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,7 +15,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import io.jsonwebtoken.Jwts;
 import jakarta.servlet.http.HttpServletResponse;
 import net.myapplication.myapp.common.ApiResponseDTO;
 import net.myapplication.myapp.enumpack.ResponseStatus;
@@ -36,6 +32,7 @@ import net.myapplication.myapp.user.repository.UserRepo;
 import net.myapplication.myapp.user.service.AuthService;
 import net.myapplication.myapp.user.service.JWTUtils;
 import net.myapplication.myapp.user.service.RoleFactory;
+import net.myapplication.myapp.user.service.UserDetailsServiceImpl;
 import net.myapplication.myapp.user.service.UserSer;
 
 @Component
@@ -182,19 +179,24 @@ public class AuthSerImpl implements AuthService {
     }
 
     @Override
-    public ResponseEntity<ApiResponseDTO<?>> refreshToken(String refreshToken, HttpServletResponse response) {
+//     public ResponseEntity<ApiResponseDTO<?>> refreshToken(String refreshToken, HttpServletResponse response) { //khi su dung cookie
+    public ResponseEntity<ApiResponseDTO<?>> refreshToken(String refreshToken) {
         RefreshToken tokenEntity
                 = refreshTokenService
                         .verifyToken(refreshToken);
+        System.out.println("AuthSerImpl" + tokenEntity);
         String username
                 = jwtUtils.getUserNameFromJwtToken(refreshToken);
+        System.out.println("AuthSerImpl" + username);
 
         UserDetailsImpl userDetails
                 = (UserDetailsImpl) userDetailsServiceImpl.
                         loadUserByUsername(username);
+        System.out.println("AuthSerImpl" + userDetails);
         String newAccessToken
                 = jwtUtils.generateJwtToken(userDetails);
 
+        System.out.println("AuthSerImpl" + newAccessToken);
         //revoked old refreshToken
         tokenEntity.setRevoked(true);
         refreshTokenRepo.save(
@@ -205,6 +207,7 @@ public class AuthSerImpl implements AuthService {
                 = jwtUtils.generateRefreshToken(
                         userDetails
                 );
+        System.out.println("AuthSerImpl" + newRefreshToken);
         refreshTokenService.saveRefreshToken(
                 tokenEntity.getUser(),
                 newRefreshToken

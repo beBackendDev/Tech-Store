@@ -17,7 +17,7 @@ public interface AuthService {
 
     ResponseEntity<ApiResponseDTO<?>> signIn(SignInRequestDto signInRequestDto) ;   
     
-    ResponseEntity<ApiResponseDTO<?>> refreshToken(String refreshToken, HttpServletResponse response);
+    ResponseEntity<ApiResponseDTO<?>> refreshToken(String refreshToken);
 
     ResponseEntity<ApiResponseDTO<?>> logout(String refreshToken, HttpServletResponse response);
 }

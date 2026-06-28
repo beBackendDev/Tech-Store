@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,14 +21,11 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @Component
 public class AuthTokenFilter extends OncePerRequestFilter {
-
+    @Autowired
     JWTUtils jwtUtils;
+    @Autowired
     UserDetailsServiceImpl userDetailsService;
 
-    public AuthTokenFilter(JWTUtils jwtUtils, UserDetailsServiceImpl userDetailsService) {
-        this.jwtUtils = jwtUtils;
-        this.userDetailsService = userDetailsService;
-    }
 
     public AuthTokenFilter() {
     }
@@ -39,6 +37,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
         try {
             String jwt = parseJwtFromHeader(request);
+            System.out.println("test 1: "+ jwt);
             if (jwt != null && jwtUtils.validateJwtToken(jwt)) {
                 String email = jwtUtils.getUserNameFromJwtToken(jwt);
                 UserDetails userDetails = userDetailsService.loadUserByUsername(email);
@@ -65,7 +64,8 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 
         return null;
     }
-    private static String extractRefreshTokenFromCookie(HttpServletRequest request){
+    public static String extractRefreshTokenFromCookie(HttpServletRequest request){
+        System.out.println("step 1");
         if(request.getCookies() == null) return null;
         for (Cookie cookie : request.getCookies()) {
             if ("refreshToken".equals(cookie.getName())) {

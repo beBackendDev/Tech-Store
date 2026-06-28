@@ -15,7 +15,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import jakarta.servlet.http.HttpServletResponse;
 import net.myapplication.myapp.common.ApiResponseDTO;
 import net.myapplication.myapp.enumpack.ResponseStatus;
 import net.myapplication.myapp.exception.RoleNotFoundException;
@@ -131,7 +130,10 @@ public class AuthSerImpl implements AuthService {
         // UsernamePasswordAuthenticationToken từ email và mật khẩu. 
         // Sau đó, sử dụng authenticationManager để xác thực thông tin này và trả về đối tượng Authentication
         Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(signInRequestDto.getEmail(), signInRequestDto.getPassword())
+                new UsernamePasswordAuthenticationToken(
+                        signInRequestDto.getEmail(),
+                        signInRequestDto.getPassword()
+                )
         );
         // (2): Đặt đối tượng Authentication vào SecurityContext để quản lý bảo mật cho session hiện tại.
         SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -139,7 +141,7 @@ public class AuthSerImpl implements AuthService {
         // (3): Lấy thông tin chi tiết của người dùng từ đối tượng Authentication.
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         // (4): Tạo một JSON Web Token (JWT) từ thông tin xác thực.
-        String jwt = jwtUtils.generateJwtToken(userDetails);
+        String accessToken = jwtUtils.generateJwtToken(userDetails);
         // Khởi tạo RefreshToken
         String refreshToken = jwtUtils.generateRefreshToken(userDetails);
         Long id = userDetails.getId();
@@ -161,7 +163,7 @@ public class AuthSerImpl implements AuthService {
                 .collect(Collectors.toList());
         // (6): Khởi tạo đối tượng SignInResponseDto để trả về kết quả cho client.
         SignInResponseDto sighInResponseDto = SignInResponseDto.builder()
-                .accessToken(jwt)
+                .accessToken(accessToken)
                 .refreshToken(refreshToken) //tam thoi
                 .id(userDetails.getId())
                 .username(userDetails.getUsername())
@@ -179,24 +181,63 @@ public class AuthSerImpl implements AuthService {
     }
 
     @Override
+    public SignInResponseDto signInWithCookie(SignInRequestDto signInRequestDto) {
+        // (1): Xac thuc thong tin dang nhap bang cach tao mot doi tuong 
+        // UsernamePasswordAuthenticationToken từ email và mật khẩu. 
+        // Sau đó, sử dụng authenticationManager để xác thực thông tin này và trả về đối tượng Authentication
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        signInRequestDto.getEmail(),
+                        signInRequestDto.getPassword()
+                )
+        );
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+        String accessToken = jwtUtils.generateJwtToken(userDetails);
+        String refreshToken = jwtUtils.generateRefreshToken(userDetails);
+        Long id = userDetails.getId();
+        User dbUser
+                = userRepo
+                        .findById(id)
+                        .orElseThrow(
+                                () -> new RuntimeException("User not found with id: " + id)
+                        );
+
+        refreshTokenService.saveRefreshToken(
+                dbUser,
+                refreshToken
+        );
+        List<String> roles = userDetails.getAuthorities().stream()
+                .map(item -> item.getAuthority())
+                .collect(Collectors.toList());
+        // (6): Khởi tạo đối tượng SignInResponseDto để trả về kết quả cho client.
+        SignInResponseDto sighInResponseDto = SignInResponseDto.builder()
+                .accessToken(accessToken)
+                .refreshToken(refreshToken) //tam thoi
+                .id(userDetails.getId())
+                .username(userDetails.getUsername())
+                .email(userDetails.getEmail())
+                .roles(roles)
+                .build();
+        return sighInResponseDto;
+
+    }
+
+    @Override
 //     public ResponseEntity<ApiResponseDTO<?>> refreshToken(String refreshToken, HttpServletResponse response) { //khi su dung cookie
-    public ResponseEntity<ApiResponseDTO<?>> refreshToken(String refreshToken) {
+    public SignInResponseDto refreshAccessToken(String refreshToken) {
         RefreshToken tokenEntity
                 = refreshTokenService
                         .verifyToken(refreshToken);
-        System.out.println("AuthSerImpl" + tokenEntity);
         String username
                 = jwtUtils.getUserNameFromJwtToken(refreshToken);
-        System.out.println("AuthSerImpl" + username);
 
         UserDetailsImpl userDetails
                 = (UserDetailsImpl) userDetailsServiceImpl.
                         loadUserByUsername(username);
-        System.out.println("AuthSerImpl" + userDetails);
         String newAccessToken
                 = jwtUtils.generateJwtToken(userDetails);
 
-        System.out.println("AuthSerImpl" + newAccessToken);
         //revoked old refreshToken
         tokenEntity.setRevoked(true);
         refreshTokenRepo.save(
@@ -207,7 +248,6 @@ public class AuthSerImpl implements AuthService {
                 = jwtUtils.generateRefreshToken(
                         userDetails
                 );
-        System.out.println("AuthSerImpl" + newRefreshToken);
         refreshTokenService.saveRefreshToken(
                 tokenEntity.getUser(),
                 newRefreshToken
@@ -223,26 +263,25 @@ public class AuthSerImpl implements AuthService {
                                 -> authority.getAuthority()
                         )
                         .toList();
-        SignInResponseDto dto
-                = SignInResponseDto.builder()
-                        .accessToken(newAccessToken)
-                        .refreshToken(newRefreshToken)
-                        .id(userDetails.getId())
-                        .username(userDetails.getUsername())
-                        .email(userDetails.getEmail())
-                        .roles(roles)
-                        .build();
-        return ResponseEntity.ok(
-                ApiResponseDTO.builder()
-                        .status("SUCCESS")
-                        .message("Token refreshed")
-                        .response(dto)
-                        .build()
-        );
+
+        // SignInResponseDto dto
+        //         = SignInResponseDto.builder()
+        //                 .accessToken(newAccessToken)
+        //                 .refreshToken(newRefreshToken)
+        //                 .id(userDetails.getId())
+        //                 .username(userDetails.getUsername())
+        //                 .email(userDetails.getEmail())
+        //                 .roles(roles)
+        //                 .build();
+        //chi can return access va refresh Token
+        return SignInResponseDto.builder()
+                .accessToken(newAccessToken)
+                .refreshToken(newRefreshToken) // ← controller cần cái này để set cookie
+                .build();
     }
 
     @Override
-    public ResponseEntity<ApiResponseDTO<?>> logout(String refreshToken, HttpServletResponse response) {
+    public ResponseEntity<ApiResponseDTO<?>> logout(String refreshToken) {
         //revoke refresh token
         refreshTokenService
                 .revokeToken(refreshToken);
@@ -255,4 +294,5 @@ public class AuthSerImpl implements AuthService {
         );
 
     }
+
 }

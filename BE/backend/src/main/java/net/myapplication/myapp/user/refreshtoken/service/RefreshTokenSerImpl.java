@@ -32,7 +32,7 @@ public class RefreshTokenSerImpl implements RefreshTokenSer {
                         .token(token)
                         .user(user)
                         .isRevoked(false)
-                        .deviceInfo("")
+                        .deviceInfo("web")
                         .expiryDate(
                                 LocalDateTime.now()
                                         .plusSeconds(
@@ -40,10 +40,10 @@ public class RefreshTokenSerImpl implements RefreshTokenSer {
                                         )
                         )
                         .build();
-
-        return refreshTokenRepo.save(
+        refreshTokenRepo.save(
                 refreshToken
         );
+        return refreshToken;
     }
 
     @Override
@@ -56,20 +56,20 @@ public class RefreshTokenSerImpl implements RefreshTokenSer {
                                         "Refresh token not found"
                                 )
                         );
-        if(refreshToken.isRevoked()) {
+        if (refreshToken.isRevoked()) {
             throw new RuntimeException("Refresh token revoked");
         }
-        if(refreshToken.getExpiryDate().isBefore(LocalDateTime.now())) {
-            throw new RuntimeException("Refresh token expired");
+        if (refreshToken.getExpiryDate().isBefore(LocalDateTime.now())) {
+            throw new RuntimeException("Refresh token expired, please try again.");
         }
-    
+
         return refreshToken;
     }
 
     @Override
     public void revokeToken(String token) {
-         RefreshToken refreshToken =
-                verifyToken(token);
+        RefreshToken refreshToken
+                = verifyToken(token);
 
         refreshToken.setRevoked(true);
 

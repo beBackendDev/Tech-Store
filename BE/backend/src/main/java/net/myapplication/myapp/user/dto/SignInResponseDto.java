@@ -8,7 +8,8 @@ import lombok.Data;
 @Data
 @Builder
 public class SignInResponseDto {
-    private String token;
+    private String accessToken;
+    private String refreshToken;
     private String type = "Bearer";
     private Long id;
     private String username;

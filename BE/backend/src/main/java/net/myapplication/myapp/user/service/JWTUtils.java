@@ -1,6 +1,7 @@
 package net.myapplication.myapp.user.service;
 
 import java.security.Key;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.slf4j.Logger;
@@ -15,16 +16,30 @@ import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.UnsupportedJwtException;
 import io.jsonwebtoken.security.Keys;
+import net.myapplication.myapp.user.entity.User;
+import net.myapplication.myapp.user.refreshtoken.entity.RefreshToken;
+import net.myapplication.myapp.user.refreshtoken.repository.RefreshTokenRepo;
+import net.myapplication.myapp.user.repository.UserRepo;
 import net.myapplication.myapp.user.service.impl.UserDetailsImpl;
 
 @Component
 public class JWTUtils {
 
+    private final UserRepo userRepo;
+    private final RefreshTokenRepo refreshTokenRepo;
+
+    public JWTUtils(UserRepo userRepo, RefreshTokenRepo refreshTokenRepo) {
+        this.userRepo = userRepo;
+        this.refreshTokenRepo = refreshTokenRepo;
+    }
+
     private static final Logger logger = LoggerFactory.getLogger(JWTUtils.class);
     @Value("${myapp.jwtSecret}")
     private String jwtSecret;
-    @Value("${myapp.jwtExpirationMs}")
-    private int jwtExpirationMs;
+    @Value("${myapp.jwtAccessTokenExpiration}")
+    private int jwtAccessTokenExpiration;
+    @Value("${myapp.jwtRefreshTokenExpiration}")
+    private int jwtRefreshTokenExpiration;
 
     //generate JWT token
     public String generateJwtToken(Authentication authentication) {
@@ -32,9 +47,29 @@ public class JWTUtils {
         return Jwts.builder()
                 .setSubject((userPrincipal.getUsername()))
                 .setIssuedAt(new Date())
-                .setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))
+                .setExpiration(new Date((new Date()).getTime() + jwtAccessTokenExpiration))
                 .signWith(key(), SignatureAlgorithm.HS256)
                 .compact();
+    }
+
+    //
+        public String generateJwtToken(UserDetailsImpl userPrincipal) {
+        return Jwts.builder()
+                .setSubject((userPrincipal.getEmail()))
+                .setIssuedAt(new Date())
+                .setExpiration(new Date((new Date()).getTime() + jwtAccessTokenExpiration))
+                .signWith(key(), SignatureAlgorithm.HS256)
+                .compact();
+    }
+    //generate JWT refresh token
+    public String generateRefreshToken(UserDetailsImpl userPrincipal) {
+        return Jwts.builder()
+                .setSubject((userPrincipal.getEmail()))
+                .setIssuedAt(new Date())
+                .setExpiration(new Date((new Date()).getTime() + jwtRefreshTokenExpiration))
+                .signWith(key(), SignatureAlgorithm.HS256)
+                .compact();
+   
     }
 
     // private Key key() {
@@ -66,4 +101,7 @@ public class JWTUtils {
 
         return false;
     }
+
+    //Refresh Token Service
+    
 }

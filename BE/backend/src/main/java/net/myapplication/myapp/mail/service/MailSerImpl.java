@@ -1,99 +1,115 @@
-import java.time.LocalDateTime;
-import java.util.UUID;
+package net.myapplication.myapp.mail.service;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import net.myapplication.myapp.mail.entity.VerificationToken;
-import net.myapplication.myapp.mail.repository.VerificationTokenRepo;
 import net.myapplication.myapp.user.entity.User;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
-public class MailSerImpl implements MailSer {
-    private final VerificationTokenRepo verificationTokenRepo;
 
-    @Value("${myapp.verification-token-expiration}")
-    private long expiration;
+public class MailSerImpl
+                implements MailSer {
+        private final JavaMailSender mailSender;
 
-    @Override
-    public VerificationToken createVerificationToken(User user) {
-        verificationTokenRepo
-                .findByUser(user)
-                .ifPresent(
-                        verificationTokenRepo::delete);
+        @Value("${spring.mail.username}")
+        private String sender;
 
-        VerificationToken token = VerificationToken.builder()
-                .token(UUID.randomUUID().toString())
-                .user(user)
-                .verified(false)
-                .expiryDate(
-                        LocalDateTime.now()
-                                .plusSeconds(expiration))
-                .build();
+        @Value("${myapp.backend-url}")
+        private String backendUrl;
 
-        return verificationTokenRepo.save(
-                token);
-    }
+        @Override
+        public void sendVerificationEmail(
+                        User user,
+                        String verificationToken) {
 
-    @Override
-    public void deleteExpiredTokens() {
-        verificationTokenRepo
-                .deleteAllByExpiryDateBefore(
-                        LocalDateTime.now());
-    }
+                String verifyUrl = backendUrl
+                                + "/api/auth/verify-email?token="
+                                + verificationToken;
 
-    }
+                SimpleMailMessage message = new SimpleMailMessage();
 
-    @Override
-    public VerificationToken resendVerificationToken(User user) {
-        verificationTokenRepo
-                .findByUser(user)
-                .ifPresent(
-                        verificationTokenRepo::delete);
+                message.setFrom(sender);
 
-        return createVerificationToken(
-                user);
-    }
+                message.setTo(user.getEmail());
 
-    @Override
-    public void sendVerificationEmail(User user, String verificationToken) {
-        // TODO Auto-generated method stub
+                message.setSubject(
+                                "Verify your account");
 
-    }
+                message.setText(buildMailContent(
+                                user,
+                                verifyUrl));
 
-    @Override
-    public VerificationToken verifyToken(String token) {
+                mailSender.send(message);
 
-        VerificationToken verificationToken = verificationTokenRepo
-                .findByToken(token)
-                .orElseThrow(
-                        () -> new RuntimeException(
-                                "Verification token not found."));
-
-        if (verificationToken.isVerified()) {
-            throw new RuntimeException(
-                    "Verification token already used.");
         }
 
-        if (verificationToken.getExpiryDate()
-                .isBefore(LocalDateTime.now())) {
+        private String buildMailContent(
+                        User user,
+                        String verifyUrl) {
 
-            throw new RuntimeException(
-                    "Verification token expired.");
+                return """
+                                Hello %s,
+
+                                Thank you for registering.
+
+                                Please verify your email by visiting the following link:
+
+                                %s
+
+                                This link will expire in 24 hours.
+
+                                If you did not create this account, please ignore this email.
+
+                                Tech-Store Team Thanks you for choosing our service!
+                                """
+                                .formatted(
+                                                user.getUsername(),
+                                                verifyUrl);
+
         }
 
-        verificationToken.setVerified(true);
+        @Override
+        public void sendPasswordResetEmail(User user, String verificationToken) {
+                String url = backendUrl
+                                + "/api/auth/reset-password?token="
+                                + verificationToken;
 
-        User user = verificationToken.getUser();
+                SimpleMailMessage message = new SimpleMailMessage();
 
-        user.setEnabled(true);
+                message.setFrom(sender);
 
-        return verificationToken;
-    }
+                message.setTo(
+                                user.getEmail());
+
+                message.setSubject(
+                                "Reset Password");
+
+                message.setText(
+                                """
+                                        Hello %s,
+
+                                        We received a request to reset your password.
+
+                                        Click the link below:
+
+                                        %s
+
+                                        This link expires in 15 minutes.
+
+                                        If you didn't request this, ignore this email,
+                                        Tech-Store Team Thanks you for choosing our service!
+
+                                """
+                                .formatted(
+                                        user.getUsername(),
+                                        url));
+
+                mailSender.send(
+                                message);
+        }
 
 }

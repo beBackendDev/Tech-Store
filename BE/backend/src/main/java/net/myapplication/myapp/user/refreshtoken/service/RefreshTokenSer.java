@@ -7,16 +7,18 @@ import net.myapplication.myapp.user.refreshtoken.entity.RefreshToken;
 
 @Service
 public interface RefreshTokenSer {
-    RefreshToken saveRefreshToken(
-            User user,
-            String token
-    );
+        RefreshToken saveRefreshToken(
+                        User user,
+                        String token);
 
-    RefreshToken verifyToken(
-            String token
-    );
+        RefreshToken verifyToken(
+                        String token);
 
-    void revokeToken(
-            String token
-    );
+        void revokeToken(
+                        String token);
+
+        void revokeAllUserTokens(
+                        User user);
+
+        void deleteExpiredTokens();
 }

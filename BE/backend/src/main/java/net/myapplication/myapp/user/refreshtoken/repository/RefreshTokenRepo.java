@@ -1,5 +1,6 @@
 package net.myapplication.myapp.user.refreshtoken.repository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,4 +19,9 @@ public interface RefreshTokenRepo
     List<RefreshToken> findByUser(User user);
 
     void deleteByUser(User user);
+
+    List<RefreshToken> findAllByUser(User user);
+
+    void deleteAllByExpiryDateBefore(LocalDateTime time);
+
 }

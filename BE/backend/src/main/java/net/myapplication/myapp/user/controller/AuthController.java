@@ -21,6 +21,8 @@ import net.myapplication.myapp.exception.RoleNotFoundException;
 import net.myapplication.myapp.exception.UserAlreadyExistsException;
 import net.myapplication.myapp.password.dto.ForgotPasswordRequest;
 import net.myapplication.myapp.password.dto.ResetPasswordRequest;
+import net.myapplication.myapp.password.dto.VerifyResetPasswordRequest;
+import net.myapplication.myapp.password.entity.ResetPasswordToken;
 import net.myapplication.myapp.user.dto.SignInRequestDto;
 import net.myapplication.myapp.user.dto.SignInResponseDto;
 import net.myapplication.myapp.user.dto.SignUpRequestDto;
@@ -28,10 +30,14 @@ import net.myapplication.myapp.user.refreshtoken.dto.RefreshTokenRequest;
 import net.myapplication.myapp.user.service.AuthService;
 import net.myapplication.myapp.user.service.AuthTokenFilter;
 
+import java.util.List;
+import java.util.logging.Logger;
+import jakarta.servlet.http.HttpServletRequest;
+
 @RestController
 @RequestMapping("/api")
 public class AuthController {
-
+        private static final Logger logger = Logger.getLogger(AuthController.class.getName());
         private final AuthService authService;
 
         @Value("${myapp.cookie.secure:false}")
@@ -48,19 +54,41 @@ public class AuthController {
         public ResponseEntity<ApiResponseDTO<?>> registerUser(
                         @RequestBody @Valid SignUpRequestDto signUpRequestDto)
                         throws UserAlreadyExistsException, RoleNotFoundException {
-                return authService.signUp(signUpRequestDto);
+
+                authService.signUp(signUpRequestDto);
+
+                return ResponseEntity.status(HttpStatus.CREATED)
+                                .body(
+                                                ApiResponseDTO.builder()
+                                                                .status(ResponseStatus.SUCCESS.name())
+                                                                .message("User account has been successfully created!")
+                                                                .build());
         }
 
         @GetMapping("/auth/verify-email")
         public ResponseEntity<ApiResponseDTO<?>> verifyEmail(
                         @RequestParam String token) {
-                return authService.verifyEmail(token);
+
+                authService.verifyEmail(token);
+
+                return ResponseEntity.ok(
+                                ApiResponseDTO.builder()
+                                                .status(String.valueOf(ResponseStatus.SUCCESS))
+                                                .message("Email verified successfully.")
+                                                .build());
         }
 
         @PostMapping("/auth/resend-verification")
         public ResponseEntity<ApiResponseDTO<?>> resendVerification(
                         @RequestParam String email) {
-                return authService.resendVerification(email);
+
+                authService.resendVerification(email);
+
+                return ResponseEntity.ok(
+                                ApiResponseDTO.builder()
+                                                .status(String.valueOf(ResponseStatus.SUCCESS))
+                                                .message("Verification email sent.")
+                                                .build());
         }
 
         // login / signin
@@ -134,25 +162,45 @@ public class AuthController {
         }
 
         @PostMapping("/auth/forgot-password")
-        public ResponseEntity<ApiResponseDTO<?>> forgotPassword(@RequestBody @Valid ForgotPasswordRequest request) {
-                // TODO: process POST request
+        public ResponseEntity<ApiResponseDTO<?>> forgotPassword(
+                        @RequestBody @Valid ForgotPasswordRequest request,
+                        HttpServletRequest httpRequest) {
 
-                return authService.forgotPassword(request.getEmail());
+                logger.info("URI: " + httpRequest.getRequestURI());
+
+                authService.forgotPassword(request.getEmail());
+
+                return ResponseEntity.ok(
+                                ApiResponseDTO.builder()
+                                                .status(String.valueOf(ResponseStatus.SUCCESS))
+                                                .message("Password reset email has been sent.")
+                                                .build());
         }
 
         @PostMapping("/auth/verify-reset-password")
-        public ResponseEntity<ApiResponseDTO<?>> verifyResetPassword(@RequestBody String token) {
-                // TODO: process POST request
+        public ResponseEntity<ApiResponseDTO<?>> verifyResetPassword(
+                        @RequestBody VerifyResetPasswordRequest request) {
 
-                return authService.verifyResetToken(token);
+                authService.verifyResetToken(request.getToken());
+
+                return ResponseEntity.ok(
+                                ApiResponseDTO.builder()
+                                                .status(String.valueOf(ResponseStatus.SUCCESS))
+                                                .message("Reset password token is valid.")
+                                                .build());
         }
 
-        @PostMapping("/reset-password")
+        @PostMapping("/auth/reset-password")
         public ResponseEntity<ApiResponseDTO<?>> resetPassword(
                         @RequestBody @Valid ResetPasswordRequest request) {
 
-                return authService.resetPassword(request);
+                authService.resetPassword(request);
 
+                return ResponseEntity.ok(
+                                ApiResponseDTO.builder()
+                                                .status(String.valueOf(ResponseStatus.SUCCESS))
+                                                .message("Password has been reset successfully.")
+                                                .build());
         }
 
         @GetMapping("/user")

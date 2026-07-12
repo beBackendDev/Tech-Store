@@ -96,35 +96,37 @@ public class AuthSerImpl implements AuthService {
         }
 
         @Override
-        public ResponseEntity<ApiResponseDTO<?>> signUp(SignUpRequestDto signUpRequestDto)
+        public void signUp(SignUpRequestDto signUpRequestDto)
                         throws UserAlreadyExistsException, RoleNotFoundException {
-                // (1) Kiem tra tinh dung dan
+
+                // (1) Kiểm tra email
                 if (userService.existByEmail(signUpRequestDto.getEmail())) {
                         throw new UserAlreadyExistsException(
-                                        "Registration Failed: Provided email already exists. Try sign in or provide another email.");
+                                        "Registration failed: Email already exists.");
                 }
+
+                // (2) Kiểm tra username
                 if (userService.existByUsername(signUpRequestDto.getUsername())) {
                         throw new UserAlreadyExistsException(
-                                        "Registration Failed: Provided username already exists. Try sign in or provide another username.");
+                                        "Registration failed: Username already exists.");
                 }
-                // (2) Kiem tra ton tai trong DB, neu chua thi create
-                User user = createUser(signUpRequestDto);
-                // (3) Luu thong tin DB
-                user.setEnabled(false);
-                userService.save(user);
-                // (4) Thuc hien verification email
-                VerificationToken token = verificationTokenService
-                                .createVerificationToken(user);
 
+                // (3) Tạo User
+                User user = createUser(signUpRequestDto);
+
+                // (4) Chưa kích hoạt
+                user.setEnabled(false);
+
+                // (5) Lưu DB
+                userService.save(user);
+
+                // (6) Sinh verification token
+                VerificationToken token = verificationTokenService.createVerificationToken(user);
+
+                // (7) Gửi email
                 mailService.sendVerificationEmail(
                                 user,
                                 token.getToken());
-                // (5) Tra ve response
-                return ResponseEntity.status(HttpStatus.CREATED).body(
-                                ApiResponseDTO.builder()
-                                                .status(String.valueOf(ResponseStatus.SUCCESS))
-                                                .message("User account has been successfully created!")
-                                                .build());
         }
 
         private User createUser(SignUpRequestDto signUpRequestDto) throws RoleNotFoundException {
@@ -312,137 +314,83 @@ public class AuthSerImpl implements AuthService {
         }
 
         @Override
-        public ResponseEntity<ApiResponseDTO<?>> resendVerification(String email) {
-                User user = userRepo
-                                .findByEmail(email)
-                                .orElseThrow(
-                                                () -> new RuntimeException("User not found with email: " + email));
+        public void resendVerification(String email) {
+
+                User user = userRepo.findByEmail(email)
+                                .orElseThrow(() -> new RuntimeException("User not found with email: " + email));
 
                 if (user.isEnabled()) {
                         throw new RuntimeException("User is already verified.");
                 }
 
-                VerificationToken token = verificationTokenService
-                                .resendVerificationToken(user);
+                VerificationToken token = verificationTokenService.resendVerificationToken(user);
+
                 mailService.sendVerificationEmail(
                                 user,
                                 token.getToken());
-
-                return ResponseEntity.ok(
-                                ApiResponseDTO.builder()
-                                                .status("SUCCESS")
-                                                .message("Verification email sent.")
-                                                .build());
         }
 
         @Override
-        public ResponseEntity<ApiResponseDTO<?>> verifyEmail(String token) {
-                VerificationToken verificationToken = verificationTokenService
-                                .verifyToken(token);
+        public void verifyEmail(String token) {
+
+                VerificationToken verificationToken = verificationTokenService.verifyToken(token);
 
                 User user = verificationToken.getUser();
+
                 user.setEnabled(true);
 
                 userService.save(user);
+
                 verificationTokenRepo.delete(verificationToken);
-                return ResponseEntity.ok(
-                                ApiResponseDTO.builder()
-                                                .status("SUCCESS")
-                                                .message("Email verified successfully")
-                                                .build());
         }
 
         @Override
-        public ResponseEntity<ApiResponseDTO<?>> forgotPassword(String email) {
+        public void forgotPassword(String email) {
+
                 User user = userRepo.findByEmail(email)
-                                .orElseThrow(
-                                                () -> new RuntimeException(
-                                                                "Email does not exist."));
+                                .orElseThrow(() -> new RuntimeException("Email does not exist."));
 
                 if (!user.isEnabled()) {
-
                         throw new RuntimeException(
                                         "Account has not been verified.");
-
                 }
-                ResetPasswordToken token = resetPasswordService
-                                .createResetPasswordToken(
-                                                user);
 
-                mailService.sendResetPasswordEmail(
+                ResetPasswordToken token = resetPasswordService.createResetPasswordToken(user);
+
+                mailService.sendPasswordResetEmail(
                                 user,
                                 token.getToken());
-
-                return ResponseEntity.ok(
-
-                                ApiResponseDTO.builder()
-                                                .status(
-                                                                String.valueOf(
-                                                                                ResponseStatus.SUCCESS))
-                                                .message(
-                                                                "Password reset email has been sent.")
-                                                .build()
-
-                );
         }
 
         @Override
-        public ResponseEntity<ApiResponseDTO<?>> verifyResetToken(String token) {
-                resetPasswordService.verifyToken(
-                                token);
+        public void verifyResetToken(String token) {
 
-                return ResponseEntity.ok(
+                resetPasswordService.verifyToken(token);
 
-                                ApiResponseDTO.builder()
-                                                .status(
-                                                                String.valueOf(
-                                                                                ResponseStatus.SUCCESS))
-                                                .message(
-                                                                "Reset password token is valid.")
-                                                .build()
-
-                );
         }
 
         @Override
-        public ResponseEntity<ApiResponseDTO<?>> resetPassword(ResetPasswordRequest request) {
+        public void resetPassword(ResetPasswordRequest request) {
+
                 if (!request.getNewPassword().equals(request.getConfirmPassword())) {
-
                         throw new RuntimeException(
                                         "Password confirmation does not match.");
-
                 }
 
-                ResetPasswordToken token = resetPasswordService.verifyToken(
-                                request.getToken());
+                ResetPasswordToken token = resetPasswordService.verifyToken(request.getToken());
 
                 User user = token.getUser();
 
                 user.setPassword(
-                                passwordEncoder.encode(
-                                                request.getNewPassword()));
+                                passwordEncoder.encode(request.getNewPassword()));
 
                 userRepo.save(user);
 
-                // revoke toàn bộ refresh token
-                refreshTokenService.revokeAllUserTokens(
-                                user);
+                // Xóa reset token
+                resetPasswordService.deleteToken(token);
 
-                // đánh dấu token đã dùng
-                token.setUsed(true);
-
-                resetPasswordService.save(token);
-
-                return ResponseEntity.ok(
-
-                                ApiResponseDTO.builder()
-                                                .status(
-                                                                String.valueOf(ResponseStatus.SUCCESS))
-                                                .message(
-                                                                "Password has been reset successfully.")
-                                                .build()
-
-                );
+                // Logout tất cả thiết bị
+                refreshTokenService.revokeAllUserTokens(user);
         }
 
 }

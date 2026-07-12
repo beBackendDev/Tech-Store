@@ -13,29 +13,26 @@ import net.myapplication.myapp.user.dto.SignUpRequestDto;
 
 @Service
 public interface AuthService {
-    ResponseEntity<ApiResponseDTO<?>> signUp(SignUpRequestDto signUpRequestDto)
-            throws UserAlreadyExistsException, RoleNotFoundException;
+        void signUp(SignUpRequestDto signUpRequestDto)
+                        throws UserAlreadyExistsException, RoleNotFoundException;
 
-    ResponseEntity<ApiResponseDTO<?>> verifyEmail(String token);
+        void verifyEmail(String token);
 
-    ResponseEntity<ApiResponseDTO<?>> resendVerification(String email);
+        void resendVerification(String email);
 
-    ResponseEntity<ApiResponseDTO<?>> signIn(SignInRequestDto signInRequestDto);
+        ResponseEntity<ApiResponseDTO<?>> signIn(SignInRequestDto signInRequestDto);
 
-    // password
-    ResponseEntity<ApiResponseDTO<?>> forgotPassword(
-            String email);
+        // password
+        void forgotPassword(String email);
 
-    ResponseEntity<ApiResponseDTO<?>> verifyResetToken(
-            String token);
+        void verifyResetToken(String token);
 
-    ResponseEntity<ApiResponseDTO<?>> resetPassword(
-            ResetPasswordRequest request);
+        void resetPassword(ResetPasswordRequest request);
 
-    // cookie
-    SignInResponseDto signInWithCookie(SignInRequestDto signInRequestDto);
+        // cookie
+        SignInResponseDto signInWithCookie(SignInRequestDto signInRequestDto);
 
-    SignInResponseDto refreshAccessToken(String refreshToken);
+        SignInResponseDto refreshAccessToken(String refreshToken);
 
-    ResponseEntity<ApiResponseDTO<?>> logout(String refreshToken);
+        ResponseEntity<ApiResponseDTO<?>> logout(String refreshToken);
 }

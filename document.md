@@ -345,4 +345,29 @@ Xử lý các trường hợp lỗi như sai mật khẩu, tài khoản không t
 ### 2.3.3 Logout
 ### 2.3.4 Forgot Pw
 
-updated line
+### 2.3.5 2FA (Two-Factor Authentication)
+
+Xác thực 2 yếu tố, là một phương pháp bảo mật yêu cầu 2 lớp thông tin khác nhau để đăng nhập tài khoản. Thay vi dùng mật khẩu thông thường thì bạn cần thêm một bước thứ 2 như nhập mã code từ SMS ứng dụng tạo mã hoặc quét vân tay.
+
+**note:** thực hiện 2FA cho các hệ thống yêu cầu độ bảo mật cao (ngâ hàng, tài chính,...)
+
+**Các phương thức 2FA phổ biến:** 
+
+- Mã xác thực qua SMS / Email
+- Ứng dụng tạo mã (Authenticator Application)
+- Xác thực sinh trắc học (FaceID vân tay)
+
+### 2.3.6 OAuth2 
+
+[Tham khảo chi tiết](https://viblo.asia/p/tim-hieu-doi-chut-ve-oauth2-eW65GvMLlDO#_cac-vai-tro-trong-oauth2-0)
+
+[Triển khai](https://share.google/aimode/HW8kDkpbi6B4ddLXp)
+
+là một phương thức xác thực cho phép một ứng dụng bên thứ 3 có thể được ủy quyền bởi người dùng để truy cập đến tài nguyên người dùng nằm trên một dịch vụ khác.
+
+**Trong OAuth2 định nghĩa 4 vai trò:**
+
+- Resource Owner: người có khả năng cấp quyền truy cập, chủ sở hữu của tài nguyên maf ứng dụng muốn truy cập
+- Resource Server: nơi lưu trữ tài nguyên, có khả năng xử lý yeu cầu truy cập đến các tài nguyên được bảo vệ
+- Client: là ứng dụng bên thứ 3 muốn truy cập vào phần tài nguyên được chia sẻ vớ tư cách của người sở hữu (resource owner) và tất nhiên trước khi truy cập ứng dụng cần sự ủy quyền của user.
+- Authorization Server: làm nhiemeh vụ xác thực, kiểm tra thông tin mà user gửi đến, từ đó cấp quyền truy cập cho ứng dụng bằng việc sinh ra đạn mã access token 

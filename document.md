@@ -367,7 +367,7 @@ là một phương thức xác thực cho phép một ứng dụng bên thứ 3 
 
 **Trong OAuth2 định nghĩa 4 vai trò:**
 
-- Resource Owner: người có khả năng cấp quyền truy cập, chủ sở hữu của tài nguyên maf ứng dụng muốn truy cập
-- Resource Server: nơi lưu trữ tài nguyên, có khả năng xử lý yeu cầu truy cập đến các tài nguyên được bảo vệ
-- Client: là ứng dụng bên thứ 3 muốn truy cập vào phần tài nguyên được chia sẻ vớ tư cách của người sở hữu (resource owner) và tất nhiên trước khi truy cập ứng dụng cần sự ủy quyền của user.
-- Authorization Server: làm nhiemeh vụ xác thực, kiểm tra thông tin mà user gửi đến, từ đó cấp quyền truy cập cho ứng dụng bằng việc sinh ra đạn mã access token 
+- `Resource Owner`: người có khả năng cấp quyền truy cập, chủ sở hữu của tài nguyên maf ứng dụng muốn truy cập
+- `Resource Server`: nơi lưu trữ tài nguyên, có khả năng xử lý yeu cầu truy cập đến các tài nguyên được bảo vệ
+- `Client`: là ứng dụng bên thứ 3 muốn truy cập vào phần tài nguyên được chia sẻ vớ tư cách của người sở hữu (resource owner) và tất nhiên trước khi truy cập ứng dụng cần sự ủy quyền của user.
+- `Authorization Server`: làm nhiemeh vụ xác thực, kiểm tra thông tin mà user gửi đến, từ đó cấp quyền truy cập cho ứng dụng bằng việc sinh ra đạn mã access token 

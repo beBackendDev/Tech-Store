@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+
+.input{
+
+width:100%;
+
+padding:12px;
+
+border:1px solid $gray-300;
+
+border-radius:$radius-sm;
+
+font-size:16px;
+
+transition:$transition;
+
+margin-bottom:16px;
+
+&:focus{
+
+border-color:$primary;
+
+box-shadow:0 0 0 4px rgba(37,99,235,.2);
+
+outline:none;
+
+}
+
+}
+
+.input-error{
+
+border-color:$danger;
+
+}

@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin:28px 0;
+
+}
+
+.divider span{
+
+    flex:1;
+
+    height:1px;
+
+    background:$gray-300;
+
+}
+
+.divider p{
+
+    color:$gray-500;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin:0;
+
+}

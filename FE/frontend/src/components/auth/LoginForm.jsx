@@ -6,81 +6,117 @@ import Input from "../common/Input";
 
 import Button from "../common/Button";
 
+import { login } from "../../services/authService";
+import AuthCard from "./AuthCard";
+import Divider from "./Divider";
+import GoogleLoginButton from "./GoogleLoginButton";
+import AuthFooter from "./AuthFooter";
+
 function LoginForm() {
 
     const [email, setEmail] = useState("");
 
     const [password, setPassword] = useState("");
 
-    const submit = (e) => {
+    const submit = async (e) => {
 
         e.preventDefault();
 
         console.log(email);
 
         console.log(password);
+        try {
+
+            const response = await login(email, password);
+            console.log("response" + response);
+            alert(response.message);
+
+            console.log(response);
+
+        } catch (error) {
+
+            // alert(error.response?.data?.message);
+            alert("Login failed");
+
+        }
 
     }
 
     return (
-
-        <form
-
-            className="login-card"
-
-            onSubmit={submit}
-
+        <AuthCard
+            title="Welcome to Tech Store"
+            subtitle="Sign in to continue"
         >
+            <form
 
-            <h2>
+                className="login-card"
 
-                Login
-
-            </h2>
-
-            <Input
-
-                label="Email"
-
-                value={email}
-
-                onChange={(e) =>
-
-                    setEmail(e.target.value)
-
-                }
-
-            />
-
-            <Input
-
-                label="Password"
-
-                type="password"
-
-                value={password}
-
-                onChange={(e) =>
-
-                    setPassword(e.target.value)
-
-                }
-
-            />
-
-            <Button
-
-                block
-
-                type="submit"
+                onSubmit={submit}
 
             >
 
-                Login
+                <h2>
 
-            </Button>
+                    Login
 
-        </form>
+                </h2>
+
+                <Input
+
+                    label="Email"
+
+                    value={email}
+
+                    onChange={(e) =>
+
+                        setEmail(e.target.value)
+
+                    }
+
+                />
+
+                <Input
+
+                    label="Password"
+
+                    type="password"
+
+                    value={password}
+
+                    onChange={(e) =>
+
+                        setPassword(e.target.value)
+
+                    }
+
+                />
+
+                <Button
+
+                    block
+
+                    type="submit"
+
+                >
+
+                    Login
+
+                </Button>
+
+            </form>
+            <Divider text="OR" />
+            <GoogleLoginButton />
+            <AuthFooter
+                text="Don't have an account?"
+
+                linkText="Create account"
+
+                link="/register"
+
+            />
+
+        </AuthCard>
+
 
     );
 

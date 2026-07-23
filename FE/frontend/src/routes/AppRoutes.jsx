@@ -26,7 +26,7 @@ function AppRoutes() {
 
                     path="/"
 
-                    element={<Register />}
+                    element={<Login />}
 
                 />
 
@@ -34,7 +34,7 @@ function AppRoutes() {
 
                     path="/register"
 
-                    element={<Login />}
+                    element={<Register />}
 
                 />
 

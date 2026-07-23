@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+
+.auth-footer{
+
+    margin-top:28px;
+
+    text-align:center;
+
+}
+
+.auth-footer span{
+
+    color:$gray-500;
+
+}
+
+.auth-footer a{
+
+    color:$primary;
+
+    margin-left:6px;
+
+    font-weight:600;
+
+    transition:$transition;
+
+}
+
+.auth-footer a:hover{
+
+    text-decoration:underline;
+
+}

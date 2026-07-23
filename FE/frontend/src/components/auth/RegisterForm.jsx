@@ -6,6 +6,8 @@ import Input from "../common/Input";
 
 import Button from "../common/Button";
 
+import { register } from "../../services/authService";
+
 function RegisterForm() {
 
     const [username, setUsername] = useState("");
@@ -13,12 +15,36 @@ function RegisterForm() {
     const [email, setEmail] = useState("");
 
     const [password, setPassword] = useState("");
+    const submit = async (e) => {
 
+        e.preventDefault();
+
+        try {
+
+            const response = await register({
+
+                username,
+                email,
+                password,
+                // roles: ["USER"]
+
+            });
+
+            alert(response.message);
+
+        } catch (error) {
+
+            alert(error.response?.data?.message);
+
+        }
+
+    };
     return (
 
         <form
 
             className="register-card"
+            onSubmit={submit}
 
         >
 
@@ -34,7 +60,7 @@ function RegisterForm() {
 
                 value={username}
 
-                onChange={(e)=>
+                onChange={(e) =>
 
                     setUsername(e.target.value)
 
@@ -48,7 +74,7 @@ function RegisterForm() {
 
                 value={email}
 
-                onChange={(e)=>
+                onChange={(e) =>
 
                     setEmail(e.target.value)
 
@@ -64,7 +90,7 @@ function RegisterForm() {
 
                 value={password}
 
-                onChange={(e)=>
+                onChange={(e) =>
 
                     setPassword(e.target.value)
 

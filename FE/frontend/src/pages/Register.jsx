@@ -2,13 +2,37 @@ import "./Register.scss";
 
 import RegisterForm from "../components/auth/RegisterForm";
 
-function Register() {
+function Register(){
 
-    return (
+    return(
 
-        <div className="register-page">
+        <div className="auth-page">
 
-            <RegisterForm />
+            <div className="auth-left">
+
+                <div>
+
+                    <h1>
+
+                        Tech Store
+
+                    </h1>
+
+                    <p>
+
+                        Create your account
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div className="auth-right">
+
+                <RegisterForm/>
+
+            </div>
 
         </div>
 

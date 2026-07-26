@@ -11,3 +11,78 @@
     background:#f5f7fb;
 
 }
+.auth-page{
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:1fr 520px;
+
+}
+
+.auth-left{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #2563eb,
+
+        #1d4ed8
+
+    );
+
+    color:white;
+
+}
+
+.auth-left h1{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+}
+
+.auth-left p{
+
+    font-size:22px;
+
+    opacity:.85;
+
+}
+
+.auth-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f8fafc;
+
+}
+
+@media(max-width:900px){
+
+.auth-page{
+
+grid-template-columns:1fr;
+
+}
+
+.auth-left{
+
+display:none;
+
+}
+
+}

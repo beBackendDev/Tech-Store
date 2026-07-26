@@ -24,7 +24,7 @@ function AppRoutes() {
 
                 <Route
 
-                    path="/"
+                    path="/login"
 
                     element={<Login />}
 

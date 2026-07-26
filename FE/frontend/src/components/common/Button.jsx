@@ -2,6 +2,8 @@ import "./Button.scss";
 
 function Button({
 
+    loading,
+
     children,
 
     type = "button",
@@ -24,9 +26,18 @@ function Button({
 
             onClick={onClick}
 
+            disabled={loading}
+
         >
 
-            {children}
+            {loading ?
+
+                "Loading..."
+
+                :
+
+                children
+            }
 
         </button>
 

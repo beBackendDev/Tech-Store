@@ -2,26 +2,36 @@ import "./LoginForm.scss";
 
 import { useState } from "react";
 
+import { MdEmail } from "react-icons/md";
+
 import Input from "../common/Input";
 
 import Button from "../common/Button";
 
 import { login } from "../../services/authService";
+
+import PasswordInput from "./PasswordInput";
+
 import AuthCard from "./AuthCard";
+
 import Divider from "./Divider";
+
 import GoogleLoginButton from "./GoogleLoginButton";
+
 import AuthFooter from "./AuthFooter";
 
 function LoginForm() {
 
     const [email, setEmail] = useState("");
 
+    const [loading, setLoading] = useState(false);
+
     const [password, setPassword] = useState("");
 
     const submit = async (e) => {
 
         e.preventDefault();
-
+        setLoading(true);
         console.log(email);
 
         console.log(password);
@@ -37,6 +47,11 @@ function LoginForm() {
 
             // alert(error.response?.data?.message);
             alert("Login failed");
+
+        }
+        finally {
+
+            setLoading(false);
 
         }
 
@@ -64,6 +79,8 @@ function LoginForm() {
                 <Input
 
                     label="Email"
+                    icon={<MdEmail />}
+
 
                     value={email}
 
@@ -75,7 +92,7 @@ function LoginForm() {
 
                 />
 
-                <Input
+                <PasswordInput
 
                     label="Password"
 
@@ -92,6 +109,7 @@ function LoginForm() {
                 />
 
                 <Button
+                    loading={loading}
 
                     block
 

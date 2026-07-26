@@ -1,5 +1,51 @@
 @use "../../styles/variables" as *;
 
+.register-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.password-strength{
+
+    margin-top:-8px;
+
+    margin-bottom:18px;
+
+    font-size:13px;
+
+    color:#2563eb;
+
+    font-weight:600;
+
+}
+
+.agree{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:14px;
+
+    margin:18px 0 25px;
+
+}
+
+.agree a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
 .register-card{
 
     width:460px;
@@ -19,5 +65,17 @@
     margin-bottom:25px;
 
     text-align:center;
+
+}
+
+.password-strength{
+
+    margin-top:6px;
+
+    font-size:13px;
+
+    color:#2563eb;
+
+    font-weight:600;
 
 }

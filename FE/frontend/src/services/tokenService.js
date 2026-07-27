@@ -1,3 +1,6 @@
+//quanly access_token 
+//luu trong localStorage sessionStorage or memory (su dung memory de tranh bi xoa khi reload trang) 
+
 const ACCESS_TOKEN = "accessToken";
 
 export const saveAccessToken = (token) => {

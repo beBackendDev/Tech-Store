@@ -1,5 +1,7 @@
 import "./LoginForm.scss";
 
+import { useNavigate } from 'react-router-dom';
+
 import { useState } from "react";
 
 import { MdEmail } from "react-icons/md";
@@ -19,12 +21,18 @@ import Divider from "./Divider";
 import GoogleLoginButton from "./GoogleLoginButton";
 
 import AuthFooter from "./AuthFooter";
+import useAuth from "../../hooks/useAuth";
+import { saveAccessToken } from "../../services/tokenService";
 
 function LoginForm() {
+
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
 
     const [loading, setLoading] = useState(false);
+
+    const { setAuth } = useAuth();
 
     const [password, setPassword] = useState("");
 
@@ -38,8 +46,22 @@ function LoginForm() {
         try {
 
             const response = await login(email, password);
+
+            //login thanh cong
+            //save accesstoken 
+
+            saveAccessToken(response.response);
+
+            setAuth({
+
+                accessToken: response.response,
+
+                authenticated: true
+
+            });
+            navigate("/home");
             console.log("response" + response);
-            alert(response.message);
+            // alert(response.message);
 
             console.log(response);
 

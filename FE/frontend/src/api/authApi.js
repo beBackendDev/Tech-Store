@@ -10,5 +10,5 @@ export const signUp = (data) =>
 export const logout = () =>
     api.post("/auth/logout");
 
-export const refresh = () =>
+export const refreshToken = () =>
     api.post("/auth/cookie/refresh");

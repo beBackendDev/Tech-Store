@@ -14,7 +14,13 @@ import Login from "../pages/Login";
 
 import Register from "../pages/Register";
 
-import Home from "../components/auth/Home";
+import Home from "../pages/Home";
+
+import Profile from "../pages/Profile";
+
+import AdminDashboard from "../pages/AdminDashboard";
+
+import ProtectedRoute from "./ProtectedRoute";
 
 function AppRoutes() {
 
@@ -30,6 +36,25 @@ function AppRoutes() {
                     element={<Home />}
 
                 />
+                <Route element={<ProtectedRoute />}>
+
+                    <Route
+
+                        path="/profile"
+
+                        element={<Profile />}
+
+                    />
+
+                    <Route
+
+                        path="/admin"
+
+                        element={<AdminDashboard />}
+
+                    />
+
+                </Route>
                 <Route
 
                     path="/login"

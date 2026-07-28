@@ -3,7 +3,7 @@ function Home(){
 
     return(
 
-        <h1>Welcome to Tech Store</h1>
+        <h1>Welcome back, Sir!!</h1>
 
     )
 

@@ -13,7 +13,7 @@ export default function useAxiosPrivate(){
     useEffect(()=>{
 
         const requestIntercept =
-
+//1
         axiosPrivate.interceptors.request.use(
 
             config=>{

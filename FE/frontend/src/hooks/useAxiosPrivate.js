@@ -6,81 +6,84 @@ import useRefreshToken from "./useRefreshToken";
 
 import { getAccessToken } from "../services/tokenService";
 
-export default function useAxiosPrivate(){
+export default function useAxiosPrivate() {
 
     const refresh = useRefreshToken();
 
-    useEffect(()=>{
+    useEffect(() => {
 
         const requestIntercept =
-//1
-        axiosPrivate.interceptors.request.use(
+            //1
+            axiosPrivate.interceptors.request.use(
 
-            config=>{
+                config => {
 
-                const token=getAccessToken();
+                    const token = getAccessToken();
 
-                if(
+                    if (
 
-                    token &&
+                        token &&
 
-                    !config.headers.Authorization
+                        !config.headers.Authorization
 
-                ){
+                    ) {
 
-                    config.headers.Authorization=
+                        config.headers.Authorization =
 
-                    `Bearer ${token}`;
+                            `Bearer ${token}`;
 
-                }
+                    }
 
-                return config;
-
-            }
-
-        );
-
-        const responseIntercept=
-
-        axiosPrivate.interceptors.response.use(
-
-            response=>response,
-
-            async(error)=>{
-
-                const previousRequest=
-
-                error?.config;
-
-                if(
-
-                    error.response?.status===401 &&
-
-                    !previousRequest.sent
-
-                ){
-
-                    previousRequest.sent=true;
-
-                    const newToken=
-
-                    await refresh();
-
-                    previousRequest.headers.Authorization=
-
-                    `Bearer ${newToken}`;
-
-                    return axiosPrivate(previousRequest);
+                    return config;
 
                 }
 
-                return Promise.reject(error);
+            );
 
-            }
+        const responseIntercept =
 
-        );
+            axiosPrivate.interceptors.response.use(
 
-        return ()=>{
+                response => response,
+
+                async (error) => {
+
+                    const previousRequest =
+
+                        error?.config;
+
+                    if (
+
+                        error.response?.status === 401 &&
+
+                        !previousRequest.sent
+
+                    ) {
+
+                        previousRequest.sent = true;
+
+                        const newToken =
+
+                            await refresh();
+
+                        previousRequest.headers =
+                            previousRequest.headers || {};
+                            
+                        previousRequest.headers.Authorization =
+
+                            `Bearer ${newToken}`;
+
+                        return axiosPrivate(previousRequest);
+
+                    }
+
+                    return Promise.reject(error);
+
+                }
+
+            );
+
+        return () => {
 
             axiosPrivate.interceptors.request.eject(requestIntercept);
 
@@ -88,7 +91,7 @@ export default function useAxiosPrivate(){
 
         };
 
-    },[refresh]);
+    }, [refresh]);
 
     return axiosPrivate;
 

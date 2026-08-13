@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -21,6 +19,8 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import net.myapplication.myapp.security.oauth2.OAuth2AuthenticationFailureHandler;
+import net.myapplication.myapp.security.oauth2.OAuth2AuthenticationSuccessHandler;
 import net.myapplication.myapp.user.service.AuthEntryPointJwt;
 import net.myapplication.myapp.user.service.AuthTokenFilter;
 import net.myapplication.myapp.user.service.UserDetailsServiceImpl;
@@ -33,12 +33,20 @@ public class WebSecurityConfig {
     private final AuthEntryPointJwt unauthorizedHandler;
 
     private final AuthTokenFilter authTokenFilter;
+    // oauth2
+    private final OAuth2AuthenticationSuccessHandler oAuth2SuccessHandler;
+
+    private final OAuth2AuthenticationFailureHandler oAuth2FailureHandler;
 
     @Autowired
-    public WebSecurityConfig(AuthEntryPointJwt unauthorizedHandler, UserDetailsServiceImpl userDetailsService, AuthTokenFilter authTokenFilter) {
+    public WebSecurityConfig(AuthEntryPointJwt unauthorizedHandler, UserDetailsServiceImpl userDetailsService,
+            AuthTokenFilter authTokenFilter, OAuth2AuthenticationSuccessHandler oAuth2SuccessHandler,
+            OAuth2AuthenticationFailureHandler oAuth2FailureHandler) {
         this.unauthorizedHandler = unauthorizedHandler;
         this.userDetailsService = userDetailsService;
         this.authTokenFilter = authTokenFilter;
+        this.oAuth2SuccessHandler = oAuth2SuccessHandler;
+        this.oAuth2FailureHandler = oAuth2FailureHandler;
     }
 
     @Bean
@@ -50,10 +58,6 @@ public class WebSecurityConfig {
         return authProvider;
     }
 
-    @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
-        return authConfig.getAuthenticationManager();
-    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -68,18 +72,22 @@ public class WebSecurityConfig {
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .requestMatchers("/api/auth/**").permitAll()
-                .requestMatchers("/api/dashboard/admin/**").hasAuthority("ADMIN")
-                .anyRequest().authenticated()
-                );
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                        .requestMatchers(
+                                "/api/auth/**",
+                                "/oauth2/**")
+                        .permitAll()
+                        .requestMatchers("/api/dashboard/admin/**").hasAuthority("ADMIN")
+                        .anyRequest().authenticated());
 
         http
                 .authenticationProvider(authenticationProvider());
 
         http
                 .addFilterBefore(authTokenFilter, UsernamePasswordAuthenticationFilter.class);
-
+        http.oauth2Login(oauth2 -> oauth2
+                .successHandler(oAuth2SuccessHandler)
+                .failureHandler(oAuth2FailureHandler));
         return http.build();
     }
 

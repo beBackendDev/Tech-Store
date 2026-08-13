@@ -2,7 +2,9 @@ package net.myapplication.myapp.user.service.impl;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Component;
 
 import net.myapplication.myapp.common.ApiResponseDTO;
@@ -215,42 +218,126 @@ public class AuthSerImpl implements AuthService {
         }
 
         @Override
-        public SignInResponseDto signInWithCookie(SignInRequestDto signInRequestDto) {
-                // (1): Xac thuc thong tin dang nhap bang cach tao mot doi tuong
-                // UsernamePasswordAuthenticationToken từ email và mật khẩu.
-                // Sau đó, sử dụng authenticationManager để xác thực thông tin này và trả về đối
-                // tượng Authentication
-                Authentication authentication = authenticationManager.authenticate(
-                                new UsernamePasswordAuthenticationToken(
-                                                signInRequestDto.getEmail(),
-                                                signInRequestDto.getPassword()));
-                SecurityContextHolder.getContext().setAuthentication(authentication);
-                UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+        public User findOrCreateGoogleUser(OAuth2User oauth2User)
+                        throws RoleNotFoundException {
+
+                String email = oauth2User.getAttribute("email");
+
+                String name = oauth2User.getAttribute("name");
+
+                Optional<User> existingUser = userRepo.findByEmail(email);
+
+                if (existingUser.isPresent()) {
+                        return existingUser.get();
+                }
+
+                String username = generateUniqueUsername(name);
+
+                String randomPassword = UUID.randomUUID().toString();
+
+                User user = User.builder()
+                                .email(email)
+                                .username(username)
+                                .password(
+                                                passwordEncoder.encode(
+                                                                randomPassword))
+                                .enabled(true)
+                                .roles(
+                                                determineDefaultUserRole())
+                                .build();
+
+                return userRepo.save(user);
+        }
+
+        private Set<Role> determineDefaultUserRole()
+                        throws RoleNotFoundException {
+
+                Set<Role> roles = new HashSet<>();
+
+                roles.add(
+                                roleFactory.getInstance("user"));
+
+                return roles;
+        }
+
+        private String generateUniqueUsername(
+                        String name) {
+
+                String base = name
+                                .replaceAll(
+                                                "[^a-zA-Z0-9]",
+                                                "")
+                                .toLowerCase();
+
+                if (base.isBlank()) {
+                        base = "user";
+                }
+
+                String username = base;
+
+                int counter = 1;
+
+                while (userRepo.existsByUsername(username)) {
+
+                        username = base + counter;
+
+                        counter++;
+                }
+
+                return username;
+        }
+
+        @Override
+        public SignInResponseDto createTokensForUser(User user) {
+
+                UserDetailsImpl userDetails = UserDetailsImpl.build(user);
+
                 String accessToken = jwtUtils.generateJwtToken(userDetails);
+
                 String refreshToken = jwtUtils.generateRefreshToken(userDetails);
-                Long id = userDetails.getId();
-                User dbUser = userRepo
-                                .findById(id)
-                                .orElseThrow(
-                                                () -> new RuntimeException("User not found with id: " + id));
 
                 refreshTokenService.saveRefreshToken(
-                                dbUser,
+                                user,
                                 refreshToken);
-                List<String> roles = userDetails.getAuthorities().stream()
+
+                List<String> roles = userDetails.getAuthorities()
+                                .stream()
                                 .map(item -> item.getAuthority())
                                 .collect(Collectors.toList());
-                // (6): Khởi tạo đối tượng SignInResponseDto để trả về kết quả cho client.
-                SignInResponseDto sighInResponseDto = SignInResponseDto.builder()
+
+                return SignInResponseDto.builder()
                                 .accessToken(accessToken)
-                                .refreshToken(refreshToken) // tam thoi
+                                .refreshToken(refreshToken)
                                 .id(userDetails.getId())
                                 .username(userDetails.getUsername())
                                 .email(userDetails.getEmail())
                                 .roles(roles)
                                 .build();
-                return sighInResponseDto;
+        }
 
+        @Override
+        public SignInResponseDto signInWithCookie(
+                        SignInRequestDto signInRequestDto) {
+
+                Authentication authentication = authenticationManager.authenticate(
+                                new UsernamePasswordAuthenticationToken(
+                                                signInRequestDto.getEmail(),
+                                                signInRequestDto.getPassword()));
+
+                SecurityContextHolder
+                                .getContext()
+                                .setAuthentication(authentication);
+
+                UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+
+                Long id = userDetails.getId();
+
+                User dbUser = userRepo.findById(id)
+                                .orElseThrow(
+                                                () -> new RuntimeException(
+                                                                "User not found with id: " + id));
+
+                return createTokensForUser(dbUser);
         }
 
         @Override

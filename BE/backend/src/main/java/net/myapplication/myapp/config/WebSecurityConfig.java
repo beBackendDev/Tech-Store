@@ -11,8 +11,6 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
@@ -29,6 +27,7 @@ import net.myapplication.myapp.user.service.UserDetailsServiceImpl;
 @EnableMethodSecurity
 public class WebSecurityConfig {
 
+    private final DaoAuthenticationProvider authenticationProvider;
     private final UserDetailsServiceImpl userDetailsService;
     private final AuthEntryPointJwt unauthorizedHandler;
 
@@ -41,28 +40,15 @@ public class WebSecurityConfig {
     @Autowired
     public WebSecurityConfig(AuthEntryPointJwt unauthorizedHandler, UserDetailsServiceImpl userDetailsService,
             AuthTokenFilter authTokenFilter, OAuth2AuthenticationSuccessHandler oAuth2SuccessHandler,
-            OAuth2AuthenticationFailureHandler oAuth2FailureHandler) {
+            OAuth2AuthenticationFailureHandler oAuth2FailureHandler, DaoAuthenticationProvider authenticationProvider) {
         this.unauthorizedHandler = unauthorizedHandler;
         this.userDetailsService = userDetailsService;
         this.authTokenFilter = authTokenFilter;
         this.oAuth2SuccessHandler = oAuth2SuccessHandler;
         this.oAuth2FailureHandler = oAuth2FailureHandler;
+        this.authenticationProvider = authenticationProvider;
     }
 
-    @Bean
-    public DaoAuthenticationProvider authenticationProvider() {
-        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider(userDetailsService);
-
-        authProvider.setPasswordEncoder(passwordEncoder());
-
-        return authProvider;
-    }
-
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -81,7 +67,7 @@ public class WebSecurityConfig {
                         .anyRequest().authenticated());
 
         http
-                .authenticationProvider(authenticationProvider());
+                .authenticationProvider(authenticationProvider);
 
         http
                 .addFilterBefore(authTokenFilter, UsernamePasswordAuthenticationFilter.class);

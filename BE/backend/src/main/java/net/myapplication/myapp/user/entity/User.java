@@ -56,7 +56,7 @@ public class User {
     @Column(name = "enabled", unique = false, nullable = true)
     private boolean enabled;
 
-    @Column(name = "role", unique = false, nullable = false)
+    // @Column(name = "role", unique = false, nullable = false)
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),

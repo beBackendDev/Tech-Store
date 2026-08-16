@@ -6,9 +6,9 @@ import { useState } from "react";
 
 import { MdEmail } from "react-icons/md";
 
-import Input from "../common/Input";
+import Input from "../common/Input/Input";
 
-import Button from "../common/Button";
+import Button from "../common/Button/Button";
 
 import { login } from "../../services/authService";
 

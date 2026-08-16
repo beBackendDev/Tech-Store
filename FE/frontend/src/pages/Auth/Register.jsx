@@ -1,8 +1,8 @@
-import "./Login.scss";
+import "./Register.scss";
 
-import LoginForm from "../components/auth/LoginForm";
+import RegisterForm from "../../components/auth/RegisterForm";
 
-function Login(){
+function Register(){
 
     return(
 
@@ -20,7 +20,7 @@ function Login(){
 
                     <p>
 
-                        Secure Authentication
+                        Create your account
 
                     </p>
 
@@ -30,7 +30,7 @@ function Login(){
 
             <div className="auth-right">
 
-                <LoginForm/>
+                <RegisterForm/>
 
             </div>
 
@@ -40,4 +40,4 @@ function Login(){
 
 }
 
-export default Login;
+export default Register;

@@ -10,17 +10,18 @@ import {
 
     from "react-router-dom";
 
-import Login from "../pages/Login";
 
-import Register from "../pages/Register";
+import Register from "../pages/Auth/Register";
 
-import Home from "../pages/Home";
+import Home from "../pages/Home/Home";
 
-import Profile from "../pages/Profile";
+import Profile from "../pages/Profile/Profile";
 
-import AdminDashboard from "../pages/AdminDashboard";
+import AdminDashboard from "../pages/AdminDashboard/AdminDashboard";
 
 import ProtectedRoute from "./ProtectedRoute";
+import Login from "../pages/Auth/Login";
+import MainLayout from "../layouts/MainLayout/MainLayout";
 
 function AppRoutes() {
 
@@ -70,7 +71,15 @@ function AppRoutes() {
                     element={<Register />}
 
                 />
+                <Route element={<MainLayout />}>
 
+                    <Route path="/" element={<Home />} />
+
+                    {/* <Route path="/products" element={<Products />} /> */}
+
+                    {/* <Route path="/categories" element={<Categories />} /> */}
+
+                </Route>
             </Routes>
 
         </BrowserRouter>

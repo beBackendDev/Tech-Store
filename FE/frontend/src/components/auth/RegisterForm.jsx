@@ -4,9 +4,9 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import Input from "../common/Input";
+import Input from "../common/Input/Input";
 import PasswordInput from "./PasswordInput";
-import Button from "../common/Button";
+import Button from "../common/Button/Button";
 
 import Divider from "./Divider";
 import GoogleLoginButton from "./GoogleLoginButton";

@@ -1,4 +1,4 @@
-import { getAccessToken, removeAccessToken } from "../services/tokenService";
+import { getAccessToken, removeAccessToken } from "../../services/tokenService";
 
 function Home(){
     return(

@@ -1,0 +1,399 @@
+.user-menu {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    // ============================================================
+    // Trigger
+    // ============================================================
+
+    &__trigger {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        padding: 6px 8px;
+
+        border: none;
+        background: transparent;
+
+        border-radius: 10px;
+
+        cursor: pointer;
+
+        transition:
+            background-color 0.2s ease,
+            box-shadow 0.2s ease;
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+
+        &:focus-visible {
+            outline: 2px solid #1677ff;
+            outline-offset: 2px;
+        }
+    }
+
+
+    // ============================================================
+    // Avatar
+    // ============================================================
+
+    &__avatar {
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        border-radius: 50%;
+
+        background: #1677ff;
+
+        color: #ffffff;
+
+        font-size: 16px;
+        font-weight: 600;
+
+        text-transform: uppercase;
+    }
+
+
+    // ============================================================
+    // Identity
+    // ============================================================
+
+    &__identity {
+        display: flex;
+        flex-direction: column;
+
+        min-width: 0;
+
+        text-align: left;
+    }
+
+    &__username {
+        max-width: 140px;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+
+        color: #1f1f1f;
+
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__email {
+        max-width: 140px;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+
+        color: #8c8c8c;
+
+        font-size: 12px;
+    }
+
+
+    // ============================================================
+    // Arrow
+    // ============================================================
+
+    &__arrow {
+        color: #8c8c8c;
+
+        font-size: 11px;
+
+        transition:
+            transform 0.2s ease;
+    }
+
+    &__arrow--open {
+        transform: rotate(180deg);
+    }
+
+
+    // ============================================================
+    // Dropdown
+    // ============================================================
+
+    &__dropdown {
+        position: absolute;
+
+        top: calc(100% + 10px);
+
+        right: 0;
+
+        z-index: 1000;
+
+        width: 280px;
+
+        padding: 8px;
+
+        background: #ffffff;
+
+        border: 1px solid #f0f0f0;
+
+        border-radius: 12px;
+
+        box-shadow:
+            0 8px 24px rgba(0, 0, 0, 0.12);
+
+        animation:
+            userMenuFadeIn 0.15s ease;
+    }
+
+
+    // ============================================================
+    // Profile
+    // ============================================================
+
+    &__profile {
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 12px;
+    }
+
+    &__profile-avatar {
+        width: 44px;
+        height: 44px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        border-radius: 50%;
+
+        background: #1677ff;
+
+        color: #ffffff;
+
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &__profile-info {
+        display: flex;
+
+        flex-direction: column;
+
+        min-width: 0;
+
+        gap: 3px;
+
+        strong {
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+
+            white-space: nowrap;
+
+            color: #1f1f1f;
+
+            font-size: 14px;
+        }
+
+        span {
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+
+            white-space: nowrap;
+
+            color: #8c8c8c;
+
+            font-size: 12px;
+        }
+    }
+
+
+    // ============================================================
+    // Divider
+    // ============================================================
+
+    &__divider {
+        height: 1px;
+
+        margin: 6px 4px;
+
+        background: #f0f0f0;
+    }
+
+
+    // ============================================================
+    // Menu item
+    // ============================================================
+
+    &__item {
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        width: 100%;
+
+        padding: 10px 12px;
+
+        border: none;
+
+        border-radius: 8px;
+
+        background: transparent;
+
+        color: #262626;
+
+        font-size: 14px;
+
+        text-decoration: none;
+
+        cursor: pointer;
+
+        transition:
+            background-color 0.15s ease,
+            color 0.15s ease;
+
+        box-sizing: border-box;
+
+        &:hover {
+            background: #f5f5f5;
+        }
+
+        &:focus-visible {
+            outline: 2px solid #1677ff;
+            outline-offset: -2px;
+        }
+
+        svg {
+            width: 16px;
+
+            color: #595959;
+
+            font-size: 16px;
+        }
+    }
+
+
+    // ============================================================
+    // Admin
+    // ============================================================
+
+    &__item--admin {
+        color: #1677ff;
+
+        svg {
+            color: #1677ff;
+        }
+
+        &:hover {
+            background: #e6f4ff;
+        }
+    }
+
+
+    // ============================================================
+    // Logout
+    // ============================================================
+
+    &__item--logout {
+        color: #ff4d4f;
+
+        svg {
+            color: #ff4d4f;
+        }
+
+        &:hover {
+            background: #fff1f0;
+        }
+    }
+}
+
+
+// ============================================================
+// Animation
+// ============================================================
+
+@keyframes userMenuFadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+// ============================================================
+// Responsive
+// ============================================================
+
+@media (max-width: 768px) {
+
+    .user-menu {
+
+        &__identity {
+            display: none;
+        }
+
+        &__trigger {
+            padding: 4px;
+        }
+
+        &__arrow {
+            display: none;
+        }
+
+        &__dropdown {
+            right: -4px;
+
+            width: 270px;
+        }
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .user-menu {
+
+        &__dropdown {
+            position: fixed;
+
+            top: 70px;
+
+            right: 12px;
+            left: 12px;
+
+            width: auto;
+
+            max-width: none;
+        }
+    }
+
+}

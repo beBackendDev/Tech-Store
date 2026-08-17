@@ -7,9 +7,10 @@ import { AiOutlineSearch } from "react-icons/ai";
 import Container from "../Container/Container";
 
 import "./Header.scss";
-
+import useAuth from "../../../hooks/useAuth";
+import UserMenu from "./UserMenu";
 const Header = () => {
-
+    const { auth, logout } = useAuth();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
@@ -40,11 +41,10 @@ const Header = () => {
 
                     {/* Navigation */}
                     <div
-                        className={`navbar__navigation ${
-                            isMenuOpen
-                                ? "navbar__navigation--open"
-                                : ""
-                        }`}
+                        className={`navbar__navigation ${isMenuOpen
+                            ? "navbar__navigation--open"
+                            : ""
+                            }`}
                     >
 
                         <Link to="/">
@@ -92,14 +92,31 @@ const Header = () => {
                         >
                             <LuShoppingCart />
                         </Link>
+                        {/*authentication */}
+                        {auth.authenticated ? (
+                            <UserMenu
+                                user={auth.user}
+                                onLogout={logout}
+                            />
+                        )
+                            : (<div className="header__auth">
 
-                        <Link
+                                <Link to="/login">
+                                    Sign in
+                                </Link>
+
+                                <Link to="/register">
+                                    Sign up
+                                </Link>
+
+                            </div>)}
+                        {/* <Link
                             to="/login"
                             className="navbar__action"
                             aria-label="Account"
                         >
                             <CgProfile />
-                        </Link>
+                        </Link> */}
 
                     </div>
 

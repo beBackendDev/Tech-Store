@@ -59,7 +59,7 @@ function LoginForm() {
                 authenticated: true
 
             });
-            navigate("/home");
+            navigate("/");
             console.log("response" + response);
             // alert(response.message);
 

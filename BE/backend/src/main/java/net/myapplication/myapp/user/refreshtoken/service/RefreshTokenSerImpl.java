@@ -4,13 +4,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import net.myapplication.myapp.user.entity.User;
 import net.myapplication.myapp.user.refreshtoken.entity.RefreshToken;
 import net.myapplication.myapp.user.refreshtoken.repository.RefreshTokenRepo;
 
-@Component
+@Service
 public class RefreshTokenSerImpl implements RefreshTokenSer {
 
         private final RefreshTokenRepo refreshTokenRepo;
@@ -61,12 +61,15 @@ public class RefreshTokenSerImpl implements RefreshTokenSer {
 
         @Override
         public void revokeToken(String token) {
-                RefreshToken refreshToken = verifyToken(token);
+                // RefreshToken refreshToken = verifyToken(token);
+                refreshTokenRepo.findByToken(token)
+                                .ifPresent(refreshToken -> {
+                                        refreshToken.setRevoked(true);
 
-                refreshToken.setRevoked(true);
+                                        refreshTokenRepo.save(
+                                                        refreshToken);
+                                });
 
-                refreshTokenRepo.save(
-                                refreshToken);
         }
 
         @Override
@@ -81,6 +84,6 @@ public class RefreshTokenSerImpl implements RefreshTokenSer {
         @Override
         public void deleteExpiredTokens() {
                 refreshTokenRepo.deleteAllByExpiryDateBefore(
-                LocalDateTime.now());
+                                LocalDateTime.now());
         }
 }

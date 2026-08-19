@@ -13,6 +13,7 @@ import {
 import { AuthContext } from "../../../context/AuthContext";
 
 import "./UserMenu.scss";
+import { logout } from "../../../services/authService";
 
 function UserMenu() {
 
@@ -137,14 +138,8 @@ function UserMenu() {
 
         try {
 
-            /*
-             * Sau này chúng ta sẽ gọi:
-             *
-             * await logout();
-             *
-             * để revoke refresh token
-             * ở backend.
-             */
+           await logout();
+            
 
         } catch (error) {
 

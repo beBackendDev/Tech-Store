@@ -20,9 +20,14 @@ import Profile from "../pages/Profile/Profile";
 import AdminDashboard from "../pages/AdminDashboard/AdminDashboard";
 
 import ProtectedRoute from "./ProtectedRoute";
+
 import Login from "../pages/Auth/Login";
+
 import MainLayout from "../layouts/MainLayout/MainLayout";
 
+import ProductDetail from "../pages/ProductDetail/ProductDetail";
+
+import Categories from "../pages/Categories/Categories";
 function AppRoutes() {
 
     return (
@@ -80,6 +85,15 @@ function AppRoutes() {
                     {/* <Route path="/categories" element={<Categories />} /> */}
 
                 </Route>
+                {/*  Route detail product */}
+                <Route
+                    path="/products/:id"
+                    element={<ProductDetail />}
+                />
+                <Route
+                    path="/categories"
+                    element={<Categories />}
+                />
             </Routes>
 
         </BrowserRouter>

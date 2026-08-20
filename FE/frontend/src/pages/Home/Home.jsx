@@ -64,11 +64,17 @@ function Home() {
 
                     <div className="home-page__hero-actions">
 
-                        <button className="home-page__primary-button">
+                        <button className="home-page__primary-button"
+                            type="button"
+                            onClick={() => navigate("/products")}
+                        >
                             Shop now
                         </button>
 
-                        <button className="home-page__secondary-button">
+                        <button className="home-page__secondary-button"
+                            type="button"
+                            onClick={() => navigate("/products")}
+                        >
                             Explore categories
                         </button>
 

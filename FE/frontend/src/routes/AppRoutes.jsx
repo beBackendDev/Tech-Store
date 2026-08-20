@@ -28,6 +28,10 @@ import MainLayout from "../layouts/MainLayout/MainLayout";
 import ProductDetail from "../pages/ProductDetail/ProductDetail";
 
 import Categories from "../pages/Categories/Categories";
+
+import ProductListing from "../pages/Product/ProductListing/ProductListing";
+
+import Cart from "../pages/Cart/Cart";
 function AppRoutes() {
 
     return (
@@ -93,6 +97,16 @@ function AppRoutes() {
                 <Route
                     path="/categories"
                     element={<Categories />}
+                />
+                {/* Product listing route */}
+                <Route
+                    path="/products"
+                    element={<ProductListing />}
+                />
+                {/* Cart Route */}
+                <Route
+                    path="/cart"
+                    element={<Cart />}
                 />
             </Routes>
 

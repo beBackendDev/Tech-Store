@@ -7,6 +7,62 @@
 
     background: var(--color-background);
     border-bottom: 1px solid var(--color-border);
+
+    //cart
+}
+
+.header {
+
+    &__cart {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        padding: 0;
+
+        border: none;
+        background: transparent;
+
+        cursor: pointer;
+    }
+
+
+    &__cart-icon {
+        font-size: 20px;
+    }
+
+
+    &__cart-badge {
+        position: absolute;
+
+        top: 1px;
+        right: 0;
+
+        min-width: 18px;
+        height: 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0 5px;
+
+        border-radius: 999px;
+
+        background: var(--color-primary);
+        color: black;
+
+        font-size: 10px;
+        font-weight: 700;
+
+        line-height: 1;
+    }
+
 }
 
 .navbar {

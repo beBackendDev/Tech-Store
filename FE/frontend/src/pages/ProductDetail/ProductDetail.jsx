@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { mockProducts } from "../../data/mockProducts";
+import useCart from "../../hooks/useCart";
 
 import "./ProductDetail.scss";
 
@@ -11,9 +13,13 @@ function ProductDetail() {
 
     const navigate = useNavigate();
 
+    const { addToCart } = useCart();
+
     const product = mockProducts.find(
         item => item.id === Number(id)
     );
+
+    const [quantity, setQuantity] = useState(1);
 
 
     const formatPrice = (price) => {
@@ -22,6 +28,54 @@ function ProductDetail() {
             style: "currency",
             currency: "VND",
         }).format(price);
+
+    };
+
+
+    const increaseQuantity = () => {
+
+        setQuantity(prev =>
+            Math.min(prev + 1, product.stock)
+        );
+
+    };
+
+
+    const decreaseQuantity = () => {
+
+        setQuantity(prev =>
+            Math.max(prev - 1, 1)
+        );
+
+    };
+
+
+    const handleAddToCart = () => {
+
+        if (!product || product.stock <= 0) {
+            return;
+        }
+
+        for (let i = 0; i < quantity; i++) {
+            addToCart(product);
+        }
+
+        navigate("/cart");
+
+    };
+
+
+    const handleBuyNow = () => {
+
+        if (!product || product.stock <= 0) {
+            return;
+        }
+
+        for (let i = 0; i < quantity; i++) {
+            addToCart(product);
+        }
+
+        navigate("/cart");
 
     };
 
@@ -39,9 +93,10 @@ function ProductDetail() {
                     </h1>
 
                     <button
-                        onClick={() => navigate("/")}
+                        type="button"
+                        onClick={() => navigate("/products")}
                     >
-                        Back to home
+                        Back to products
                     </button>
 
                 </div>
@@ -60,13 +115,23 @@ function ProductDetail() {
 
             <div className="product-detail__breadcrumb">
 
-                <button onClick={() => navigate("/")}>
+                <button
+                    type="button"
+                    onClick={() => navigate("/")}
+                >
                     Home
                 </button>
 
                 <span>/</span>
 
-                <button>
+                <button
+                    type="button"
+                    onClick={() =>
+                        navigate(
+                            `/categories/${product.category}`
+                        )
+                    }
+                >
                     {product.category}
                 </button>
 
@@ -83,7 +148,7 @@ function ProductDetail() {
 
             <section className="product-detail__main">
 
-                {/* IMAGE */}
+                {/* ================= IMAGE ================= */}
 
                 <div className="product-detail__gallery">
 
@@ -93,6 +158,14 @@ function ProductDetail() {
 
                             <span className="product-detail__discount">
                                 -{product.discount}%
+                            </span>
+
+                        )}
+
+                        {product.isNew && (
+
+                            <span className="product-detail__new">
+                                NEW
                             </span>
 
                         )}
@@ -107,7 +180,7 @@ function ProductDetail() {
                 </div>
 
 
-                {/* INFORMATION */}
+                {/* ================= INFORMATION ================= */}
 
                 <div className="product-detail__info">
 
@@ -168,7 +241,9 @@ function ProductDetail() {
                             <>
                                 <span className="product-detail__stock-dot" />
 
-                                In stock
+                                <span>
+                                    In stock
+                                </span>
 
                                 <span>
                                     ({product.stock} available)
@@ -186,12 +261,10 @@ function ProductDetail() {
                     </div>
 
 
-                    {/* Divider */}
-
                     <div className="product-detail__divider" />
 
 
-                    {/* Quantity */}
+                    {/* ================= QUANTITY ================= */}
 
                     <div className="product-detail__quantity">
 
@@ -201,15 +274,25 @@ function ProductDetail() {
 
                         <div className="product-detail__quantity-control">
 
-                            <button>
+                            <button
+                                type="button"
+                                onClick={decreaseQuantity}
+                                disabled={quantity <= 1}
+                            >
                                 −
                             </button>
 
                             <span>
-                                1
+                                {quantity}
                             </span>
 
-                            <button>
+                            <button
+                                type="button"
+                                onClick={increaseQuantity}
+                                disabled={
+                                    quantity >= product.stock
+                                }
+                            >
                                 +
                             </button>
 
@@ -218,20 +301,24 @@ function ProductDetail() {
                     </div>
 
 
-                    {/* Actions */}
+                    {/* ================= ACTIONS ================= */}
 
                     <div className="product-detail__actions">
 
                         <button
+                            type="button"
                             className="product-detail__add-cart"
                             disabled={product.stock <= 0}
+                            onClick={handleAddToCart}
                         >
                             Add to cart
                         </button>
 
                         <button
+                            type="button"
                             className="product-detail__buy-now"
                             disabled={product.stock <= 0}
+                            onClick={handleBuyNow}
                         >
                             Buy now
                         </button>
@@ -239,11 +326,12 @@ function ProductDetail() {
                     </div>
 
 
-                    {/* Benefits */}
+                    {/* ================= BENEFITS ================= */}
 
                     <div className="product-detail__benefits">
 
                         <div>
+
                             <strong>
                                 Free shipping
                             </strong>
@@ -251,9 +339,12 @@ function ProductDetail() {
                             <span>
                                 On orders over 500,000₫
                             </span>
+
                         </div>
 
+
                         <div>
+
                             <strong>
                                 Secure payment
                             </strong>
@@ -261,9 +352,12 @@ function ProductDetail() {
                             <span>
                                 Your payment is protected
                             </span>
+
                         </div>
 
+
                         <div>
+
                             <strong>
                                 Easy returns
                             </strong>
@@ -271,6 +365,7 @@ function ProductDetail() {
                             <span>
                                 7-day return policy
                             </span>
+
                         </div>
 
                     </div>
@@ -309,6 +404,7 @@ function ProductDetail() {
         </main>
 
     );
+
 }
 
 export default ProductDetail;

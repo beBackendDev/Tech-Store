@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import "./ProductCard.scss";
+import useCart from "../../../hooks/useCart";
 
-function ProductCard({ product, onAddToCart }) {
+function ProductCard({ product }) {
     const navigate = useNavigate();
     const formatPrice = (price) => {
         return new Intl.NumberFormat("vi-VN", {
@@ -12,6 +13,7 @@ function ProductCard({ product, onAddToCart }) {
     const handleProductClick = () => {
         navigate(`/products/${product.id}`);
     };
+    const { addToCart } = useCart();
     return (
         <article className="product-card">
 
@@ -81,7 +83,7 @@ function ProductCard({ product, onAddToCart }) {
                 <button
                     className="product-card__cart"
                     disabled={product.stock <= 0}
-                    onClick={() => onAddToCart?.(product)}
+                    onClick={() => addToCart(product)}
                 >
                     {product.stock > 0
                         ? "Add to cart"

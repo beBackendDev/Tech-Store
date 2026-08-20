@@ -9,9 +9,11 @@ import Container from "../Container/Container";
 import "./Header.scss";
 import useAuth from "../../../hooks/useAuth";
 import UserMenu from "./UserMenu";
+import useCart from "../../../hooks/useCart";
 const Header = () => {
     const { auth, logout } = useAuth();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { totalItems } = useCart();
 
     return (
         <header className="header">
@@ -85,13 +87,30 @@ const Header = () => {
                     {/* Actions */}
                     <div className="navbar__actions">
 
-                        <Link
+                        {/* <Link
                             to="/cart"
                             className="navbar__action"
                             aria-label="Shopping cart"
                         >
                             <LuShoppingCart />
+                        </Link> */}
+
+                        <Link
+                         
+                            className="header__cart"
+                            to="/cart"
+                        >
+                            <span className="header__cart-icon">
+                                <LuShoppingCart />
+                            </span>
+
+                            {totalItems > 0 && (
+                                <span className="header__cart-badge">
+                                    {totalItems}
+                                </span>
+                            )}
                         </Link>
+
                         {/*authentication */}
                         {auth.authenticated ? (
                             <UserMenu

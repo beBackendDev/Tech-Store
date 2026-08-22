@@ -32,6 +32,7 @@ import Categories from "../pages/Categories/Categories";
 import ProductListing from "../pages/Product/ProductListing/ProductListing";
 
 import Cart from "../pages/Cart/Cart";
+import Checkout from "../pages/Checkout/Checkout";
 function AppRoutes() {
 
     return (
@@ -107,6 +108,11 @@ function AppRoutes() {
                 <Route
                     path="/cart"
                     element={<Cart />}
+                />
+                {/* Checkout Route */}
+                <Route
+                    path="/checkout"
+                    element={<Checkout />}
                 />
             </Routes>
 

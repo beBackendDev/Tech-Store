@@ -1,95 +1,83 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
 .product-filter {
-
     width: 240px;
-
     flex-shrink: 0;
 
+    // =========================
+    // HEADER
+    // =========================
 
     &__header {
-
         padding-bottom: 20px;
 
-        border-bottom:
-            1px solid var(--color-border);
-
+        border-bottom: 1px solid $border-color;
 
         h3 {
-
             margin: 0;
 
-            font-size: 18px;
+            font-size: $font-size-lg;
+            font-weight: 600;
 
-            color: var(--color-text-primary);
+            color: $gray-800;
         }
     }
 
+    // =========================
+    // SECTION
+    // =========================
 
     &__section {
-
         padding: 24px 0;
 
-
         h4 {
-
             margin: 0 0 16px;
 
-            font-size: 14px;
-
+            font-size: $font-size-sm;
             font-weight: 700;
 
-            color: var(--color-text-primary);
+            color: $gray-800;
         }
     }
 
+    // =========================
+    // CATEGORIES
+    // =========================
 
     &__categories {
-
         display: flex;
-
         flex-direction: column;
 
         gap: 6px;
 
-
         button {
-
             padding: 9px 10px;
 
-            border: 0;
-
-            border-radius: 8px;
+            border: none;
+            border-radius: $radius-sm;
 
             background: transparent;
 
             text-align: left;
 
-            font-size: 14px;
-
-            color: var(--color-text-secondary);
+            font-size: $font-size-sm;
+            color: $gray-600;
 
             cursor: pointer;
 
             transition:
-                background 0.2s ease,
-                color 0.2s ease;
-
+                background $transition,
+                color $transition;
 
             &:hover {
-
-                background:
-                    var(--color-background-secondary);
-
-                color:
-                    var(--color-text-primary);
+                background: $gray-100;
+                color: $gray-800;
             }
 
-
             &.active {
-
-                background:
-                    var(--color-primary);
-
-                color: white;
+                background: $primary;
+                color: $white;
 
                 font-weight: 600;
             }
@@ -97,25 +85,20 @@
     }
 }
 
+// =========================
+// TABLET / MOBILE
+// =========================
 
-@media (max-width: 768px) {
-
+@include tablet {
     .product-filter {
-
         width: 100%;
 
-
         &__categories {
-
             flex-direction: row;
-
             flex-wrap: wrap;
 
-
             button {
-
-                border:
-                    1px solid var(--color-border);
+                border: 1px solid $border-color;
             }
         }
     }

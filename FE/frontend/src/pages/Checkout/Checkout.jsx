@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 import useCart from "../../hooks/useCart";
 
@@ -9,6 +10,9 @@ import "./Checkout.scss";
 function Checkout() {
 
     const navigate = useNavigate();
+
+    const { auth } = useAuth();
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const {
         items,
@@ -22,7 +26,7 @@ function Checkout() {
         firstName: "",
         lastName: "",
         phone: "",
-        email: "",
+        email: auth.user?.email || "",
         address: "",
         city: "",
         district: "",
@@ -32,7 +36,7 @@ function Checkout() {
 
 
     const [paymentMethod, setPaymentMethod] =
-        useState("cod");
+        useState("COD");
 
 
     const formatPrice = (price) => {
@@ -73,27 +77,63 @@ function Checkout() {
     const handleSubmit = (event) => {
 
         event.preventDefault();
+        if (isSubmitting) {
+            return;
+        }
 
-        console.log(
-            "Checkout:",
-            {
-                items,
-                shipping: formData,
+        setIsSubmitting(true);
+        try {
+            const orderData = {
+
+                shipping: {
+                    firstName: formData.firstName.trim(),
+                    lastName: formData.lastName.trim(),
+                    phone: formData.phone.trim(),
+                    email: formData.email.trim(),
+                    address: formData.address.trim(),
+                    city: formData.city,
+                    district: formData.district,
+                    note: formData.note.trim()
+                },
+
                 paymentMethod,
+
+                items: items.map(item => ({
+                    productId: item.product.id,
+                    quantity: item.quantity
+                })),
+
                 subtotal,
                 shippingFee,
                 total
-            }
-        );
+            };
+            console.log(
+                "Checkout:",
+                orderData
+            );
 
-        /*
-         * Sau này:
-         *
-         * await createOrder(...)
-         *
-         */
+            /*
+ * Sau này:
+ *
+ * await createOrder(...)
+ *
+ */
 
-        navigate("/order-success");
+        } catch (error) {
+
+            console.error(
+                "Create order failed:",
+                error
+            );
+
+        } finally {
+
+            setIsSubmitting(false);
+
+        }
+
+
+
 
     };
 
@@ -431,19 +471,18 @@ function Checkout() {
                                 {/* COD */}
 
                                 <label
-                                    className={`checkout-payment__option ${
-                                        paymentMethod === "cod"
-                                            ? "checkout-payment__option--active"
-                                            : ""
-                                    }`}
+                                    className={`checkout-payment__option ${paymentMethod === "cod"
+                                        ? "checkout-payment__option--active"
+                                        : ""
+                                        }`}
                                 >
 
                                     <input
                                         type="radio"
                                         name="payment"
-                                        value="cod"
+                                        value="COD"
                                         checked={
-                                            paymentMethod === "cod"
+                                            paymentMethod === "COD"
                                         }
                                         onChange={(event) =>
                                             setPaymentMethod(
@@ -470,19 +509,18 @@ function Checkout() {
                                 {/* BANK */}
 
                                 <label
-                                    className={`checkout-payment__option ${
-                                        paymentMethod === "bank"
-                                            ? "checkout-payment__option--active"
-                                            : ""
-                                    }`}
+                                    className={`checkout-payment__option ${paymentMethod === "bank"
+                                        ? "checkout-payment__option--active"
+                                        : ""
+                                        }`}
                                 >
 
                                     <input
                                         type="radio"
                                         name="payment"
-                                        value="bank"
+                                        value="BANK_TRANSFER"
                                         checked={
-                                            paymentMethod === "bank"
+                                            paymentMethod === "BANK_TRANSFER"
                                         }
                                         onChange={(event) =>
                                             setPaymentMethod(
@@ -509,19 +547,18 @@ function Checkout() {
                                 {/* MOCK */}
 
                                 <label
-                                    className={`checkout-payment__option ${
-                                        paymentMethod === "online"
-                                            ? "checkout-payment__option--active"
-                                            : ""
-                                    }`}
+                                    className={`checkout-payment__option ${paymentMethod === "online"
+                                        ? "checkout-payment__option--active"
+                                        : ""
+                                        }`}
                                 >
 
                                     <input
                                         type="radio"
                                         name="payment"
-                                        value="online"
+                                        value="ONLINE"
                                         checked={
-                                            paymentMethod === "online"
+                                            paymentMethod === "ONLINE"
                                         }
                                         onChange={(event) =>
                                             setPaymentMethod(
@@ -682,8 +719,12 @@ function Checkout() {
                             <button
                                 type="submit"
                                 className="checkout-summary__submit"
+                                disabled={isSubmitting}
                             >
-                                Place order
+                                {isSubmitting
+                                    ? "Processing..."
+                                    : "Place order"
+                                }
                             </button>
 
 

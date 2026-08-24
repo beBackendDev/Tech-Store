@@ -17,7 +17,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import net.myapplication.myapp.enumpack.OrderStatus;
 import net.myapplication.myapp.enumpack.PaymentMethod;
 import net.myapplication.myapp.enumpack.PaymentStatus;
@@ -25,6 +31,10 @@ import net.myapplication.myapp.user.entity.User;
 
 @Entity
 @Table(name = "orders")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Order {
 
     @Id
@@ -91,7 +101,38 @@ public class Order {
 
     private LocalDateTime updatedAt;
 
+    //LifeCycle 
+    @PrePersist
+    protected void onCreate() {
+
+        LocalDateTime now = LocalDateTime.now();
+
+        createdAt = now;
+        updatedAt = now;
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+
+        updatedAt = LocalDateTime.now();
+    }
+
     // relation
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderItem> items = new ArrayList<>();
+
+    // methods
+    public void addItem(OrderItem item) {
+
+        items.add(item);
+
+        item.setOrder(this);
+    }
+
+    public void removeItem(OrderItem item) {
+
+        items.remove(item);
+
+        item.setOrder(null);
+    }
 }

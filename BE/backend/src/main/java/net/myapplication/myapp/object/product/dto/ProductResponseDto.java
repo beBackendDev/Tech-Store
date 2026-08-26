@@ -36,4 +36,6 @@ public class ProductResponseDto {
     private Integer stock;
 
     private boolean isNew;
+
+    private boolean active;
 }

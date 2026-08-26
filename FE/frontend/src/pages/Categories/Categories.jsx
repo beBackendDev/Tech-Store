@@ -1,12 +1,15 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 import ProductCard
     from "../../components/product/ProductCard/ProductCard";
 
-import { mockProducts }
-    from "../../data/mockProducts";
+// import { mockProducts }
+//     from "../../data/mockProducts";
 
+import {
+    getProducts
+} from "../../services/productService";
 import { mockCategories }
     from "../../data/mockCategories";
 
@@ -17,6 +20,13 @@ function Categories() {
 
     const navigate = useNavigate();
 
+    const [products, setProducts] =
+        useState([]);
+    const [loading, setLoading] =
+        useState(true);
+
+    const [error, setError] =
+        useState(null);
     const [searchParams] = useSearchParams();
 
     const initialCategory =
@@ -33,21 +43,55 @@ function Categories() {
     const [search, setSearch] =
         useState("");
 
+    useEffect(() => {
+
+        const loadProducts = async () => {
+
+            try {
+
+                setLoading(true);
+
+                const data =
+                    await getProducts();
+
+                setProducts(data);
+
+            } catch (error) {
+
+                console.error(
+                    "Failed to load products:",
+                    error
+                );
+
+                setError(
+                    "Unable to load products."
+                );
+
+            } finally {
+
+                setLoading(false);
+            }
+        };
+
+
+        loadProducts();
+
+    }, []);
 
     // ==============================
     // FILTER + SORT
     // ==============================
 
     const filteredProducts = useMemo(() => {
-//thuc hien tren mockProductsz
-        let products = [...mockProducts];
+        //thuc hien tren mockProductsz
+        let product = [...products];
 
 
         // Category
 
         if (selectedCategory !== "All") {
 
-            products = products.filter(
+            product = product.filter(
                 product =>
                     product.category.toLowerCase() ===
                     selectedCategory.toLowerCase()
@@ -63,7 +107,7 @@ function Categories() {
             const keyword =
                 search.toLowerCase().trim();
 
-            products = products.filter(product =>
+            product = product.filter(product =>
                 product.category
                     .toLowerCase()
                     .includes(keyword)
@@ -78,7 +122,7 @@ function Categories() {
 
             case "price-low":
 
-                products.sort(
+                product.sort(
                     (a, b) => a.price - b.price
                 );
 
@@ -87,7 +131,7 @@ function Categories() {
 
             case "price-high":
 
-                products.sort(
+                product.sort(
                     (a, b) => b.price - a.price
                 );
 
@@ -96,7 +140,7 @@ function Categories() {
 
             case "rating":
 
-                products.sort(
+                product.sort(
                     (a, b) => b.rating - a.rating
                 );
 
@@ -105,7 +149,7 @@ function Categories() {
 
             case "newest":
 
-                products.sort(
+                product.sort(
                     (a, b) =>
                         Number(b.isNew) -
                         Number(a.isNew)
@@ -119,7 +163,7 @@ function Categories() {
         }
 
 
-        return products;
+        return product;
 
     }, [
         selectedCategory,
@@ -127,7 +171,24 @@ function Categories() {
         sortBy
     ]);
 
+    if (loading) {
 
+        return (
+            <main className="products-page">
+                <p>Loading products...</p>
+            </main>
+        );
+    }
+
+
+    if (error) {
+
+        return (
+            <main className="products-page">
+                <p>{error}</p>
+            </main>
+        );
+    }
     // ==============================
     // HANDLERS
     // ==============================

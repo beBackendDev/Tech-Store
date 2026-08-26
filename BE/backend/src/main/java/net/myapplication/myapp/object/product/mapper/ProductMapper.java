@@ -40,6 +40,8 @@ public class ProductMapper {
                 .stock(product.getStock())
 
                 .isNew(product.isNew())
+                
+                .active(product.isActive())
 
                 .build();
     }

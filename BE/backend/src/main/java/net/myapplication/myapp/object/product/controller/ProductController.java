@@ -13,12 +13,12 @@ import net.myapplication.myapp.object.product.dto.ProductResponseDto;
 import net.myapplication.myapp.object.product.service.ProductService;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/api")
 @RequiredArgsConstructor
 public class ProductController {
         private final ProductService productService;
 
-    @GetMapping
+    @GetMapping("/public/products")
     public ResponseEntity<List<ProductResponseDto>> getProducts() {
 
         return ResponseEntity.ok(
@@ -26,7 +26,7 @@ public class ProductController {
         );
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/public/products/{id}")
     public ResponseEntity<ProductResponseDto> getProduct(
             @PathVariable Long id
     ) {
@@ -36,7 +36,7 @@ public class ProductController {
         );
     }
 
-    @GetMapping("/category/{category}")
+    @GetMapping("/public/products/category/{category}")
     public ResponseEntity<List<ProductResponseDto>> getByCategory(
             @PathVariable String category
     ) {

@@ -1,15 +1,32 @@
-//private api
-
 import axios from "axios";
+import { getAccessToken } from "../utils/tokenStorage";
 
 const axiosPrivate = axios.create({
-
-    baseURL:"http://localhost:8080/api",
-
-    withCredentials:true
-
+    baseURL: "http://localhost:8080/api",
+    withCredentials: true,
+    headers: {
+        "Content-Type": "application/json"
+    }
 });
 
-export default axiosPrivate;
+axiosPrivate.interceptors.request.use(
+    (config) => {
 
-//hoan thien o giai doan 6
+        const accessToken = getAccessToken();
+
+        if (accessToken) {
+
+            config.headers.Authorization =
+                `Bearer ${accessToken}`;
+
+        }
+
+        return config;
+    },
+
+    (error) => {
+        return Promise.reject(error);
+    }
+);
+
+export default axiosPrivate;

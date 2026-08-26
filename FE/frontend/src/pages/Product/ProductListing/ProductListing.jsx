@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect , useMemo, useState } from "react";
 
 import ProductGrid
     from "../../../components/product/ProductGrid/ProductGrid";
@@ -9,13 +9,24 @@ import ProductFilter
 import ProductSort
     from "../../../components/product/ProductSort/ProductSort";
 
-import { mockProducts }
-    from "../../../data/mockProducts";
+// import { mockProducts }
+//     from "../../../data/mockProducts";
 
 import "./ProductListing.scss";
 
+import {
+    getProducts
+} from "../../../services/productService";
 
 function ProductListing() {
+    const [products, setProducts] =
+        useState([]);
+
+    const [loading, setLoading] =
+        useState(true);
+
+    const [error, setError] =
+        useState(null);
 
     const [selectedCategory, setSelectedCategory] =
         useState("");
@@ -41,7 +52,7 @@ function ProductListing() {
 
         return [
             ...new Set(
-                mockProducts.map(
+                products.map(
                     product => product.category
                 )
             )
@@ -56,14 +67,14 @@ function ProductListing() {
 
     const filteredProducts = useMemo(() => {
 
-        let products = [...mockProducts];
+        let product = [...products];
 
 
         // Category
 
         if (selectedCategory) {
 
-            products = products.filter(
+            product = product.filter(
                 product =>
                     product.category === selectedCategory
             );
@@ -76,7 +87,7 @@ function ProductListing() {
 
             case "price-low":
 
-                products.sort(
+                product.sort(
                     (a, b) =>
                         a.price - b.price
                 );
@@ -86,7 +97,7 @@ function ProductListing() {
 
             case "price-high":
 
-                products.sort(
+                product.sort(
                     (a, b) =>
                         b.price - a.price
                 );
@@ -96,7 +107,7 @@ function ProductListing() {
 
             case "rating":
 
-                products.sort(
+                product.sort(
                     (a, b) =>
                         b.rating - a.rating
                 );
@@ -106,7 +117,7 @@ function ProductListing() {
 
             case "newest":
 
-                products.sort(
+                product.sort(
                     (a, b) =>
                         Number(b.isNew) -
                         Number(a.isNew)
@@ -120,14 +131,65 @@ function ProductListing() {
         }
 
 
-        return products;
+        return product;
 
     }, [
         selectedCategory,
         sort
     ]);
 
+useEffect(() => {
 
+        const loadProducts = async () => {
+
+            try {
+
+                setLoading(true);
+
+                const data =
+                    await getProducts();
+
+                setProducts(data);
+
+            } catch (error) {
+
+                console.error(
+                    "Failed to load products:",
+                    error
+                );
+
+                setError(
+                    "Unable to load products."
+                );
+
+            } finally {
+
+                setLoading(false);
+            }
+        };
+
+
+        loadProducts();
+
+    }, []);
+    if (loading) {
+
+        return (
+            <main className="products-page">
+                <p>Loading products...</p>
+            </main>
+        );
+    }
+
+
+    if (error) {
+
+        return (
+            <main className="products-page">
+                <p>{error}</p>
+            </main>
+        );
+    }
     return (
 
         <main className="product-listing">

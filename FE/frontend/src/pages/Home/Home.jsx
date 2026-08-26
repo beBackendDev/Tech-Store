@@ -1,20 +1,30 @@
+import { useEffect, useState } from "react";
 import ProductSection
     from "../../components/product/ProductSection/ProductSection";
 
 import CategoryCard
     from "../../components/product/CategoryCard/CategoryCard";
 
-import { mockProducts }
-    from "../../data/mockProducts";
-
 import { mockCategories }
     from "../../data/mockCategories";
+
+import {
+    getProducts
+} from "../../services/productService";
 
 import "./Home.scss";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
     const navigate = useNavigate();
+    const [products, setProducts] =
+        useState([]);
+
+    const [loading, setLoading] =
+        useState(true);
+
+    const [error, setError] =
+        useState(null);
     const handleAddToCart = (product) => {
 
         console.log(
@@ -36,6 +46,59 @@ function Home() {
     const handleViewAllCategories = () => {
         navigate("/categories");
     };
+
+    useEffect(() => {
+
+        const loadProducts = async () => {
+
+            try {
+
+                setLoading(true);
+
+                const data =
+                    await getProducts();
+
+                setProducts(data);
+
+            } catch (error) {
+
+                console.error(
+                    "Failed to load products:",
+                    error
+                );
+
+                setError(
+                    "Unable to load products."
+                );
+
+            } finally {
+
+                setLoading(false);
+            }
+        };
+
+
+        loadProducts();
+
+    }, []);
+    if (loading) {
+
+        return (
+            <main className="products-page">
+                <p>Loading products...</p>
+            </main>
+        );
+    }
+
+
+    if (error) {
+
+        return (
+            <main className="products-page">
+                <p>{error}</p>
+            </main>
+        );
+    }
     return (
 
         <main className="home-page">
@@ -149,7 +212,7 @@ function Home() {
             <ProductSection
                 title="Featured Products"
                 subtitle="Our most popular products"
-                products={mockProducts}
+                products={products}
                 onAddToCart={handleAddToCart}
             />
 
@@ -190,7 +253,8 @@ function Home() {
             <ProductSection
                 title="New Arrivals"
                 subtitle="Discover our latest products"
-                products={mockProducts}
+                products={products}
+                // products={mockProducts}
                 onAddToCart={handleAddToCart}
             />
 

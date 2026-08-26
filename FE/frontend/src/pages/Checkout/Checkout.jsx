@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { createOrder } from "../../services/orderService";
 import useAuth from "../../hooks/useAuth";
 
 import useCart from "../../hooks/useCart";
@@ -17,7 +18,8 @@ function Checkout() {
     const {
         items,
         subtotal,
-        totalItems
+        totalItems,
+        clearCart
     } = useCart();
 
 
@@ -74,7 +76,7 @@ function Checkout() {
     };
 
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
 
         event.preventDefault();
         if (isSubmitting) {
@@ -88,12 +90,16 @@ function Checkout() {
                 shipping: {
                     firstName: formData.firstName.trim(),
                     lastName: formData.lastName.trim(),
+
                     phone: formData.phone.trim(),
                     email: formData.email.trim(),
+
                     address: formData.address.trim(),
                     city: formData.city,
                     district: formData.district,
-                    note: formData.note.trim()
+
+                    note: formData.note.trim(),
+
                 },
 
                 paymentMethod,
@@ -102,22 +108,25 @@ function Checkout() {
                     productId: item.product.id,
                     quantity: item.quantity
                 })),
-
-                subtotal,
-                shippingFee,
-                total
+                // subtotal,
+                // shippingFee,
+                // total
             };
+
             console.log(
                 "Checkout:",
                 orderData
             );
 
-            /*
- * Sau này:
- *
- * await createOrder(...)
- *
- */
+            const response = await createOrder(orderData);
+            console.log(
+                "Order created:",
+                response
+            );
+
+            clearCart();
+
+            navigate("/order-success");
 
         } catch (error) {
 

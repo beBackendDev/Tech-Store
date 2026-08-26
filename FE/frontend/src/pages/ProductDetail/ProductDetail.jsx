@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { mockProducts } from "../../data/mockProducts";
+import { getProducts } from "../../services/productService";
 import useCart from "../../hooks/useCart";
 
 import "./ProductDetail.scss";
@@ -10,17 +10,76 @@ import "./ProductDetail.scss";
 function ProductDetail() {
 
     const { id } = useParams();
-
     const navigate = useNavigate();
 
     const { addToCart } = useCart();
 
-    const product = mockProducts.find(
-        item => item.id === Number(id)
-    );
+    // ==============================
+    // STATE
+    // ==============================
+
+    const [products, setProducts] = useState([]);
+
+    const [loading, setLoading] = useState(true);
+
+    const [error, setError] = useState(null);
 
     const [quantity, setQuantity] = useState(1);
 
+
+    // ==============================
+    // LOAD PRODUCTS
+    // ==============================
+
+    useEffect(() => {
+
+        const loadProducts = async () => {
+
+            try {
+
+                setLoading(true);
+                setError(null);
+
+                const data = await getProducts();
+
+                setProducts(data);
+
+            } catch (error) {
+
+                console.error(
+                    "Failed to load products:",
+                    error
+                );
+
+                setError(
+                    "Unable to load products."
+                );
+
+            } finally {
+
+                setLoading(false);
+
+            }
+
+        };
+
+        loadProducts();
+
+    }, []);
+
+
+    // ==============================
+    // FIND PRODUCT
+    // ==============================
+
+    const product = products.find(
+        item => item.id === Number(id)
+    );
+
+
+    // ==============================
+    // FORMAT PRICE
+    // ==============================
 
     const formatPrice = (price) => {
 
@@ -32,10 +91,21 @@ function ProductDetail() {
     };
 
 
+    // ==============================
+    // QUANTITY
+    // ==============================
+
     const increaseQuantity = () => {
 
+        if (!product) {
+            return;
+        }
+
         setQuantity(prev =>
-            Math.min(prev + 1, product.stock)
+            Math.min(
+                prev + 1,
+                product.stock
+            )
         );
 
     };
@@ -50,6 +120,10 @@ function ProductDetail() {
     };
 
 
+    // ==============================
+    // ADD TO CART
+    // ==============================
+
     const handleAddToCart = () => {
 
         if (!product || product.stock <= 0) {
@@ -57,13 +131,19 @@ function ProductDetail() {
         }
 
         for (let i = 0; i < quantity; i++) {
+
             addToCart(product);
+
         }
 
         navigate("/cart");
 
     };
 
+
+    // ==============================
+    // BUY NOW
+    // ==============================
 
     const handleBuyNow = () => {
 
@@ -72,25 +152,60 @@ function ProductDetail() {
         }
 
         for (let i = 0; i < quantity; i++) {
+
             addToCart(product);
+
         }
 
-        navigate("/cart");
+        navigate("/checkout");
 
     };
 
 
-    if (!product) {
+    // ==============================
+    // LOADING
+    // ==============================
+
+    if (loading) {
 
         return (
 
             <main className="product-detail">
 
-                <div className="product-detail__not-found">
+                <div className="product-detail__loading">
+
+                    <p>
+                        Loading product...
+                    </p>
+
+                </div>
+
+            </main>
+
+        );
+
+    }
+
+
+    // ==============================
+    // ERROR
+    // ==============================
+
+    if (error) {
+
+        return (
+
+            <main className="product-detail">
+
+                <div className="product-detail__error">
 
                     <h1>
-                        Product not found
+                        Something went wrong
                     </h1>
+
+                    <p>
+                        {error}
+                    </p>
 
                     <button
                         type="button"
@@ -104,14 +219,58 @@ function ProductDetail() {
             </main>
 
         );
+
     }
 
+
+    // ==============================
+    // PRODUCT NOT FOUND
+    // ==============================
+
+    if (!product) {
+
+        return (
+
+            <main className="product-detail">
+
+                <div className="product-detail__not-found">
+
+                    <h1>
+                        Product not found
+                    </h1>
+
+                    <p>
+                        The product you're looking for
+                        doesn't exist.
+                    </p>
+
+                    <button
+                        type="button"
+                        onClick={() => navigate("/products")}
+                    >
+                        Back to products
+                    </button>
+
+                </div>
+
+            </main>
+
+        );
+
+    }
+
+
+    // ==============================
+    // RENDER
+    // ==============================
 
     return (
 
         <main className="product-detail">
 
-            {/* ================= BREADCRUMB ================= */}
+            {/* ==============================
+                BREADCRUMB
+            ============================== */}
 
             <div className="product-detail__breadcrumb">
 
@@ -128,7 +287,9 @@ function ProductDetail() {
                     type="button"
                     onClick={() =>
                         navigate(
-                            `/categories/${product.category}`
+                            `/categories?category=${encodeURIComponent(
+                                product.category
+                            )}`
                         )
                     }
                 >
@@ -144,11 +305,16 @@ function ProductDetail() {
             </div>
 
 
-            {/* ================= PRODUCT ================= */}
+            {/* ==============================
+                PRODUCT
+            ============================== */}
 
             <section className="product-detail__main">
 
-                {/* ================= IMAGE ================= */}
+
+                {/* ==============================
+                    IMAGE
+                ============================== */}
 
                 <div className="product-detail__gallery">
 
@@ -180,21 +346,34 @@ function ProductDetail() {
                 </div>
 
 
-                {/* ================= INFORMATION ================= */}
+                {/* ==============================
+                    INFORMATION
+                ============================== */}
 
                 <div className="product-detail__info">
 
+
+                    {/* CATEGORY */}
+
                     <span className="product-detail__category">
+
                         {product.category}
+
                     </span>
 
 
+                    {/* NAME */}
+
                     <h1 className="product-detail__name">
+
                         {product.name}
+
                     </h1>
 
 
-                    {/* Rating */}
+                    {/* ==============================
+                        RATING
+                    ============================== */}
 
                     <div className="product-detail__rating">
 
@@ -213,7 +392,9 @@ function ProductDetail() {
                     </div>
 
 
-                    {/* Price */}
+                    {/* ==============================
+                        PRICE
+                    ============================== */}
 
                     <div className="product-detail__price">
 
@@ -232,14 +413,19 @@ function ProductDetail() {
                     </div>
 
 
-                    {/* Stock */}
+                    {/* ==============================
+                        STOCK
+                    ============================== */}
 
                     <div className="product-detail__stock">
 
                         {product.stock > 0 ? (
 
                             <>
-                                <span className="product-detail__stock-dot" />
+
+                                <span
+                                    className="product-detail__stock-dot"
+                                />
 
                                 <span>
                                     In stock
@@ -248,6 +434,7 @@ function ProductDetail() {
                                 <span>
                                     ({product.stock} available)
                                 </span>
+
                             </>
 
                         ) : (
@@ -264,7 +451,9 @@ function ProductDetail() {
                     <div className="product-detail__divider" />
 
 
-                    {/* ================= QUANTITY ================= */}
+                    {/* ==============================
+                        QUANTITY
+                    ============================== */}
 
                     <div className="product-detail__quantity">
 
@@ -301,7 +490,9 @@ function ProductDetail() {
                     </div>
 
 
-                    {/* ================= ACTIONS ================= */}
+                    {/* ==============================
+                        ACTIONS
+                    ============================== */}
 
                     <div className="product-detail__actions">
 
@@ -326,7 +517,9 @@ function ProductDetail() {
                     </div>
 
 
-                    {/* ================= BENEFITS ================= */}
+                    {/* ==============================
+                        BENEFITS
+                    ============================== */}
 
                     <div className="product-detail__benefits">
 
@@ -375,7 +568,9 @@ function ProductDetail() {
             </section>
 
 
-            {/* ================= DESCRIPTION ================= */}
+            {/* ==============================
+                DESCRIPTION
+            ============================== */}
 
             <section className="product-detail__description">
 

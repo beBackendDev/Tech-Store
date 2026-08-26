@@ -61,7 +61,9 @@ public class WebSecurityConfig {
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers(
                                 "/api/auth/**",
-                                "/oauth2/**")
+                                "/oauth2/**",
+                                "/api/public/**"
+                        )
                         .permitAll()
                         .requestMatchers("/api/dashboard/admin/**").hasAuthority("ADMIN")
                         .anyRequest().authenticated());

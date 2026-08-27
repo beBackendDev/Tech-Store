@@ -1,66 +1,68 @@
-// import { refreshToken } from "../services/authService";
-// import { saveAccessToken } from "../services/tokenService";
-// import  useAuth  from "./useAuth";
+// src/hooks/useRefreshToken.js
 
-// export default function useRefreshToken(){
+import {
+    refreshToken
+} from "../services/authService";
 
-//     const { auth, setAuth } = useAuth();
-
-//     const refresh = async () => {
-//         const response = await refreshToken();
-
-//         const accessToken = response.response;
-
-//         saveAccessToken(accessToken);
-
-//         setAuth(prev => ({
-
-//             ...prev,
-
-//             accessToken,
-
-//             authenticated:true
-
-//         }));
-
-//         return accessToken;
-
-//     };
-
-//     return refresh;
-
-// }
+import {
+    saveAccessToken
+} from "../utils/tokenStorage";
+import useAuth from "./useAuth";
 
 
 
-import { useCallback } from "react";
+const useRefreshToken = () => {
 
-import { refreshToken } from "../services/authService";
-
-
-// useRefreshToken
-//        ↓
-// authService.refreshToken()
-//        ↓
-// authApi.refreshToken()
-//        ↓
-// Backend
-
-export default function useRefreshToken() {
+    const {
+        setAuth
+    } = useAuth();
 
 
-    const refresh = useCallback(async () => {
+    const refresh = async () => {
+
+        const response =
+            await refreshToken();
 
 
-        const accessToken = await refreshToken();
+        const newAccessToken =
+            response.response;
 
 
-        return accessToken;
+        if (!newAccessToken) {
+
+            throw new Error(
+                "Refresh token response does not contain access token"
+            );
+
+        }
 
 
-    }, []);
+        saveAccessToken(
+            newAccessToken
+        );
+
+
+        setAuth(prev => ({
+
+            ...prev,
+
+            accessToken:
+                newAccessToken,
+
+            authenticated:
+                true
+
+        }));
+
+
+        return newAccessToken;
+
+    };
 
 
     return refresh;
 
-}
+};
+
+
+export default useRefreshToken;

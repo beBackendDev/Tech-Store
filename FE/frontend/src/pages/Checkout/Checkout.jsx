@@ -87,20 +87,17 @@ function Checkout() {
         try {
             const orderData = {
 
-                shipping: {
-                    firstName: formData.firstName.trim(),
-                    lastName: formData.lastName.trim(),
+                firstName: formData.firstName.trim(),
+                lastName: formData.lastName.trim(),
 
-                    phone: formData.phone.trim(),
-                    email: formData.email.trim(),
+                phone: formData.phone.trim(),
+                email: formData.email.trim(),
 
-                    address: formData.address.trim(),
-                    city: formData.city,
-                    district: formData.district,
+                address: formData.address.trim(),
+                city: formData.city,
+                district: formData.district,
 
-                    note: formData.note.trim(),
-
-                },
+                note: formData.note.trim(),
 
                 paymentMethod,
 

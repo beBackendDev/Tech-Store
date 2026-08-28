@@ -32,7 +32,12 @@ import Categories from "../pages/Categories/Categories";
 import ProductListing from "../pages/Product/ProductListing/ProductListing";
 
 import Cart from "../pages/Cart/Cart";
+
 import Checkout from "../pages/Checkout/Checkout";
+
+import NotFound from "../pages/Error/NotFound/NotFound";
+import OrderFailed from "../pages/Checkout/OrderFailed/OrderFailed";
+import OrderSuccess from "../pages/Checkout/OrderSuccess/OrderSuccess";
 function AppRoutes() {
 
     return (
@@ -113,6 +118,22 @@ function AppRoutes() {
                 <Route
                     path="/checkout"
                     element={<Checkout />}
+
+
+                />
+                {/* response checkout-order */}
+                <Route
+                    path="/order-success"
+                    element={<OrderSuccess />}
+                />
+
+                <Route
+                    path="/order-failed"
+                    element={<OrderFailed />}
+                />
+                <Route
+                    path="*"
+                    element={<NotFound />}
                 />
             </Routes>
 

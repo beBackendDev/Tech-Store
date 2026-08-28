@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getAccessToken } from "../utils/tokenStorage";
+import { getAccessToken } from "../services/tokenService";
 
 const axiosPrivate = axios.create({
     baseURL: "http://localhost:8080/api",

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createOrder } from "../../services/orderService";
+import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import useAuth from "../../hooks/useAuth";
 
 import useCart from "../../hooks/useCart";
@@ -11,7 +12,7 @@ import "./Checkout.scss";
 function Checkout() {
 
     const navigate = useNavigate();
-
+    const axiosPrivate = useAxiosPrivate();
     const { auth } = useAuth();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -115,21 +116,40 @@ function Checkout() {
                 orderData
             );
 
-            const response = await createOrder(orderData);
+            const response = await createOrder(
+                orderData,
+                axiosPrivate
+            );
             console.log(
                 "Order created:",
                 response
             );
-
+            const orderId = response.id; 
+            if (!orderId) { 
+                throw new Error("Order ID was not returned by server."); 
+            }
             clearCart();
 
-            navigate("/order-success");
+            navigate(
+                `/order-success?orderId=${orderId}`
+            );
 
         } catch (error) {
 
             console.error(
                 "Create order failed:",
                 error
+            );
+
+            navigate(
+                "/order-failed",
+                {
+                    state: {
+                        message:
+                            error.response?.data?.message ||
+                            "Unable to create your order."
+                    }
+                }
             );
 
         } finally {

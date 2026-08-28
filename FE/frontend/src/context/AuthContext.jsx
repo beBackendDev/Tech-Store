@@ -2,17 +2,16 @@
 import {
     createContext,
     useState,
-    useEffect
+    useEffect,
+    useCallback
 } from "react";
-import { refreshToken } from "../api/authApi";
-import useRefreshToken from "../hooks/useRefreshToken";
+import { saveAccessToken } from "../services/tokenService";
+import { refreshToken } from "../services/authService";
 
-export const AuthContext = createContext();
+export const AuthContext = createContext(null);
 
 
 export function AuthProvider({ children }) {
-    const refresh = useRefreshToken();
-
     const [auth, setAuth] = useState({
         accessToken: null,
         user: null,
@@ -22,42 +21,57 @@ export function AuthProvider({ children }) {
     });
 
     const [loading, setLoading] = useState(true);
+    const initializeAuth = useCallback(async () => {
 
-    useEffect(() => {
-        const initialize = async () => {
+        try {
 
-            try {
+            const accessToken =
+                await refreshToken();
 
-                const accessToken = await refresh();
-                setAuth(prev => ({
+            if (!accessToken) {
 
-
-                    ...prev,
-
-
-                    accessToken,
-
-
-                    authenticated: true
-
-
-                }));
-
-            } catch (err) {
-
-                console.log(err);
-
-            } finally {
-
-                setLoading(false);
+                throw new Error(
+                    "No access token returned"
+                );
 
             }
+            saveAccessToken(accessToken);
 
-        };
+            setAuth(prev => ({
+                ...prev,
+                accessToken,
+                authenticated: true
+            }));
 
-        initialize();
+        } catch (error) {
 
-    }, [refresh]);
+            console.log(
+                "No valid refresh token."
+            );
+
+            setAuth({
+                accessToken: null,
+                user: null,
+                roles: [],
+                authenticated: false
+            });
+
+        } finally {
+
+            setLoading(false);
+
+        }
+
+    }, []);
+
+
+    useEffect(() => {
+
+        initializeAuth();
+
+    }, []);
+
+
     return (
         <AuthContext.Provider
 
@@ -77,3 +91,4 @@ export function AuthProvider({ children }) {
         </AuthContext.Provider>
     );
 }
+export default AuthContext;

@@ -19,13 +19,10 @@ const useRefreshToken = () => {
 
 
     const refresh = async () => {
-
-        const response =
+//boi vi response la string accesstoken 
+        const newAccessToken =
             await refreshToken();
 
-
-        const newAccessToken =
-            response.response;
 
 
         if (!newAccessToken) {

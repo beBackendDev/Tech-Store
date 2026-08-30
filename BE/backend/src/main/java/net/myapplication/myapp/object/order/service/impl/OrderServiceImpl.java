@@ -1,6 +1,7 @@
 package net.myapplication.myapp.object.order.service.impl;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,158 +26,183 @@ import net.myapplication.myapp.user.repository.UserRepo;
 @Service
 @RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
-    private final OrderRepository orderRepository;
+        private final OrderRepository orderRepository;
 
-    private final OrderItemRepository orderItemRepository;
+        private final OrderItemRepository orderItemRepository;
 
-    private final ProductRepository productRepository;
+        private final ProductRepository productRepository;
 
-    private final UserRepo userRepository;
+        private final UserRepo userRepository;
 
-    private final OrderMapper orderMapper;
+        private final OrderMapper orderMapper;
 
-    @Override
-    @Transactional
-    public OrderResponseDto createOrder(CreateOrderRequest request, Long userId) {
-        // Find user
-        User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-        // Create Order
-        Order order = new Order();
-        order.setUser(user);
+        @Override
+        @Transactional
+        public OrderResponseDto createOrder(CreateOrderRequest request, Long userId) {
+                // Find user
+                User user = userRepository.findById(userId)
+                                .orElseThrow(() -> new RuntimeException("User not found"));
+                // Create Order
+                Order order = new Order();
+                order.setUser(user);
 
-        // Create Customer snapshot
-        String customerName = request.getFirstName() + " " + request.getLastName();
-        order.setCustomerName(customerName);
-        order.setEmail(request.getEmail());
-        order.setPhone(request.getPhone());
+                // Create Customer snapshot
+                String customerName = request.getFirstName() + " " + request.getLastName();
+                order.setCustomerName(customerName);
+                order.setEmail(request.getEmail());
+                order.setPhone(request.getPhone());
 
-        // Create Shipping snapshot
-        order.setAddress(request.getAddress());
-        order.setCity(
-                request.getCity());
+                // Create Shipping snapshot
+                order.setAddress(request.getAddress());
+                order.setCity(
+                                request.getCity());
 
-        order.setDistrict(
-                request.getDistrict());
+                order.setDistrict(
+                                request.getDistrict());
 
-        order.setNote(
-                request.getNote());
+                order.setNote(
+                                request.getNote());
 
-        // Create Payment
-        order.setPaymentMethod(
-                request.getPaymentMethod());
+                // Create Payment
+                order.setPaymentMethod(
+                                request.getPaymentMethod());
 
-        order.setPaymentStatus(
-                PaymentStatus.PENDING);
+                order.setPaymentStatus(
+                                PaymentStatus.PENDING);
 
-        // Order status
-        order.setStatus(
-                OrderStatus.PENDING);
+                // Order status
+                order.setStatus(
+                                OrderStatus.PENDING);
 
-        // Calculate subtotal
-        BigDecimal subtotal = BigDecimal.ZERO;
-        for (OrderItemRequest itemRequest : request.getItems()) {
-            // validate product existence and availability
-            Product product = productRepository
-                    .findByIdForUpdate(
-                            itemRequest.getProductId())
-                    .orElseThrow(() -> new RuntimeException(
-                            "Product not found: "
-                                    + itemRequest.getProductId()));
-            // check Active
-            if (!product.isActive()) {
-                throw new RuntimeException(
-                        "Product is no longer available: "
-                                + product.getName());
-            }
-            // check stock
-            Integer requestedQuantity = itemRequest.getQuantity();
+                // Calculate subtotal
+                BigDecimal subtotal = BigDecimal.ZERO;
+                for (OrderItemRequest itemRequest : request.getItems()) {
+                        // validate product existence and availability
+                        Product product = productRepository
+                                        .findByIdForUpdate(
+                                                        itemRequest.getProductId())
+                                        .orElseThrow(() -> new RuntimeException(
+                                                        "Product not found: "
+                                                                        + itemRequest.getProductId()));
+                        // check Active
+                        if (!product.isActive()) {
+                                throw new RuntimeException(
+                                                "Product is no longer available: "
+                                                                + product.getName());
+                        }
+                        // check stock
+                        Integer requestedQuantity = itemRequest.getQuantity();
 
-            if (product.getStock() < requestedQuantity) {
+                        if (product.getStock() < requestedQuantity) {
 
-                throw new RuntimeException(
-                        "Not enough stock for product: "
-                                + product.getName());
-            }
-            // current price
-            BigDecimal price = product.getPrice();
-            // item subtotal
-            BigDecimal itemSubtotal = price.multiply(
-                    BigDecimal.valueOf(
-                            requestedQuantity));
+                                throw new RuntimeException(
+                                                "Not enough stock for product: "
+                                                                + product.getName());
+                        }
+                        // current price
+                        BigDecimal price = product.getPrice();
+                        // item subtotal
+                        BigDecimal itemSubtotal = price.multiply(
+                                        BigDecimal.valueOf(
+                                                        requestedQuantity));
 
-            subtotal = subtotal.add(
-                    itemSubtotal);
-            // create order item
-            OrderItem orderItem = new OrderItem();
+                        subtotal = subtotal.add(
+                                        itemSubtotal);
+                        // create order item
+                        OrderItem orderItem = new OrderItem();
 
-            orderItem.setProduct(
-                    product);
+                        orderItem.setProduct(
+                                        product);
 
-            orderItem.setProductName(
-                    product.getName());
+                        orderItem.setProductName(
+                                        product.getName());
 
-            orderItem.setProductImage(
-                    product.getImage());
+                        orderItem.setProductImage(
+                                        product.getImage());
 
-            orderItem.setPrice(
-                    price);
+                        orderItem.setPrice(
+                                        price);
 
-            orderItem.setQuantity(
-                    requestedQuantity);
+                        orderItem.setQuantity(
+                                        requestedQuantity);
 
-            orderItem.setSubtotal(
-                    itemSubtotal);
-            // add to order
-            order.addItem(
-                    orderItem);
-            // decrease product stock
-            product.setStock(
-                    product.getStock()
-                            - requestedQuantity);
-        }
-        // shipping fee
-        BigDecimal shippingFee = calculateShippingFee(
-                subtotal);
-        // discount
-        BigDecimal discount = BigDecimal.ZERO;
-        // total
-        BigDecimal totalAmount = subtotal
-                .add(shippingFee)
-                .subtract(discount);
+                        orderItem.setSubtotal(
+                                        itemSubtotal);
+                        // add to order
+                        order.addItem(
+                                        orderItem);
+                        // decrease product stock
+                        product.setStock(
+                                        product.getStock()
+                                                        - requestedQuantity);
+                }
+                // shipping fee
+                BigDecimal shippingFee = calculateShippingFee(
+                                subtotal);
+                // discount
+                BigDecimal discount = BigDecimal.ZERO;
+                // total
+                BigDecimal totalAmount = subtotal
+                                .add(shippingFee)
+                                .subtract(discount);
 
-        order.setSubtotal(
-                subtotal);
+                order.setSubtotal(
+                                subtotal);
 
-        order.setShippingFee(
-                shippingFee);
+                order.setShippingFee(
+                                shippingFee);
 
-        order.setDiscount(
-                discount);
+                order.setDiscount(
+                                discount);
 
-        order.setTotalAmount(
-                totalAmount);
-        Order savedOrder = orderRepository.save(
-                order);
-        return orderMapper.toResponseDto(
-                savedOrder);
-    }
-
-    // other methods...
-    private BigDecimal calculateShippingFee(
-            BigDecimal subtotal) {
-
-        BigDecimal freeShippingThreshold = BigDecimal.valueOf(
-                500_000);
-
-        if (subtotal.compareTo(
-                freeShippingThreshold) >= 0) {
-
-            return BigDecimal.ZERO;
+                order.setTotalAmount(
+                                totalAmount);
+                Order savedOrder = orderRepository.save(
+                                order);
+                return orderMapper.toResponseDto(
+                                savedOrder);
         }
 
-        return BigDecimal.valueOf(
-                30_000);
-    }
+        // other methods...
+        private BigDecimal calculateShippingFee(
+                        BigDecimal subtotal) {
+
+                BigDecimal freeShippingThreshold = BigDecimal.valueOf(
+                                500_000);
+
+                if (subtotal.compareTo(
+                                freeShippingThreshold) >= 0) {
+
+                        return BigDecimal.ZERO;
+                }
+
+                return BigDecimal.valueOf(
+                                30_000);
+        }
+
+        @Override
+        @Transactional(readOnly = true)
+        public List<OrderResponseDto> getMyOrders(Long userId) {
+
+                List<Order> orders = orderRepository.findOrdersByUserId(userId);
+
+                return orders.stream()
+                                .map(orderMapper::toResponseDto)
+                                .toList();
+        }
+
+        @Override
+        @Transactional(readOnly = true)
+        public OrderResponseDto getOrderById(
+                        Long orderId,
+                        Long userId) {
+
+                Order order = orderRepository
+                                .findByIdAndUserId(orderId, userId)
+                                .orElseThrow(() -> new RuntimeException(
+                                                "Order not found"));
+
+                return orderMapper.toResponseDto(order);
+        }
 
 }

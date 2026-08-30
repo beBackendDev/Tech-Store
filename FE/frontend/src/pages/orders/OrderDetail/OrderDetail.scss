@@ -1,0 +1,805 @@
+@use "../../../styles/variables" as *;
+
+.order-detail {
+
+ max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 48px 24px 100px;
+
+
+    // =====================================
+    // CONTAINER
+    // =====================================
+
+    &__container {
+
+        width: 100%;
+
+    }
+
+
+    // =====================================
+    // HEADER
+    // =====================================
+
+    &__header {
+
+        margin-bottom: 40px;
+
+    }
+
+    &__back {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 6px;
+
+        margin-bottom: 28px;
+
+        padding: 0;
+
+        border: none;
+
+        background: transparent;
+
+        color: $gray-600;
+
+        font-size: $font-size-sm;
+
+        cursor: pointer;
+
+        transition:
+
+            color 0.2s ease;
+
+        &:hover {
+
+            color: $gray-900;
+
+        }
+
+    }
+
+    &__eyebrow {
+
+        display: inline-block;
+
+        margin-bottom: 12px;
+
+        color: $primary;
+
+        font-size: $font-size-xs;
+
+        font-weight: 700;
+
+        letter-spacing: 0.12em;
+
+    }
+
+    &__header h1 {
+
+        margin: 0 0 10px;
+
+        color: $gray-900;
+
+        font-size: clamp(34px, 5vw, 48px);
+
+        font-weight: 700;
+
+        line-height: 1.1;
+
+        letter-spacing: -0.035em;
+
+    }
+
+    &__header p {
+
+        margin: 0;
+
+        color: $gray-600;
+
+        font-size: $font-size-sm;
+
+        line-height: 1.6;
+
+    }
+
+
+    // =====================================
+    // STATUS
+    // =====================================
+
+    &__status {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 1px;
+
+        margin-bottom: 24px;
+
+        overflow: hidden;
+
+        border: 1px solid $border-color;
+
+        border-radius: $radius-lg;
+
+        background: $border-color;
+
+    }
+
+    &__status>div {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 6px;
+
+        min-width: 0;
+
+        padding: 20px;
+
+        background: $white;
+
+    }
+
+    &__status span {
+
+        color: $gray-600;
+
+        font-size: $font-size-xs;
+
+    }
+
+    &__status strong {
+
+        overflow: hidden;
+
+        color: $gray-900;
+
+        font-size: $font-size-sm;
+
+        font-weight: 700;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+
+    }
+
+
+    // =====================================
+    // CARD
+    // =====================================
+
+    &__card {
+
+        margin-bottom: 24px;
+
+        overflow: hidden;
+
+        border: 1px solid $border-color;
+
+        border-radius: $radius-lg;
+
+        background: $white;
+
+    }
+
+    &__card-header {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 20px;
+
+        padding: 22px 24px;
+
+        border-bottom: 1px solid $border-color;
+
+    }
+
+    &__card-header h2 {
+
+        margin: 0;
+
+        color: $gray-900;
+
+        font-size: 18px;
+
+        font-weight: 700;
+
+    }
+
+    &__card-header span {
+
+        color: $gray-600;
+
+        font-size: $font-size-xs;
+
+    }
+
+
+    // =====================================
+    // ITEMS
+    // =====================================
+
+    &__items {
+
+        padding: 0 24px;
+
+    }
+
+    &__item {
+
+        display: grid;
+
+        grid-template-columns:
+            76px minmax(0, 1fr) auto;
+
+        align-items: center;
+
+        gap: 18px;
+
+        padding: 20px 0;
+
+        border-bottom: 1px solid $border-color;
+
+        &:last-child {
+
+            border-bottom: none;
+
+        }
+
+    }
+
+    &__image {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 76px;
+
+        height: 76px;
+
+        overflow: hidden;
+
+        border-radius: $radius-sm;
+
+        background: $gray-100;
+
+    }
+
+    &__image img {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: contain;
+
+    }
+
+    &__item-info {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 6px;
+
+        min-width: 0;
+
+    }
+
+    &__item-info strong {
+
+        overflow: hidden;
+
+        color: $gray-900;
+
+        font-size: $font-size-sm;
+
+        font-weight: 600;
+
+        line-height: 1.4;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+
+    }
+
+    &__item-info span {
+
+        color: $gray-600;
+
+        font-size: $font-size-xs;
+
+    }
+
+    &__item>strong {
+
+        color: $gray-900;
+
+        font-size: $font-size-sm;
+
+        font-weight: 700;
+
+        white-space: nowrap;
+
+    }
+
+
+    // =====================================
+    // SHIPPING
+    // =====================================
+
+    &__shipping {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 0;
+
+    }
+
+    &__shipping>div {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 6px;
+
+        min-width: 0;
+
+        padding: 20px 24px;
+
+        border-bottom: 1px solid $border-color;
+
+    }
+
+    &__shipping>div:nth-child(odd) {
+
+        border-right: 1px solid $border-color;
+
+    }
+
+    &__shipping>div:nth-last-child(-n + 2) {
+
+        border-bottom: none;
+
+    }
+
+    &__shipping span {
+
+        color: $gray-600;
+
+        font-size: $font-size-xs;
+
+    }
+
+    &__shipping strong {
+
+        color: $gray-900;
+
+        font-size: $font-size-sm;
+
+        font-weight: 600;
+
+        line-height: 1.5;
+
+        word-break: break-word;
+
+    }
+
+
+    // =====================================
+    // SUMMARY
+    // =====================================
+
+    &__summary {
+
+        width: min(520px, 100%);
+
+        margin-left: auto;
+
+        padding: 24px;
+
+        border: 1px solid $border-color;
+
+        border-radius: $radius-lg;
+
+        background: $white;
+
+    }
+
+    &__summary>div {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 24px;
+
+        padding: 10px 0;
+
+    }
+
+    &__summary span {
+
+        color: $gray-600;
+
+        font-size: $font-size-sm;
+
+    }
+
+    &__summary strong {
+
+        color: $gray-900;
+
+        font-size: $font-size-sm;
+
+        font-weight: 600;
+
+        white-space: nowrap;
+
+    }
+
+    &__summary-total {
+
+        margin-top: 10px;
+
+        padding-top: 20px !important;
+
+        border-top: 1px solid $border-color;
+
+    }
+
+    &__summary-total span {
+
+        color: $gray-900;
+
+        font-size: 16px;
+
+        font-weight: 700;
+
+    }
+
+    &__summary-total strong {
+
+        color: $primary;
+
+        font-size: 22px;
+
+        font-weight: 700;
+
+    }
+
+
+    // =====================================
+    // STATE
+    // =====================================
+
+    &__state {
+
+        min-height: 420px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        padding: 40px;
+
+        text-align: center;
+
+        border: 1px solid $border-color;
+
+        border-radius: $radius-lg;
+
+        background: $white;
+
+    }
+
+    &__state p {
+
+        margin: 0 0 24px;
+
+        color: $gray-600;
+
+        font-size: $font-size-sm;
+
+    }
+
+    &__state button {
+
+        padding: 10px 18px;
+
+        border: none;
+
+        border-radius: 7px;
+
+        background: $primary;
+
+        color: $white;
+
+        font-size: $font-size-sm;
+
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition: $transition;
+
+        &:hover {
+
+            background: $primary-hover;
+
+        }
+
+    }
+
+
+}
+
+// =====================================
+// TABLET
+// =====================================
+
+@media (max-width: $laptop) {
+
+ .order-detail {
+
+        padding: 40px 24px 80px;
+
+        &__status {
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+        }
+
+        &__shipping>div {
+
+            padding: 18px 20px;
+
+        }
+
+        &__items {
+
+            padding: 0 20px;
+
+        }
+
+    }
+
+
+}
+
+// =====================================
+// MOBILE
+// =====================================
+
+@media (max-width: $tablet) {
+
+ .order-detail {
+
+        padding: 32px 16px 64px;
+
+
+        // HEADER
+
+        &__header {
+
+            margin-bottom: 28px;
+
+        }
+
+        &__back {
+
+            margin-bottom: 22px;
+
+        }
+
+        &__header h1 {
+
+            font-size: 34px;
+
+        }
+
+
+        // STATUS
+
+        &__status {
+
+            grid-template-columns: 1fr;
+
+            gap: 1px;
+
+        }
+
+        &__status>div {
+
+            padding: 16px 18px;
+
+        }
+
+
+        // CARD
+
+        &__card-header {
+
+            padding: 18px;
+
+        }
+
+
+        // ITEMS
+
+        &__items {
+
+            padding: 0 18px;
+
+        }
+
+        &__item {
+
+            grid-template-columns:
+                64px minmax(0, 1fr);
+
+            gap: 14px;
+
+        }
+
+        &__image {
+
+            width: 64px;
+
+            height: 64px;
+
+        }
+
+        &__item>strong {
+
+            grid-column: 2;
+
+            justify-self: start;
+
+        }
+
+
+        // SHIPPING
+
+        &__shipping {
+
+            grid-template-columns: 1fr;
+
+        }
+
+        &__shipping>div {
+
+            padding: 16px 18px;
+
+            border-right: none !important;
+
+            border-bottom: 1px solid $border-color;
+
+        }
+
+        &__shipping>div:nth-last-child(-n + 2) {
+
+            border-bottom: 1px solid $border-color;
+
+        }
+
+        &__shipping>div:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        // SUMMARY
+
+        &__summary {
+
+            width: 100%;
+
+        }
+
+    }
+}
+
+// =====================================
+// SMALL MOBILE
+// =====================================
+
+@media (max-width: 480px) {
+
+     .order-detail {
+
+        padding: 24px 12px 56px;
+
+
+        &__header h1 {
+
+            font-size: 30px;
+
+        }
+
+
+        &__card-header {
+
+            align-items: flex-start;
+
+            flex-direction: column;
+
+            gap: 6px;
+
+        }
+
+
+        &__item {
+
+            grid-template-columns:
+                56px minmax(0, 1fr);
+
+            gap: 12px;
+
+        }
+
+
+        &__image {
+
+            width: 56px;
+
+            height: 56px;
+
+        }
+
+
+        &__item-info strong {
+
+            white-space: normal;
+
+        }
+
+
+        &__summary {
+
+            padding: 18px;
+
+        }
+
+
+        &__summary-total strong {
+
+            font-size: 20px;
+
+        }
+
+    }
+
+}

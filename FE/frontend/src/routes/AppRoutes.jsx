@@ -38,6 +38,8 @@ import Checkout from "../pages/Checkout/Checkout";
 import NotFound from "../pages/Error/NotFound/NotFound";
 import OrderFailed from "../pages/Checkout/OrderFailed/OrderFailed";
 import OrderSuccess from "../pages/Checkout/OrderSuccess/OrderSuccess";
+import OrderHistory from "../pages/orders/OrderHistory/OrderHistory";
+import OrderDetail from "../pages/orders/OrderDetail/OrderDetail";
 function AppRoutes() {
 
     return (
@@ -135,6 +137,18 @@ function AppRoutes() {
                     path="*"
                     element={<NotFound />}
                 />
+
+                <Route
+                    path="/orders"
+                    element={<OrderHistory />}
+                />
+
+                <Route
+                    path="/orders/:id"
+                    element={<OrderDetail />}
+                />
+
+
             </Routes>
 
         </BrowserRouter>

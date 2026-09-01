@@ -1,0 +1,1015 @@
+external_id,name,description,category,price,old_price,stock,image,rating,review_count,is_new,active
+LAP-000001,Lenovo V15 ITL G2 82KBA033IH Laptop,Lenovo V15 ITL G2 82KBA033IH Laptop laptop,LAPTOP,33921.0,,10,,0.0,0,False,True
+LAP-000002,HP Pavilion 15-ec2004AX Gaming Laptop,HP Pavilion 15-ec2004AX Gaming Laptop laptop,LAPTOP,56150.0,,10,,0.0,0,False,True
+LAP-000003,Lenovo V15 82KBA03HIH Laptop,Lenovo V15 82KBA03HIH Laptop laptop,LAPTOP,35499.0,,10,,0.0,0,False,True
+LAP-000004,Asus Vivobook 16X 2022 M1603QA-MB502WS Laptop,Asus Vivobook 16X 2022 M1603QA-MB502WS Laptop laptop,LAPTOP,48990.0,,10,,0.0,0,False,True
+LAP-000005,HP 15s-fr4000TU Laptop,HP 15s-fr4000TU Laptop laptop,LAPTOP,52990.0,,10,,0.0,0,False,True
+LAP-000006,Lenovo IdeaPad Gaming 3 82K101ECIN Laptop,Lenovo IdeaPad Gaming 3 82K101ECIN Laptop laptop,LAPTOP,56700.0,,10,,0.0,0,False,True
+LAP-000007,Infinix Zero Book Ultra Laptop,Infinix Zero Book Ultra Laptop laptop,LAPTOP,87620.0,,10,,0.0,0,False,True
+LAP-000008,HP 15s-eq1559AU Laptop,HP 15s-eq1559AU Laptop laptop,LAPTOP,29212.0,,10,,0.0,0,False,True
+LAP-000009,Dell Inspiron 3520 Laptop,Dell Inspiron 3520 Laptop laptop,LAPTOP,44087.0,,10,,0.0,0,False,True
+LAP-000010,Dell Inspiron 3511 Laptop,Dell Inspiron 3511 Laptop laptop,LAPTOP,38800.0,,10,,0.0,0,False,True
+LAP-000011,Asus Vivobook Pro 15 OLED M6500QH-HN701WS Laptop,Asus Vivobook Pro 15 OLED M6500QH-HN701WS Laptop laptop,LAPTOP,65990.0,,10,,0.0,0,False,True
+LAP-000012,Apple MacBook Air 2020 MGND3HN Laptop,Apple MacBook Air 2020 MGND3HN Laptop laptop,LAPTOP,83900.0,,10,,0.0,0,False,True
+LAP-000013,HP 15s-fq5007TU Laptop,HP 15s-fq5007TU Laptop laptop,LAPTOP,46790.0,,10,,0.0,0,False,True
+LAP-000014,HP 15s-fq5111TU Laptop,HP 15s-fq5111TU Laptop laptop,LAPTOP,58530.0,,10,,0.0,0,False,True
+LAP-000015,Dell Inspiron 3520 D560871WIN9B Laptop,Dell Inspiron 3520 D560871WIN9B Laptop laptop,LAPTOP,57223.0,,10,,0.0,0,False,True
+LAP-000016,Asus TUF Gaming A15 FA506IHRZ-HN111W Laptop,Asus TUF Gaming A15 FA506IHRZ-HN111W Laptop laptop,LAPTOP,49990.0,,10,,0.0,0,False,True
+LAP-000017,HP 15s-er1501AU Laptop,HP 15s-er1501AU Laptop laptop,LAPTOP,28490.0,,10,,0.0,0,False,True
+LAP-000018,HP Victus 15-fb0040AX Gaming Laptop,HP Victus 15-fb0040AX Gaming Laptop laptop,LAPTOP,59800.0,,10,,0.0,0,False,True
+LAP-000019,Realme Book Slim Laptop,Realme Book Slim Laptop laptop,LAPTOP,49990.0,,10,,0.0,0,False,True
+LAP-000020,Asus Vivobook 16X 2022 M1603QA-MB511WS Laptop,Asus Vivobook 16X 2022 M1603QA-MB511WS Laptop laptop,LAPTOP,53990.0,,10,,0.0,0,False,True
+LAP-000021,Apple MacBook Air 2022 Laptop,Apple MacBook Air 2022 Laptop laptop,LAPTOP,107990.0,,10,,0.0,0,False,True
+LAP-000022,Asus VivoBook 14 X415JA-BV301WS Laptop,Asus VivoBook 14 X415JA-BV301WS Laptop laptop,LAPTOP,29890.0,,10,,0.0,0,False,True
+LAP-000023,HP 15s-fq2717TU Laptop,HP 15s-fq2717TU Laptop laptop,LAPTOP,41900.0,,10,,0.0,0,False,True
+LAP-000024,Lenovo V15 ‎82C70005UK Laptop,Lenovo V15 ‎82C70005UK Laptop laptop,LAPTOP,38480.0,,10,,0.0,0,False,True
+LAP-000025,Lenovo V15 82KDA00XIH Laptop,Lenovo V15 82KDA00XIH Laptop laptop,LAPTOP,38489.0,,10,,0.0,0,False,True
+LAP-000026,Lenovo E41-55 82FJ00AGIH Laptop,Lenovo E41-55 82FJ00AGIH Laptop laptop,LAPTOP,18990.0,,10,,0.0,0,False,True
+LAP-000027,Asus VivoBook 15 X1500EA-EJ322WS Laptop,Asus VivoBook 15 X1500EA-EJ322WS Laptop laptop,LAPTOP,35978.0,,10,,0.0,0,False,True
+LAP-000028,HP Victus 15-fa0165TX Laptop,HP Victus 15-fa0165TX Laptop laptop,LAPTOP,69990.0,,10,,0.0,0,False,True
+LAP-000029,HP 15s-FR2511TU Laptop,HP 15s-FR2511TU Laptop laptop,LAPTOP,40880.0,,10,,0.0,0,False,True
+LAP-000030,Asus TUF Gaming A17 FA706IHRB-HX041W Gaming Laptop,Asus TUF Gaming A17 FA706IHRB-HX041W Gaming Laptop laptop,LAPTOP,52990.0,,10,,0.0,0,False,True
+LAP-000031,HP Pavilion 15-eg2009TU Laptop,HP Pavilion 15-eg2009TU Laptop laptop,LAPTOP,62990.0,,10,,0.0,0,False,True
+LAP-000032,HP 15s- eq2212AU Laptop,HP 15s- eq2212AU Laptop laptop,LAPTOP,37990.0,,10,,0.0,0,False,True
+LAP-000033,Dell Inspiron 3520 Laptop,Dell Inspiron 3520 Laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000034,HP 245 G8 62G68PA Laptop,HP 245 G8 62G68PA Laptop laptop,LAPTOP,27890.0,,10,,0.0,0,False,True
+LAP-000035,Acer One 14 Z2-493 Laptop,Acer One 14 Z2-493 Laptop laptop,LAPTOP,20990.0,,10,,0.0,0,False,True
+LAP-000036,Acer Aspire 7 A715-51G NH.QGCSI.001 Gaming Laptop,Acer Aspire 7 A715-51G NH.QGCSI.001 Gaming Laptop laptop,LAPTOP,64990.0,,10,,0.0,0,False,True
+LAP-000037,Dell Inspiron 5320 Laptop,Dell Inspiron 5320 Laptop laptop,LAPTOP,84918.0,,10,,0.0,0,False,True
+LAP-000038,MSI Bravo 15 B5DD-410IN Gaming Laptop,MSI Bravo 15 B5DD-410IN Gaming Laptop laptop,LAPTOP,47990.0,,10,,0.0,0,False,True
+LAP-000039,Lenovo IdeaPad Flex 5 82R9008GIN Laptop,Lenovo IdeaPad Flex 5 82R9008GIN Laptop laptop,LAPTOP,61100.0,,10,,0.0,0,False,True
+LAP-000040,HP Victus 15-fa0070TX Laptop,HP Victus 15-fa0070TX Laptop laptop,LAPTOP,67990.0,,10,,0.0,0,False,True
+LAP-000041,Lenovo IdeaPad Slim 1 82R10049IN Laptop,Lenovo IdeaPad Slim 1 82R10049IN Laptop laptop,LAPTOP,34300.0,,10,,0.0,0,False,True
+LAP-000042,Asus Vivobook S15 OLED K3502ZA-L501WS Laptop,Asus Vivobook S15 OLED K3502ZA-L501WS Laptop laptop,LAPTOP,73000.0,,10,,0.0,0,False,True
+LAP-000043,Lenovo IdeaPad D330 82H0001YIN Laptop,Lenovo IdeaPad D330 82H0001YIN Laptop laptop,LAPTOP,22999.0,,10,,0.0,0,False,True
+LAP-000044,Infinix INBook X1 XL11 Laptop,Infinix INBook X1 XL11 Laptop laptop,LAPTOP,37999.0,,10,,0.0,0,False,True
+LAP-000045,Realme Book Slim Laptop,Realme Book Slim Laptop laptop,LAPTOP,39990.0,,10,,0.0,0,False,True
+LAP-000046,Infinix Zero Book Series ZL12 Laptop,Infinix Zero Book Series ZL12 Laptop laptop,LAPTOP,64990.0,,10,,0.0,0,False,True
+LAP-000047,Asus VivoBook 15 X1500EA-EJ701W Laptop,Asus VivoBook 15 X1500EA-EJ701W Laptop laptop,LAPTOP,56799.0,,10,,0.0,0,False,True
+LAP-000048,Lenovo IdeaPad Gaming 3 82K201YAIN Laptop,Lenovo IdeaPad Gaming 3 82K201YAIN Laptop laptop,LAPTOP,55990.0,,10,,0.0,0,False,True
+LAP-000049,Asus Vivobook Pro 14 OLED M3400QA-KM502WS Gaming Laptop,Asus Vivobook Pro 14 OLED M3400QA-KM502WS Gaming Laptop laptop,LAPTOP,53000.0,,10,,0.0,0,False,True
+LAP-000050,HP Pavilion x360 14-ek0074TU Laptop,HP Pavilion x360 14-ek0074TU Laptop laptop,LAPTOP,73490.0,,10,,0.0,0,False,True
+LAP-000051,Lenovo IdeaPad Gaming 3 82K201UEIN Laptop,Lenovo IdeaPad Gaming 3 82K201UEIN Laptop laptop,LAPTOP,58490.0,,10,,0.0,0,False,True
+LAP-000052,Asus Vivobook Pro 15 OLED M6500IH-HN701WS Laptop,Asus Vivobook Pro 15 OLED M6500IH-HN701WS Laptop laptop,LAPTOP,58990.0,,10,,0.0,0,False,True
+LAP-000053,Asus TUF Gaming A15 FA506IHRZ-HN111W Laptop,Asus TUF Gaming A15 FA506IHRZ-HN111W Laptop laptop,LAPTOP,54990.0,,10,,0.0,0,False,True
+LAP-000054,HP Victus 15-fb0050AX Gaming Laptop,HP Victus 15-fb0050AX Gaming Laptop laptop,LAPTOP,67600.0,,10,,0.0,0,False,True
+LAP-000055,Lenovo IdeaPad Slim 5 82SF008YIN Laptop,Lenovo IdeaPad Slim 5 82SF008YIN Laptop laptop,LAPTOP,72490.0,,10,,0.0,0,False,True
+LAP-000056,Acer Aspire 5 A515-57G UN.K9TSI.002 Gaming Laptop,Acer Aspire 5 A515-57G UN.K9TSI.002 Gaming Laptop laptop,LAPTOP,62990.0,,10,,0.0,0,False,True
+LAP-000057,Asus VivoBook 15 X1500EA-EJ322WS Laptop,Asus VivoBook 15 X1500EA-EJ322WS Laptop laptop,LAPTOP,35325.0,,10,,0.0,0,False,True
+LAP-000058,HP 14s-dy5005TU Laptop,HP 14s-dy5005TU Laptop laptop,LAPTOP,63990.0,,10,,0.0,0,False,True
+LAP-000059,Asus Vivobook 15 2022 X1502ZA-EJ312WS Laptop,Asus Vivobook 15 2022 X1502ZA-EJ312WS Laptop laptop,LAPTOP,42300.0,,10,,0.0,0,False,True
+LAP-000060,Lenovo IdeaPad Slim 3 82RK0062IN Laptop,Lenovo IdeaPad Slim 3 82RK0062IN Laptop laptop,LAPTOP,58490.0,,10,,0.0,0,False,True
+LAP-000061,MSI Thin GF63 11SC-852IN Gaming Laptop,MSI Thin GF63 11SC-852IN Gaming Laptop laptop,LAPTOP,64000.0,,10,,0.0,0,False,True
+LAP-000062,Asus Zenbook 17 Fold UX9702AA-MD023WS Laptop,Asus Zenbook 17 Fold UX9702AA-MD023WS Laptop laptop,LAPTOP,329990.0,,10,,0.0,0,False,True
+LAP-000063,Nokia PureBook S14 NKi511TL165S Laptop,Nokia PureBook S14 NKi511TL165S Laptop laptop,LAPTOP,40990.0,,10,,0.0,0,False,True
+LAP-000064,Dell Latitude 3420 Laptop,Dell Latitude 3420 Laptop laptop,LAPTOP,73740.0,,10,,0.0,0,False,True
+LAP-000065,Acer Aspire 3 A315-24 Laptop,Acer Aspire 3 A315-24 Laptop laptop,LAPTOP,52490.0,,10,,0.0,0,False,True
+LAP-000066,HP 14s-dq2649TU Laptop,HP 14s-dq2649TU Laptop laptop,LAPTOP,45500.0,,10,,0.0,0,False,True
+LAP-000067,Samsung Galaxy Book2 NP550XED-KA1IN 15 Laptop,Samsung Galaxy Book2 NP550XED-KA1IN 15 Laptop laptop,LAPTOP,67990.0,,10,,0.0,0,False,True
+LAP-000068,Samsung Galaxy Book 3 Pro NP960XFG-KC1IN Laptop,Samsung Galaxy Book 3 Pro NP960XFG-KC1IN Laptop laptop,LAPTOP,149990.0,,10,,0.0,0,False,True
+LAP-000069,Samsung Galaxy Book 3 Pro 14 NP940XFG-KC4IN Laptop,Samsung Galaxy Book 3 Pro 14 NP940XFG-KC4IN Laptop laptop,LAPTOP,139990.0,,10,,0.0,0,False,True
+LAP-000070,Samsung Galaxy Book 3 Pro 14 NP940XFG-KC5IN Laptop,Samsung Galaxy Book 3 Pro 14 NP940XFG-KC5IN Laptop laptop,LAPTOP,155990.0,,10,,0.0,0,False,True
+LAP-000071,Samsung Galaxy Book 3 Pro 14 NP940XFG-KC1IN Laptop,Samsung Galaxy Book 3 Pro 14 NP940XFG-KC1IN Laptop laptop,LAPTOP,131990.0,,10,,0.0,0,False,True
+LAP-000072,Samsung Galaxy Book 3 360 15 NP750QFG-KA2IN Laptop,Samsung Galaxy Book 3 360 15 NP750QFG-KA2IN Laptop laptop,LAPTOP,114990.0,,10,,0.0,0,False,True
+LAP-000073,Lenovo V15 ‎82C70005UK Laptop,Lenovo V15 ‎82C70005UK Laptop laptop,LAPTOP,38490.0,,10,,0.0,0,False,True
+LAP-000074,Samsung Galaxy Book 3 360 13 NP730QFG-KA1IN Laptop,Samsung Galaxy Book 3 360 13 NP730QFG-KA1IN Laptop laptop,LAPTOP,109990.0,,10,,0.0,0,False,True
+LAP-000075,Samsung Galaxy Book 3 360 13 NP730QFG-KA3IN Laptop,Samsung Galaxy Book 3 360 13 NP730QFG-KA3IN Laptop laptop,LAPTOP,133990.0,,10,,0.0,0,False,True
+LAP-000076,Samsung Galaxy Book 3 360 13 NP730QFG-KA2IN Laptop,Samsung Galaxy Book 3 360 13 NP730QFG-KA2IN Laptop laptop,LAPTOP,117990.0,,10,,0.0,0,False,True
+LAP-000077,Samsung Galaxy Book 3 Pro 360 NP960QFG-KA2IN Laptop,Samsung Galaxy Book 3 Pro 360 NP960QFG-KA2IN Laptop laptop,LAPTOP,155990.0,,10,,0.0,0,False,True
+LAP-000078,Samsung Galaxy Book 3 Pro NP960XFG-KC2IN Laptop,Samsung Galaxy Book 3 Pro NP960XFG-KC2IN Laptop laptop,LAPTOP,165990.0,,10,,0.0,0,False,True
+LAP-000079,Samsung Galaxy Book 3 Pro 360 NP960QFG-KA1IN Laptop,Samsung Galaxy Book 3 Pro 360 NP960QFG-KA1IN Laptop laptop,LAPTOP,163990.0,,10,,0.0,0,False,True
+LAP-000080,Samsung Galaxy Book 3 360 NP750QFG-KA1IN Laptop,Samsung Galaxy Book 3 360 NP750QFG-KA1IN Laptop laptop,LAPTOP,122990.0,,10,,0.0,0,False,True
+LAP-000081,Samsung Galaxy Book 3 Pro 360 NP960QFG-KA3IN Laptop,Samsung Galaxy Book 3 Pro 360 NP960QFG-KA3IN Laptop laptop,LAPTOP,179990.0,,10,,0.0,0,False,True
+LAP-000082,Lenovo IdeaPad Gaming 3 82K1017WIN Laptop,Lenovo IdeaPad Gaming 3 82K1017WIN Laptop laptop,LAPTOP,52900.0,,10,,0.0,0,False,True
+LAP-000083,Acer One 14 Z2-493 Laptop,Acer One 14 Z2-493 Laptop laptop,LAPTOP,25990.0,,10,,0.0,0,False,True
+LAP-000084,Dell Inspiron 3525 D560789WIN9S Laptop,Dell Inspiron 3525 D560789WIN9S Laptop laptop,LAPTOP,49441.0,,10,,0.0,0,False,True
+LAP-000085,Acer Aspire 3 A315-59 Laptop,Acer Aspire 3 A315-59 Laptop laptop,LAPTOP,39990.0,,10,,0.0,0,False,True
+LAP-000086,Lenovo IdeaPad Gaming 3 82K201Y9IN Laptop,Lenovo IdeaPad Gaming 3 82K201Y9IN Laptop laptop,LAPTOP,56990.0,,10,,0.0,0,False,True
+LAP-000087,Lenovo IdeaPad Flex 5 82R9008GIN Laptop,Lenovo IdeaPad Flex 5 82R9008GIN Laptop laptop,LAPTOP,61590.0,,10,,0.0,0,False,True
+LAP-000088,HP Pavilion 15s-eq2182AU Laptop,HP Pavilion 15s-eq2182AU Laptop laptop,LAPTOP,49123.0,,10,,0.0,0,False,True
+LAP-000089,HP Victus 15-fa0350TX Laptop,HP Victus 15-fa0350TX Laptop laptop,LAPTOP,77990.0,,10,,0.0,0,False,True
+LAP-000090,Asus TUF Gaming A15 2022 FA577RE-HN055WS Gaming Laptop,Asus TUF Gaming A15 2022 FA577RE-HN055WS Gaming Laptop laptop,LAPTOP,96085.0,,10,,0.0,0,False,True
+LAP-000091,HP Victus 16-e0352AX Gaming Laptop,HP Victus 16-e0352AX Gaming Laptop laptop,LAPTOP,63990.0,,10,,0.0,0,False,True
+LAP-000092,Asus TUF Gaming F15 FX506LHB-HN355WS Gaming Laptop,Asus TUF Gaming F15 FX506LHB-HN355WS Gaming Laptop laptop,LAPTOP,54990.0,,10,,0.0,0,False,True
+LAP-000093,HP Pavilion 15-eg2002TU Laptop,HP Pavilion 15-eg2002TU Laptop laptop,LAPTOP,69990.0,,10,,0.0,0,False,True
+LAP-000094,Samsung Galaxy Book2 Pro 360 15 Laptop,Samsung Galaxy Book2 Pro 360 15 Laptop laptop,LAPTOP,129990.0,,10,,0.0,0,False,True
+LAP-000095,Dell Vostro 3510 Laptop,Dell Vostro 3510 Laptop laptop,LAPTOP,37990.0,,10,,0.0,0,False,True
+LAP-000096,Asus VivoBook K15 OLED KM513UA-L503WS Laptop,Asus VivoBook K15 OLED KM513UA-L503WS Laptop laptop,LAPTOP,47990.0,,10,,0.0,0,False,True
+LAP-000097,HP 14s-fq1092au Laptop,HP 14s-fq1092au Laptop laptop,LAPTOP,46058.0,,10,,0.0,0,False,True
+LAP-000098,Microsoft Surface Laptop Go 1943 THJ-00023 Laptop,Microsoft Surface Laptop Go 1943 THJ-00023 Laptop laptop,LAPTOP,67000.0,,10,,0.0,0,False,True
+LAP-000099,HP 245 G8 689T3PA Laptop,HP 245 G8 689T3PA Laptop laptop,LAPTOP,27989.0,,10,,0.0,0,False,True
+LAP-000100,Lenovo IdeaPad 3i ‎82RJ005BUS Laptop,Lenovo IdeaPad 3i ‎82RJ005BUS Laptop laptop,LAPTOP,49990.0,,10,,0.0,0,False,True
+LAP-000101,Apple MacBook Pro 16 inch Laptop,Apple MacBook Pro 16 inch Laptop laptop,LAPTOP,349900.0,,10,,0.0,0,False,True
+LAP-000102,Samsung Galaxy Book 2 NP550XED-KA3IN Laptop,Samsung Galaxy Book 2 NP550XED-KA3IN Laptop laptop,LAPTOP,72990.0,,10,,0.0,0,False,True
+LAP-000103,Asus VivoBook 15 K513EP-BQ1093T Laptop,Asus VivoBook 15 K513EP-BQ1093T Laptop laptop,LAPTOP,45990.0,,10,,0.0,0,False,True
+LAP-000104,Lenovo IdeaPad Gaming 3 15IHU6 82K101GSIN Laptop,Lenovo IdeaPad Gaming 3 15IHU6 82K101GSIN Laptop laptop,LAPTOP,54990.0,,10,,0.0,0,False,True
+LAP-000105,Asus VivoBook 14 X415EA-EK701WS Laptop,Asus VivoBook 14 X415EA-EK701WS Laptop laptop,LAPTOP,56990.0,,10,,0.0,0,False,True
+LAP-000106,Asus VivoBook 14 2022 X1402ZA-EK312WS Laptop,Asus VivoBook 14 2022 X1402ZA-EK312WS Laptop laptop,LAPTOP,40990.0,,10,,0.0,0,False,True
+LAP-000107,HP 247 G8 600A9PA Laptop,HP 247 G8 600A9PA Laptop laptop,LAPTOP,32999.0,,10,,0.0,0,False,True
+LAP-000108,Asus Vivobook Pro 16 OLED K6602HC-N1902WS Gaming Laptop,Asus Vivobook Pro 16 OLED K6602HC-N1902WS Gaming Laptop laptop,LAPTOP,87990.0,,10,,0.0,0,False,True
+LAP-000109,Acer Swift 3 OLED SF314-71 NX.KAVSI.001 Laptop,Acer Swift 3 OLED SF314-71 NX.KAVSI.001 Laptop laptop,LAPTOP,115999.0,,10,,0.0,0,False,True
+LAP-000110,Dell Latitude 3430 Laptop,Dell Latitude 3430 Laptop laptop,LAPTOP,108000.0,,10,,0.0,0,False,True
+LAP-000111,HP Pavilion 15-eg2018TX Laptop,HP Pavilion 15-eg2018TX Laptop laptop,LAPTOP,75070.0,,10,,0.0,0,False,True
+LAP-000112,Microsoft Surface Pro 9 QEZ-00065 Laptop,Microsoft Surface Pro 9 QEZ-00065 Laptop laptop,LAPTOP,99999.0,,10,,0.0,0,False,True
+LAP-000113,HP 247 G8 ‎6B5R3PA Laptop,HP 247 G8 ‎6B5R3PA Laptop laptop,LAPTOP,30020.0,,10,,0.0,0,False,True
+LAP-000114,HP Omen 16-n0079AX Gaming Laptop,HP Omen 16-n0079AX Gaming Laptop laptop,LAPTOP,108290.0,,10,,0.0,0,False,True
+LAP-000115,Asus VivoBook 14 2022 X1402ZA-MW511WS Laptop,Asus VivoBook 14 2022 X1402ZA-MW511WS Laptop laptop,LAPTOP,66990.0,,10,,0.0,0,False,True
+LAP-000116,HP 14s-dr3001TU Laptop,HP 14s-dr3001TU Laptop laptop,LAPTOP,30990.0,,10,,0.0,0,False,True
+LAP-000117,Asus VivoBook 14 X415JA-EK522WS Laptop,Asus VivoBook 14 X415JA-EK522WS Laptop laptop,LAPTOP,41990.0,,10,,0.0,0,False,True
+LAP-000118,Asus Chromebook Flip C214MA-BU0704 Laptop,Asus Chromebook Flip C214MA-BU0704 Laptop laptop,LAPTOP,15990.0,,10,,0.0,0,False,True
+LAP-000119,Lenovo IdeaPad Gaming 3 15IAH7 82S900R6IN Laptop,Lenovo IdeaPad Gaming 3 15IAH7 82S900R6IN Laptop laptop,LAPTOP,80990.0,,10,,0.0,0,False,True
+LAP-000120,Acer Predator Helios 300 PH315-55 Gaming Laptop,Acer Predator Helios 300 PH315-55 Gaming Laptop laptop,LAPTOP,158990.0,,10,,0.0,0,False,True
+LAP-000121,Acer Extensa 15 EX215-54 Laptop,Acer Extensa 15 EX215-54 Laptop laptop,LAPTOP,33990.0,,10,,0.0,0,False,True
+LAP-000122,Asus ProArt StudioBook Pro 16 OLED H7600ZM-L701WS Laptop,Asus ProArt StudioBook Pro 16 OLED H7600ZM-L701WS Laptop laptop,LAPTOP,198490.0,,10,,0.0,0,False,True
+LAP-000123,Asus VivoBook 15 X515JA-EJ382WS Laptop,Asus VivoBook 15 X515JA-EJ382WS Laptop laptop,LAPTOP,33575.0,,10,,0.0,0,False,True
+LAP-000124,MSI Bravo 15 B5DD-410IN Gaming Laptop,MSI Bravo 15 B5DD-410IN Gaming Laptop laptop,LAPTOP,48890.0,,10,,0.0,0,False,True
+LAP-000125,Infinix INBook X1 Neo Laptop,Infinix INBook X1 Neo Laptop laptop,LAPTOP,22990.0,,10,,0.0,0,False,True
+LAP-000126,Asus TUF Dash F15 2022 FX517ZC-HN108WS Gaming Laptop,Asus TUF Dash F15 2022 FX517ZC-HN108WS Gaming Laptop laptop,LAPTOP,95990.0,,10,,0.0,0,False,True
+LAP-000127,Asus VivoBook 15 X515EA-EJ522WS Laptop,Asus VivoBook 15 X515EA-EJ522WS Laptop laptop,LAPTOP,46990.0,,10,,0.0,0,False,True
+LAP-000128,Asus Vivobook 15 2022 X1502ZA-EZ311WS Touch Laptop,Asus Vivobook 15 2022 X1502ZA-EZ311WS Touch Laptop laptop,LAPTOP,43879.0,,10,,0.0,0,False,True
+LAP-000129,HP 14s-dy2507TU Laptop,HP 14s-dy2507TU Laptop laptop,LAPTOP,35490.0,,10,,0.0,0,False,True
+LAP-000130,HP Pavilion 15s-fq5112TU Laptop,HP Pavilion 15s-fq5112TU Laptop laptop,LAPTOP,62490.0,,10,,0.0,0,False,True
+LAP-000131,Asus TUF Gaming F15,Asus TUF Gaming F15 laptop,LAPTOP,94990.0,,10,,0.0,0,False,True
+LAP-000132,Asus ROG Strix G17 2022 G713IE-HX040W Gaming Laptop,Asus ROG Strix G17 2022 G713IE-HX040W Gaming Laptop laptop,LAPTOP,87990.0,,10,,0.0,0,False,True
+LAP-000133,Infinix INBook X1 Neo XL22 Laptop,Infinix INBook X1 Neo XL22 Laptop laptop,LAPTOP,29990.0,,10,,0.0,0,False,True
+LAP-000134,Asus TUF Dash F15 2022 FX517ZC-HN083WS Gaming Laptop,Asus TUF Dash F15 2022 FX517ZC-HN083WS Gaming Laptop laptop,LAPTOP,77990.0,,10,,0.0,0,False,True
+LAP-000135,Acer Nitro 5 AN515-56 Gaming Laptop,Acer Nitro 5 AN515-56 Gaming Laptop laptop,LAPTOP,62990.0,,10,,0.0,0,False,True
+LAP-000136,Acer Aspire 5 A515-57G Gaming Laptop,Acer Aspire 5 A515-57G Gaming Laptop laptop,LAPTOP,59999.0,,10,,0.0,0,False,True
+LAP-000137,Lenovo IdeaPad Slim 1 82R1004AIN Laptop,Lenovo IdeaPad Slim 1 82R1004AIN Laptop laptop,LAPTOP,40026.0,,10,,0.0,0,False,True
+LAP-000138,Acer Aspire 7 A715-75G NH.QGBSI.001 Gaming Laptop,Acer Aspire 7 A715-75G NH.QGBSI.001 Gaming Laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000139,Lenovo IdeaPad Gaming 3 82K201ULIN Laptop,Lenovo IdeaPad Gaming 3 82K201ULIN Laptop laptop,LAPTOP,71990.0,,10,,0.0,0,False,True
+LAP-000140,Asus TUF Dash F15 2022 FX517ZC-HN035WS Gaming Laptop,Asus TUF Dash F15 2022 FX517ZC-HN035WS Gaming Laptop laptop,LAPTOP,75990.0,,10,,0.0,0,False,True
+LAP-000141,Asus Vivobook Pro 14 OLED M3400QA-KM512WS Gaming Laptop,Asus Vivobook Pro 14 OLED M3400QA-KM512WS Gaming Laptop laptop,LAPTOP,59990.0,,10,,0.0,0,False,True
+LAP-000142,HP Pavilion 15-eg2039TU Laptop,HP Pavilion 15-eg2039TU Laptop laptop,LAPTOP,85990.0,,10,,0.0,0,False,True
+LAP-000143,HP Pavilion 14-dv2041TU Laptop,HP Pavilion 14-dv2041TU Laptop laptop,LAPTOP,71990.0,,10,,0.0,0,False,True
+LAP-000144,MSI Gaming Crosshair 15 B12UEZ-677IN Laptop,MSI Gaming Crosshair 15 B12UEZ-677IN Laptop laptop,LAPTOP,111000.0,,10,,0.0,0,False,True
+LAP-000145,Apple MacBook Pro 2022 Laptop,Apple MacBook Pro 2022 Laptop laptop,LAPTOP,139990.0,,10,,0.0,0,False,True
+LAP-000146,HP Pavilion 14-dv2015TU Laptop,HP Pavilion 14-dv2015TU Laptop laptop,LAPTOP,84990.0,,10,,0.0,0,False,True
+LAP-000147,Asus Vivobook 15 2022 X1502ZA-BQ502WS Laptop,Asus Vivobook 15 2022 X1502ZA-BQ502WS Laptop laptop,LAPTOP,56825.0,,10,,0.0,0,False,True
+LAP-000148,Dell G15-5511 Gaming Laptop,Dell G15-5511 Gaming Laptop laptop,LAPTOP,68102.0,,10,,0.0,0,False,True
+LAP-000149,Dell G15-5520 Laptop,Dell G15-5520 Laptop laptop,LAPTOP,108400.0,,10,,0.0,0,False,True
+LAP-000150,Acer Aspire 3 A315-58 Laptop,Acer Aspire 3 A315-58 Laptop laptop,LAPTOP,43490.0,,10,,0.0,0,False,True
+LAP-000151,HP Pavilion 15-EC2048AX Gaming Laptop,HP Pavilion 15-EC2048AX Gaming Laptop laptop,LAPTOP,69028.0,,10,,0.0,0,False,True
+LAP-000152,Dell Inspiron 3525 Laptop,Dell Inspiron 3525 Laptop laptop,LAPTOP,33000.0,,10,,0.0,0,False,True
+LAP-000153,Avita Satus Ultimus S111 Laptop,Avita Satus Ultimus S111 Laptop laptop,LAPTOP,16990.0,,10,,0.0,0,False,True
+LAP-000154,Samsung Galaxy Book Go Laptop,Samsung Galaxy Book Go Laptop laptop,LAPTOP,32990.0,,10,,0.0,0,False,True
+LAP-000155,Asus Vivobook 13 Slate OLED T3300KA-LQ122WS Laptop,Asus Vivobook 13 Slate OLED T3300KA-LQ122WS Laptop laptop,LAPTOP,29990.0,,10,,0.0,0,False,True
+LAP-000156,Asus VivoBook 15 X515EA-EJ322WS Laptop,Asus VivoBook 15 X515EA-EJ322WS Laptop laptop,LAPTOP,35990.0,,10,,0.0,0,False,True
+LAP-000157,Lenovo Ideapad 15ALC6 82KU017KIN Laptop,Lenovo Ideapad 15ALC6 82KU017KIN Laptop laptop,LAPTOP,47799.0,,10,,0.0,0,False,True
+LAP-000158,HP Pavilion 15-EC2146AX Gaming Laptop,HP Pavilion 15-EC2146AX Gaming Laptop laptop,LAPTOP,73758.0,,10,,0.0,0,False,True
+LAP-000159,Infinix INBook X1 XL11 Laptop,Infinix INBook X1 XL11 Laptop laptop,LAPTOP,37490.0,,10,,0.0,0,False,True
+LAP-000160,Apple MacBook Pro 14 inch MKGP3HN Laptop,Apple MacBook Pro 14 inch MKGP3HN Laptop laptop,LAPTOP,171594.0,,10,,0.0,0,False,True
+LAP-000161,HP Victus 16-e0162AX Gaming Laptop,HP Victus 16-e0162AX Gaming Laptop laptop,LAPTOP,61490.0,,10,,0.0,0,False,True
+LAP-000162,Dell Inspiron 3511 Laptop,Dell Inspiron 3511 Laptop laptop,LAPTOP,59306.0,,10,,0.0,0,False,True
+LAP-000163,Dell Latitude 5420 Laptop,Dell Latitude 5420 Laptop laptop,LAPTOP,74500.0,,10,,0.0,0,False,True
+LAP-000164,HP Pavilion 15-DK2100TX Gaming Laptop,HP Pavilion 15-DK2100TX Gaming Laptop laptop,LAPTOP,66990.0,,10,,0.0,0,False,True
+LAP-000165,Dell Inspiron 5518 Laptop,Dell Inspiron 5518 Laptop laptop,LAPTOP,67990.0,,10,,0.0,0,False,True
+LAP-000166,Xiaomi Mi Notebook Pro 14 Laptop,Xiaomi Mi Notebook Pro 14 Laptop laptop,LAPTOP,58355.0,,10,,0.0,0,False,True
+LAP-000167,HP 15s-GR0012AU Laptop,HP 15s-GR0012AU Laptop laptop,LAPTOP,44990.0,,10,,0.0,0,False,True
+LAP-000168,HP EliteBook 840 G6,HP EliteBook 840 G6 laptop,LAPTOP,90464.0,,10,,0.0,0,False,True
+LAP-000169,HP 15s-fq2717TU Laptop,HP 15s-fq2717TU Laptop laptop,LAPTOP,41990.0,,10,,0.0,0,False,True
+LAP-000170,Asus VivoBook 15 X515EA-EJ701WS Laptop,Asus VivoBook 15 X515EA-EJ701WS Laptop laptop,LAPTOP,54990.0,,10,,0.0,0,False,True
+LAP-000171,HP 245 G8 Laptop,HP 245 G8 Laptop laptop,LAPTOP,25999.0,,10,,0.0,0,False,True
+LAP-000172,HP 15s-eq2146AU Laptop,HP 15s-eq2146AU Laptop laptop,LAPTOP,40490.0,,10,,0.0,0,False,True
+LAP-000173,Lenovo V15 82KBA01TIH Laptop,Lenovo V15 82KBA01TIH Laptop laptop,LAPTOP,49490.0,,10,,0.0,0,False,True
+LAP-000174,Apple MacBook Pro M2 2022 Laptop,Apple MacBook Pro M2 2022 Laptop laptop,LAPTOP,168900.0,,10,,0.0,0,False,True
+LAP-000175,Lenovo V15 82KDA01UIH Laptop,Lenovo V15 82KDA01UIH Laptop laptop,LAPTOP,32990.0,,10,,0.0,0,False,True
+LAP-000176,Lenovo Yoga 9i 83B1002GIN Laptop,Lenovo Yoga 9i 83B1002GIN Laptop laptop,LAPTOP,174990.0,,10,,0.0,0,False,True
+LAP-000177,Honor MagicBook X14 Laptop,Honor MagicBook X14 Laptop laptop,LAPTOP,46990.0,,10,,0.0,0,False,True
+LAP-000178,Chuwi CoreBook X Laptop,Chuwi CoreBook X Laptop laptop,LAPTOP,33990.0,,10,,0.0,0,False,True
+LAP-000179,Dell Inspiron 15 3520 D560915WIN9S Laptop,Dell Inspiron 15 3520 D560915WIN9S Laptop laptop,LAPTOP,46900.0,,10,,0.0,0,False,True
+LAP-000180,Dell Inspiron 3520 D560866WIN9S Laptop,Dell Inspiron 3520 D560866WIN9S Laptop laptop,LAPTOP,63690.0,,10,,0.0,0,False,True
+LAP-000181,Lenovo V15 82KDA00YIH Laptop,Lenovo V15 82KDA00YIH Laptop laptop,LAPTOP,42137.0,,10,,0.0,0,False,True
+LAP-000182,HP 245 G8 3S7L2PA Laptop,HP 245 G8 3S7L2PA Laptop laptop,LAPTOP,24990.0,,10,,0.0,0,False,True
+LAP-000183,Acer Aspire 3 A314-35 UN.K0SSI.040 Laptop,Acer Aspire 3 A314-35 UN.K0SSI.040 Laptop laptop,LAPTOP,37990.0,,10,,0.0,0,False,True
+LAP-000184,Asus VivoBook 15 X1500EA-EJ3379WS Laptop,Asus VivoBook 15 X1500EA-EJ3379WS Laptop laptop,LAPTOP,42990.0,,10,,0.0,0,False,True
+LAP-000185,Lenovo V15 82KBA01KIH Laptop,Lenovo V15 82KBA01KIH Laptop laptop,LAPTOP,52500.0,,10,,0.0,0,False,True
+LAP-000186,HP 255 G8 Business Laptop,HP 255 G8 Business Laptop laptop,LAPTOP,27390.0,,10,,0.0,0,False,True
+LAP-000187,Lenovo E41-55 82FJ00ALIH Laptop,Lenovo E41-55 82FJ00ALIH Laptop laptop,LAPTOP,18990.0,,10,,0.0,0,False,True
+LAP-000188,Lenovo E41-55 82FJ00BLIH Laptop,Lenovo E41-55 82FJ00BLIH Laptop laptop,LAPTOP,20990.0,,10,,0.0,0,False,True
+LAP-000189,Dell Inspiron 5620 Laptop,Dell Inspiron 5620 Laptop laptop,LAPTOP,98450.0,,10,,0.0,0,False,True
+LAP-000190,Acer Aspire 7 A715-51G UN.QGCSI.002 Gaming Laptop,Acer Aspire 7 A715-51G UN.QGCSI.002 Gaming Laptop laptop,LAPTOP,73990.0,,10,,0.0,0,False,True
+LAP-000191,Asus VivoBook 14 X415EA-EK522WS Laptop,Asus VivoBook 14 X415EA-EK522WS Laptop laptop,LAPTOP,49490.0,,10,,0.0,0,False,True
+LAP-000192,Dell Alienware M15 R7 Gaming Laptop,Dell Alienware M15 R7 Gaming Laptop laptop,LAPTOP,168990.0,,10,,0.0,0,False,True
+LAP-000193,Asus Vivobook 16X M1603QA-MB512WS Laptop,Asus Vivobook 16X M1603QA-MB512WS Laptop laptop,LAPTOP,54990.0,,10,,0.0,0,False,True
+LAP-000194,Acer Extensa EX215-31 Laptop,Acer Extensa EX215-31 Laptop laptop,LAPTOP,24990.0,,10,,0.0,0,False,True
+LAP-000195,Asus Vivobook 15 2022 X1502ZA-EJ514WS Laptop,Asus Vivobook 15 2022 X1502ZA-EJ514WS Laptop laptop,LAPTOP,56990.0,,10,,0.0,0,False,True
+LAP-000196,Asus VivoBook 15 X1500EA-EJ522WS Laptop,Asus VivoBook 15 X1500EA-EJ522WS Laptop laptop,LAPTOP,46890.0,,10,,0.0,0,False,True
+LAP-000197,Lenovo IdeaPad 3 82KU017KIN Laptop,Lenovo IdeaPad 3 82KU017KIN Laptop laptop,LAPTOP,45278.0,,10,,0.0,0,False,True
+LAP-000198,Dell G15-5521 D560897WIN9S Gaming Laptop,Dell G15-5521 D560897WIN9S Gaming Laptop laptop,LAPTOP,138990.0,,10,,0.0,0,False,True
+LAP-000199,Dell Inspiron 5420 Laptop,Dell Inspiron 5420 Laptop laptop,LAPTOP,79490.0,,10,,0.0,0,False,True
+LAP-000200,HP 255 G8 6X4B2PA Laptop,HP 255 G8 6X4B2PA Laptop laptop,LAPTOP,21633.0,,10,,0.0,0,False,True
+LAP-000201,Asus Vivobook 15 OLED X1505ZA-L1511WS Laptop,Asus Vivobook 15 OLED X1505ZA-L1511WS Laptop laptop,LAPTOP,67499.0,,10,,0.0,0,False,True
+LAP-000202,Microsoft Surface Laptop 5 13.5 inch,Microsoft Surface Laptop 5 13.5 inch laptop,LAPTOP,98990.0,,10,,0.0,0,False,True
+LAP-000203,Infinix INBook X2 Plus XL25 Laptop,Infinix INBook X2 Plus XL25 Laptop laptop,LAPTOP,34990.0,,10,,0.0,0,False,True
+LAP-000204,Infinix INBook X2 Plus XL25 Laptop,Infinix INBook X2 Plus XL25 Laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000205,Infinix INBook X2 Plus XL25 Laptop,Infinix INBook X2 Plus XL25 Laptop laptop,LAPTOP,47990.0,,10,,0.0,0,False,True
+LAP-000206,Honor MagicBook 14 M-WFQ9AHNE Laptop,Honor MagicBook 14 M-WFQ9AHNE Laptop laptop,LAPTOP,44990.0,,10,,0.0,0,False,True
+LAP-000207,HP Victus 15-fa0092TX Laptop,HP Victus 15-fa0092TX Laptop laptop,LAPTOP,81990.0,,10,,0.0,0,False,True
+LAP-000208,HP ProBook 440 G8 Laptop,HP ProBook 440 G8 Laptop laptop,LAPTOP,51990.0,,10,,0.0,0,False,True
+LAP-000209,Lenovo Legion 5 82RB00K8IN Laptop,Lenovo Legion 5 82RB00K8IN Laptop laptop,LAPTOP,141990.0,,10,,0.0,0,False,True
+LAP-000210,Dell Inspiron 3520 D560879WIN9S Laptop,Dell Inspiron 3520 D560879WIN9S Laptop laptop,LAPTOP,65990.0,,10,,0.0,0,False,True
+LAP-000211,HP Omen 16-n0091AX Gaming Laptop,HP Omen 16-n0091AX Gaming Laptop laptop,LAPTOP,115903.0,,10,,0.0,0,False,True
+LAP-000212,MSI Modern 15 B12M-202IN Laptop,MSI Modern 15 B12M-202IN Laptop laptop,LAPTOP,55490.0,,10,,0.0,0,False,True
+LAP-000213,Lenovo Legion 5 Pro 16IAH7H 82RF00DYIN Gaming Laptop,Lenovo Legion 5 Pro 16IAH7H 82RF00DYIN Gaming Laptop laptop,LAPTOP,164990.0,,10,,0.0,0,False,True
+LAP-000214,Asus Vivobook Pro 15 OLED M3500QC-L1461WS Gaming Laptop,Asus Vivobook Pro 15 OLED M3500QC-L1461WS Gaming Laptop laptop,LAPTOP,98500.0,,10,,0.0,0,False,True
+LAP-000215,Lenovo V15 82C3001VSP Laptop,Lenovo V15 82C3001VSP Laptop laptop,LAPTOP,21999.0,,10,,0.0,0,False,True
+LAP-000216,Dell Inspiron 5320 Laptop,Dell Inspiron 5320 Laptop laptop,LAPTOP,76490.0,,10,,0.0,0,False,True
+LAP-000217,Asus TUF Gaming A15 2022 FA506QM-HN008W Gaming Laptop,Asus TUF Gaming A15 2022 FA506QM-HN008W Gaming Laptop laptop,LAPTOP,89990.0,,10,,0.0,0,False,True
+LAP-000218,Lenovo E41-55 AMD Laptop,Lenovo E41-55 AMD Laptop laptop,LAPTOP,22999.0,,10,,0.0,0,False,True
+LAP-000219,Asus VivoBook 14 2022 X1402ZA-EK391WS Laptop,Asus VivoBook 14 2022 X1402ZA-EK391WS Laptop laptop,LAPTOP,38990.0,,10,,0.0,0,False,True
+LAP-000220,Lenovo IdeaPad 3 82KU00LQIN Laptop,Lenovo IdeaPad 3 82KU00LQIN Laptop laptop,LAPTOP,46990.0,,10,,0.0,0,False,True
+LAP-000221,Lenovo V15 G2-ITL Business Laptop,Lenovo V15 G2-ITL Business Laptop laptop,LAPTOP,48999.0,,10,,0.0,0,False,True
+LAP-000222,Lenovo IdeaPad Gaming 3 82K1019BIN Laptop,Lenovo IdeaPad Gaming 3 82K1019BIN Laptop laptop,LAPTOP,68989.0,,10,,0.0,0,False,True
+LAP-000223,MSI Gaming Katana GF76 11SC-847IN Laptop,MSI Gaming Katana GF76 11SC-847IN Laptop laptop,LAPTOP,55990.0,,10,,0.0,0,False,True
+LAP-000224,MSI Katana GF66 12UD-640IN Gaming Laptop,MSI Katana GF66 12UD-640IN Gaming Laptop laptop,LAPTOP,77990.0,,10,,0.0,0,False,True
+LAP-000225,MSI Thin GF63 12HW-004IN Gaming Laptop,MSI Thin GF63 12HW-004IN Gaming Laptop laptop,LAPTOP,54990.0,,10,,0.0,0,False,True
+LAP-000226,Lenovo IdeaPad Gaming 3 82SA00B2IN Laptop,Lenovo IdeaPad Gaming 3 82SA00B2IN Laptop laptop,LAPTOP,105990.0,,10,,0.0,0,False,True
+LAP-000227,Lenovo IdeaPad Slim 5 82LN00JSIN Laptop,Lenovo IdeaPad Slim 5 82LN00JSIN Laptop laptop,LAPTOP,64990.0,,10,,0.0,0,False,True
+LAP-000228,MSI Pulse GL66 12UEK-898IN Gaming Laptop,MSI Pulse GL66 12UEK-898IN Gaming Laptop laptop,LAPTOP,135000.0,,10,,0.0,0,False,True
+LAP-000229,Chuwi HeroBook Air Laptop,Chuwi HeroBook Air Laptop laptop,LAPTOP,15990.0,,10,,0.0,0,False,True
+LAP-000230,MSI Vector GP66 12UEO-646IN Gaming Laptop,MSI Vector GP66 12UEO-646IN Gaming Laptop laptop,LAPTOP,134000.0,,10,,0.0,0,False,True
+LAP-000231,Lenovo IdeaPad Slim 3 81X800LCIN Laptop,Lenovo IdeaPad Slim 3 81X800LCIN Laptop laptop,LAPTOP,33990.0,,10,,0.0,0,False,True
+LAP-000232,MSI Modern 14 B5M-242IN Laptop,MSI Modern 14 B5M-242IN Laptop laptop,LAPTOP,44290.0,,10,,0.0,0,False,True
+LAP-000233,HP Envy x360 13-bf0059TU Laptop,HP Envy x360 13-bf0059TU Laptop laptop,LAPTOP,102123.0,,10,,0.0,0,False,True
+LAP-000234,Asus ZenBook Pro Duo 14 OLED 2022 UX8402ZE-M711WS Laptop,Asus ZenBook Pro Duo 14 OLED 2022 UX8402ZE-M711WS Laptop laptop,LAPTOP,159990.0,,10,,0.0,0,False,True
+LAP-000235,Dell Vostro 3425 D552305WIN9BE Laptop,Dell Vostro 3425 D552305WIN9BE Laptop laptop,LAPTOP,38663.0,,10,,0.0,0,False,True
+LAP-000236,Lenovo Ideapad Slim 3 82H802KVIN Laptop,Lenovo Ideapad Slim 3 82H802KVIN Laptop laptop,LAPTOP,55490.0,,10,,0.0,0,False,True
+LAP-000237,Dell Vostro 3425 D552309WIN9BE Laptop,Dell Vostro 3425 D552309WIN9BE Laptop laptop,LAPTOP,38990.0,,10,,0.0,0,False,True
+LAP-000238,Acer Extensa EX215-54 NX.EGJSI.00N Laptop,Acer Extensa EX215-54 NX.EGJSI.00N Laptop laptop,LAPTOP,40990.0,,10,,0.0,0,False,True
+LAP-000239,HP Pavilion 15s-FR5007TU Laptop,HP Pavilion 15s-FR5007TU Laptop laptop,LAPTOP,59490.0,,10,,0.0,0,False,True
+LAP-000240,Lenovo Ideapad Slim 3i 81WQ00NXIN Laptop,Lenovo Ideapad Slim 3i 81WQ00NXIN Laptop laptop,LAPTOP,28980.0,,10,,0.0,0,False,True
+LAP-000241,Asus Vivobook 15 2022 X1502ZA-EJ302WS Laptop,Asus Vivobook 15 2022 X1502ZA-EJ302WS Laptop laptop,LAPTOP,40990.0,,10,,0.0,0,False,True
+LAP-000242,HP 15s-ey1508AU Laptop,HP 15s-ey1508AU Laptop laptop,LAPTOP,29990.0,,10,,0.0,0,False,True
+LAP-000243,MSI Thin GF63 11UC-866IN Gaming Laptop,MSI Thin GF63 11UC-866IN Gaming Laptop laptop,LAPTOP,65590.0,,10,,0.0,0,False,True
+LAP-000244,Asus Vivobook Pro 15 OLED M6500IH-L1701WS Laptop,Asus Vivobook Pro 15 OLED M6500IH-L1701WS Laptop laptop,LAPTOP,64990.0,,10,,0.0,0,False,True
+LAP-000245,Lenovo IdeaPad Slim 3 82KU017EIN Laptop,Lenovo IdeaPad Slim 3 82KU017EIN Laptop laptop,LAPTOP,48990.0,,10,,0.0,0,False,True
+LAP-000246,Lenovo Ideapad Gaming 3 82K201UKIN Laptop,Lenovo Ideapad Gaming 3 82K201UKIN Laptop laptop,LAPTOP,77850.0,,10,,0.0,0,False,True
+LAP-000247,Lenovo IdeaPad 3 14ITL6 82H701DYIN Laptop,Lenovo IdeaPad 3 14ITL6 82H701DYIN Laptop laptop,LAPTOP,37990.0,,10,,0.0,0,False,True
+LAP-000248,Dell Latitude 5320 Business Laptop,Dell Latitude 5320 Business Laptop laptop,LAPTOP,102400.0,,10,,0.0,0,False,True
+LAP-000249,MSI Thin GF63 11UC-867IN Gaming Laptop,MSI Thin GF63 11UC-867IN Gaming Laptop laptop,LAPTOP,56990.0,,10,,0.0,0,False,True
+LAP-000250,HP 15s-fr2514TU Laptop,HP 15s-fr2514TU Laptop laptop,LAPTOP,38499.0,,10,,0.0,0,False,True
+LAP-000251,Asus Zenbook Flip 14 OLED UP5401ZA-KN501WS Laptop,Asus Zenbook Flip 14 OLED UP5401ZA-KN501WS Laptop laptop,LAPTOP,85990.0,,10,,0.0,0,False,True
+LAP-000252,Acer Aspire 3 A315-23 UN.HVTSI.013 Laptop,Acer Aspire 3 A315-23 UN.HVTSI.013 Laptop laptop,LAPTOP,26990.0,,10,,0.0,0,False,True
+LAP-000253,HP 15s-dr3506TU Laptop,HP 15s-dr3506TU Laptop laptop,LAPTOP,43990.0,,10,,0.0,0,False,True
+LAP-000254,HP 14s-fq0568AU Laptop,HP 14s-fq0568AU Laptop laptop,LAPTOP,25758.0,,10,,0.0,0,False,True
+LAP-000255,HP 15s-du3614TU Laptop,HP 15s-du3614TU Laptop laptop,LAPTOP,40390.0,,10,,0.0,0,False,True
+LAP-000256,HP 15s-eq1560AU Laptop,HP 15s-eq1560AU Laptop laptop,LAPTOP,37990.0,,10,,0.0,0,False,True
+LAP-000257,Dell Inspiron 3525 Laptop,Dell Inspiron 3525 Laptop laptop,LAPTOP,40663.0,,10,,0.0,0,False,True
+LAP-000258,Lenovo IdeaPad Gaming 3 82K10198IN Laptop,Lenovo IdeaPad Gaming 3 82K10198IN Laptop laptop,LAPTOP,54451.0,,10,,0.0,0,False,True
+LAP-000259,Acer Predator Helios 500 Ph517-52 Gaming Laptop,Acer Predator Helios 500 Ph517-52 Gaming Laptop laptop,LAPTOP,432159.0,,10,,0.0,0,False,True
+LAP-000260,Lenovo Ideapad Gaming 3 82K201UNIN Laptop,Lenovo Ideapad Gaming 3 82K201UNIN Laptop laptop,LAPTOP,90700.0,,10,,0.0,0,False,True
+LAP-000261,Lenovo IdeaPad Slim 3 82H701DNIN Laptop,Lenovo IdeaPad Slim 3 82H701DNIN Laptop laptop,LAPTOP,37700.0,,10,,0.0,0,False,True
+LAP-000262,Dell Vostro 5625 laptop,Dell Vostro 5625 laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000263,HP Pavilion 14-eh0024TU Laptop,HP Pavilion 14-eh0024TU Laptop laptop,LAPTOP,91990.0,,10,,0.0,0,False,True
+LAP-000264,Dell XPS 13 Plus 9320 Laptop,Dell XPS 13 Plus 9320 Laptop laptop,LAPTOP,178500.0,,10,,0.0,0,False,True
+LAP-000265,Asus ZenBook Pro Duo 15 OLED 2022 UX582ZM-H701WS Laptop,Asus ZenBook Pro Duo 15 OLED 2022 UX582ZM-H701WS Laptop laptop,LAPTOP,199990.0,,10,,0.0,0,False,True
+LAP-000266,Dell Alienware x14 Gaming Laptop,Dell Alienware x14 Gaming Laptop laptop,LAPTOP,169990.0,,10,,0.0,0,False,True
+LAP-000267,HP Victus 15-fa0354TX Laptop,HP Victus 15-fa0354TX Laptop laptop,LAPTOP,94699.0,,10,,0.0,0,False,True
+LAP-000268,HP 15s-fq2671TU Laptop,HP 15s-fq2671TU Laptop laptop,LAPTOP,41500.0,,10,,0.0,0,False,True
+LAP-000269,MSI Katana GF66 11UE-861IN Gaming Laptop,MSI Katana GF66 11UE-861IN Gaming Laptop laptop,LAPTOP,85990.0,,10,,0.0,0,False,True
+LAP-000270,Lenovo Yoga Slim 7 Pro 82NC00EWIN Laptop,Lenovo Yoga Slim 7 Pro 82NC00EWIN Laptop laptop,LAPTOP,71990.0,,10,,0.0,0,False,True
+LAP-000271,HP 15s- fr2512TU Laptop,HP 15s- fr2512TU Laptop laptop,LAPTOP,41890.0,,10,,0.0,0,False,True
+LAP-000272,Lenovo IdeaPad Slim 3 82RK006DIN Laptop,Lenovo IdeaPad Slim 3 82RK006DIN Laptop laptop,LAPTOP,43999.0,,10,,0.0,0,False,True
+LAP-000273,HP Victus 16-e0650AX Gaming Laptop,HP Victus 16-e0650AX Gaming Laptop laptop,LAPTOP,71990.0,,10,,0.0,0,False,True
+LAP-000274,Lenovo V15 82KBA03TIH Laptop,Lenovo V15 82KBA03TIH Laptop laptop,LAPTOP,37000.0,,10,,0.0,0,False,True
+LAP-000275,Lenovo IdeaPad Gaming 3 82K101B7IN Laptop,Lenovo IdeaPad Gaming 3 82K101B7IN Laptop laptop,LAPTOP,77750.0,,10,,0.0,0,False,True
+LAP-000276,Dell Inspiron 7420 D560780WIN9S Laptop,Dell Inspiron 7420 D560780WIN9S Laptop laptop,LAPTOP,53906.0,,10,,0.0,0,False,True
+LAP-000277,Dell Inspiron 7420 Laptop,Dell Inspiron 7420 Laptop laptop,LAPTOP,74990.0,,10,,0.0,0,False,True
+LAP-000278,Dell Inspiron 7620 Laptop,Dell Inspiron 7620 Laptop laptop,LAPTOP,94500.0,,10,,0.0,0,False,True
+LAP-000279,Dell Inspiron 7420 2-in-1 Laptop,Dell Inspiron 7420 2-in-1 Laptop laptop,LAPTOP,102990.0,,10,,0.0,0,False,True
+LAP-000280,Asus ROG Strix G15 G513IE-HN040WS Gaming Laptop,Asus ROG Strix G15 G513IE-HN040WS Gaming Laptop laptop,LAPTOP,85990.0,,10,,0.0,0,False,True
+LAP-000281,Infinix INBook X1 Slim XL21 Laptop,Infinix INBook X1 Slim XL21 Laptop laptop,LAPTOP,46990.0,,10,,0.0,0,False,True
+LAP-000282,HP 255 G8 62Y23PA Laptop,HP 255 G8 62Y23PA Laptop laptop,LAPTOP,32083.0,,10,,0.0,0,False,True
+LAP-000283,Asus Vivobook 16X 2022 M1603QA-MB711WS Laptop,Asus Vivobook 16X 2022 M1603QA-MB711WS Laptop laptop,LAPTOP,66990.0,,10,,0.0,0,False,True
+LAP-000284,HP Pavilion 15-eg2036TU Laptop,HP Pavilion 15-eg2036TU Laptop laptop,LAPTOP,69990.0,,10,,0.0,0,False,True
+LAP-000285,Asus TUF Gaming F17 FX707ZM-HX030WS Laptop,Asus TUF Gaming F17 FX707ZM-HX030WS Laptop laptop,LAPTOP,109990.0,,10,,0.0,0,False,True
+LAP-000286,Asus Vivobook Pro 14 OLED M3400QA-KM702WS Gaming Laptop,Asus Vivobook Pro 14 OLED M3400QA-KM702WS Gaming Laptop laptop,LAPTOP,64990.0,,10,,0.0,0,False,True
+LAP-000287,Infinix INBook X1 Slim Series XL21 Laptop,Infinix INBook X1 Slim Series XL21 Laptop laptop,LAPTOP,33490.0,,10,,0.0,0,False,True
+LAP-000288,Asus TUF Gaming A15 FA506ICB-HN005W Laptop,Asus TUF Gaming A15 FA506ICB-HN005W Laptop laptop,LAPTOP,69990.0,,10,,0.0,0,False,True
+LAP-000289,Asus TUF Gaming F15 FX577ZM-HQ067WS Laptop,Asus TUF Gaming F15 FX577ZM-HQ067WS Laptop laptop,LAPTOP,122990.0,,10,,0.0,0,False,True
+LAP-000290,Acer Aspire Vero AV15-51-5155 Laptop,Acer Aspire Vero AV15-51-5155 Laptop laptop,LAPTOP,54990.0,,10,,0.0,0,False,True
+LAP-000291,Apple MacBook Air 2022 Laptop,Apple MacBook Air 2022 Laptop laptop,LAPTOP,137990.0,,10,,0.0,0,False,True
+LAP-000292,Asus TUF Gaming F15 FA506IHRB-HN079W Gaming Laptop,Asus TUF Gaming F15 FA506IHRB-HN079W Gaming Laptop laptop,LAPTOP,55990.0,,10,,0.0,0,False,True
+LAP-000293,Asus Vivobook S15 OLED S3502ZA-L502WS Laptop,Asus Vivobook S15 OLED S3502ZA-L502WS Laptop laptop,LAPTOP,72000.0,,10,,0.0,0,False,True
+LAP-000294,HP Pavilion 14-dv2053TU Laptop,HP Pavilion 14-dv2053TU Laptop laptop,LAPTOP,62278.0,,10,,0.0,0,False,True
+LAP-000295,HP Pavilion 15s-fq5010TU Laptop,HP Pavilion 15s-fq5010TU Laptop laptop,LAPTOP,63350.0,,10,,0.0,0,False,True
+LAP-000296,Lenovo Ideapad Slim 3 81WB01EBIN Laptop,Lenovo Ideapad Slim 3 81WB01EBIN Laptop laptop,LAPTOP,36490.0,,10,,0.0,0,False,True
+LAP-000297,HP Pavilion 15s-FQ5009TU Laptop,HP Pavilion 15s-FQ5009TU Laptop laptop,LAPTOP,60500.0,,10,,0.0,0,False,True
+LAP-000298,Samsung Galaxy Book2 Laptop,Samsung Galaxy Book2 Laptop laptop,LAPTOP,79990.0,,10,,0.0,0,False,True
+LAP-000299,Asus Strix G15 G513RM-HQ271WS Gaming Laptop,Asus Strix G15 G513RM-HQ271WS Gaming Laptop laptop,LAPTOP,124990.0,,10,,0.0,0,False,True
+LAP-000300,Dell Inspiron 5520 Laptop,Dell Inspiron 5520 Laptop laptop,LAPTOP,79990.0,,10,,0.0,0,False,True
+LAP-000301,Asus Vivobook S14 OLED S3402ZA-KM501WS Laptop,Asus Vivobook S14 OLED S3402ZA-KM501WS Laptop laptop,LAPTOP,70990.0,,10,,0.0,0,False,True
+LAP-000302,HP Pavilion 15-EG2019TX Laptop,HP Pavilion 15-EG2019TX Laptop laptop,LAPTOP,78200.0,,10,,0.0,0,False,True
+LAP-000303,Samsung Galaxy Book2 15 Laptop,Samsung Galaxy Book2 15 Laptop laptop,LAPTOP,79990.0,,10,,0.0,0,False,True
+LAP-000304,Samsung Galaxy Book2 15 Laptop,Samsung Galaxy Book2 15 Laptop laptop,LAPTOP,64490.0,,10,,0.0,0,False,True
+LAP-000305,Dell G15-5511 Gaming Laptop,Dell G15-5511 Gaming Laptop laptop,LAPTOP,65990.0,,10,,0.0,0,False,True
+LAP-000306,Lenovo IdeaPad 3 81WQ00MQIN Laptop,Lenovo IdeaPad 3 81WQ00MQIN Laptop laptop,LAPTOP,26585.0,,10,,0.0,0,False,True
+LAP-000307,Dell G15-5520 Laptop,Dell G15-5520 Laptop laptop,LAPTOP,84990.0,,10,,0.0,0,False,True
+LAP-000308,HP Pavilion 15-EG2035TU Laptop,HP Pavilion 15-EG2035TU Laptop laptop,LAPTOP,71999.0,,10,,0.0,0,False,True
+LAP-000309,Acer Nitro 5 AN515-58 Gaming Laptop,Acer Nitro 5 AN515-58 Gaming Laptop laptop,LAPTOP,76109.0,,10,,0.0,0,False,True
+LAP-000310,Asus TUF Gaming A15 2021 FA506QM-HN124W Laptop,Asus TUF Gaming A15 2021 FA506QM-HN124W Laptop laptop,LAPTOP,98900.0,,10,,0.0,0,False,True
+LAP-000311,Lenovo V15-IGL 82C3A008IH Laptop,Lenovo V15-IGL 82C3A008IH Laptop laptop,LAPTOP,19990.0,,10,,0.0,0,False,True
+LAP-000312,Dell Latitude 3420 Laptop,Dell Latitude 3420 Laptop laptop,LAPTOP,76900.0,,10,,0.0,0,False,True
+LAP-000313,Dell Inspiron 3521 Laptop,Dell Inspiron 3521 Laptop laptop,LAPTOP,32033.0,,10,,0.0,0,False,True
+LAP-000314,Dell Vostro 5625 laptop,Dell Vostro 5625 laptop laptop,LAPTOP,62490.0,,10,,0.0,0,False,True
+LAP-000315,HP 240 G8 Laptop,HP 240 G8 Laptop laptop,LAPTOP,60618.0,,10,,0.0,0,False,True
+LAP-000316,Lenovo E41-55 82FJ009JIH Laptop,Lenovo E41-55 82FJ009JIH Laptop laptop,LAPTOP,18990.0,,10,,0.0,0,False,True
+LAP-000317,HP Pavilion 15-eh2018AU Laptop,HP Pavilion 15-eh2018AU Laptop laptop,LAPTOP,52490.0,,10,,0.0,0,False,True
+LAP-000318,HP Pavilion 14-ec1003AU Laptop,HP Pavilion 14-ec1003AU Laptop laptop,LAPTOP,51990.0,,10,,0.0,0,False,True
+LAP-000319,Samsung Galaxy Book2 Pro 360 13 Laptop,Samsung Galaxy Book2 Pro 360 13 Laptop laptop,LAPTOP,113990.0,,10,,0.0,0,False,True
+LAP-000320,Dell Vostro 3510 Laptop,Dell Vostro 3510 Laptop laptop,LAPTOP,54490.0,,10,,0.0,0,False,True
+LAP-000321,Asus Vivobook 15 X515MA-BR101W Laptop,Asus Vivobook 15 X515MA-BR101W Laptop laptop,LAPTOP,23399.0,,10,,0.0,0,False,True
+LAP-000322,Samsung Galaxy Book2 Pro 360 13 Laptop,Samsung Galaxy Book2 Pro 360 13 Laptop laptop,LAPTOP,110990.0,,10,,0.0,0,False,True
+LAP-000323,Asus Vivobook 13 Slate OLED T3300KA-LQ111WS Laptop,Asus Vivobook 13 Slate OLED T3300KA-LQ111WS Laptop laptop,LAPTOP,43290.0,,10,,0.0,0,False,True
+LAP-000324,Apple MacBook Air 2020 Z124J002KD Laptop,Apple MacBook Air 2020 Z124J002KD Laptop laptop,LAPTOP,125990.0,,10,,0.0,0,False,True
+LAP-000325,HP 14s-fq1089au Laptop,HP 14s-fq1089au Laptop laptop,LAPTOP,40300.0,,10,,0.0,0,False,True
+LAP-000326,HP 15s- fq4021TU Laptop,HP 15s- fq4021TU Laptop laptop,LAPTOP,55499.0,,10,,0.0,0,False,True
+LAP-000327,Apple MacBook Air 2020 Z124J001KD Laptop,Apple MacBook Air 2020 Z124J001KD Laptop laptop,LAPTOP,105990.0,,10,,0.0,0,False,True
+LAP-000328,HP 15s-eq2143au Laptop,HP 15s-eq2143au Laptop laptop,LAPTOP,39648.0,,10,,0.0,0,False,True
+LAP-000329,Dell Inspiron 3511 Laptop,Dell Inspiron 3511 Laptop laptop,LAPTOP,62812.0,,10,,0.0,0,False,True
+LAP-000330,Lenovo IdeaPad 3 82H801L7IN,Lenovo IdeaPad 3 82H801L7IN laptop,LAPTOP,37952.0,,10,,0.0,0,False,True
+LAP-000331,Dell Latitude 7410 Laptop,Dell Latitude 7410 Laptop laptop,LAPTOP,77499.0,,10,,0.0,0,False,True
+LAP-000332,HP Pavilion 15-EC2145AX Gaming Laptop,HP Pavilion 15-EC2145AX Gaming Laptop laptop,LAPTOP,64990.0,,10,,0.0,0,False,True
+LAP-000333,HP Pavilion 15-ec2150AX Laptop,HP Pavilion 15-ec2150AX Laptop laptop,LAPTOP,59910.0,,10,,0.0,0,False,True
+LAP-000334,Dell Latitude 5420 Laptop,Dell Latitude 5420 Laptop laptop,LAPTOP,112000.0,,10,,0.0,0,False,True
+LAP-000335,HP 14s-dy2506TU Laptop,HP 14s-dy2506TU Laptop laptop,LAPTOP,35490.0,,10,,0.0,0,False,True
+LAP-000336,Lenovo IdeaPad 3 15ITL6 82H801L3IN Laptop,Lenovo IdeaPad 3 15ITL6 82H801L3IN Laptop laptop,LAPTOP,36001.0,,10,,0.0,0,False,True
+LAP-000337,Infinix INBook X1 XL12 Laptop,Infinix INBook X1 XL12 Laptop laptop,LAPTOP,46990.0,,10,,0.0,0,False,True
+LAP-000338,Asus Vivobook X415EA-EB372WS Laptop,Asus Vivobook X415EA-EB372WS Laptop laptop,LAPTOP,38990.0,,10,,0.0,0,False,True
+LAP-000339,Asus VivoBook 15 2021 X515JA-EJ362WS Laptop,Asus VivoBook 15 2021 X515JA-EJ362WS Laptop laptop,LAPTOP,32990.0,,10,,0.0,0,False,True
+LAP-000340,HP Pavilion 15-dk2095TX Gaming Laptop,HP Pavilion 15-dk2095TX Gaming Laptop laptop,LAPTOP,61990.0,,10,,0.0,0,False,True
+LAP-000341,Apple MacBook Pro 16 inch MK1A3HN Laptop,Apple MacBook Pro 16 inch MK1A3HN Laptop laptop,LAPTOP,296894.0,,10,,0.0,0,False,True
+LAP-000342,Lenovo V15 82C30052IH Laptop,Lenovo V15 82C30052IH Laptop laptop,LAPTOP,21999.0,,10,,0.0,0,False,True
+LAP-000343,Dell Inspiron 3511 Laptop,Dell Inspiron 3511 Laptop laptop,LAPTOP,41490.0,,10,,0.0,0,False,True
+LAP-000344,HP Pavilion 15-ec2008AX Gaming Laptop,HP Pavilion 15-ec2008AX Gaming Laptop laptop,LAPTOP,58635.0,,10,,0.0,0,False,True
+LAP-000345,Asus VivoBook 15 X515EA-BQ312TS Laptop,Asus VivoBook 15 X515EA-BQ312TS Laptop laptop,LAPTOP,34994.0,,10,,0.0,0,False,True
+LAP-000346,Xiaomi Mi Notebook Ultra Laptop,Xiaomi Mi Notebook Ultra Laptop laptop,LAPTOP,62999.0,,10,,0.0,0,False,True
+LAP-000347,MSI Bravo 15 B5DD-043IN Gaming Laptop,MSI Bravo 15 B5DD-043IN Gaming Laptop laptop,LAPTOP,58500.0,,10,,0.0,0,False,True
+LAP-000348,Lenovo IdeaPad 3 15ITL6 82H800U5IN Laptop,Lenovo IdeaPad 3 15ITL6 82H800U5IN Laptop laptop,LAPTOP,37600.0,,10,,0.0,0,False,True
+LAP-000349,Xiaomi RedmiBook e-Learning Edition,Xiaomi RedmiBook e-Learning Edition laptop,LAPTOP,30990.0,,10,,0.0,0,False,True
+LAP-000350,Realme Book Slim Laptop,Realme Book Slim Laptop laptop,LAPTOP,46990.0,,10,,0.0,0,False,True
+LAP-000351,Lenovo IdeaPad 3 15ITL6 82H8014BIN Laptop,Lenovo IdeaPad 3 15ITL6 82H8014BIN Laptop laptop,LAPTOP,55850.0,,10,,0.0,0,False,True
+LAP-000352,Acer Extensa EX215-31 Laptop,Acer Extensa EX215-31 Laptop laptop,LAPTOP,21990.0,,10,,0.0,0,False,True
+LAP-000353,Asus ROG Flow X13 GV301QH-K5462TS Gaming Laptop,Asus ROG Flow X13 GV301QH-K5462TS Gaming Laptop laptop,LAPTOP,105990.0,,10,,0.0,0,False,True
+LAP-000354,Lenovo Yoga 9i 82BG005JIN Laptop,Lenovo Yoga 9i 82BG005JIN Laptop laptop,LAPTOP,172990.0,,10,,0.0,0,False,True
+LAP-000355,Dell Inspiron 3501 Laptop,Dell Inspiron 3501 Laptop laptop,LAPTOP,61640.0,,10,,0.0,0,False,True
+LAP-000356,Apple MacBook Air 2020 MGN73HN Laptop,Apple MacBook Air 2020 MGN73HN Laptop laptop,LAPTOP,109990.0,,10,,0.0,0,False,True
+LAP-000357,Dell Inspiron 3593 Laptop,Dell Inspiron 3593 Laptop laptop,LAPTOP,36990.0,,10,,0.0,0,False,True
+LAP-000358,Microsoft Surface Laptop 3 1873,Microsoft Surface Laptop 3 1873 laptop,LAPTOP,99990.0,,10,,0.0,0,False,True
+LAP-000359,HP EliteBook 840 G6,HP EliteBook 840 G6 laptop,LAPTOP,146000.0,,10,,0.0,0,False,True
+LAP-000360,Dell Latitude 5320 2-in-1 Laptop,Dell Latitude 5320 2-in-1 Laptop laptop,LAPTOP,87999.0,,10,,0.0,0,False,True
+LAP-000361,Lenovo V15 ITL 82KBA03JIH Laptop,Lenovo V15 ITL 82KBA03JIH Laptop laptop,LAPTOP,33990.0,,10,,0.0,0,False,True
+LAP-000362,Asus VivoBook 15 X1500EA-EJ3381WS Laptop,Asus VivoBook 15 X1500EA-EJ3381WS Laptop laptop,LAPTOP,39400.0,,10,,0.0,0,False,True
+LAP-000363,HP Envy x360 15-ew0037TU Laptop,HP Envy x360 15-ew0037TU Laptop laptop,LAPTOP,82999.0,,10,,0.0,0,False,True
+LAP-000364,HP 15s-eq2213AU Laptop,HP 15s-eq2213AU Laptop laptop,LAPTOP,40960.0,,10,,0.0,0,False,True
+LAP-000365,Asus Vivobook Pro 16X OLED N7601ZM-MQ711WS Gaming Laptop,Asus Vivobook Pro 16X OLED N7601ZM-MQ711WS Gaming Laptop laptop,LAPTOP,168990.0,,10,,0.0,0,False,True
+LAP-000366,HP Victus 16-d0310TX Gaming Laptop,HP Victus 16-d0310TX Gaming Laptop laptop,LAPTOP,84419.0,,10,,0.0,0,False,True
+LAP-000367,HP Victus 15-fb0777AX Gaming Laptop,HP Victus 15-fb0777AX Gaming Laptop laptop,LAPTOP,70816.0,,10,,0.0,0,False,True
+LAP-000368,HP Victus 16-d0311TX Gaming Laptop,HP Victus 16-d0311TX Gaming Laptop laptop,LAPTOP,75990.0,,10,,0.0,0,False,True
+LAP-000369,Dell G15-5520 D560897WIN9S Laptop,Dell G15-5520 D560897WIN9S Laptop laptop,LAPTOP,149899.0,,10,,0.0,0,False,True
+LAP-000370,HP Victus 16-e0333TX Gaming Laptop,HP Victus 16-e0333TX Gaming Laptop laptop,LAPTOP,92990.0,,10,,0.0,0,False,True
+LAP-000371,Lenovo Legion 5 Pro 82RG00ELIN Laptop,Lenovo Legion 5 Pro 82RG00ELIN Laptop laptop,LAPTOP,159990.0,,10,,0.0,0,False,True
+LAP-000372,MSI Katana GF66 12UD Gaming Laptop,MSI Katana GF66 12UD Gaming Laptop laptop,LAPTOP,105000.0,,10,,0.0,0,False,True
+LAP-000373,MSI Pulse GL66 12UGSZOK Gaming Laptop,MSI Pulse GL66 12UGSZOK Gaming Laptop laptop,LAPTOP,209000.0,,10,,0.0,0,False,True
+LAP-000374,HP Pavilion 15-eg2091TU Laptop,HP Pavilion 15-eg2091TU Laptop laptop,LAPTOP,74098.0,,10,,0.0,0,False,True
+LAP-000375,HP Envy x360 15-ew0043TU 2-in-1 Laptop,HP Envy x360 15-ew0043TU 2-in-1 Laptop laptop,LAPTOP,99999.0,,10,,0.0,0,False,True
+LAP-000376,HP Envy x360 15-ew0047TU 2-in-1 Laptop,HP Envy x360 15-ew0047TU 2-in-1 Laptop laptop,LAPTOP,116000.0,,10,,0.0,0,False,True
+LAP-000377,HP ProBook 445 G8 Laptop,HP ProBook 445 G8 Laptop laptop,LAPTOP,73999.0,,10,,0.0,0,False,True
+LAP-000378,Apple MacBook Pro 16 inch Laptop,Apple MacBook Pro 16 inch Laptop laptop,LAPTOP,269900.0,,10,,0.0,0,False,True
+LAP-000379,Apple MacBook Pro 16 inch Laptop,Apple MacBook Pro 16 inch Laptop laptop,LAPTOP,249900.0,,10,,0.0,0,False,True
+LAP-000380,Apple MacBook Pro 14 inch Laptop,Apple MacBook Pro 14 inch Laptop laptop,LAPTOP,309900.0,,10,,0.0,0,False,True
+LAP-000381,Apple MacBook Pro 14 inch Laptop,Apple MacBook Pro 14 inch Laptop laptop,LAPTOP,249900.0,,10,,0.0,0,False,True
+LAP-000382,Apple MacBook Pro 14 inch Laptop,Apple MacBook Pro 14 inch Laptop laptop,LAPTOP,199900.0,,10,,0.0,0,False,True
+LAP-000383,HP Pavilion Plus 14-eh0037TU Laptop,HP Pavilion Plus 14-eh0037TU Laptop laptop,LAPTOP,81990.0,,10,,0.0,0,False,True
+LAP-000384,Apple MacBook Pro 2022 Laptop,Apple MacBook Pro 2022 Laptop laptop,LAPTOP,149000.0,,10,,0.0,0,False,True
+LAP-000385,Apple MacBook Air M2 2022 Laptop,Apple MacBook Air M2 2022 Laptop laptop,LAPTOP,159000.0,,10,,0.0,0,False,True
+LAP-000386,Apple MacBook Air 2022 Laptop,Apple MacBook Air 2022 Laptop laptop,LAPTOP,137900.0,,10,,0.0,0,False,True
+LAP-000387,Samsung Galaxy Book2 NP550XED-KA2IN Laptop,Samsung Galaxy Book2 NP550XED-KA2IN Laptop laptop,LAPTOP,70990.0,,10,,0.0,0,False,True
+LAP-000388,Lenovo Legion 7i 82TD009KIN Gaming Laptop,Lenovo Legion 7i 82TD009KIN Gaming Laptop laptop,LAPTOP,359990.0,,10,,0.0,0,False,True
+LAP-000389,Dell Inspiron 3511 D560783WIN9BD Laptop,Dell Inspiron 3511 D560783WIN9BD Laptop laptop,LAPTOP,61202.0,,10,,0.0,0,False,True
+LAP-000390,Dell Vostro 3425 D552308WIN9B Laptop,Dell Vostro 3425 D552308WIN9B Laptop laptop,LAPTOP,50852.0,,10,,0.0,0,False,True
+LAP-000391,HP 245 G8 ‎6E3Z1PA Laptop,HP 245 G8 ‎6E3Z1PA Laptop laptop,LAPTOP,36000.0,,10,,0.0,0,False,True
+LAP-000392,MSI Modern 14 C12M-269IN Laptop,MSI Modern 14 C12M-269IN Laptop laptop,LAPTOP,44990.0,,10,,0.0,0,False,True
+LAP-000393,Dell Inspiron 5420 ICC-C782537WIN8 Laptop,Dell Inspiron 5420 ICC-C782537WIN8 Laptop laptop,LAPTOP,91958.0,,10,,0.0,0,False,True
+LAP-000394,HP 15s-du3612TU Laptop,HP 15s-du3612TU Laptop laptop,LAPTOP,41990.0,,10,,0.0,0,False,True
+LAP-000395,Infinix INBook X2 Plus XL25 Laptop,Infinix INBook X2 Plus XL25 Laptop laptop,LAPTOP,49990.0,,10,,0.0,0,False,True
+LAP-000396,Dell Inspiron 3520 Laptop,Dell Inspiron 3520 Laptop laptop,LAPTOP,62029.0,,10,,0.0,0,False,True
+LAP-000397,Dell Vostro 3420 Laptop,Dell Vostro 3420 Laptop laptop,LAPTOP,69900.0,,10,,0.0,0,False,True
+LAP-000398,Dell Inspiron 3520 2022 Laptop,Dell Inspiron 3520 2022 Laptop laptop,LAPTOP,72990.0,,10,,0.0,0,False,True
+LAP-000399,HP Envy x360 15-ew0040TU Laptop,HP Envy x360 15-ew0040TU Laptop laptop,LAPTOP,77990.0,,10,,0.0,0,False,True
+LAP-000400,HP Envy x360 15-ew0048TU Laptop,HP Envy x360 15-ew0048TU Laptop laptop,LAPTOP,109990.0,,10,,0.0,0,False,True
+LAP-000401,HP Envy x360 15-ew0043TU Laptop,HP Envy x360 15-ew0043TU Laptop laptop,LAPTOP,84990.0,,10,,0.0,0,False,True
+LAP-000402,Dell G15-5520 Gaming Laptop,Dell G15-5520 Gaming Laptop laptop,LAPTOP,79990.0,,10,,0.0,0,False,True
+LAP-000403,HP Pavilion 14-ec1005AU Laptop,HP Pavilion 14-ec1005AU Laptop laptop,LAPTOP,59815.0,,10,,0.0,0,False,True
+LAP-000404,HP Pavilion 14-ec1005AU Laptop,HP Pavilion 14-ec1005AU Laptop laptop,LAPTOP,75990.0,,10,,0.0,0,False,True
+LAP-000405,HP Envy x360 13-bf0121TU  Laptop,HP Envy x360 13-bf0121TU  Laptop laptop,LAPTOP,79990.0,,10,,0.0,0,False,True
+LAP-000406,HP Envy x360 13-ay1064AU 2-in-1 Laptop,HP Envy x360 13-ay1064AU 2-in-1 Laptop laptop,LAPTOP,98000.0,,10,,0.0,0,False,True
+LAP-000407,Dell Vostro 3520 Laptop,Dell Vostro 3520 Laptop laptop,LAPTOP,60070.0,,10,,0.0,0,False,True
+LAP-000408,Asus ROG Zephyrus G15 GA503RMZ-LN155WS Gaming Laptop,Asus ROG Zephyrus G15 GA503RMZ-LN155WS Gaming Laptop laptop,LAPTOP,157990.0,,10,,0.0,0,False,True
+LAP-000409,Dell Vostro 3420 Laptop,Dell Vostro 3420 Laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000410,Dell Vostro 3525 Laptop,Dell Vostro 3525 Laptop laptop,LAPTOP,55530.0,,10,,0.0,0,False,True
+LAP-000411,Dell Vostro 3525 Laptop,Dell Vostro 3525 Laptop laptop,LAPTOP,51499.0,,10,,0.0,0,False,True
+LAP-000412,Dell Vostro 3420 Laptop,Dell Vostro 3420 Laptop laptop,LAPTOP,43990.0,,10,,0.0,0,False,True
+LAP-000413,Asus ROG Zephyrus G15 GA503RSZ-HQ061WS Gaming Laptop,Asus ROG Zephyrus G15 GA503RSZ-HQ061WS Gaming Laptop laptop,LAPTOP,211990.0,,10,,0.0,0,False,True
+LAP-000414,MSI Modern 15 B12M Laptop,MSI Modern 15 B12M Laptop laptop,LAPTOP,67990.0,,10,,0.0,0,False,True
+LAP-000415,MSI Modern 15 B12M Laptop,MSI Modern 15 B12M Laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000416,MSI Modern 14 C12M Laptop,MSI Modern 14 C12M Laptop laptop,LAPTOP,56990.0,,10,,0.0,0,False,True
+LAP-000417,Asus Vivobook 15 X1502ZA-EJ381WS Laptop,Asus Vivobook 15 X1502ZA-EJ381WS Laptop laptop,LAPTOP,42990.0,,10,,0.0,0,False,True
+LAP-000418,HP 240 G8 Business Laptop,HP 240 G8 Business Laptop laptop,LAPTOP,52999.0,,10,,0.0,0,False,True
+LAP-000419,HP Victus 15-fa0031dx Gaming Laptop,HP Victus 15-fa0031dx Gaming Laptop laptop,LAPTOP,79888.0,,10,,0.0,0,False,True
+LAP-000420,Lenovo Thinkpad P15v 21AAS05L00 Laptop,Lenovo Thinkpad P15v 21AAS05L00 Laptop laptop,LAPTOP,159999.0,,10,,0.0,0,False,True
+LAP-000421,Acer Aspire 5 A515-57 2022 Laptop,Acer Aspire 5 A515-57 2022 Laptop laptop,LAPTOP,61990.0,,10,,0.0,0,False,True
+LAP-000422,HP Pavilion x360 14-ek0137TU Laptop,HP Pavilion x360 14-ek0137TU Laptop laptop,LAPTOP,59990.0,,10,,0.0,0,False,True
+LAP-000423,Dell Vostro 3510 ICC-D585046WIN8 Laptop,Dell Vostro 3510 ICC-D585046WIN8 Laptop laptop,LAPTOP,32990.0,,10,,0.0,0,False,True
+LAP-000424,HP 240 G8 4K5D5PA Business Laptop,HP 240 G8 4K5D5PA Business Laptop laptop,LAPTOP,35000.0,,10,,0.0,0,False,True
+LAP-000425,Lenovo E41-55 82FJ00B5IH Laptop,Lenovo E41-55 82FJ00B5IH Laptop laptop,LAPTOP,18990.0,,10,,0.0,0,False,True
+LAP-000426,Lenovo E41-55 82FJ00B5IH Laptop,Lenovo E41-55 82FJ00B5IH Laptop laptop,LAPTOP,18990.0,,10,,0.0,0,False,True
+LAP-000427,MSI Katana GF66 12UC-632IN Gaming Laptop,MSI Katana GF66 12UC-632IN Gaming Laptop laptop,LAPTOP,80990.0,,10,,0.0,0,False,True
+LAP-000428,Lenovo IdeaPad Flex 5 14ALC7 82R9006PIN Laptop,Lenovo IdeaPad Flex 5 14ALC7 82R9006PIN Laptop laptop,LAPTOP,72690.0,,10,,0.0,0,False,True
+LAP-000429,Lenovo V14 Gen 2 ‎82C40019IX Laptop,Lenovo V14 Gen 2 ‎82C40019IX Laptop laptop,LAPTOP,49999.0,,10,,0.0,0,False,True
+LAP-000430,Asus ROG Strix G15 G513IE-HN088WS Gaming Laptop,Asus ROG Strix G15 G513IE-HN088WS Gaming Laptop laptop,LAPTOP,76990.0,,10,,0.0,0,False,True
+LAP-000431,Asus Vivobook 14 OLED UX3402ZA-KN531WS Laptop,Asus Vivobook 14 OLED UX3402ZA-KN531WS Laptop laptop,LAPTOP,95980.0,,10,,0.0,0,False,True
+LAP-000432,Lenovo IdeaPad Slim 3 82RJ0040IN Laptop,Lenovo IdeaPad Slim 3 82RJ0040IN Laptop laptop,LAPTOP,52900.0,,10,,0.0,0,False,True
+LAP-000433,Ultimus S151 NU14U2INC43VN-CS Laptop,Ultimus S151 NU14U2INC43VN-CS Laptop laptop,LAPTOP,19990.0,,10,,0.0,0,False,True
+LAP-000434,HP Pavilion 14-dv2014TU Laptop,HP Pavilion 14-dv2014TU Laptop laptop,LAPTOP,68918.0,,10,,0.0,0,False,True
+LAP-000435,Ultimus S151 NU14U2INC43VD-CS Laptop,Ultimus S151 NU14U2INC43VD-CS Laptop laptop,LAPTOP,17990.0,,10,,0.0,0,False,True
+LAP-000436,Ultimus S152 NU15U2INC44VN-SG Laptop,Ultimus S152 NU15U2INC44VN-SG Laptop laptop,LAPTOP,23990.0,,10,,0.0,0,False,True
+LAP-000437,Lenovo Legion S7 82TF007LIN Gaming Laptop,Lenovo Legion S7 82TF007LIN Gaming Laptop laptop,LAPTOP,149990.0,,10,,0.0,0,False,True
+LAP-000438,Acer Aspire 5 A515-57 NX.K2VSI.002 Laptop,Acer Aspire 5 A515-57 NX.K2VSI.002 Laptop laptop,LAPTOP,42990.0,,10,,0.0,0,False,True
+LAP-000439,MSI Stealth GS66 12UGS-290IN Gaming Laptop,MSI Stealth GS66 12UGS-290IN Gaming Laptop laptop,LAPTOP,288990.0,,10,,0.0,0,False,True
+LAP-000440,HP Envy x360 13-AY1065AU Laptop,HP Envy x360 13-AY1065AU Laptop laptop,LAPTOP,75190.0,,10,,0.0,0,False,True
+LAP-000441,Dell Latitude 14 7420 Laptop,Dell Latitude 14 7420 Laptop laptop,LAPTOP,98280.0,,10,,0.0,0,False,True
+LAP-000442,Acer Aspire 5 A515-57 Laptop,Acer Aspire 5 A515-57 Laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000443,Lenovo IdeaPad Slim 3 82H802XXIN Laptop,Lenovo IdeaPad Slim 3 82H802XXIN Laptop laptop,LAPTOP,59290.0,,10,,0.0,0,False,True
+LAP-000444,Gigabyte G5 KE RC55KE Laptop,Gigabyte G5 KE RC55KE Laptop laptop,LAPTOP,103890.0,,10,,0.0,0,False,True
+LAP-000445,Gigabyte G5 ME RC55ME Laptop,Gigabyte G5 ME RC55ME Laptop laptop,LAPTOP,85990.0,,10,,0.0,0,False,True
+LAP-000446,Gigabyte G5 GE RC55GE Laptop,Gigabyte G5 GE RC55GE Laptop laptop,LAPTOP,109990.0,,10,,0.0,0,False,True
+LAP-000447,Dell Inspiron 7420 D560918WIN9S Laptop,Dell Inspiron 7420 D560918WIN9S Laptop laptop,LAPTOP,74990.0,,10,,0.0,0,False,True
+LAP-000448,Lenovo ThinkPad X13 21BNS03K00 Laptop,Lenovo ThinkPad X13 21BNS03K00 Laptop laptop,LAPTOP,200000.0,,10,,0.0,0,False,True
+LAP-000449,Acer Nitro 5 AN515-45 UN.QCLSI.005 Gaming Laptop,Acer Nitro 5 AN515-45 UN.QCLSI.005 Gaming Laptop laptop,LAPTOP,75990.0,,10,,0.0,0,False,True
+LAP-000450,Acer Nitro 5 AN515-45 UN.QCLSI.006 Gaming Laptop,Acer Nitro 5 AN515-45 UN.QCLSI.006 Gaming Laptop laptop,LAPTOP,68990.0,,10,,0.0,0,False,True
+LAP-000451,Acer Nitro 5 AN515-45 UN.QBMSI.009 Gaming Laptop,Acer Nitro 5 AN515-45 UN.QBMSI.009 Gaming Laptop laptop,LAPTOP,63990.0,,10,,0.0,0,False,True
+LAP-000452,HP Envy x360 13-bf0085TU Laptop,HP Envy x360 13-bf0085TU Laptop laptop,LAPTOP,79990.0,,10,,0.0,0,False,True
+LAP-000453,HP 240 G8 Business Laptop,HP 240 G8 Business Laptop laptop,LAPTOP,34440.0,,10,,0.0,0,False,True
+LAP-000454,Lenovo Ideapad Slim 3 81WD014XIN Laptop,Lenovo Ideapad Slim 3 81WD014XIN Laptop laptop,LAPTOP,31990.0,,10,,0.0,0,False,True
+LAP-000455,Lenovo ThinkPad T14 20W0S1HU00 Laptop,Lenovo ThinkPad T14 20W0S1HU00 Laptop laptop,LAPTOP,140200.0,,10,,0.0,0,False,True
+LAP-000456,HP Pavilion 14-ek0084TU Laptop,HP Pavilion 14-ek0084TU Laptop laptop,LAPTOP,71020.0,,10,,0.0,0,False,True
+LAP-000457,Asus Eeebook 14 E410KA-BV092W Laptop,Asus Eeebook 14 E410KA-BV092W Laptop laptop,LAPTOP,24500.0,,10,,0.0,0,False,True
+LAP-000458,HP 240 G8 689T7PA Business Laptop,HP 240 G8 689T7PA Business Laptop laptop,LAPTOP,34440.0,,10,,0.0,0,False,True
+LAP-000459,Lenovo ThinkPad E14 G3 20Y700B5IG Laptop,Lenovo ThinkPad E14 G3 20Y700B5IG Laptop laptop,LAPTOP,74990.0,,10,,0.0,0,False,True
+LAP-000460,Lenovo V14 82KAA057IH Laptop,Lenovo V14 82KAA057IH Laptop laptop,LAPTOP,32499.0,,10,,0.0,0,False,True
+LAP-000461,Lenovo IdeaPad Slim 3 82H802XVIN Laptop,Lenovo IdeaPad Slim 3 82H802XVIN Laptop laptop,LAPTOP,37100.0,,10,,0.0,0,False,True
+LAP-000462,Acer Chromebook Enterprise Spin 513 R841LT-S6DJ Laptop,Acer Chromebook Enterprise Spin 513 R841LT-S6DJ Laptop laptop,LAPTOP,47990.0,,10,,0.0,0,False,True
+LAP-000463,Lenovo ThinkPad E14 Gen 2 20TAS08F00 Laptop,Lenovo ThinkPad E14 Gen 2 20TAS08F00 Laptop laptop,LAPTOP,76890.0,,10,,0.0,0,False,True
+LAP-000464,Dell Inspiron 3520 D560878WIN9S Laptop,Dell Inspiron 3520 D560878WIN9S Laptop laptop,LAPTOP,64490.0,,10,,0.0,0,False,True
+LAP-000465,Asus Vivobook 14 OLED UX3402ZA-KN731WS Laptop,Asus Vivobook 14 OLED UX3402ZA-KN731WS Laptop laptop,LAPTOP,108990.0,,10,,0.0,0,False,True
+LAP-000466,Lenovo Ideapad Slim 3 81WB01FYIN Laptop,Lenovo Ideapad Slim 3 81WB01FYIN Laptop laptop,LAPTOP,33990.0,,10,,0.0,0,False,True
+LAP-000467,Dell Inspiron 3525 D560863WIN9B Laptop,Dell Inspiron 3525 D560863WIN9B Laptop laptop,LAPTOP,51490.0,,10,,0.0,0,False,True
+LAP-000468,Lenovo Thinkpad E14 Gen 2 20TAS0Y800 Laptop,Lenovo Thinkpad E14 Gen 2 20TAS0Y800 Laptop laptop,LAPTOP,72990.0,,10,,0.0,0,False,True
+LAP-000469,Asus TUF Gaming F15 FX506LHB-HN358W Gaming Laptop,Asus TUF Gaming F15 FX506LHB-HN358W Gaming Laptop laptop,LAPTOP,54990.0,,10,,0.0,0,False,True
+LAP-000470,MSI Stealth 17M A12UE Gaming Laptop,MSI Stealth 17M A12UE Gaming Laptop laptop,LAPTOP,149990.0,,10,,0.0,0,False,True
+LAP-000471,MSI Modern 15 A5M-055IN Laptop,MSI Modern 15 A5M-055IN Laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000472,Lenovo Thinkpad E14 Gen 2 20TAS0E800 Laptop,Lenovo Thinkpad E14 Gen 2 20TAS0E800 Laptop laptop,LAPTOP,77500.0,,10,,0.0,0,False,True
+LAP-000473,Dell Vostro 3420 D552278WIN9S Laptop,Dell Vostro 3420 D552278WIN9S Laptop laptop,LAPTOP,47000.0,,10,,0.0,0,False,True
+LAP-000474,Lenovo ‎ThinkPad E14 Gen 4 Laptop,Lenovo ‎ThinkPad E14 Gen 4 Laptop laptop,LAPTOP,74500.0,,10,,0.0,0,False,True
+LAP-000475,Dell Alienware X17 R1 D569936WIN9 Gaming Laptop,Dell Alienware X17 R1 D569936WIN9 Gaming Laptop laptop,LAPTOP,312199.0,,10,,0.0,0,False,True
+LAP-000476,Lenovo V15 82KBA02UIH Laptop,Lenovo V15 82KBA02UIH Laptop laptop,LAPTOP,36990.0,,10,,0.0,0,False,True
+LAP-000477,Lenovo Thinkpad P15v 21D8S00V00 Laptop,Lenovo Thinkpad P15v 21D8S00V00 Laptop laptop,LAPTOP,190400.0,,10,,0.0,0,False,True
+LAP-000478,Microsoft Surface Laptop 5 ‎RBG-00048 13.5 inch,Microsoft Surface Laptop 5 ‎RBG-00048 13.5 inch laptop,LAPTOP,178999.0,,10,,0.0,0,False,True
+LAP-000479,Microsoft Surface Pro 9 ‎QIL-00031 Laptop,Microsoft Surface Pro 9 ‎QIL-00031 Laptop laptop,LAPTOP,167999.0,,10,,0.0,0,False,True
+LAP-000480,Microsoft Surface Pro 9 ‎‎QIX-00031 Laptop,Microsoft Surface Pro 9 ‎‎QIX-00031 Laptop laptop,LAPTOP,192990.0,,10,,0.0,0,False,True
+LAP-000481,Microsoft Surface Laptop 5 ‎RIP-00048 15 inch,Microsoft Surface Laptop 5 ‎RIP-00048 15 inch laptop,LAPTOP,182990.0,,10,,0.0,0,False,True
+LAP-000482,Dell Inspiron 14 5415 Laptop,Dell Inspiron 14 5415 Laptop laptop,LAPTOP,55999.0,,10,,0.0,0,False,True
+LAP-000483,Lenovo Legion 5 Pro 82RF00E1IN Gaming Laptop,Lenovo Legion 5 Pro 82RF00E1IN Gaming Laptop laptop,LAPTOP,218000.0,,10,,0.0,0,False,True
+LAP-000484,Lenovo Ideapad Slim 3 81WE01QSIN Laptop,Lenovo Ideapad Slim 3 81WE01QSIN Laptop laptop,LAPTOP,29990.0,,10,,0.0,0,False,True
+LAP-000485,Acer Aspire 3 A315-58 Laptop,Acer Aspire 3 A315-58 Laptop laptop,LAPTOP,49312.0,,10,,0.0,0,False,True
+LAP-000486,Asus E410 Eeebook E410KA-BV003W Laptop,Asus E410 Eeebook E410KA-BV003W Laptop laptop,LAPTOP,24415.0,,10,,0.0,0,False,True
+LAP-000487,Asus Vivobook 15 2022 X1502ZA-EJ515WS Laptop,Asus Vivobook 15 2022 X1502ZA-EJ515WS Laptop laptop,LAPTOP,56990.0,,10,,0.0,0,False,True
+LAP-000488,Lenovo Thinkbook 14 20VD011EIH Laptop,Lenovo Thinkbook 14 20VD011EIH Laptop laptop,LAPTOP,103600.0,,10,,0.0,0,False,True
+LAP-000489,Acer Swift 3 SF314-43 Laptop,Acer Swift 3 SF314-43 Laptop laptop,LAPTOP,61500.0,,10,,0.0,0,False,True
+LAP-000490,Lenovo V15 G2-ITL 82KBA034IH Laptop,Lenovo V15 G2-ITL 82KBA034IH Laptop laptop,LAPTOP,34499.0,,10,,0.0,0,False,True
+LAP-000491,Dell XPS 9315 Laptop,Dell XPS 9315 Laptop laptop,LAPTOP,185800.0,,10,,0.0,0,False,True
+LAP-000492,Dell Inspiron 5415 Laptop,Dell Inspiron 5415 Laptop laptop,LAPTOP,89976.0,,10,,0.0,0,False,True
+LAP-000493,HP Victus 16-e0550AX Gaming Laptop,HP Victus 16-e0550AX Gaming Laptop laptop,LAPTOP,68990.0,,10,,0.0,0,False,True
+LAP-000494,Asus VivoBook 14 X415MA-BV102WS Laptop,Asus VivoBook 14 X415MA-BV102WS Laptop laptop,LAPTOP,27990.0,,10,,0.0,0,False,True
+LAP-000495,Asus VivoBook 15 2022 X515JA-EJ592WS Laptop,Asus VivoBook 15 2022 X515JA-EJ592WS Laptop laptop,LAPTOP,44990.0,,10,,0.0,0,False,True
+LAP-000496,Dell Inspiron 3520 Laptop,Dell Inspiron 3520 Laptop laptop,LAPTOP,66111.0,,10,,0.0,0,False,True
+LAP-000497,Dell G15-5520 D560895WIN9S Laptop,Dell G15-5520 D560895WIN9S Laptop laptop,LAPTOP,124400.0,,10,,0.0,0,False,True
+LAP-000498,Acer One 14 Z2-493 UN.431SI.129 Laptop,Acer One 14 Z2-493 UN.431SI.129 Laptop laptop,LAPTOP,39999.0,,10,,0.0,0,False,True
+LAP-000499,HP 15s-fq2670TU Laptop,HP 15s-fq2670TU Laptop laptop,LAPTOP,37490.0,,10,,0.0,0,False,True
+LAP-000500,Asus VivoBook 15 X515JA-EJ392WS Laptop,Asus VivoBook 15 X515JA-EJ392WS Laptop laptop,LAPTOP,34490.0,,10,,0.0,0,False,True
+LAP-000501,Lenovo IdeaPad Slim 3 82RK007JIN Laptop,Lenovo IdeaPad Slim 3 82RK007JIN Laptop laptop,LAPTOP,45500.0,,10,,0.0,0,False,True
+LAP-000502,Acer Chromebook 311 C733 Laptop,Acer Chromebook 311 C733 Laptop laptop,LAPTOP,18490.0,,10,,0.0,0,False,True
+LAP-000503,Dell Latitude 7420 Laptop,Dell Latitude 7420 Laptop laptop,LAPTOP,112500.0,,10,,0.0,0,False,True
+LAP-000504,HP ProBook 445 G7 Laptop,HP ProBook 445 G7 Laptop laptop,LAPTOP,49999.0,,10,,0.0,0,False,True
+LAP-000505,Lenovo V15 82C3002VGE Laptop,Lenovo V15 82C3002VGE Laptop laptop,LAPTOP,23999.0,,10,,0.0,0,False,True
+LAP-000506,Dell Vostro 3425 D552267WIN9S Laptop,Dell Vostro 3425 D552267WIN9S Laptop laptop,LAPTOP,60990.0,,10,,0.0,0,False,True
+LAP-000507,Dell G15-5525 Gaming Laptop,Dell G15-5525 Gaming Laptop laptop,LAPTOP,147100.0,,10,,0.0,0,False,True
+LAP-000508,Dell G15-5525 D560894WIN9S Gaming Laptop,Dell G15-5525 D560894WIN9S Gaming Laptop laptop,LAPTOP,128200.0,,10,,0.0,0,False,True
+LAP-000509,Dell G15-5525 D560898WIN9S Gaming Laptop,Dell G15-5525 D560898WIN9S Gaming Laptop laptop,LAPTOP,159200.0,,10,,0.0,0,False,True
+LAP-000510,Dell G15-5521 D560899WIN9S Gaming Laptop,Dell G15-5521 D560899WIN9S Gaming Laptop laptop,LAPTOP,181799.0,,10,,0.0,0,False,True
+LAP-000511,Dell Inspiron 7620 Laptop,Dell Inspiron 7620 Laptop laptop,LAPTOP,126990.0,,10,,0.0,0,False,True
+LAP-000512,Acer Aspire 5 A515-57 Gaming Laptop,Acer Aspire 5 A515-57 Gaming Laptop laptop,LAPTOP,47990.0,,10,,0.0,0,False,True
+LAP-000513,Acer Aspire 3 A315-58 NX.ADDSI.011 Laptop,Acer Aspire 3 A315-58 NX.ADDSI.011 Laptop laptop,LAPTOP,37990.0,,10,,0.0,0,False,True
+LAP-000514,Lenovo IdeaPad Slim 5 82SE005SIN Laptop,Lenovo IdeaPad Slim 5 82SE005SIN Laptop laptop,LAPTOP,59990.0,,10,,0.0,0,False,True
+LAP-000515,Asus TUF Gaming A15 FA506IHRZ-HN112W Laptop,Asus TUF Gaming A15 FA506IHRZ-HN112W Laptop laptop,LAPTOP,65990.0,,10,,0.0,0,False,True
+LAP-000516,Asus Vivobook 14 OLED X1405ZA-KM511WS Laptop,Asus Vivobook 14 OLED X1405ZA-KM511WS Laptop laptop,LAPTOP,69990.0,,10,,0.0,0,False,True
+LAP-000517,Lenovo ThinkPad X1 Carbon 21CB002JIG Laptop,Lenovo ThinkPad X1 Carbon 21CB002JIG Laptop laptop,LAPTOP,211990.0,,10,,0.0,0,False,True
+LAP-000518,Asus Vivobook 14 OLED X1405ZA-KM311WS Laptop,Asus Vivobook 14 OLED X1405ZA-KM311WS Laptop laptop,LAPTOP,51990.0,,10,,0.0,0,False,True
+LAP-000519,Dell Alienware M15 R6 Gaming Laptop,Dell Alienware M15 R6 Gaming Laptop laptop,LAPTOP,200000.0,,10,,0.0,0,False,True
+LAP-000520,Lenovo IdeaPad Gaming 3 82K101E1IN Laptop,Lenovo IdeaPad Gaming 3 82K101E1IN Laptop laptop,LAPTOP,54950.0,,10,,0.0,0,False,True
+LAP-000521,Asus Vivobook 15 OLED X1505ZA-L1311WS Laptop,Asus Vivobook 15 OLED X1505ZA-L1311WS Laptop laptop,LAPTOP,50500.0,,10,,0.0,0,False,True
+LAP-000522,Asus ROG Strix G17 2022 G713RS-LL023WS Gaming Laptop,Asus ROG Strix G17 2022 G713RS-LL023WS Gaming Laptop laptop,LAPTOP,210990.0,,10,,0.0,0,False,True
+LAP-000523,Lenovo V15 82C500XHIH Laptop,Lenovo V15 82C500XHIH Laptop laptop,LAPTOP,47115.0,,10,,0.0,0,False,True
+LAP-000524,Lenovo IdeaPad 3 15IAU7 82RK0090IN Laptop,Lenovo IdeaPad 3 15IAU7 82RK0090IN Laptop laptop,LAPTOP,63590.0,,10,,0.0,0,False,True
+LAP-000525,Lenovo Thinkpad L14 20X1CTO Laptop,Lenovo Thinkpad L14 20X1CTO Laptop laptop,LAPTOP,79500.0,,10,,0.0,0,False,True
+LAP-000526,AGB Octev VR-1818 Gaming Laptop,AGB Octev VR-1818 Gaming Laptop laptop,LAPTOP,70000.0,,10,,0.0,0,False,True
+LAP-000527,Infinix INBook X2 Plus XL25 Laptop,Infinix INBook X2 Plus XL25 Laptop laptop,LAPTOP,38990.0,,10,,0.0,0,False,True
+LAP-000528,Dell XPS 13 Plus Laptop,Dell XPS 13 Plus Laptop laptop,LAPTOP,195190.0,,10,,0.0,0,False,True
+LAP-000529,Lenovo IdeaPad Slim 3 82RJ005CIN Laptop,Lenovo IdeaPad Slim 3 82RJ005CIN Laptop laptop,LAPTOP,59990.0,,10,,0.0,0,False,True
+LAP-000530,Asus E410KA-BV002W Laptop,Asus E410KA-BV002W Laptop laptop,LAPTOP,24485.0,,10,,0.0,0,False,True
+LAP-000531,MSI Creator Pro Z17 A12UMST-237IN Gaming Laptop,MSI Creator Pro Z17 A12UMST-237IN Gaming Laptop laptop,LAPTOP,444990.0,,10,,0.0,0,False,True
+LAP-000532,Lenovo IdeaPad Flex 5 82R90068IN Laptop,Lenovo IdeaPad Flex 5 82R90068IN Laptop laptop,LAPTOP,78990.0,,10,,0.0,0,False,True
+LAP-000533,Dell XPS 9315 Laptop,Dell XPS 9315 Laptop laptop,LAPTOP,133500.0,,10,,0.0,0,False,True
+LAP-000534,Asus Vivobook S15 OLED S3502ZA-L701WS Laptop,Asus Vivobook S15 OLED S3502ZA-L701WS Laptop laptop,LAPTOP,87500.0,,10,,0.0,0,False,True
+LAP-000535,Acer Aspire 3 UN.HVTSI.012 Laptop,Acer Aspire 3 UN.HVTSI.012 Laptop laptop,LAPTOP,29990.0,,10,,0.0,0,False,True
+LAP-000536,MSI Creator Z16P B12UKST-209IN Gaming Laptop,MSI Creator Z16P B12UKST-209IN Gaming Laptop laptop,LAPTOP,395000.0,,10,,0.0,0,False,True
+LAP-000537,Lenovo Yoga 6 82UD0069IN Laptop,Lenovo Yoga 6 82UD0069IN Laptop laptop,LAPTOP,78990.0,,10,,0.0,0,False,True
+LAP-000538,HP 14s-fq0567AU Laptop,HP 14s-fq0567AU Laptop laptop,LAPTOP,36990.0,,10,,0.0,0,False,True
+LAP-000539,MSI Creator Pro M16 A12UJS-601IN Gaming Laptop,MSI Creator Pro M16 A12UJS-601IN Gaming Laptop laptop,LAPTOP,196990.0,,10,,0.0,0,False,True
+LAP-000540,HP Omen 17-ck1023TX Gaming Laptop,HP Omen 17-ck1023TX Gaming Laptop laptop,LAPTOP,299999.0,,10,,0.0,0,False,True
+LAP-000541,HP Omen 16-n0051AX Gaming Laptop,HP Omen 16-n0051AX Gaming Laptop laptop,LAPTOP,154990.0,,10,,0.0,0,False,True
+LAP-000542,Lenovo ThinkPad E14 21E3S04X00 Laptop,Lenovo ThinkPad E14 21E3S04X00 Laptop laptop,LAPTOP,75000.0,,10,,0.0,0,False,True
+LAP-000543,HP Omen 16-k0370TX Gaming Laptop,HP Omen 16-k0370TX Gaming Laptop laptop,LAPTOP,180880.0,,10,,0.0,0,False,True
+LAP-000544,Chuwi Gemibook Pro Laptop,Chuwi Gemibook Pro Laptop laptop,LAPTOP,27489.0,,10,,0.0,0,False,True
+LAP-000545,HP Omen 16-k0360TX Laptop,HP Omen 16-k0360TX Laptop laptop,LAPTOP,144480.0,,10,,0.0,0,False,True
+LAP-000546,Lenovo Thinkbook 15 21DJA04LIH Laptop,Lenovo Thinkbook 15 21DJA04LIH Laptop laptop,LAPTOP,61990.0,,10,,0.0,0,False,True
+LAP-000547,Lenovo IdeaPad Gaming 3 82S900HNIN Laptop,Lenovo IdeaPad Gaming 3 82S900HNIN Laptop laptop,LAPTOP,80990.0,,10,,0.0,0,False,True
+LAP-000548,HP Omen 16-n0054AX Gaming Laptop,HP Omen 16-n0054AX Gaming Laptop laptop,LAPTOP,139680.0,,10,,0.0,0,False,True
+LAP-000549,Lenovo Ideapad Flex 5 82R70068IN Laptop,Lenovo Ideapad Flex 5 82R70068IN Laptop laptop,LAPTOP,75990.0,,10,,0.0,0,False,True
+LAP-000550,HP Victus 15-fb0082AX Gaming Laptop,HP Victus 15-fb0082AX Gaming Laptop laptop,LAPTOP,71990.0,,10,,0.0,0,False,True
+LAP-000551,Dell XPS 9315 Laptop,Dell XPS 9315 Laptop laptop,LAPTOP,132470.0,,10,,0.0,0,False,True
+LAP-000552,HP Omen 16-n0049AX Gaming Laptop,HP Omen 16-n0049AX Gaming Laptop laptop,LAPTOP,107690.0,,10,,0.0,0,False,True
+LAP-000553,HP Omen 16-n0050AX Gaming Laptop,HP Omen 16-n0050AX Gaming Laptop laptop,LAPTOP,99800.0,,10,,0.0,0,False,True
+LAP-000554,Lenovo V14 Gen 2 ITL 82KAA001IH Laptop,Lenovo V14 Gen 2 ITL 82KAA001IH Laptop laptop,LAPTOP,49999.0,,10,,0.0,0,False,True
+LAP-000555,Lenovo V15 82C30057IH Laptop,Lenovo V15 82C30057IH Laptop laptop,LAPTOP,29999.0,,10,,0.0,0,False,True
+LAP-000556,Lenovo IdeaPad Gaming 3 82K201V2IN Laptop,Lenovo IdeaPad Gaming 3 82K201V2IN Laptop laptop,LAPTOP,76990.0,,10,,0.0,0,False,True
+LAP-000557,Lenovo ThinkPad E14 21E3S04W00 Laptop,Lenovo ThinkPad E14 21E3S04W00 Laptop laptop,LAPTOP,74490.0,,10,,0.0,0,False,True
+LAP-000558,Lenovo Thinkpad E14 Gen 21E3S05800 Laptop,Lenovo Thinkpad E14 Gen 21E3S05800 Laptop laptop,LAPTOP,102490.0,,10,,0.0,0,False,True
+LAP-000559,Lenovo Yoga 9 82LU008TIN Laptop,Lenovo Yoga 9 82LU008TIN Laptop laptop,LAPTOP,179990.0,,10,,0.0,0,False,True
+LAP-000560,Dell Vostro 3510 2022 Laptop,Dell Vostro 3510 2022 Laptop laptop,LAPTOP,49850.0,,10,,0.0,0,False,True
+LAP-000561,Acer One 14 Z2-493 Business Laptop,Acer One 14 Z2-493 Business Laptop laptop,LAPTOP,39990.0,,10,,0.0,0,False,True
+LAP-000562,Fujitsu UH-X 4ZR1K06212 Laptop,Fujitsu UH-X 4ZR1K06212 Laptop laptop,LAPTOP,99990.0,,10,,0.0,0,False,True
+LAP-000563,HP Envy x360 13-bf0062TU Laptop,HP Envy x360 13-bf0062TU Laptop laptop,LAPTOP,104990.0,,10,,0.0,0,False,True
+LAP-000564,Gigabyte G5 RC45MD Laptop,Gigabyte G5 RC45MD Laptop laptop,LAPTOP,76600.0,,10,,0.0,0,False,True
+LAP-000565,Gigabyte G5 RC45GD Laptop,Gigabyte G5 RC45GD Laptop laptop,LAPTOP,73990.0,,10,,0.0,0,False,True
+LAP-000566,Gigabyte G5 RC45KD Laptop,Gigabyte G5 RC45KD Laptop laptop,LAPTOP,87800.0,,10,,0.0,0,False,True
+LAP-000567,MSI Katana GF66 11UE-249IN Gaming Laptop,MSI Katana GF66 11UE-249IN Gaming Laptop laptop,LAPTOP,115990.0,,10,,0.0,0,False,True
+LAP-000568,Lenovo IdeaPad Gaming 3 15IAH7 82S900KQIN Laptop,Lenovo IdeaPad Gaming 3 15IAH7 82S900KQIN Laptop laptop,LAPTOP,89990.0,,10,,0.0,0,False,True
+LAP-000569,Lenovo IdeaPad Gaming 3 15IHU6 82K101EDIN Laptop,Lenovo IdeaPad Gaming 3 15IHU6 82K101EDIN Laptop laptop,LAPTOP,69500.0,,10,,0.0,0,False,True
+LAP-000570,Dell Latitude 3520 Laptop,Dell Latitude 3520 Laptop laptop,LAPTOP,38700.0,,10,,0.0,0,False,True
+LAP-000571,Honor MagicBook X15 BohrBR-WAH9F Laptop,Honor MagicBook X15 BohrBR-WAH9F Laptop laptop,LAPTOP,67318.0,,10,,0.0,0,False,True
+LAP-000572,Dell Vostro 3510 2022 Laptop,Dell Vostro 3510 2022 Laptop laptop,LAPTOP,46300.0,,10,,0.0,0,False,True
+LAP-000573,HP ProBook 450 G8 4Y7G3PA Laptop,HP ProBook 450 G8 4Y7G3PA Laptop laptop,LAPTOP,48500.0,,10,,0.0,0,False,True
+LAP-000574,Dell Vostro 3510 2022 Laptop,Dell Vostro 3510 2022 Laptop laptop,LAPTOP,53100.0,,10,,0.0,0,False,True
+LAP-000575,Lenovo ThinkBook 14 20VDA0QTIH Laptop,Lenovo ThinkBook 14 20VDA0QTIH Laptop laptop,LAPTOP,60100.0,,10,,0.0,0,False,True
+LAP-000576,Dell Vostro 3510 2022 Laptop,Dell Vostro 3510 2022 Laptop laptop,LAPTOP,49800.0,,10,,0.0,0,False,True
+LAP-000577,Dell Latitude 3420 Laptop,Dell Latitude 3420 Laptop laptop,LAPTOP,69500.0,,10,,0.0,0,False,True
+LAP-000578,Fujitsu UH-X 4ZR1J37875 Laptop,Fujitsu UH-X 4ZR1J37875 Laptop laptop,LAPTOP,89990.0,,10,,0.0,0,False,True
+LAP-000579,Dell Latitude 3420 2022 Laptop,Dell Latitude 3420 2022 Laptop laptop,LAPTOP,102999.0,,10,,0.0,0,False,True
+LAP-000580,Fujitsu UH-X 4ZR1J37876 Laptop,Fujitsu UH-X 4ZR1J37876 Laptop laptop,LAPTOP,99990.0,,10,,0.0,0,False,True
+LAP-000581,Acer TravelMate TMB311-31 Laptop,Acer TravelMate TMB311-31 Laptop laptop,LAPTOP,24990.0,,10,,0.0,0,False,True
+LAP-000582,Lenovo IdeaPad Flex 5 81X10087IN Laptop,Lenovo IdeaPad Flex 5 81X10087IN Laptop laptop,LAPTOP,66000.0,,10,,0.0,0,False,True
+LAP-000583,Lenovo ThinkPad E15 20TDS0TA00 Laptop,Lenovo ThinkPad E15 20TDS0TA00 Laptop laptop,LAPTOP,71300.0,,10,,0.0,0,False,True
+LAP-000584,HP 250 G8 6X4B3PA Laptop,HP 250 G8 6X4B3PA Laptop laptop,LAPTOP,36499.0,,10,,0.0,0,False,True
+LAP-000585,Dell Vostro 5320 Laptop,Dell Vostro 5320 Laptop laptop,LAPTOP,78990.0,,10,,0.0,0,False,True
+LAP-000586,HP Elitebook 840 G8 4S1H5PA Laptop,HP Elitebook 840 G8 4S1H5PA Laptop laptop,LAPTOP,138800.0,,10,,0.0,0,False,True
+LAP-000587,HP Pavilion x360 14-ek0072TU Laptop,HP Pavilion x360 14-ek0072TU Laptop laptop,LAPTOP,71999.0,,10,,0.0,0,False,True
+LAP-000588,Acer Predator Helios 300 PH315-55s Spatial Labs Edition Gaming Laptop,Acer Predator Helios 300 PH315-55s Spatial Labs Edition Gaming Laptop laptop,LAPTOP,319999.0,,10,,0.0,0,False,True
+LAP-000589,Dell XPS 13 Plus Laptop,Dell XPS 13 Plus Laptop laptop,LAPTOP,171000.0,,10,,0.0,0,False,True
+LAP-000590,Acer Nitro 5 AN515-46 Laptop,Acer Nitro 5 AN515-46 Laptop laptop,LAPTOP,98990.0,,10,,0.0,0,False,True
+LAP-000591,Acer Aspire 3 A315-23 Laptop,Acer Aspire 3 A315-23 Laptop laptop,LAPTOP,51250.0,,10,,0.0,0,False,True
+LAP-000592,Asus TUF F15 FA507RE-HN043WS 2022 Gaming Laptop,Asus TUF F15 FA507RE-HN043WS 2022 Gaming Laptop laptop,LAPTOP,89990.0,,10,,0.0,0,False,True
+LAP-000593,MSI GF63 Thin 10SC-848IN Gaming Laptop,MSI GF63 Thin 10SC-848IN Gaming Laptop laptop,LAPTOP,60700.0,,10,,0.0,0,False,True
+LAP-000594,Acer Aspire 5 A515-45-R1YC Laptop,Acer Aspire 5 A515-45-R1YC Laptop laptop,LAPTOP,44990.0,,10,,0.0,0,False,True
+LAP-000595,Acer Nitro 5 AN515-46 Gaming Laptop,Acer Nitro 5 AN515-46 Gaming Laptop laptop,LAPTOP,129990.0,,10,,0.0,0,False,True
+LAP-000596,Lenovo Legion 5 Pro 82RG009AIN Laptop,Lenovo Legion 5 Pro 82RG009AIN Laptop laptop,LAPTOP,159990.0,,10,,0.0,0,False,True
+LAP-000597,HP Omen 16-C0136AX Laptop,HP Omen 16-C0136AX Laptop laptop,LAPTOP,75299.0,,10,,0.0,0,False,True
+LAP-000598,HP Envy x360 13-bf0058TU Laptop,HP Envy x360 13-bf0058TU Laptop laptop,LAPTOP,103000.0,,10,,0.0,0,False,True
+LAP-000599,HP Omen 17-ck1022TX Gaming Laptop,HP Omen 17-ck1022TX Gaming Laptop laptop,LAPTOP,199999.0,,10,,0.0,0,False,True
+LAP-000600,Honor MagicBook 15 WDQ9CHNE Laptop,Honor MagicBook 15 WDQ9CHNE Laptop laptop,LAPTOP,39990.0,,10,,0.0,0,False,True
+LAP-000601,HP Envy x360 16-h0028TX Laptop,HP Envy x360 16-h0028TX Laptop laptop,LAPTOP,143990.0,,10,,0.0,0,False,True
+LAP-000602,HP Envy 16-h0026tx Laptop,HP Envy 16-h0026tx Laptop laptop,LAPTOP,219900.0,,10,,0.0,0,False,True
+LAP-000603,HP Envy 16-h0025tx Laptop,HP Envy 16-h0025tx Laptop laptop,LAPTOP,192490.0,,10,,0.0,0,False,True
+LAP-000604,Lenovo Legion 5 Pro 82RG00EKIN Laptop,Lenovo Legion 5 Pro 82RG00EKIN Laptop laptop,LAPTOP,189990.0,,10,,0.0,0,False,True
+LAP-000605,Lenovo Yoga Slim 7 Pro 82SV0053IN Laptop,Lenovo Yoga Slim 7 Pro 82SV0053IN Laptop laptop,LAPTOP,109969.0,,10,,0.0,0,False,True
+LAP-000606,Asus VivoBook 14 X415JA-BV322WS Laptop,Asus VivoBook 14 X415JA-BV322WS Laptop laptop,LAPTOP,33990.0,,10,,0.0,0,False,True
+LAP-000607,Lenovo Yoga 6 82UD0068IN 2-in-1 Laptop,Lenovo Yoga 6 82UD0068IN 2-in-1 Laptop laptop,LAPTOP,80030.0,,10,,0.0,0,False,True
+LAP-000608,HP Chromebook 14a-na1004TU Laptop,HP Chromebook 14a-na1004TU Laptop laptop,LAPTOP,21990.0,,10,,0.0,0,False,True
+LAP-000609,Lenovo V14 G2-ITL 82KAA025IH Laptop,Lenovo V14 G2-ITL 82KAA025IH Laptop laptop,LAPTOP,51500.0,,10,,0.0,0,False,True
+LAP-000610,HP Envy x360 13-bf0063TU Laptop,HP Envy x360 13-bf0063TU Laptop laptop,LAPTOP,109990.0,,10,,0.0,0,False,True
+LAP-000611,Gigabyte Aero 5 XE4 OLED Laptop,Gigabyte Aero 5 XE4 OLED Laptop laptop,LAPTOP,185490.0,,10,,0.0,0,False,True
+LAP-000612,Lenovo V14-IIL 82C4019YIH Laptop,Lenovo V14-IIL 82C4019YIH Laptop laptop,LAPTOP,48000.0,,10,,0.0,0,False,True
+LAP-000613,Asus VivoBook 14 2022 X1402ZA-EK521WS Laptop,Asus VivoBook 14 2022 X1402ZA-EK521WS Laptop laptop,LAPTOP,53990.0,,10,,0.0,0,False,True
+LAP-000614,Asus VivoBook 14 2022 X1402ZA-MW512WS Laptop,Asus VivoBook 14 2022 X1402ZA-MW512WS Laptop laptop,LAPTOP,66990.0,,10,,0.0,0,False,True
+LAP-000615,Asus VivoBook 14 2022 X1402ZA-MW311WS Laptop,Asus VivoBook 14 2022 X1402ZA-MW311WS Laptop laptop,LAPTOP,45990.0,,10,,0.0,0,False,True
+LAP-000616,Lenovo Thinkpad E14 Gen 2 20TBS4K300 Laptop,Lenovo Thinkpad E14 Gen 2 20TBS4K300 Laptop laptop,LAPTOP,71449.0,,10,,0.0,0,False,True
+LAP-000617,Lenovo E41-55 ‎82C700FNGE Laptop,Lenovo E41-55 ‎82C700FNGE Laptop laptop,LAPTOP,21999.0,,10,,0.0,0,False,True
+LAP-000618,Dell Latitude 3420 Laptop,Dell Latitude 3420 Laptop laptop,LAPTOP,75800.0,,10,,0.0,0,False,True
+LAP-000619,HP 250 G8 6G9R1PA Notebook,HP 250 G8 6G9R1PA Notebook laptop,LAPTOP,35979.0,,10,,0.0,0,False,True
+LAP-000620,Acer TravelMate TMP215-53 Laptop,Acer TravelMate TMP215-53 Laptop laptop,LAPTOP,26990.0,,10,,0.0,0,False,True
+LAP-000621,HP 430 G8 366B1PA Business Laptop,HP 430 G8 366B1PA Business Laptop laptop,LAPTOP,111500.0,,10,,0.0,0,False,True
+LAP-000622,MSI Creator M16 A11UC-669IN Laptop,MSI Creator M16 A11UC-669IN Laptop laptop,LAPTOP,115990.0,,10,,0.0,0,False,True
+LAP-000623,Lenovo ThinkPad X1 Yoga 20XYS00R00 Laptop,Lenovo ThinkPad X1 Yoga 20XYS00R00 Laptop laptop,LAPTOP,248890.0,,10,,0.0,0,False,True
+LAP-000624,Lenovo ThinkPad T14 2021 20W0S03F00 Laptop,Lenovo ThinkPad T14 2021 20W0S03F00 Laptop laptop,LAPTOP,87000.0,,10,,0.0,0,False,True
+LAP-000625,Huawei MateBook D14 Laptop,Huawei MateBook D14 Laptop laptop,LAPTOP,71901.0,,10,,0.0,0,False,True
+LAP-000626,Lenovo IdeaPad Slim 5 82FG01HAIN Laptop,Lenovo IdeaPad Slim 5 82FG01HAIN Laptop laptop,LAPTOP,59990.0,,10,,0.0,0,False,True
+LAP-000627,Asus VivoBook 14 2021 X415KA-BV121WS Laptop,Asus VivoBook 14 2021 X415KA-BV121WS Laptop laptop,LAPTOP,28990.0,,10,,0.0,0,False,True
+LAP-000628,Dell Inspiron 3511 Laptop,Dell Inspiron 3511 Laptop laptop,LAPTOP,46499.0,,10,,0.0,0,False,True
+LAP-000629,Lenovo V14 G2-ITL ﻿82KAA05VIH Laptop,Lenovo V14 G2-ITL ﻿82KAA05VIH Laptop laptop,LAPTOP,39000.0,,10,,0.0,0,False,True
+LAP-000630,Huawei MateBook 14 2021‎ WDH9A Laptop,Huawei MateBook 14 2021‎ WDH9A Laptop laptop,LAPTOP,100931.0,,10,,0.0,0,False,True
+LAP-000631,Asus ROG Zephyrus G14 GA402RJZ-L4136WS Gaming Laptop,Asus ROG Zephyrus G14 GA402RJZ-L4136WS Gaming Laptop laptop,LAPTOP,155000.0,,10,,0.0,0,False,True
+LAP-000632,HP Envy x360 13-bf0078TU Laptop,HP Envy x360 13-bf0078TU Laptop laptop,LAPTOP,80990.0,,10,,0.0,0,False,True
+LAP-000633,Asus ROG Flow X16 2022 GV601RM-M5053WS Gaming Laptop,Asus ROG Flow X16 2022 GV601RM-M5053WS Gaming Laptop laptop,LAPTOP,187990.0,,10,,0.0,0,False,True
+LAP-000634,Asus ROG Flow X16 2022 GV601RM-M5039WS Gaming Laptop,Asus ROG Flow X16 2022 GV601RM-M5039WS Gaming Laptop laptop,LAPTOP,211990.0,,10,,0.0,0,False,True
+LAP-000635,Lenovo V14 Gen 2 82KAA002IH Laptop,Lenovo V14 Gen 2 82KAA002IH Laptop laptop,LAPTOP,47199.0,,10,,0.0,0,False,True
+LAP-000636,Avita Pura E NS14A6 Laptop,Avita Pura E NS14A6 Laptop laptop,LAPTOP,29990.0,,10,,0.0,0,False,True
+LAP-000637,Lenovo ThinkBook 13s ITL Gen 2 20V9A036IH Laptop,Lenovo ThinkBook 13s ITL Gen 2 20V9A036IH Laptop laptop,LAPTOP,85999.0,,10,,0.0,0,False,True
+LAP-000638,Lenovo Thinkpad T15P Gen 2 ‎21A7001LUS Laptop,Lenovo Thinkpad T15P Gen 2 ‎21A7001LUS Laptop laptop,LAPTOP,219000.0,,10,,0.0,0,False,True
+LAP-000639,Lenovo Ideapad Flex 5 82R700ASIN Laptop,Lenovo Ideapad Flex 5 82R700ASIN Laptop laptop,LAPTOP,59801.0,,10,,0.0,0,False,True
+LAP-000640,Lenovo Ideapad Slim 3i 82H802EYIN Laptop,Lenovo Ideapad Slim 3i 82H802EYIN Laptop laptop,LAPTOP,37000.0,,10,,0.0,0,False,True
+LAP-000641,Lenovo IdeaPad Flex 5 82R7006HIN Laptop,Lenovo IdeaPad Flex 5 82R7006HIN Laptop laptop,LAPTOP,74490.0,,10,,0.0,0,False,True
+LAP-000642,Dell Vostro 3400 Laptop AMD,Dell Vostro 3400 Laptop AMD laptop,LAPTOP,36990.0,,10,,0.0,0,False,True
+LAP-000643,Lenovo Yoga Slim 7 Pro 82NC00FRIN Laptop,Lenovo Yoga Slim 7 Pro 82NC00FRIN Laptop laptop,LAPTOP,74517.0,,10,,0.0,0,False,True
+LAP-000644,MSI Katana GF66 12UC-636IN Gaming Laptop,MSI Katana GF66 12UC-636IN Gaming Laptop laptop,LAPTOP,70990.0,,10,,0.0,0,False,True
+LAP-000645,MSI Gaming Katana GF76 11UC-848IN Laptop,MSI Gaming Katana GF76 11UC-848IN Laptop laptop,LAPTOP,76990.0,,10,,0.0,0,False,True
+LAP-000646,MSI Gaming Katana GF76 11UD-849IN Laptop,MSI Gaming Katana GF76 11UD-849IN Laptop laptop,LAPTOP,82990.0,,10,,0.0,0,False,True
+LAP-000647,MSI Katana GF66 12UE-1001IN Gaming Laptop,MSI Katana GF66 12UE-1001IN Gaming Laptop laptop,LAPTOP,85990.0,,10,,0.0,0,False,True
+LAP-000648,MSI Gaming Katana GF66 12UE-1002IN Laptop,MSI Gaming Katana GF66 12UE-1002IN Laptop laptop,LAPTOP,105990.0,,10,,0.0,0,False,True
+LAP-000649,Acer Swift X SFX14-41G Laptop,Acer Swift X SFX14-41G Laptop laptop,LAPTOP,76000.0,,10,,0.0,0,False,True
+LAP-000650,Lenovo V14-IGL ‎82C2S02K00 Laptop,Lenovo V14-IGL ‎82C2S02K00 Laptop laptop,LAPTOP,21999.0,,10,,0.0,0,False,True
+LAP-000651,HP 255 G8 6V2R7PA Laptop,HP 255 G8 6V2R7PA Laptop laptop,LAPTOP,24650.0,,10,,0.0,0,False,True
+LAP-000652,Acer Swift X SFX14-41G Laptop,Acer Swift X SFX14-41G Laptop laptop,LAPTOP,79521.0,,10,,0.0,0,False,True
+LAP-000653,Asus TUF Gaming F15 FX566HCB-HN231T Gaming Laptop,Asus TUF Gaming F15 FX566HCB-HN231T Gaming Laptop laptop,LAPTOP,101000.0,,10,,0.0,0,False,True
+LAP-000654,Dell Vostro 3400 Laptop,Dell Vostro 3400 Laptop laptop,LAPTOP,38499.0,,10,,0.0,0,False,True
+LAP-000655,Asus ROG Flow X13 GV301RC-LJ073WS Gaming Laptop,Asus ROG Flow X13 GV301RC-LJ073WS Gaming Laptop laptop,LAPTOP,151990.0,,10,,0.0,0,False,True
+LAP-000656,AGB Octev GA-9009 Gaming Laptop,AGB Octev GA-9009 Gaming Laptop laptop,LAPTOP,65000.0,,10,,0.0,0,False,True
+LAP-000657,Lenovo Thinkbook 14 Gen 2 20VDA0G9IH Laptop,Lenovo Thinkbook 14 Gen 2 20VDA0G9IH Laptop laptop,LAPTOP,83399.0,,10,,0.0,0,False,True
+LAP-000658,Asus ROG Flow X13 GV301RE-LJ156WS Gaming Laptop,Asus ROG Flow X13 GV301RE-LJ156WS Gaming Laptop laptop,LAPTOP,171990.0,,10,,0.0,0,False,True
+LAP-000659,Gigabyte Aorus 5 SE4 Gaming Laptop,Gigabyte Aorus 5 SE4 Gaming Laptop laptop,LAPTOP,144990.0,,10,,0.0,0,False,True
+LAP-000660,HP Victus 15-fb0052AX Gaming Laptop,HP Victus 15-fb0052AX Gaming Laptop laptop,LAPTOP,78650.0,,10,,0.0,0,False,True
+LAP-000661,Lenovo Ideapad Flex 5 14IAU7 82R7006EIN Laptop,Lenovo Ideapad Flex 5 14IAU7 82R7006EIN Laptop laptop,LAPTOP,60990.0,,10,,0.0,0,False,True
+LAP-000662,Lenovo Thinkpad L13 Gen 2 20VHS07500 Laptop,Lenovo Thinkpad L13 Gen 2 20VHS07500 Laptop laptop,LAPTOP,92999.0,,10,,0.0,0,False,True
+LAP-000663,Lenovo 15ACH6 82JW00P5IN Laptop,Lenovo 15ACH6 82JW00P5IN Laptop laptop,LAPTOP,69990.0,,10,,0.0,0,False,True
+LAP-000664,Lenovo IdeaPad Slim 5 15ITL05 82SE0061IN Laptop,Lenovo IdeaPad Slim 5 15ITL05 82SE0061IN Laptop laptop,LAPTOP,63990.0,,10,,0.0,0,False,True
+LAP-000665,Acer Nitro 5 AN515-45 NH.QCLSI.004 Gaming Laptop,Acer Nitro 5 AN515-45 NH.QCLSI.004 Gaming Laptop laptop,LAPTOP,67990.0,,10,,0.0,0,False,True
+LAP-000666,Gigabyte Aero 5 KE4 OLED Laptop,Gigabyte Aero 5 KE4 OLED Laptop laptop,LAPTOP,143990.0,,10,,0.0,0,False,True
+LAP-000667,Lenovo V14 G2-ITL 82KA00G8IH Laptop,Lenovo V14 G2-ITL 82KA00G8IH Laptop laptop,LAPTOP,29500.0,,10,,0.0,0,False,True
+LAP-000668,Asus ROG Strix G17 2022 G713RW-KH110WS Gaming Laptop,Asus ROG Strix G17 2022 G713RW-KH110WS Gaming Laptop laptop,LAPTOP,205780.0,,10,,0.0,0,False,True
+LAP-000669,MSI Crosshair 15 B12UGZ-1012IN Gaming Laptop,MSI Crosshair 15 B12UGZ-1012IN Gaming Laptop laptop,LAPTOP,134990.0,,10,,0.0,0,False,True
+LAP-000670,MSI Crosshair 15 B12UEZ-897IN Gaming Laptop,MSI Crosshair 15 B12UEZ-897IN Gaming Laptop laptop,LAPTOP,104990.0,,10,,0.0,0,False,True
+LAP-000671,Lenovo V15 Gen 2 Laptop,Lenovo V15 Gen 2 Laptop laptop,LAPTOP,40871.0,,10,,0.0,0,False,True
+LAP-000672,Lenovo V15 82KDA01DIH Laptop,Lenovo V15 82KDA01DIH Laptop laptop,LAPTOP,39999.0,,10,,0.0,0,False,True
+LAP-000673,Acer Spin 3 SP314-55N Laptop,Acer Spin 3 SP314-55N Laptop laptop,LAPTOP,84990.0,,10,,0.0,0,False,True
+LAP-000674,Lenovo Legion 5 82JU00SYIN Laptop,Lenovo Legion 5 82JU00SYIN Laptop laptop,LAPTOP,129994.0,,10,,0.0,0,False,True
+LAP-000675,Lenovo ThinkPad T14 20W0S1C800 Laptop,Lenovo ThinkPad T14 20W0S1C800 Laptop laptop,LAPTOP,142000.0,,10,,0.0,0,False,True
+LAP-000676,MSI Raider GE77HX 12UHS-205IN Gaming Laptop,MSI Raider GE77HX 12UHS-205IN Gaming Laptop laptop,LAPTOP,299990.0,,10,,0.0,0,False,True
+LAP-000677,MSI Vector GP76 12UGSO-868IN Gaming Laptop,MSI Vector GP76 12UGSO-868IN Gaming Laptop laptop,LAPTOP,170990.0,,10,,0.0,0,False,True
+LAP-000678,MSI Creator M16 A12UD-633IN Laptop,MSI Creator M16 A12UD-633IN Laptop laptop,LAPTOP,99990.0,,10,,0.0,0,False,True
+LAP-000679,MSI Alpha 15 B5EEK-235IN Laptop,MSI Alpha 15 B5EEK-235IN Laptop laptop,LAPTOP,79990.0,,10,,0.0,0,False,True
+LAP-000680,MSI Creator Pro M16 A12UIS-634IN Gaming Laptop,MSI Creator Pro M16 A12UIS-634IN Gaming Laptop laptop,LAPTOP,109990.0,,10,,0.0,0,False,True
+LAP-000681,MSI Thin GF63 11SC-1046IN Gaming Laptop,MSI Thin GF63 11SC-1046IN Gaming Laptop laptop,LAPTOP,54490.0,,10,,0.0,0,False,True
+LAP-000682,Asus ROG Strix Scar 17 SE G733CX-LL012WS Gaming Laptop,Asus ROG Strix Scar 17 SE G733CX-LL012WS Gaming Laptop laptop,LAPTOP,479990.0,,10,,0.0,0,False,True
+LAP-000683,Asus VivoBook 14 X415JA-EK324WS Laptop,Asus VivoBook 14 X415JA-EK324WS Laptop laptop,LAPTOP,32749.0,,10,,0.0,0,False,True
+LAP-000684,Chuwi HeroBook Pro Laptop,Chuwi HeroBook Pro Laptop laptop,LAPTOP,23990.0,,10,,0.0,0,False,True
+LAP-000685,MSI Gaming Katana GF66 12UE-262IN Laptop,MSI Gaming Katana GF66 12UE-262IN Laptop laptop,LAPTOP,144834.0,,10,,0.0,0,False,True
+LAP-000686,Asus ROG Strix Scar 15 G533ZXZ-LN116WS Gaming Laptop,Asus ROG Strix Scar 15 G533ZXZ-LN116WS Gaming Laptop laptop,LAPTOP,281990.0,,10,,0.0,0,False,True
+LAP-000687,MSI Katana GF76 11UE-485IN Laptop,MSI Katana GF76 11UE-485IN Laptop laptop,LAPTOP,92900.0,,10,,0.0,0,False,True
+LAP-000688,MSI Delta 15 A5EFK-201IN Gaming Laptop,MSI Delta 15 A5EFK-201IN Gaming Laptop laptop,LAPTOP,100990.0,,10,,0.0,0,False,True
+LAP-000689,Asus VivoBook K15 OLED K513EA-L503WS Laptop,Asus VivoBook K15 OLED K513EA-L503WS Laptop laptop,LAPTOP,67000.0,,10,,0.0,0,False,True
+LAP-000690,Asus VivoBook Pro 15 OLED K6500ZC-L502WS Laptop,Asus VivoBook Pro 15 OLED K6500ZC-L502WS Laptop laptop,LAPTOP,89990.0,,10,,0.0,0,False,True
+LAP-000691,Lenovo IdeaPad Slim 5 82SF004XIN Laptop,Lenovo IdeaPad Slim 5 82SF004XIN Laptop laptop,LAPTOP,82990.0,,10,,0.0,0,False,True
+LAP-000692,Lenovo V15 G2 82KDA00UIH Laptop,Lenovo V15 G2 82KDA00UIH Laptop laptop,LAPTOP,33250.0,,10,,0.0,0,False,True
+LAP-000693,Lenovo IdeaPad 3 15ITL6 82H802KYIN Laptop,Lenovo IdeaPad 3 15ITL6 82H802KYIN Laptop laptop,LAPTOP,53490.0,,10,,0.0,0,False,True
+LAP-000694,Lenovo ThinkBook 14 20VDA0THIH Laptop,Lenovo ThinkBook 14 20VDA0THIH Laptop laptop,LAPTOP,77500.0,,10,,0.0,0,False,True
+LAP-000695,Asus Vivobook S14 Flip 2022 TN3402QA-LZ501WS Laptop,Asus Vivobook S14 Flip 2022 TN3402QA-LZ501WS Laptop laptop,LAPTOP,68200.0,,10,,0.0,0,False,True
+LAP-000696,Lenovo Legion 5 15ACH6 82JU018YIN Gaming Laptop,Lenovo Legion 5 15ACH6 82JU018YIN Gaming Laptop laptop,LAPTOP,117900.0,,10,,0.0,0,False,True
+LAP-000697,Asus EeeBook E410KA-BV101WS Laptop,Asus EeeBook E410KA-BV101WS Laptop laptop,LAPTOP,28990.0,,10,,0.0,0,False,True
+LAP-000698,Lenovo V14-IGL Laptop,Lenovo V14-IGL Laptop laptop,LAPTOP,22999.0,,10,,0.0,0,False,True
+LAP-000699,Acer Nitro 5 AN515-45 Gaming Laptop,Acer Nitro 5 AN515-45 Gaming Laptop laptop,LAPTOP,59990.0,,10,,0.0,0,False,True
+LAP-000700,HP 14s-dy2508TU Laptop,HP 14s-dy2508TU Laptop laptop,LAPTOP,39990.0,,10,,0.0,0,False,True
+LAP-000701,Asus VivoBook Ultra K14 K413EA-EB523WS Laptop,Asus VivoBook Ultra K14 K413EA-EB523WS Laptop laptop,LAPTOP,60990.0,,10,,0.0,0,False,True
+LAP-000702,Xiaomi Notebook Pro 120G Laptop,Xiaomi Notebook Pro 120G Laptop laptop,LAPTOP,76490.0,,10,,0.0,0,False,True
+LAP-000703,Asus VivoBook Pro 15 OLED K6500ZE-L501WS Laptop,Asus VivoBook Pro 15 OLED K6500ZE-L501WS Laptop laptop,LAPTOP,92772.0,,10,,0.0,0,False,True
+LAP-000704,Dell Inspiron 7420 D560828WIN9S Laptop,Dell Inspiron 7420 D560828WIN9S Laptop laptop,LAPTOP,80490.0,,10,,0.0,0,False,True
+LAP-000705,HP Spectre x360 13-ef0057TU Laptop,HP Spectre x360 13-ef0057TU Laptop laptop,LAPTOP,108990.0,,10,,0.0,0,False,True
+LAP-000706,Dell G15-5521 SE D560738WIN9B Laptop,Dell G15-5521 SE D560738WIN9B Laptop laptop,LAPTOP,137490.0,,10,,0.0,0,False,True
+LAP-000707,Gigabyte Aorus 15 XE5 Gaming Laptop,Gigabyte Aorus 15 XE5 Gaming Laptop laptop,LAPTOP,184900.0,,10,,0.0,0,False,True
+LAP-000708,HP Spectre x360 16-f1009TX Laptop,HP Spectre x360 16-f1009TX Laptop laptop,LAPTOP,176990.0,,10,,0.0,0,False,True
+LAP-000709,Asus ROG Strix G17 G713RM-KH168W Gaming Laptop,Asus ROG Strix G17 G713RM-KH168W Gaming Laptop laptop,LAPTOP,129990.0,,10,,0.0,0,False,True
+LAP-000710,HP Spectre x360 13-ef0052TU OLED Laptop,HP Spectre x360 13-ef0052TU OLED Laptop laptop,LAPTOP,110480.0,,10,,0.0,0,False,True
+LAP-000711,Gigabyte Aorus 15 XE4 Gaming Laptop,Gigabyte Aorus 15 XE4 Gaming Laptop laptop,LAPTOP,179990.0,,10,,0.0,0,False,True
+LAP-000712,Asus ROG Strix Scar 17 SE G733CX-LL013WS Gaming Laptop,Asus ROG Strix Scar 17 SE G733CX-LL013WS Gaming Laptop laptop,LAPTOP,359990.0,,10,,0.0,0,False,True
+LAP-000713,HP 255 G8 R3 Laptop,HP 255 G8 R3 Laptop laptop,LAPTOP,36600.0,,10,,0.0,0,False,True
+LAP-000714,HP Victus 15-fb0053AX Gaming Laptop,HP Victus 15-fb0053AX Gaming Laptop laptop,LAPTOP,83099.0,,10,,0.0,0,False,True
+LAP-000715,Acer Nitro AN515-57 Gaming Laptop,Acer Nitro AN515-57 Gaming Laptop laptop,LAPTOP,82990.0,,10,,0.0,0,False,True
+LAP-000716,Acer Nitro 5 AN515-58 Gaming Laptop,Acer Nitro 5 AN515-58 Gaming Laptop laptop,LAPTOP,82990.0,,10,,0.0,0,False,True
+LAP-000717,Acer Nitro AN515-57 UN.QEHSI.003 Gaming Laptop,Acer Nitro AN515-57 UN.QEHSI.003 Gaming Laptop laptop,LAPTOP,62990.0,,10,,0.0,0,False,True
+LAP-000718,Asus Vivobook 15 2022 X1502ZA-EZ511WS Laptop,Asus Vivobook 15 2022 X1502ZA-EZ511WS Laptop laptop,LAPTOP,64980.0,,10,,0.0,0,False,True
+LAP-000719,Asus ROG Zephyrus G15 2022 GA503RM-HQ030WS Gaming Laptop,Asus ROG Zephyrus G15 2022 GA503RM-HQ030WS Gaming Laptop laptop,LAPTOP,161990.0,,10,,0.0,0,False,True
+LAP-000720,Asus Zenbook Flip 14 OLED UP5401ZA-KN711WS Laptop,Asus Zenbook Flip 14 OLED UP5401ZA-KN711WS Laptop laptop,LAPTOP,146490.0,,10,,0.0,0,False,True
+LAP-000721,Asus ProArt StudioBook Pro 16 H7600ZM-L901WS Laptop,Asus ProArt StudioBook Pro 16 H7600ZM-L901WS Laptop laptop,LAPTOP,217490.0,,10,,0.0,0,False,True
+LAP-000722,Asus ROG Zephyrus G15 GA503RM-LN095WS Gaming Laptop,Asus ROG Zephyrus G15 GA503RM-LN095WS Gaming Laptop laptop,LAPTOP,164990.0,,10,,0.0,0,False,True
+LAP-000723,Asus ProArt StudioBook Pro 16 H7600ZW-L711WS Laptop,Asus ProArt StudioBook Pro 16 H7600ZW-L711WS Laptop laptop,LAPTOP,238121.0,,10,,0.0,0,False,True
+LAP-000724,MSI Stealth GS77 12UGS Gaming Laptop,MSI Stealth GS77 12UGS Gaming Laptop laptop,LAPTOP,308990.0,,10,,0.0,0,False,True
+LAP-000725,Asus ProArt StudioBook Pro 16 OLED H7600ZW-L911W Laptop,Asus ProArt StudioBook Pro 16 OLED H7600ZW-L911W Laptop laptop,LAPTOP,249990.0,,10,,0.0,0,False,True
+LAP-000726,Gigabyte Aorus 5 KE4 Gaming Laptop,Gigabyte Aorus 5 KE4 Gaming Laptop laptop,LAPTOP,185000.0,,10,,0.0,0,False,True
+LAP-000727,Dell Latitude 3420 Laptop,Dell Latitude 3420 Laptop laptop,LAPTOP,34800.0,,10,,0.0,0,False,True
+LAP-000728,Dell Latitude 3420 Laptop,Dell Latitude 3420 Laptop laptop,LAPTOP,41500.0,,10,,0.0,0,False,True
+LAP-000729,HP 250 G8 64Q91PA Laptop,HP 250 G8 64Q91PA Laptop laptop,LAPTOP,64000.0,,10,,0.0,0,False,True
+LAP-000730,Dell Latitude 3420 Laptop,Dell Latitude 3420 Laptop laptop,LAPTOP,42000.0,,10,,0.0,0,False,True
+LAP-000731,Lenovo IdeaPad Gaming 3 15ACH6 82K201Y8IN Laptop,Lenovo IdeaPad Gaming 3 15ACH6 82K201Y8IN Laptop laptop,LAPTOP,73590.0,,10,,0.0,0,False,True
+LAP-000732,Acer Aspire 3 A314-35 UN.K0SSI.033 Laptop,Acer Aspire 3 A314-35 UN.K0SSI.033 Laptop laptop,LAPTOP,24990.0,,10,,0.0,0,False,True
+LAP-000733,Asus VivoBook 15 X515JA-EJ552WS Laptop,Asus VivoBook 15 X515JA-EJ552WS Laptop laptop,LAPTOP,50000.0,,10,,0.0,0,False,True
+LAP-000734,MSI Vector GP66 12UGSO-623IN Gaming Laptop,MSI Vector GP66 12UGSO-623IN Gaming Laptop laptop,LAPTOP,212990.0,,10,,0.0,0,False,True
+LAP-000735,Acer Aspire 3 A314-35 UN.K0SSI.030 Laptop,Acer Aspire 3 A314-35 UN.K0SSI.030 Laptop laptop,LAPTOP,22990.0,,10,,0.0,0,False,True
+LAP-000736,MSI Vector GP66 GP76-12UGSO Gaming Laptop,MSI Vector GP66 GP76-12UGSO Gaming Laptop laptop,LAPTOP,205000.0,,10,,0.0,0,False,True
+LAP-000737,Asus ZenBook Pro Duo 14 OLED UX8402ZA-LM711WS Laptop,Asus ZenBook Pro Duo 14 OLED UX8402ZA-LM711WS Laptop laptop,LAPTOP,149990.0,,10,,0.0,0,False,True
+LAP-000738,Asus ZenBook Pro Duo 14 OLED UX8402ZE-LM921WS Laptop,Asus ZenBook Pro Duo 14 OLED UX8402ZE-LM921WS Laptop laptop,LAPTOP,179990.0,,10,,0.0,0,False,True
+LAP-000739,Asus ZenBook Pro Duo 14 OLED 2022 UX8402ZA-M501WS Laptop,Asus ZenBook Pro Duo 14 OLED 2022 UX8402ZA-M501WS Laptop laptop,LAPTOP,118299.0,,10,,0.0,0,False,True
+LAP-000740,Dell Inspiron 3525 D560831WIN9SE Laptop,Dell Inspiron 3525 D560831WIN9SE Laptop laptop,LAPTOP,36680.0,,10,,0.0,0,False,True
+LAP-000741,Asus TUF Gaming A15 2022 FA577RM-HF031WS Gaming Laptop,Asus TUF Gaming A15 2022 FA577RM-HF031WS Gaming Laptop laptop,LAPTOP,115990.0,,10,,0.0,0,False,True
+LAP-000742,Dell Alienware x15 R2 D569941WIN9 Gaming Laptop,Dell Alienware x15 R2 D569941WIN9 Gaming Laptop laptop,LAPTOP,280490.0,,10,,0.0,0,False,True
+LAP-000743,HP Victus 15-fa0353TX Laptop,HP Victus 15-fa0353TX Laptop laptop,LAPTOP,90990.0,,10,,0.0,0,False,True
+LAP-000744,HP Spectre x360 13-ef0054TU Laptop,HP Spectre x360 13-ef0054TU Laptop laptop,LAPTOP,150480.0,,10,,0.0,0,False,True
+LAP-000745,Lenovo IdeaPad Gaming 3 15IAH7 82S900RAIN Laptop,Lenovo IdeaPad Gaming 3 15IAH7 82S900RAIN Laptop laptop,LAPTOP,89990.0,,10,,0.0,0,False,True
+LAP-000746,Lenovo IdeaPad Gaming 3 82K201YCIN Laptop,Lenovo IdeaPad Gaming 3 82K201YCIN Laptop laptop,LAPTOP,66489.0,,10,,0.0,0,False,True
+LAP-000747,Asus VivoBook 14 X415EA-EK322WS Notebook,Asus VivoBook 14 X415EA-EK322WS Notebook laptop,LAPTOP,38490.0,,10,,0.0,0,False,True
+LAP-000748,Acer Aspire 3 A315-23 UN.HVTSI.015 Laptop,Acer Aspire 3 A315-23 UN.HVTSI.015 Laptop laptop,LAPTOP,38994.0,,10,,0.0,0,False,True
+LAP-000749,Acer Aspire 3 A315-23 UN.HVTSI.010 Laptop,Acer Aspire 3 A315-23 UN.HVTSI.010 Laptop laptop,LAPTOP,34490.0,,10,,0.0,0,False,True
+LAP-000750,Asus ROG Strix G15 2022 G513RW-HQ149WS Gaming Laptop,Asus ROG Strix G15 2022 G513RW-HQ149WS Gaming Laptop laptop,LAPTOP,174990.0,,10,,0.0,0,False,True
+LAP-000751,Asus ROG Strix G15 2022 G513RS-HQ024WS Gaming Laptop,Asus ROG Strix G15 2022 G513RS-HQ024WS Gaming Laptop laptop,LAPTOP,186000.0,,10,,0.0,0,False,True
+LAP-000752,Dell Inspiron 5410 ICC-C782512WIN8 Laptop,Dell Inspiron 5410 ICC-C782512WIN8 Laptop laptop,LAPTOP,65600.0,,10,,0.0,0,False,True
+LAP-000753,Lenovo IdeaPad Slim 3 82RK00EDIN Laptop,Lenovo IdeaPad Slim 3 82RK00EDIN Laptop laptop,LAPTOP,62390.0,,10,,0.0,0,False,True
+LAP-000754,Acer Aspire 3 A315-58 Laptop,Acer Aspire 3 A315-58 Laptop laptop,LAPTOP,53990.0,,10,,0.0,0,False,True
+LAP-000755,Acer Nitro 5 AN515-58 Laptop,Acer Nitro 5 AN515-58 Laptop laptop,LAPTOP,124990.0,,10,,0.0,0,False,True
+LAP-000756,LG Gram 14 14Z90Q-G.AJ56A2 Laptop,LG Gram 14 14Z90Q-G.AJ56A2 Laptop laptop,LAPTOP,91490.0,,10,,0.0,0,False,True
+LAP-000757,Dell Alienware X17 R2 D569943WIN9 Gaming Laptop,Dell Alienware X17 R2 D569943WIN9 Gaming Laptop laptop,LAPTOP,300490.0,,10,,0.0,0,False,True
+LAP-000758,Asus TUF Gaming A17 FA706IHR-HX031W Gaming Laptop,Asus TUF Gaming A17 FA706IHR-HX031W Gaming Laptop laptop,LAPTOP,70000.0,,10,,0.0,0,False,True
+LAP-000759,Asus ROG Strix G15 2022 G513RW-HQ137WS Gaming Laptop,Asus ROG Strix G15 2022 G513RW-HQ137WS Gaming Laptop laptop,LAPTOP,174990.0,,10,,0.0,0,False,True
+LAP-000760,Lenovo Thinkbook 14 Gen 2 20VD011CIH Laptop,Lenovo Thinkbook 14 Gen 2 20VD011CIH Laptop laptop,LAPTOP,70900.0,,10,,0.0,0,False,True
+LAP-000761,Asus ROG Strix G15 G513RM-HF328WS Gaming Laptop,Asus ROG Strix G15 G513RM-HF328WS Gaming Laptop laptop,LAPTOP,137990.0,,10,,0.0,0,False,True
+LAP-000762,HP Victus 15-fa0351TX Laptop,HP Victus 15-fa0351TX Laptop laptop,LAPTOP,88570.0,,10,,0.0,0,False,True
+LAP-000763,HP 15s-eq1561AU Laptop,HP 15s-eq1561AU Laptop laptop,LAPTOP,29997.0,,10,,0.0,0,False,True
+LAP-000764,Asus ROG Zephyrus M16 GU603ZM-K8034WS Laptop,Asus ROG Zephyrus M16 GU603ZM-K8034WS Laptop laptop,LAPTOP,174990.0,,10,,0.0,0,False,True
+LAP-000765,Asus TUF Gaming F15 FX506HC-HN119W Gaming Laptop,Asus TUF Gaming F15 FX506HC-HN119W Gaming Laptop laptop,LAPTOP,85990.0,,10,,0.0,0,False,True
+LAP-000766,Asus ROG Strix G15 G513QR-HF302WS Gaming Laptop,Asus ROG Strix G15 G513QR-HF302WS Gaming Laptop laptop,LAPTOP,146990.0,,10,,0.0,0,False,True
+LAP-000767,HP Pavilion x360 14-dy0212TU Laptop,HP Pavilion x360 14-dy0212TU Laptop laptop,LAPTOP,46999.0,,10,,0.0,0,False,True
+LAP-000768,Lenovo IdeaPad Slim 3 81X800LAIN Laptop,Lenovo IdeaPad Slim 3 81X800LAIN Laptop laptop,LAPTOP,39650.0,,10,,0.0,0,False,True
+LAP-000769,Lenovo Thinkpad P15s 20W7S1H800 Laptop,Lenovo Thinkpad P15s 20W7S1H800 Laptop laptop,LAPTOP,168500.0,,10,,0.0,0,False,True
+LAP-000770,HP 14s-dq3037tu Laptop,HP 14s-dq3037tu Laptop laptop,LAPTOP,25521.0,,10,,0.0,0,False,True
+LAP-000771,HP Pavilion x360 14-ek0088TU Laptop,HP Pavilion x360 14-ek0088TU Laptop laptop,LAPTOP,89990.0,,10,,0.0,0,False,True
+LAP-000772,Asus Vivobook S14 Flip 2022 TN3402QA-LZ511WS Laptop,Asus Vivobook S14 Flip 2022 TN3402QA-LZ511WS Laptop laptop,LAPTOP,72990.0,,10,,0.0,0,False,True
+LAP-000773,Acer Aspire 7 A715-42G UN.QAYSI.006 Gaming Laptop,Acer Aspire 7 A715-42G UN.QAYSI.006 Gaming Laptop laptop,LAPTOP,56990.0,,10,,0.0,0,False,True
+LAP-000774,Acer Aspire 3 A314-22 NX.HVVSI.007 Laptop,Acer Aspire 3 A314-22 NX.HVVSI.007 Laptop laptop,LAPTOP,22449.0,,10,,0.0,0,False,True
+LAP-000775,Dell Inspiron 3525 Laptop,Dell Inspiron 3525 Laptop laptop,LAPTOP,47990.0,,10,,0.0,0,False,True
+LAP-000776,Lenovo ThinkPad T14  20W0S1HW00 Laptop,Lenovo ThinkPad T14  20W0S1HW00 Laptop laptop,LAPTOP,153970.0,,10,,0.0,0,False,True
+LAP-000777,Lenovo Ideapad Gaming 3 82K201UMIN Laptop,Lenovo Ideapad Gaming 3 82K201UMIN Laptop laptop,LAPTOP,79990.0,,10,,0.0,0,False,True
+LAP-000778,Dell Vostro 5625 laptop,Dell Vostro 5625 laptop laptop,LAPTOP,70990.0,,10,,0.0,0,False,True
+LAP-000779,Asus Vivobook Pro 15 M3500QC-L901WS Gaming Laptop,Asus Vivobook Pro 15 M3500QC-L901WS Gaming Laptop laptop,LAPTOP,90990.0,,10,,0.0,0,False,True
+LAP-000780,Lenovo IdeaPad 3 82RK0064IN Laptop,Lenovo IdeaPad 3 82RK0064IN Laptop laptop,LAPTOP,58099.0,,10,,0.0,0,False,True
+LAP-000781,Lenovo IdeaPad Gaming 3 82K101A4IN Laptop,Lenovo IdeaPad Gaming 3 82K101A4IN Laptop laptop,LAPTOP,63990.0,,10,,0.0,0,False,True
+LAP-000782,Fujitsu UH-X FPC01319LK Laptop,Fujitsu UH-X FPC01319LK Laptop laptop,LAPTOP,82994.0,,10,,0.0,0,False,True
+LAP-000783,Fujitsu UH-X FPC02568LK Laptop,Fujitsu UH-X FPC02568LK Laptop laptop,LAPTOP,73494.0,,10,,0.0,0,False,True
+LAP-000784,Fujitsu CH FPC02548LK Laptop,Fujitsu CH FPC02548LK Laptop laptop,LAPTOP,54490.0,,10,,0.0,0,False,True
+LAP-000785,Fujitsu UH-X FPC02569LK Laptop,Fujitsu UH-X FPC02569LK Laptop laptop,LAPTOP,82994.0,,10,,0.0,0,False,True
+LAP-000786,Dell Alienware M15 ICC-C780002WIN8 Laptop,Dell Alienware M15 ICC-C780002WIN8 Laptop laptop,LAPTOP,131699.0,,10,,0.0,0,False,True
+LAP-000787,Lenovo IdeaPad Gaming 3 82K1019AIN Laptop,Lenovo IdeaPad Gaming 3 82K1019AIN Laptop laptop,LAPTOP,64990.0,,10,,0.0,0,False,True
+LAP-000788,HP Spectre X360 16-f1003TU Laptop,HP Spectre X360 16-f1003TU Laptop laptop,LAPTOP,138999.0,,10,,0.0,0,False,True
+LAP-000789,HP Pavilion 14-eh0021TU Laptop,HP Pavilion 14-eh0021TU Laptop laptop,LAPTOP,74990.0,,10,,0.0,0,False,True
+LAP-000790,HP Victus 15-fa0073TX Laptop,HP Victus 15-fa0073TX Laptop laptop,LAPTOP,85990.0,,10,,0.0,0,False,True
+LAP-000791,HP Pavilion 14-eh0025TU Laptop,HP Pavilion 14-eh0025TU Laptop laptop,LAPTOP,73500.0,,10,,0.0,0,False,True
+LAP-000792,Lenovo Yoga 7 Flip 82QE009SIN Laptop,Lenovo Yoga 7 Flip 82QE009SIN Laptop laptop,LAPTOP,112990.0,,10,,0.0,0,False,True
+LAP-000793,Lenovo IdeaPad Gaming 3 15ACH6 82K201UXIN Laptop,Lenovo IdeaPad Gaming 3 15ACH6 82K201UXIN Laptop laptop,LAPTOP,109990.0,,10,,0.0,0,False,True
+LAP-000794,Acer Aspire 5 NX.K6SSI.002 Laptop,Acer Aspire 5 NX.K6SSI.002 Laptop laptop,LAPTOP,40990.0,,10,,0.0,0,False,True
+LAP-000795,Asus TUF Gaming F15 FX506HC-HN362WS Gaming Laptop,Asus TUF Gaming F15 FX506HC-HN362WS Gaming Laptop laptop,LAPTOP,76990.0,,10,,0.0,0,False,True
+LAP-000796,Acer Aspire 7 A715-5G UN.QGBSI.002 Gaming Laptop,Acer Aspire 7 A715-5G UN.QGBSI.002 Gaming Laptop laptop,LAPTOP,61990.0,,10,,0.0,0,False,True
+LAP-000797,Dell Vostro 3525 Laptop,Dell Vostro 3525 Laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000798,LG Gram 16Z90Q-G.AJ54A2 Laptop,LG Gram 16Z90Q-G.AJ54A2 Laptop laptop,LAPTOP,96490.0,,10,,0.0,0,False,True
+LAP-000799,Dell Vostro 3425 Laptop,Dell Vostro 3425 Laptop laptop,LAPTOP,52499.0,,10,,0.0,0,False,True
+LAP-000800,Asus TUF Gaming F15 FX506LHB-HN357W Gaming Laptop,Asus TUF Gaming F15 FX506LHB-HN357W Gaming Laptop laptop,LAPTOP,67461.0,,10,,0.0,0,False,True
+LAP-000801,Asus ROG Flow X13 GV301RC-LJ022WS Gaming Laptop,Asus ROG Flow X13 GV301RC-LJ022WS Gaming Laptop laptop,LAPTOP,144990.0,,10,,0.0,0,False,True
+LAP-000802,Asus ROG Zephyrus G14 2022 GA402RK-L8148WS Gaming Laptop,Asus ROG Zephyrus G14 2022 GA402RK-L8148WS Gaming Laptop laptop,LAPTOP,199990.0,,10,,0.0,0,False,True
+LAP-000803,Asus ROG Flow X13 GV301RE-LJ199WS Gaming Laptop,Asus ROG Flow X13 GV301RE-LJ199WS Gaming Laptop laptop,LAPTOP,164104.0,,10,,0.0,0,False,True
+LAP-000804,Asus ROG Flow X13 GV301RE-LI201WS Gaming Laptop,Asus ROG Flow X13 GV301RE-LI201WS Gaming Laptop laptop,LAPTOP,175990.0,,10,,0.0,0,False,True
+LAP-000805,Asus ROG Zephyrus G15 2022 GA503RM-LN143WS Gaming Laptop,Asus ROG Zephyrus G15 2022 GA503RM-LN143WS Gaming Laptop laptop,LAPTOP,144990.0,,10,,0.0,0,False,True
+LAP-000806,Asus ROG Zephyrus G15 2022 GA503RM-HQ142WS Gaming Laptop,Asus ROG Zephyrus G15 2022 GA503RM-HQ142WS Gaming Laptop laptop,LAPTOP,156990.0,,10,,0.0,0,False,True
+LAP-000807,Asus ROG Zephyrus Duo 16 2022 GX650RXZ-LB226WS Gaming Laptop,Asus ROG Zephyrus Duo 16 2022 GX650RXZ-LB226WS Gaming Laptop laptop,LAPTOP,396990.0,,10,,0.0,0,False,True
+LAP-000808,Asus ROG Zephyrus G15 2022 GA503RS-HQ027WS Gaming Laptop,Asus ROG Zephyrus G15 2022 GA503RS-HQ027WS Gaming Laptop laptop,LAPTOP,199086.0,,10,,0.0,0,False,True
+LAP-000809,Asus ROG Zephyrus Duo 16 2022 GX650RXZ-LS228WS Gaming Laptop,Asus ROG Zephyrus Duo 16 2022 GX650RXZ-LS228WS Gaming Laptop laptop,LAPTOP,361990.0,,10,,0.0,0,False,True
+LAP-000810,Asus ROG Zephyrus G14 GA402RJ-L8182WS Gaming Laptop,Asus ROG Zephyrus G14 GA402RJ-L8182WS Gaming Laptop laptop,LAPTOP,159399.0,,10,,0.0,0,False,True
+LAP-000811,Asus ROG Zephyrus G15 2022 GA503RM-HQ111WS Gaming Laptop,Asus ROG Zephyrus G15 2022 GA503RM-HQ111WS Gaming Laptop laptop,LAPTOP,148990.0,,10,,0.0,0,False,True
+LAP-000812,Asus ROG Flow X16 2022 GV601RE-M6012WS Gaming Laptop,Asus ROG Flow X16 2022 GV601RE-M6012WS Gaming Laptop laptop,LAPTOP,151990.0,,10,,0.0,0,False,True
+LAP-000813,Asus ROG Zephyrus Duo 16 GX650RMZ-LS019WS Gaming Laptop,Asus ROG Zephyrus Duo 16 GX650RMZ-LS019WS Gaming Laptop laptop,LAPTOP,224990.0,,10,,0.0,0,False,True
+LAP-000814,Asus ROG Zephyrus G15 2022 GA503RW-LN067WS Gaming Laptop,Asus ROG Zephyrus G15 2022 GA503RW-LN067WS Gaming Laptop laptop,LAPTOP,189990.0,,10,,0.0,0,False,True
+LAP-000815,Asus ROG Flow X16 2022 GV601RM-M6054WS Gaming Laptop,Asus ROG Flow X16 2022 GV601RM-M6054WS Gaming Laptop laptop,LAPTOP,171990.0,,10,,0.0,0,False,True
+LAP-000816,Asus ROG Zephyrus Duo 16 2022 GX650RXZ-LO227WS Gaming Laptop,Asus ROG Zephyrus Duo 16 2022 GX650RXZ-LO227WS Gaming Laptop laptop,LAPTOP,391990.0,,10,,0.0,0,False,True
+LAP-000817,Asus ROG Flow X13 GV301RA-LJ031WS Gaming Laptop,Asus ROG Flow X13 GV301RA-LJ031WS Gaming Laptop laptop,LAPTOP,111399.0,,10,,0.0,0,False,True
+LAP-000818,Asus ROG Zephyrus G15 GA503RW-LN066WS Gaming Laptop,Asus ROG Zephyrus G15 GA503RW-LN066WS Gaming Laptop laptop,LAPTOP,188000.0,,10,,0.0,0,False,True
+LAP-000819,HP Pavilion x360 14-ek0092TU Laptop,HP Pavilion x360 14-ek0092TU Laptop laptop,LAPTOP,89990.0,,10,,0.0,0,False,True
+LAP-000820,Dell Inspiron 7620 Laptop,Dell Inspiron 7620 Laptop laptop,LAPTOP,87500.0,,10,,0.0,0,False,True
+LAP-000821,HP Pavilion x360 14-ek0078TU Laptop,HP Pavilion x360 14-ek0078TU Laptop laptop,LAPTOP,71990.0,,10,,0.0,0,False,True
+LAP-000822,Asus Zenbook Flip 14 OLED UP5401ZA-KN701WS Laptop,Asus Zenbook Flip 14 OLED UP5401ZA-KN701WS Laptop laptop,LAPTOP,134990.0,,10,,0.0,0,False,True
+LAP-000823,Asus Vivobook Flip 14 TP3402ZA-LZ511WS Laptop,Asus Vivobook Flip 14 TP3402ZA-LZ511WS Laptop laptop,LAPTOP,76990.0,,10,,0.0,0,False,True
+LAP-000824,HP 15s-fq2672TU Laptop,HP 15s-fq2672TU Laptop laptop,LAPTOP,43500.0,,10,,0.0,0,False,True
+LAP-000825,Asus Vivobook Flip 14 TP3402ZA-LZ501WS Laptop,Asus Vivobook Flip 14 TP3402ZA-LZ501WS Laptop laptop,LAPTOP,94500.0,,10,,0.0,0,False,True
+LAP-000826,HP 15s-fq2674TU Laptop,HP 15s-fq2674TU Laptop laptop,LAPTOP,43990.0,,10,,0.0,0,False,True
+LAP-000827,Asus TUF Gaming A17 FA706IC-HX036W Laptop,Asus TUF Gaming A17 FA706IC-HX036W Laptop laptop,LAPTOP,67990.0,,10,,0.0,0,False,True
+LAP-000828,Lenovo Legion 5 Pro 82JD005LIN Gaming Laptop,Lenovo Legion 5 Pro 82JD005LIN Gaming Laptop laptop,LAPTOP,179790.0,,10,,0.0,0,False,True
+LAP-000829,Asus VivoBook Ultra 14,Asus VivoBook Ultra 14 laptop,LAPTOP,41790.0,,10,,0.0,0,False,True
+LAP-000830,MSI GF75 Thin 10SC-611IN Laptop,MSI GF75 Thin 10SC-611IN Laptop laptop,LAPTOP,58900.0,,10,,0.0,0,False,True
+LAP-000831,Dell Inspiron 3511 D560803WIN9B Laptop,Dell Inspiron 3511 D560803WIN9B Laptop laptop,LAPTOP,62500.0,,10,,0.0,0,False,True
+LAP-000832,Asus VivoBook 14 X415JA-EB521WS Laptop,Asus VivoBook 14 X415JA-EB521WS Laptop laptop,LAPTOP,42990.0,,10,,0.0,0,False,True
+LAP-000833,Lenovo IdeaPad Gaming 3 82K101EEIN Laptop,Lenovo IdeaPad Gaming 3 82K101EEIN Laptop laptop,LAPTOP,64990.0,,10,,0.0,0,False,True
+LAP-000834,Lenovo ThinkBook 15 20VEA0YNIH Laptop,Lenovo ThinkBook 15 20VEA0YNIH Laptop laptop,LAPTOP,55990.0,,10,,0.0,0,False,True
+LAP-000835,Dell Latitude 5420 Business Laptop,Dell Latitude 5420 Business Laptop laptop,LAPTOP,68500.0,,10,,0.0,0,False,True
+LAP-000836,Lenovo Thinkbook 14 20VDA0KNIH Laptop,Lenovo Thinkbook 14 20VDA0KNIH Laptop laptop,LAPTOP,71999.0,,10,,0.0,0,False,True
+LAP-000837,MSI Alpha 15 B5EEK-029IN Laptop,MSI Alpha 15 B5EEK-029IN Laptop laptop,LAPTOP,85290.0,,10,,0.0,0,False,True
+LAP-000838,HP Victus 15-fb0051AX Gaming Laptop,HP Victus 15-fb0051AX Gaming Laptop laptop,LAPTOP,74990.0,,10,,0.0,0,False,True
+LAP-000839,HP Pavilion 14s- fy1003AU Laptop,HP Pavilion 14s- fy1003AU Laptop laptop,LAPTOP,50499.0,,10,,0.0,0,False,True
+LAP-000840,Asus VivoBook Ultra X415JA-EB531WS Laptop,Asus VivoBook Ultra X415JA-EB531WS Laptop laptop,LAPTOP,47990.0,,10,,0.0,0,False,True
+LAP-000841,Dell Vostro 3420 D552299WIN9BE Laptop,Dell Vostro 3420 D552299WIN9BE Laptop laptop,LAPTOP,42300.0,,10,,0.0,0,False,True
+LAP-000842,Dell XPS 15 9520 Laptop,Dell XPS 15 9520 Laptop laptop,LAPTOP,255000.0,,10,,0.0,0,False,True
+LAP-000843,HP Pavilion 14s-fy1005AU Laptop,HP Pavilion 14s-fy1005AU Laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000844,Asus TUF Gaming A17 FA706IC-HX055W Laptop,Asus TUF Gaming A17 FA706IC-HX055W Laptop laptop,LAPTOP,86990.0,,10,,0.0,0,False,True
+LAP-000845,Dell Vostro 5620 Laptop,Dell Vostro 5620 Laptop laptop,LAPTOP,76990.0,,10,,0.0,0,False,True
+LAP-000846,Lenovo Yoga 6 82UD0088IN 2-in-1 Laptop,Lenovo Yoga 6 82UD0088IN 2-in-1 Laptop laptop,LAPTOP,84500.0,,10,,0.0,0,False,True
+LAP-000847,Dell Vostro 5620 Laptop,Dell Vostro 5620 Laptop laptop,LAPTOP,69800.0,,10,,0.0,0,False,True
+LAP-000848,Asus EeeBook 14 E410KA-BV121WS Laptop,Asus EeeBook 14 E410KA-BV121WS Laptop laptop,LAPTOP,25490.0,,10,,0.0,0,False,True
+LAP-000849,Dell Vostro 3420 D552276WIN9BE Laptop,Dell Vostro 3420 D552276WIN9BE Laptop laptop,LAPTOP,43490.0,,10,,0.0,0,False,True
+LAP-000850,Dell XPS 13 9320 Laptop,Dell XPS 13 9320 Laptop laptop,LAPTOP,140900.0,,10,,0.0,0,False,True
+LAP-000851,HP Victus 16-E0301Ax Gaming Laptop,HP Victus 16-E0301Ax Gaming Laptop laptop,LAPTOP,66490.0,,10,,0.0,0,False,True
+LAP-000852,HP 15s-fq2673TU Laptop,HP 15s-fq2673TU Laptop laptop,LAPTOP,44490.0,,10,,0.0,0,False,True
+LAP-000853,LG Gram 17Z90Q-G.AH75A2 Laptop,LG Gram 17Z90Q-G.AH75A2 Laptop laptop,LAPTOP,102990.0,,10,,0.0,0,False,True
+LAP-000854,LG Gram 17 17Z90Q-G.AJ55A2 Laptop,LG Gram 17 17Z90Q-G.AJ55A2 Laptop laptop,LAPTOP,87990.0,,10,,0.0,0,False,True
+LAP-000855,Asus TUF Gaming F15 FX506HC-HN089WS Gaming Laptop,Asus TUF Gaming F15 FX506HC-HN089WS Gaming Laptop laptop,LAPTOP,78990.0,,10,,0.0,0,False,True
+LAP-000856,MSI Stealth 15M B12UE Gaming Laptop,MSI Stealth 15M B12UE Gaming Laptop laptop,LAPTOP,139990.0,,10,,0.0,0,False,True
+LAP-000857,HP Pavilion x360 14-ek0086TU Laptop,HP Pavilion x360 14-ek0086TU Laptop laptop,LAPTOP,69950.0,,10,,0.0,0,False,True
+LAP-000858,HP Envy x360 13-ay1062AU Laptop,HP Envy x360 13-ay1062AU Laptop laptop,LAPTOP,79990.0,,10,,0.0,0,False,True
+LAP-000859,LG Gram 14 14Z90Q-G.AH75A2 Laptop,LG Gram 14 14Z90Q-G.AH75A2 Laptop laptop,LAPTOP,93490.0,,10,,0.0,0,False,True
+LAP-000860,Asus ROG Strix G17 2022 G713RW-LL133WS Gaming Laptop,Asus ROG Strix G17 2022 G713RW-LL133WS Gaming Laptop laptop,LAPTOP,181589.0,,10,,0.0,0,False,True
+LAP-000861,LG Gram 16Z90Q-G.AH75A2 Laptop,LG Gram 16Z90Q-G.AH75A2 Laptop laptop,LAPTOP,104590.0,,10,,0.0,0,False,True
+LAP-000862,Asus TUF Gaming A15 FA506ICB-HN075W Laptop,Asus TUF Gaming A15 FA506ICB-HN075W Laptop laptop,LAPTOP,78500.0,,10,,0.0,0,False,True
+LAP-000863,LG Gram 17Z90Q-G.AH78A2 Laptop,LG Gram 17Z90Q-G.AH78A2 Laptop laptop,LAPTOP,119990.0,,10,,0.0,0,False,True
+LAP-000864,Dell G15-5525 Gaming Laptop,Dell G15-5525 Gaming Laptop laptop,LAPTOP,124990.0,,10,,0.0,0,False,True
+LAP-000865,Dell G15-5525 Gaming Laptop,Dell G15-5525 Gaming Laptop laptop,LAPTOP,81990.0,,10,,0.0,0,False,True
+LAP-000866,Lenovo IdeaPad Slim 3 82RK0085IN Laptop,Lenovo IdeaPad Slim 3 82RK0085IN Laptop laptop,LAPTOP,61490.0,,10,,0.0,0,False,True
+LAP-000867,MSI Crosshair 15 B12UEZ-037IN Gaming Laptop,MSI Crosshair 15 B12UEZ-037IN Gaming Laptop laptop,LAPTOP,122000.0,,10,,0.0,0,False,True
+LAP-000868,MSI Gaming Raider GE66 12UHS-218IN Gaming Laptop,MSI Gaming Raider GE66 12UHS-218IN Gaming Laptop laptop,LAPTOP,409066.0,,10,,0.0,0,False,True
+LAP-000869,Dell  G15-5525 Laptop,Dell  G15-5525 Laptop laptop,LAPTOP,105990.0,,10,,0.0,0,False,True
+LAP-000870,Dell G15-5525 Gaming Laptop,Dell G15-5525 Gaming Laptop laptop,LAPTOP,74990.0,,10,,0.0,0,False,True
+LAP-000871,Dell G15-5525 Gaming Laptop,Dell G15-5525 Gaming Laptop laptop,LAPTOP,98900.0,,10,,0.0,0,False,True
+LAP-000872,Lenovo ThinkPad P14s 20VXS0G800 Laptop,Lenovo ThinkPad P14s 20VXS0G800 Laptop laptop,LAPTOP,103990.0,,10,,0.0,0,False,True
+LAP-000873,MSI GP66 Leopard 11UG-693IN Gaming Laptop,MSI GP66 Leopard 11UG-693IN Gaming Laptop laptop,LAPTOP,129990.0,,10,,0.0,0,False,True
+LAP-000874,HP Spectre x360 13-ef0053TU Laptop,HP Spectre x360 13-ef0053TU Laptop laptop,LAPTOP,124999.0,,10,,0.0,0,False,True
+LAP-000875,MSI Sword 15 A12UD-471IN  Gaming Laptop,MSI Sword 15 A12UD-471IN  Gaming Laptop laptop,LAPTOP,85990.0,,10,,0.0,0,False,True
+LAP-000876,MSI Katana GF66 12UD-472IN Gaming Laptop,MSI Katana GF66 12UD-472IN Gaming Laptop laptop,LAPTOP,76990.0,,10,,0.0,0,False,True
+LAP-000877,Lenovo Thinkpad P15v 21AAS0R500 Laptop,Lenovo Thinkpad P15v 21AAS0R500 Laptop laptop,LAPTOP,259500.0,,10,,0.0,0,False,True
+LAP-000878,Asus ROG Strix G17 2022 G713RW-LL111WS Gaming Laptop,Asus ROG Strix G17 2022 G713RW-LL111WS Gaming Laptop laptop,LAPTOP,188990.0,,10,,0.0,0,False,True
+LAP-000879,Microsoft Surface GO 2 8QF-00046 Laptop,Microsoft Surface GO 2 8QF-00046 Laptop laptop,LAPTOP,77324.0,,10,,0.0,0,False,True
+LAP-000880,Dell Inspiron 7420 2-in-1 Touch Laptop,Dell Inspiron 7420 2-in-1 Touch Laptop laptop,LAPTOP,62490.0,,10,,0.0,0,False,True
+LAP-000881,Lenovo V14  82KAA01SIH Laptop,Lenovo V14  82KAA01SIH Laptop laptop,LAPTOP,31999.0,,10,,0.0,0,False,True
+LAP-000882,HP Victus 16-e1062AX Gaming Laptop,HP Victus 16-e1062AX Gaming Laptop laptop,LAPTOP,84190.0,,10,,0.0,0,False,True
+LAP-000883,HP Victus 16-e1060AX Gaming Laptop,HP Victus 16-e1060AX Gaming Laptop laptop,LAPTOP,111500.0,,10,,0.0,0,False,True
+LAP-000884,HP Victus 16-e0305ax Gaming Laptop,HP Victus 16-e0305ax Gaming Laptop laptop,LAPTOP,78950.0,,10,,0.0,0,False,True
+LAP-000885,Microsoft Surface GO 2 8QC-00021 Laptop,Microsoft Surface GO 2 8QC-00021 Laptop laptop,LAPTOP,71990.0,,10,,0.0,0,False,True
+LAP-000886,Acer TravelMate TMP214-53 Laptop,Acer TravelMate TMP214-53 Laptop laptop,LAPTOP,41490.0,,10,,0.0,0,False,True
+LAP-000887,Acer TravelMate TMP214-53 Laptop,Acer TravelMate TMP214-53 Laptop laptop,LAPTOP,51990.0,,10,,0.0,0,False,True
+LAP-000888,Acer TravelMate TMP214-53 Laptop,Acer TravelMate TMP214-53 Laptop laptop,LAPTOP,45990.0,,10,,0.0,0,False,True
+LAP-000889,Acer Aspire 3 A315-58 Laptop,Acer Aspire 3 A315-58 Laptop laptop,LAPTOP,32800.0,,10,,0.0,0,False,True
+LAP-000890,Acer Nitro 5 AN515-57 UN.QEHSI.004 Laptop,Acer Nitro 5 AN515-57 UN.QEHSI.004 Laptop laptop,LAPTOP,62999.0,,10,,0.0,0,False,True
+LAP-000891,Acer TravelMate TMP214-53 Business Laptop,Acer TravelMate TMP214-53 Business Laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000892,Lenovo Legion 5 82JK00BEIN Laptop,Lenovo Legion 5 82JK00BEIN Laptop laptop,LAPTOP,119990.0,,10,,0.0,0,False,True
+LAP-000893,Lenovo IdeaPad Slim 3 81X800LGIN Laptop,Lenovo IdeaPad Slim 3 81X800LGIN Laptop laptop,LAPTOP,36999.0,,10,,0.0,0,False,True
+LAP-000894,Acer Aspire 3 A315-59 Laptop,Acer Aspire 3 A315-59 Laptop laptop,LAPTOP,56699.0,,10,,0.0,0,False,True
+LAP-000895,Dell Inspiron 3525 Laptop,Dell Inspiron 3525 Laptop laptop,LAPTOP,58750.0,,10,,0.0,0,False,True
+LAP-000896,Asus TUF Gaming F17 FX777ZE-HX052WS Laptop,Asus TUF Gaming F17 FX777ZE-HX052WS Laptop laptop,LAPTOP,114990.0,,10,,0.0,0,False,True
+LAP-000897,Acer Nitro 5 AN515-45 NH.QBCSI.00F Gaming Laptop,Acer Nitro 5 AN515-45 NH.QBCSI.00F Gaming Laptop laptop,LAPTOP,129999.0,,10,,0.0,0,False,True
+LAP-000898,Dell Inspiron 7420 Laptop,Dell Inspiron 7420 Laptop laptop,LAPTOP,86990.0,,10,,0.0,0,False,True
+LAP-000899,Asus Vivobook S15 OLED S3502ZA-L702WS Laptop,Asus Vivobook S15 OLED S3502ZA-L702WS Laptop laptop,LAPTOP,84900.0,,10,,0.0,0,False,True
+LAP-000900,Lenovo Thinkpad E14 Gen 2 20TAS14C00 Laptop,Lenovo Thinkpad E14 Gen 2 20TAS14C00 Laptop laptop,LAPTOP,48000.0,,10,,0.0,0,False,True
+LAP-000901,Asus ZenBook S13 UM5302TA-LX701WS Laptop,Asus ZenBook S13 UM5302TA-LX701WS Laptop laptop,LAPTOP,119990.0,,10,,0.0,0,False,True
+LAP-000902,Asus ZenBook S13 UM5302TA-LX501WS Laptop,Asus ZenBook S13 UM5302TA-LX501WS Laptop laptop,LAPTOP,99800.0,,10,,0.0,0,False,True
+LAP-000903,Asus TUF Dash F15 2022 FX517ZE-HN036WS Gaming Laptop,Asus TUF Dash F15 2022 FX517ZE-HN036WS Gaming Laptop laptop,LAPTOP,98990.0,,10,,0.0,0,False,True
+LAP-000904,Lenovo IdeaPad Gaming 3 81Y401BHIN Gaming Laptop,Lenovo IdeaPad Gaming 3 81Y401BHIN Gaming Laptop laptop,LAPTOP,74829.0,,10,,0.0,0,False,True
+LAP-000905,Lenovo ThinkBook 15 21A4A09SIH Laptop,Lenovo ThinkBook 15 21A4A09SIH Laptop laptop,LAPTOP,39500.0,,10,,0.0,0,False,True
+LAP-000906,Asus VivoBook 14 2022 X1402ZA-EB512WS Laptop,Asus VivoBook 14 2022 X1402ZA-EB512WS Laptop laptop,LAPTOP,62990.0,,10,,0.0,0,False,True
+LAP-000907,Asus VivoBook 14 2022 X1402ZA-EB311WS Laptop,Asus VivoBook 14 2022 X1402ZA-EB311WS Laptop laptop,LAPTOP,47990.0,,10,,0.0,0,False,True
+LAP-000908,Asus ROG Flow Z13 2022 GZ301ZE-LC193WS Gaming Laptop,Asus ROG Flow Z13 2022 GZ301ZE-LC193WS Gaming Laptop laptop,LAPTOP,304980.0,,10,,0.0,0,False,True
+LAP-000909,Asus ROG Flow Z13 2022 GZ301ZE-LD064WS Gaming Laptop,Asus ROG Flow Z13 2022 GZ301ZE-LD064WS Gaming Laptop laptop,LAPTOP,181990.0,,10,,0.0,0,False,True
+LAP-000910,Asus ROG Flow Z13 2022 GZ301ZC-LD123WS Gaming Laptop,Asus ROG Flow Z13 2022 GZ301ZC-LD123WS Gaming Laptop laptop,LAPTOP,150790.0,,10,,0.0,0,False,True
+LAP-000911,Asus ROG Flow Z13 2022 GZ301ZA-LD049WS Gaming Laptop,Asus ROG Flow Z13 2022 GZ301ZA-LD049WS Gaming Laptop laptop,LAPTOP,115390.0,,10,,0.0,0,False,True
+LAP-000912,Asus TUF Dash F15 2022 FX517ZR-HQ030WS Gaming Laptop,Asus TUF Dash F15 2022 FX517ZR-HQ030WS Gaming Laptop laptop,LAPTOP,149990.0,,10,,0.0,0,False,True
+LAP-000913,Asus ROG Flow Z13 2022 GZ301ZE-LC192WS Gaming Laptop,Asus ROG Flow Z13 2022 GZ301ZE-LC192WS Gaming Laptop laptop,LAPTOP,191990.0,,10,,0.0,0,False,True
+LAP-000914,Asus TUF Dash F15 2022 FX517ZC-HN107WS Gaming Laptop,Asus TUF Dash F15 2022 FX517ZC-HN107WS Gaming Laptop laptop,LAPTOP,87990.0,,10,,0.0,0,False,True
+LAP-000915,Acer Aspire 5 A515-56 UN.A1ESI.022,Acer Aspire 5 A515-56 UN.A1ESI.022 laptop,LAPTOP,49994.0,,10,,0.0,0,False,True
+LAP-000916,MSI GS76 Stealth 11UE-631IN 9S7-17M111-631 Gaming Laptop,MSI GS76 Stealth 11UE-631IN 9S7-17M111-631 Gaming Laptop laptop,LAPTOP,162000.0,,10,,0.0,0,False,True
+LAP-000917,Infinix INBook X1 Slim XL21 Laptop,Infinix INBook X1 Slim XL21 Laptop laptop,LAPTOP,42990.0,,10,,0.0,0,False,True
+LAP-000918,Acer Predator Helios 300 PH315-55 NH.QGPS.003 Gaming Laptop,Acer Predator Helios 300 PH315-55 NH.QGPS.003 Gaming Laptop laptop,LAPTOP,155490.0,,10,,0.0,0,False,True
+LAP-000919,Lenovo ThinkBook 15 21A4A09UIH Laptop,Lenovo ThinkBook 15 21A4A09UIH Laptop laptop,LAPTOP,49990.0,,10,,0.0,0,False,True
+LAP-000920,Lenovo ThinkPad E14 20TAS16F00 Laptop,Lenovo ThinkPad E14 20TAS16F00 Laptop laptop,LAPTOP,42300.0,,10,,0.0,0,False,True
+LAP-000921,Lenovo Legion 5 15IMH6 82NL00APIN Gaming Laptop,Lenovo Legion 5 15IMH6 82NL00APIN Gaming Laptop laptop,LAPTOP,73847.0,,10,,0.0,0,False,True
+LAP-000922,Asus ROG Strix G15 Advantage Edition G513QY-HQ032WS Gaming Laptop,Asus ROG Strix G15 Advantage Edition G513QY-HQ032WS Gaming Laptop laptop,LAPTOP,139990.0,,10,,0.0,0,False,True
+LAP-000923,Asus TUF Gaming F15 FX507ZM-HF068WS Laptop,Asus TUF Gaming F15 FX507ZM-HF068WS Laptop laptop,LAPTOP,118990.0,,10,,0.0,0,False,True
+LAP-000924,Infinix INBook X1 Slim Series XL21 Laptop,Infinix INBook X1 Slim Series XL21 Laptop laptop,LAPTOP,32990.0,,10,,0.0,0,False,True
+LAP-000925,Infinix INBook X1 Slim Series XL21 Laptop,Infinix INBook X1 Slim Series XL21 Laptop laptop,LAPTOP,51990.0,,10,,0.0,0,False,True
+LAP-000926,Asus ZenBook Pro Duo 15 OLED 2021 UX582HM-H701WS Laptop,Asus ZenBook Pro Duo 15 OLED 2021 UX582HM-H701WS Laptop laptop,LAPTOP,200000.0,,10,,0.0,0,False,True
+LAP-000927,Dell XPS 15 9520 Laptop,Dell XPS 15 9520 Laptop laptop,LAPTOP,245000.0,,10,,0.0,0,False,True
+LAP-000928,Dell Vostro 3515 Laptop,Dell Vostro 3515 Laptop laptop,LAPTOP,35300.0,,10,,0.0,0,False,True
+LAP-000929,Lenovo ThinkBook 15 20VEA0YQIH Laptop,Lenovo ThinkBook 15 20VEA0YQIH Laptop laptop,LAPTOP,37990.0,,10,,0.0,0,False,True
+LAP-000930,HP Omen 16-B1371TX Gaming Laptop,HP Omen 16-B1371TX Gaming Laptop laptop,LAPTOP,176490.0,,10,,0.0,0,False,True
+LAP-000931,Asus VivoBook 15 X512DA-BQ303WS Laptop,Asus VivoBook 15 X512DA-BQ303WS Laptop laptop,LAPTOP,33990.0,,10,,0.0,0,False,True
+LAP-000932,Dell Vostro 3515 Laptop,Dell Vostro 3515 Laptop laptop,LAPTOP,38890.0,,10,,0.0,0,False,True
+LAP-000933,Asus Strix G15 G513RM-HF274WS Gaming Laptop,Asus Strix G15 G513RM-HF274WS Gaming Laptop laptop,LAPTOP,135960.0,,10,,0.0,0,False,True
+LAP-000934,HP Omen 16-b1350TX Laptop,HP Omen 16-b1350TX Laptop laptop,LAPTOP,128999.0,,10,,0.0,0,False,True
+LAP-000935,Asus TUF Gaming A17 FA777RC-HX027WS Laptop,Asus TUF Gaming A17 FA777RC-HX027WS Laptop laptop,LAPTOP,88990.0,,10,,0.0,0,False,True
+LAP-000936,Lenovo ThinkBook 14 G2 20VDA0QMIH Laptop,Lenovo ThinkBook 14 G2 20VDA0QMIH Laptop laptop,LAPTOP,44799.0,,10,,0.0,0,False,True
+LAP-000937,Asus Vivobook 15 Touch X515EA-EZ311WS Laptop,Asus Vivobook 15 Touch X515EA-EZ311WS Laptop laptop,LAPTOP,39990.0,,10,,0.0,0,False,True
+LAP-000938,Asus Vivobook 15 Touch X515EA-EZ501WS Laptop,Asus Vivobook 15 Touch X515EA-EZ501WS Laptop laptop,LAPTOP,51990.0,,10,,0.0,0,False,True
+LAP-000939,Asus TUF Gaming F17 FX777ZC-HX069W Gaming Laptop,Asus TUF Gaming F17 FX777ZC-HX069W Gaming Laptop laptop,LAPTOP,94990.0,,10,,0.0,0,False,True
+LAP-000940,Lenovo ThinkBook 15 21A4A09RIH Laptop,Lenovo ThinkBook 15 21A4A09RIH Laptop laptop,LAPTOP,48790.0,,10,,0.0,0,False,True
+LAP-000941,Asus TUF A17 FA766IC-HX005W Gaming Laptop,Asus TUF A17 FA766IC-HX005W Gaming Laptop laptop,LAPTOP,84990.0,,10,,0.0,0,False,True
+LAP-000942,MSI Thin GF63 11UC-850IN Gaming Laptop,MSI Thin GF63 11UC-850IN Gaming Laptop laptop,LAPTOP,72985.0,,10,,0.0,0,False,True
+LAP-000943,MSI Sword 15 A12UC-467IN Gaming Laptop,MSI Sword 15 A12UC-467IN Gaming Laptop laptop,LAPTOP,89544.0,,10,,0.0,0,False,True
+LAP-000944,MSI Thin GF63 11UC-851IN Gaming Laptop,MSI Thin GF63 11UC-851IN Gaming Laptop laptop,LAPTOP,63800.0,,10,,0.0,0,False,True
+LAP-000945,Apple MacBook Pro 2022 Laptop,Apple MacBook Pro 2022 Laptop laptop,LAPTOP,121990.0,,10,,0.0,0,False,True
+LAP-000946,HP Pavilion 15s-fy5001TU Laptop,HP Pavilion 15s-fy5001TU Laptop laptop,LAPTOP,61000.0,,10,,0.0,0,False,True
+LAP-000947,Lenovo IdeaPad Gaming 3 15IHU6 82K101A3IN Laptop,Lenovo IdeaPad Gaming 3 15IHU6 82K101A3IN Laptop laptop,LAPTOP,68990.0,,10,,0.0,0,False,True
+LAP-000948,HP Victus 16-d0354TX Laptop,HP Victus 16-d0354TX Laptop laptop,LAPTOP,67990.0,,10,,0.0,0,False,True
+LAP-000949,Asus TUF Gaming A15 FA506IC-HN100W Laptop,Asus TUF Gaming A15 FA506IC-HN100W Laptop laptop,LAPTOP,85990.0,,10,,0.0,0,False,True
+LAP-000950,Lenovo ThinkBook 15 20VEA0YPIH Laptop,Lenovo ThinkBook 15 20VEA0YPIH Laptop laptop,LAPTOP,41999.0,,10,,0.0,0,False,True
+LAP-000951,Asus TUF Gaming F15 FX577ZE-HN072WS Laptop,Asus TUF Gaming F15 FX577ZE-HN072WS Laptop laptop,LAPTOP,107498.0,,10,,0.0,0,False,True
+LAP-000952,HP Victus 16-d0361TX Laptop,HP Victus 16-d0361TX Laptop laptop,LAPTOP,104000.0,,10,,0.0,0,False,True
+LAP-000953,Dell Inspiron 7425 Laptop,Dell Inspiron 7425 Laptop laptop,LAPTOP,78203.0,,10,,0.0,0,False,True
+LAP-000954,Acer Predator Helios 300 NH.QC2SI.00B Laptop,Acer Predator Helios 300 NH.QC2SI.00B Laptop laptop,LAPTOP,119990.0,,10,,0.0,0,False,True
+LAP-000955,Dell Inspiron 7425 Laptop,Dell Inspiron 7425 Laptop laptop,LAPTOP,89990.0,,10,,0.0,0,False,True
+LAP-000956,Asus ROG Strix G17 G713RM-LL167WS Gaming Laptop,Asus ROG Strix G17 G713RM-LL167WS Gaming Laptop laptop,LAPTOP,134990.0,,10,,0.0,0,False,True
+LAP-000957,Samsung Galaxy Book2 15 Laptop,Samsung Galaxy Book2 15 Laptop laptop,LAPTOP,59990.0,,10,,0.0,0,False,True
+LAP-000958,HP Pavilion 14-dv2016TU Laptop,HP Pavilion 14-dv2016TU Laptop laptop,LAPTOP,69900.0,,10,,0.0,0,False,True
+LAP-000959,HP Envy x360 13-ay1059AU Laptop,HP Envy x360 13-ay1059AU Laptop laptop,LAPTOP,77990.0,,10,,0.0,0,False,True
+LAP-000960,HP Pavilion Gaming 15-DK1520TX Laptop,HP Pavilion Gaming 15-DK1520TX Laptop laptop,LAPTOP,60990.0,,10,,0.0,0,False,True
+LAP-000961,Lenovo IdeaPad Gaming 3 82K10199IN Laptop,Lenovo IdeaPad Gaming 3 82K10199IN Laptop laptop,LAPTOP,67000.0,,10,,0.0,0,False,True
+LAP-000962,HP Pavilion 14-dv2019TU Laptop,HP Pavilion 14-dv2019TU Laptop laptop,LAPTOP,62999.0,,10,,0.0,0,False,True
+LAP-000963,Asus VivoBook 15 M515DA-BQ332WS Laptop,Asus VivoBook 15 M515DA-BQ332WS Laptop laptop,LAPTOP,34990.0,,10,,0.0,0,False,True
+LAP-000964,Dell Inspiron 15 3511 Laptop,Dell Inspiron 15 3511 Laptop laptop,LAPTOP,52890.0,,10,,0.0,0,False,True
+LAP-000965,Samsung Galaxy Book2 15 Laptop,Samsung Galaxy Book2 15 Laptop laptop,LAPTOP,69990.0,,10,,0.0,0,False,True
+LAP-000966,Asus Strix G15 G513RM-HF272WS Gaming Laptop,Asus Strix G15 G513RM-HF272WS Gaming Laptop laptop,LAPTOP,129990.0,,10,,0.0,0,False,True
+LAP-000967,Asus X515EA-BQ522WS Laptop,Asus X515EA-BQ522WS Laptop laptop,LAPTOP,53500.0,,10,,0.0,0,False,True
+LAP-000968,Dell G15-5520 D560737WIN9B Laptop,Dell G15-5520 D560737WIN9B Laptop laptop,LAPTOP,125990.0,,10,,0.0,0,False,True
+LAP-000969,Lenovo IdeaPad Gaming 3 81Y401ARIN Gaming Laptop,Lenovo IdeaPad Gaming 3 81Y401ARIN Gaming Laptop laptop,LAPTOP,63990.0,,10,,0.0,0,False,True
+LAP-000970,Lenovo IdeaPad Flex 5 82HU00PPIN Laptop,Lenovo IdeaPad Flex 5 82HU00PPIN Laptop laptop,LAPTOP,57990.0,,10,,0.0,0,False,True
+LAP-000971,Dell Inspiron G15 D560826WIN9G Laptop,Dell Inspiron G15 D560826WIN9G Laptop laptop,LAPTOP,101639.0,,10,,0.0,0,False,True
+LAP-000972,Dell Vostro 3405 Laptop,Dell Vostro 3405 Laptop laptop,LAPTOP,38990.0,,10,,0.0,0,False,True
+LAP-000973,Dell Inspiron 5518 Laptop,Dell Inspiron 5518 Laptop laptop,LAPTOP,65490.0,,10,,0.0,0,False,True
+LAP-000974,Lenovo IdeaPad 5 Pro 14ITL6 82L300CAIN Laptop,Lenovo IdeaPad 5 Pro 14ITL6 82L300CAIN Laptop laptop,LAPTOP,77490.0,,10,,0.0,0,False,True
+LAP-000975,Dell Inspiron G15 D560827WIN9G Laptop,Dell Inspiron G15 D560827WIN9G Laptop laptop,LAPTOP,66599.0,,10,,0.0,0,False,True
+LAP-000976,Asus Vivobook S15 OLED K3502ZA-L701WS Laptop,Asus Vivobook S15 OLED K3502ZA-L701WS Laptop laptop,LAPTOP,84700.0,,10,,0.0,0,False,True
+LAP-000977,Lenovo IdeaPad 3 15IML05 81WB01EBIN Laptop,Lenovo IdeaPad 3 15IML05 81WB01EBIN Laptop laptop,LAPTOP,37990.0,,10,,0.0,0,False,True
+LAP-000978,Acer Aspire 3 A314-35 UN.K0SSI.011 Laptop,Acer Aspire 3 A314-35 UN.K0SSI.011 Laptop laptop,LAPTOP,26600.0,,10,,0.0,0,False,True
+LAP-000979,Lenovo IdeaPad 3 15IGL05 81WQ00MQIN Laptop,Lenovo IdeaPad 3 15IGL05 81WQ00MQIN Laptop laptop,LAPTOP,27000.0,,10,,0.0,0,False,True
+LAP-000980,Lenovo IdeaPad 3 15ITL05 81X800K9IN Laptop,Lenovo IdeaPad 3 15ITL05 81X800K9IN Laptop laptop,LAPTOP,60494.0,,10,,0.0,0,False,True
+LAP-000981,Lenovo IdeaPad 3 15ITL6 82H802L0IN Laptop,Lenovo IdeaPad 3 15ITL6 82H802L0IN Laptop laptop,LAPTOP,39994.0,,10,,0.0,0,False,True
+LAP-000982,Dell Inspiron 5310 Laptop,Dell Inspiron 5310 Laptop laptop,LAPTOP,72620.0,,10,,0.0,0,False,True
+LAP-000983,Asus Vivobook S14 OLED S3402ZA-KM701WS Laptop,Asus Vivobook S14 OLED S3402ZA-KM701WS Laptop laptop,LAPTOP,81990.0,,10,,0.0,0,False,True
+LAP-000984,Asus Zenbook 14X OLED Space Edition UX5401ZAS-KN711WS Laptop,Asus Zenbook 14X OLED Space Edition UX5401ZAS-KN711WS Laptop laptop,LAPTOP,116990.0,,10,,0.0,0,False,True
+LAP-000985,Asus Vivobook 14 OLED UX3402ZA-KM531WS Laptop,Asus Vivobook 14 OLED UX3402ZA-KM531WS Laptop laptop,LAPTOP,85990.0,,10,,0.0,0,False,True
+LAP-000986,Lenovo IdeaPad Slim 3 81X800J1IN Laptop,Lenovo IdeaPad Slim 3 81X800J1IN Laptop laptop,LAPTOP,53100.0,,10,,0.0,0,False,True
+LAP-000987,Asus Zenbook Space Edition UX5401ZAS-KN521WS Laptop,Asus Zenbook Space Edition UX5401ZAS-KN521WS Laptop laptop,LAPTOP,104390.0,,10,,0.0,0,False,True
+LAP-000988,Asus Zenbook 14X OLED Space Edition UX5401ZAS-KN901WS Laptop,Asus Zenbook 14X OLED Space Edition UX5401ZAS-KN901WS Laptop laptop,LAPTOP,159990.0,,10,,0.0,0,False,True
+LAP-000989,Lenovo ThinkBook 14 20VDA0TLIH Laptop,Lenovo ThinkBook 14 20VDA0TLIH Laptop laptop,LAPTOP,69490.0,,10,,0.0,0,False,True
+LAP-000990,Acer Aspire 3 A315-58 Laptop,Acer Aspire 3 A315-58 Laptop laptop,LAPTOP,62999.0,,10,,0.0,0,False,True
+LAP-000991,Asus TUF Gaming A15 FA506IC-HN075W Laptop,Asus TUF Gaming A15 FA506IC-HN075W Laptop laptop,LAPTOP,80990.0,,10,,0.0,0,False,True
+LAP-000992,Acer Extensa EX215-31 Laptop,Acer Extensa EX215-31 Laptop laptop,LAPTOP,23899.0,,10,,0.0,0,False,True
+LAP-000993,Fujitsu CH 4ZR1H03553 Laptop,Fujitsu CH 4ZR1H03553 Laptop laptop,LAPTOP,54990.0,,10,,0.0,0,False,True
+LAP-000994,Lenovo V15 82KB0003GE Laptop,Lenovo V15 82KB0003GE Laptop laptop,LAPTOP,32499.0,,10,,0.0,0,False,True
+LAP-000995,Lenovo Thinkpad P15v 21AAS0R100 Laptop,Lenovo Thinkpad P15v 21AAS0R100 Laptop laptop,LAPTOP,146500.0,,10,,0.0,0,False,True
+LAP-000996,Asus VivoBook 15 X515JA-BQ521WS Laptop,Asus VivoBook 15 X515JA-BQ521WS Laptop laptop,LAPTOP,42990.0,,10,,0.0,0,False,True
+LAP-000997,Fujitsu UH-X 4ZR1F38027 Laptop,Fujitsu UH-X 4ZR1F38027 Laptop laptop,LAPTOP,99990.0,,10,,0.0,0,False,True
+LAP-000998,Lenovo IdeaPad Slim 3 81WE01QLIN Laptop,Lenovo IdeaPad Slim 3 81WE01QLIN Laptop laptop,LAPTOP,37490.0,,10,,0.0,0,False,True
+LAP-000999,Asus K413EA-EB522WS Laptop,Asus K413EA-EB522WS Laptop laptop,LAPTOP,56990.0,,10,,0.0,0,False,True
+LAP-001000,HP Victus 16-e0361ax Gaming Laptop,HP Victus 16-e0361ax Gaming Laptop laptop,LAPTOP,104490.0,,10,,0.0,0,False,True
+LAP-001001,Asus Vivobook Pro 14 OLED 2021 M3401QC-KM045WS Laptop,Asus Vivobook Pro 14 OLED 2021 M3401QC-KM045WS Laptop laptop,LAPTOP,87500.0,,10,,0.0,0,False,True
+LAP-001002,HP Pavilion 14-EC1019AU Laptop,HP Pavilion 14-EC1019AU Laptop laptop,LAPTOP,61990.0,,10,,0.0,0,False,True
+LAP-001003,Asus TUF A15 OLED FA507RM-HF030WS Laptop,Asus TUF A15 OLED FA507RM-HF030WS Laptop laptop,LAPTOP,114600.0,,10,,0.0,0,False,True
+LAP-001004,Asus VivoBook 14 X415JA-EB501WS Laptop,Asus VivoBook 14 X415JA-EB501WS Laptop laptop,LAPTOP,41990.0,,10,,0.0,0,False,True
+LAP-001005,Asus VivoBook 14 2021 X415MA-BV011W Laptop,Asus VivoBook 14 2021 X415MA-BV011W Laptop laptop,LAPTOP,23990.0,,10,,0.0,0,False,True
+LAP-001006,HP Pavilion 14-EC1008AU Laptop,HP Pavilion 14-EC1008AU Laptop laptop,LAPTOP,78889.0,,10,,0.0,0,False,True
+LAP-001007,HP 15s-du3519TX Laptop,HP 15s-du3519TX Laptop laptop,LAPTOP,58990.0,,10,,0.0,0,False,True
+LAP-001008,Asus Strix G15 G513RM-HQ273WS Gaming Laptop,Asus Strix G15 G513RM-HQ273WS Gaming Laptop laptop,LAPTOP,134490.0,,10,,0.0,0,False,True
+LAP-001009,Asus BR1100CKA-GJ0722W Notebook,Asus BR1100CKA-GJ0722W Notebook laptop,LAPTOP,22990.0,,10,,0.0,0,False,True
+LAP-001010,Fujitsu UH-X 4ZR1F38024 Laptop,Fujitsu UH-X 4ZR1F38024 Laptop laptop,LAPTOP,84990.0,,10,,0.0,0,False,True
+LAP-001011,Asus BR1100CKA-GJ0722W Laptop,Asus BR1100CKA-GJ0722W Laptop laptop,LAPTOP,22990.0,,10,,0.0,0,False,True
+LAP-001012,Lenovo Yoga 6 13ALC6 82ND00DPIN Laptop,Lenovo Yoga 6 13ALC6 82ND00DPIN Laptop laptop,LAPTOP,92999.0,,10,,0.0,0,False,True
+LAP-001013,Asus BR1100FKA-BP1104W Laptop,Asus BR1100FKA-BP1104W Laptop laptop,LAPTOP,29990.0,,10,,0.0,0,False,True
+LAP-001014,Asus ROG Strix Scar 17 G733ZW-LL139WS Gaming Laptop,Asus ROG Strix Scar 17 G733ZW-LL139WS Gaming Laptop laptop,LAPTOP,249990.0,,10,,0.0,0,False,True

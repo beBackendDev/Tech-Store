@@ -1,0 +1,1015 @@
+external_id,brand,processor,ram,ssd,hard_disk,operating_system,graphics,screen_size,resolution
+LAP-000001,Lenovo,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000002,HP,AMD Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000003,Lenovo,11th Gen Core i3,8,256,1000,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000004,Asus,Ryzen 5-5600H,8,512,0,Windows,AMD Radeon Vega 7,16.0,1200x1920
+LAP-000005,HP,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000006,Lenovo,11th Gen Core i5,8,256,1000,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000007,Infinix,12th Gen Core i9,16,512,0,Windows,Missing,15.6,1920x1080
+LAP-000008,HP,AMD Athlon Silver 3050U,8,512,0,Windows,AMD Radeon Graphics,15.6,1366x768
+LAP-000009,Dell,12th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000010,Dell,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.56,1920x1080
+LAP-000011,Asus,Ryzen 7 5800H,16,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000012,Apple,Apple M1,8,256,0,Mac,Apple M1 Integrated Graphics,13.3,2560x1600
+LAP-000013,HP,12th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000014,HP,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000015,Dell,12th Gen Core i5,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000016,Asus,AMD Ryzen 5 4600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000017,HP,AMD Ryzen 3 3250U,8,256,0,Windows,AMD Radeon,15.6,1920x1080
+LAP-000018,HP,AMD Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000019,Realme,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1440x2160
+LAP-000020,Asus,Ryzen 5-5600H,16,512,0,Windows,AMD Radeon Vega 7 Graphics,16.0,1920x1200
+LAP-000021,Apple,Apple M2,8,256,0,Mac,8-Core GPU,13.6,2560x1664
+LAP-000022,Asus,10th Gen Core i3,8,0,1000,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000023,HP,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000024,Lenovo,AMD Ryzen 5 5500U,8,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000025,Lenovo,AMD Ryzen 5 5500U,8,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000026,Lenovo,Athlon Gold 3150U,4,256,0,Windows,AMD Radeon RADEON,14.0,1920x1080
+LAP-000027,Asus,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000028,HP,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000029,HP,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000030,Asus,AMD Ryzen 5 4600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,17.3,1920x1080
+LAP-000031,HP,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000032,HP,AMD Ryzen 3 5300U,8,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000033,Dell,12th Gen Core i5,8,256,1000,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000034,HP,AMD Ryzen 3  3250U,8,0,1000,Windows,AMD Radeon Graphics,14.0,1920x1080
+LAP-000035,Acer,AMD Ryzen 3 3250U,4,256,0,Windows,AMD Radeon Radeon Graphics,14.0,1366x768
+LAP-000036,Acer,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000037,Dell,12th Gen Core i7,16,512,0,Windows,Intel Integrated UHD,13.3,1920x1080
+LAP-000038,MSI,Ryzen 5 5600H,8,512,0,Windows,4 GB AMD Radeon RX 5500M,15.6,1920x1080
+LAP-000039,Lenovo,AMD Ryzen 5 5500U,16,512,0,Windows,AMD Radeon,14.0,1920x1200
+LAP-000040,HP,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000041,Lenovo,AMD Ryzen 3 3250U,8,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000042,Asus,12th Gen Core i5,16,512,0,Windows,Intel Iris XE Graphics,15.6,1920x1080
+LAP-000043,Lenovo,Celeron N4020,4,0,128,Windows,Intel UHD Graphics 600,10.1,1200x800
+LAP-000044,Infinix,10th Gen Core i3,8,256,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000045,Realme,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1440x2160
+LAP-000046,Infinix,12th Gen Core i7,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000047,Asus,11th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000048,Lenovo,AMD Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000049,Asus,Ryzen 5 5600H,8,512,0,Windows,AMD Radeon Graphics,14.0,2880x1800
+LAP-000050,HP,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000051,Lenovo,AMD Ryzen 5-5600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000052,Asus,Ryzen 7-4800H,16,512,0,Windows,4 GB NVIDIA GeForce GTX 1650 Max Q,15.6,1920x1080
+LAP-000053,Asus,AMD Ryzen 5 4600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000054,HP,AMD Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000055,Lenovo,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000056,Acer,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 2050,15.6,1920x1080
+LAP-000057,Asus,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000058,HP,12th Gen Core i5,16,512,0,Windows,Intel Integrated Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000059,Asus,12th Gen Core i3,8,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000060,Lenovo,12th Gen Core i5,8,512,0,Windows,‎Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000061,MSI,11th Gen Core i7,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650 MAX Q,15.6,1920x1080
+LAP-000062,Asus,12th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,17.3,2560x1920
+LAP-000063,Nokia,11th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.1,1920x1080
+LAP-000064,Dell,11th Gen Core i5,8,512,0,Windows,Intel UHD Graphics,14.0,1366x768
+LAP-000065,Acer,Ryzen 5 7520U,8,512,0,Windows,AMD Radeon Graphiics,15.6,1920x1080
+LAP-000066,HP,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000067,Samsung,12th Gen Core i5,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000068,Samsung,13th Gen Core i7,16,512,0,Windows,‎Intel Iris Xe Graphics,16.0,2880x1800
+LAP-000069,Samsung,13th Gen Core i7,16,512,0,Windows,‎Intel Iris Xe Graphics,14.0,2880x1800
+LAP-000070,Samsung,13th Gen Core i7,16,1000,0,Windows,‎Intel Iris Xe Graphics,14.0,2880x1800
+LAP-000071,Samsung,13th Gen Core i5,16,512,0,Windows,‎Intel Iris Xe Graphics,14.0,2880x1800
+LAP-000072,Samsung,13th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000073,Lenovo,AMD Ryzen 5 5500U,8,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000074,Samsung,13th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000075,Samsung,13th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000076,Samsung,13th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000077,Samsung,13th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,16.0,2880x1800
+LAP-000078,Samsung,13th Gen Core i7,16,1000,0,Windows,‎Intel Iris Xe Graphics,16.0,2880x1800
+LAP-000079,Samsung,13th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,16.0,2880x1800
+LAP-000080,Samsung,13th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000081,Samsung,13th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,16.0,2880x1800
+LAP-000082,Lenovo,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000083,Acer,AMD Ryzen 3 3250U,8,256,0,Windows,AMD Radeon Graphics,14.0,1366x768
+LAP-000084,Dell,AMD Ryzen 5-5625U,8,512,0,Windows,AMD Radeon Radeon Graphics,15.6,1920x1080
+LAP-000085,Acer,12th Gen Core i3,8,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000086,Lenovo,AMD Ryzen 5-5600H,8,256,1000,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000087,Lenovo,AMD Ryzen 5 5500U,16,512,0,Windows,AMD Radeon,14.0,1920x1200
+LAP-000088,HP,Ryzen 5 5500U,16,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000089,HP,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000090,Asus,AMD Ryzen 7 6800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000091,HP,Ryzen 5-5600H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,16.1,1920x1080
+LAP-000092,Asus,10th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000093,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris Xᵉ Graphics,15.6,1920x1080
+LAP-000094,Samsung,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1080x1920
+LAP-000095,Dell,11th Gen Core i3,8,256,1000,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000096,Asus,Ryzen 5 5500U,8,256,1000,Windows,AMD Radeon AMD,15.6,1920x1080
+LAP-000097,HP,Ryzen 5 5500U,8,512,0,Windows,AMD Radeon AMD,14.0,1920x1080
+LAP-000098,Microsoft,10th Gen Core i5,8,256,0,Windows,Intel Integrated UHD,12.4,1536x1024
+LAP-000099,HP,AMD Ryzen 3 3250U,8,512,0,Windows,AMD Radeon Graphics,14.0,1366x768
+LAP-000100,Lenovo,12th Gen Core i5,8,256,0,Windows,Intel iris Xe Integrated,14.0,1920x1080
+LAP-000101,Apple,M2 Max 12-core CPU,32,1000,0,Mac,38-core GPU,16.2,3456x2234
+LAP-000102,Samsung,12th Gen Core i7,16,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000103,Asus,11th Gen Core i5,8,512,0,Windows,2 GB NVIDIA GeForce MX330,15.6,1920x1080
+LAP-000104,Lenovo,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000105,Asus,11th Gen Core i7,16,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000106,Asus,12th Gen Core i3,8,512,0,Windows,Intel Integrated Iris Xe Graphics,14.0,1920x1080
+LAP-000107,HP,AMD Ryzen 3 5300U,8,512,0,Windows,AMD Radeon Graphics,14.0,1366x768
+LAP-000108,Asus,11th Gen Core i9,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,16.0,1200x1920
+LAP-000109,Acer,12th Gen Core i7,16,1000,0,Windows,Intel Integrated Iris Xe,14.0,2880x1800
+LAP-000110,Dell,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1366x768
+LAP-000111,HP,12th Gen Core i5,16,512,0,Windows,2 GB NVIDIA GeForce MX550,15.6,1920x1080
+LAP-000112,Microsoft,12th Gen Core i5,8,256,0,Windows,Intel Iris Xe Graphics,13.0,2880x1920
+LAP-000113,HP,AMD Ryzen 3 5300U,8,512,0,DOS,AMD Radeon Graphics,14.0,1366x768
+LAP-000114,HP,AMD Ryzen 7 6800H,16,512,0,Windows,8 GB AMD Radeon RX 6650M,16.1,1920x1080
+LAP-000115,Asus,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000116,HP,Pentium Silver N6000,8,256,0,Windows,Intel UHD Graphics,14.0,1366x768
+LAP-000117,Asus,10th Gen Core i5,8,512,0,Windows,Intel UHD,14.0,1920x1080
+LAP-000118,Asus,Celeron N4020,4,0,32,Chrome,Intel Integrated UHD 600,11.6,1366x768
+LAP-000119,Lenovo,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000120,Acer,12th Gen Core i9,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000121,Acer,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000122,Asus,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.0,3840x2400
+LAP-000123,Asus,10th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000124,MSI,Ryzen 5 5600H,8,512,0,Windows,4 GB AMD Radeon RX 5500M,15.6,1920x1080
+LAP-000125,Infinix,Celeron N5100,4,128,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000126,Asus,12th Gen Core i7,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000127,Asus,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000128,Asus,12th Gen Core i3,8,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000129,HP,11th Gen Core i3,8,256,0,Windows,Intel Integrated UHD Graphics,14.0,1920x1080
+LAP-000130,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000131,Asus,2022) FX507ZE-HN038W Gaming Laptop,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050-Ti,15.6,1920x1080
+LAP-000132,Asus,AMD Ryzen 7 4800H,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,17.3,1920x1080
+LAP-000133,Infinix,Celeron N5100,8,256,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000134,Asus,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1080x1920
+LAP-000135,Acer,11th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000136,Acer,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 2050,15.6,1920x1080
+LAP-000137,Lenovo,AMD Ryzen 5 3500U,8,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000138,Acer,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000139,Lenovo,Ryzen 5 5600H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000140,Asus,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000141,Asus,Ryzen 5 5600H,16,512,0,Windows,AMD Radeon Graphics,14.0,2880x1800
+LAP-000142,HP,12th Gen Core i7,16,1000,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000143,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000144,MSI,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000145,Apple,Apple M2,8,512,0,Mac,10 Core GPU,13.3,2560x1600
+LAP-000146,HP,12th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000147,Asus,12th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000148,Dell,11th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000149,Dell,12th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000150,Acer,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000151,HP,Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050Ti,15.6,1920x1080
+LAP-000152,Dell,Athlon Silver 3050U,8,256,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000153,Avita,Celeron N4020,4,128,0,Windows,Intel Integrated UHD Graphics,14.1,1920x1080
+LAP-000154,Samsung,Snapdragon 7c,4,0,128,Windows,Qualcomm Adreno,14.0,1920x1080
+LAP-000155,Asus,Pentium Silver N6000,4,0,128,Windows,Intel UHD Graphics,13.3,1920x1080
+LAP-000156,Asus,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000157,Lenovo,Ryzen 5 5500U,8,512,0,Windows,AMD Radeon,15.6,1920x1080
+LAP-000158,HP,Ryzen 7 5800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000159,Infinix,10th Gen Core i5,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000160,Apple,M1 Pro 8-core CPU,16,512,0,Mac,14-Core GPU,14.2,3024x1964
+LAP-000161,HP,Ryzen 5 5600H,8,512,0,Windows,4 GB AMD Radeon RX 5500M,16.1,1920x1080
+LAP-000162,Dell,11th Gen Core i5,8,512,0,Windows,2 GB NVIDIA GeForce MX350,15.6,1920x1080
+LAP-000163,Dell,11th Gen Core i5,8,256,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000164,HP,11th Gen Core i5,8,256,1000,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000165,Dell,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000166,Xiaomi,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,2560x1600
+LAP-000167,HP,AMD Ryzen 3 3250U,8,256,1000,Windows,AMD Radeon Vega 6,15.6,1920x1080
+LAP-000168,HP,8LX79PA) Laptop,8,512,0,Windows,Integrated UHD Graphics 620,14.0,1920x1080
+LAP-000169,HP,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000170,Asus,11th Gen Core i7,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000171,HP,AMD Athlon Silver 3050U,8,0,1000,Windows,AMD Radeon Graphics,14.0,1366x768
+LAP-000172,HP,Ryzen 3 5300U,8,256,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000173,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000174,Apple,Apple M2,16,512,0,Mac,10 Core GPU,13.3,2560x1600
+LAP-000175,Lenovo,AMD Ryzen 3 5300U,8,512,0,DOS,AMD Radeon Graphics,15.6,1920x1080
+LAP-000176,Lenovo,13th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Integrated Graphics,14.0,3840x2400
+LAP-000177,Honor,11th Gen Core i5,8,512,0,Windows,‎Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000178,Chuwi,12th Gen Core i3,16,512,0,Windows,Intel HD Graphics,14.0,2160x1440
+LAP-000179,Dell,12th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000180,Dell,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000181,Lenovo,AMD Ryzen 5 5500U,8,512,0,DOS,AMD Radeon Graphics,15.6,1920x1080
+LAP-000182,HP,AMD Ryzen 3 3250U,4,0,1000,Windows,AMD Radeon Graphics,14.0,1920x1080
+LAP-000183,Acer,Pentium Silver N6005,4,256,0,Windows,Intel Integrated UHD,14.0,1366x768
+LAP-000184,Asus,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000185,Lenovo,11th Gen Core i5,8,512,0,DOS,Intel Integrated UHD,15.6,1920x1080
+LAP-000186,HP,Athlon 3050U,8,0,1000,Windows,AMD Radeon Graphics,15.6,1366x768
+LAP-000187,Lenovo,Athlon 3150U,4,0,1000,DOS,AMD Radeon AMD,14.0,1366x768
+LAP-000188,Lenovo,Athlon 3050U,4,256,0,Windows,AMD Radeon AMD,14.0,1366x768
+LAP-000189,Dell,12th Gen Core i7,16,512,0,Windows,2 GB NVIDIA GeForce MX570,16.0,1920x1080
+LAP-000190,Acer,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000191,Asus,11th Gen Core i5,8,512,0,Windows,Intel Integrated Intel UHD,14.0,1920x1080
+LAP-000192,Dell,12th Gen Core i7,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000193,Asus,Ryzen 5-5600H,16,512,0,Windows,AMD Radeon Vega 7,16.0,1200x1920
+LAP-000194,Acer,Pentium N5030,8,256,0,Windows,Intel Integrated UHD 605,15.6,1366x768
+LAP-000195,Asus,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000196,Asus,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000197,Lenovo,AMD Ryzen 5 5500U,8,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000198,Dell,12th Gen Core i9,16,1000,0,Windows,8 GB NVIDIA GEFORCE RTX 3070 Ti,15.6,2560x1440
+LAP-000199,Dell,12th Gen Core i7,16,512,0,Windows,Intel Integrated Iris,14.0,1920x1200
+LAP-000200,HP,AMD Athlon 3050,4,256,0,DOS,‎AMD Integrated,15.6,1920x1080
+LAP-000201,Asus,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000202,Microsoft,12th Gen Core i5,8,256,0,Windows,Intel Iris Xe,13.5,2256x1504
+LAP-000203,Infinix,11th Gen Core i3,8,256,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000204,Infinix,11th Gen Core i7,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000205,Infinix,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000206,Honor,AMD Ryzen 5 5500U,16,512,0,Windows,AMD Radeon,14.0,1920x1080
+LAP-000207,HP,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000208,HP,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1366x768
+LAP-000209,Lenovo,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1600
+LAP-000210,Dell,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000211,HP,AMD Ryzen 7 6800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050Ti,16.1,1920x1080
+LAP-000212,MSI,12th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000213,Lenovo,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.0,2560x1600
+LAP-000214,Asus,AMD Ryzen 5 5600H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000215,Lenovo,Celeron N4020,4,256,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000216,Dell,12th Gen Core i5,16,512,0,Windows,Intel Integrated UHD,13.3,2560x1600
+LAP-000217,Asus,AMD Ryzen 7 5800H,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000218,Lenovo,Athlon Pro 3045B,8,0,1000,Windows,AMD Radeon Graphics,14.0,1920x1080
+LAP-000219,Asus,12th Gen Core i3,8,256,0,Windows,Intel Integrated Iris Xe Graphics,14.0,1920x1080
+LAP-000220,Lenovo,AMD Ryzen 5 5500U,8,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000221,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000222,Lenovo,11th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000223,MSI,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX1650,15.6,1920x1080
+LAP-000224,MSI,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000225,MSI,12th Gen Core i5,8,512,0,Windows,Intel Integrated ARC,15.6,1920x1080
+LAP-000226,Lenovo,12th Gen Core i7,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.0,1920x1200
+LAP-000227,Lenovo,Ryzen 7 5700U,16,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000228,MSI,12th Gen Core i9,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000229,Chuwi,Intel Celeron N4020,4,128,0,Windows,Intel HD Graphics,14.1,1366x768
+LAP-000230,MSI,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000231,Lenovo,11th Gen Core i3,8,256,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000232,MSI,Ryzen 5 5500U,8,512,0,Windows,AMD Radeon Radeon,14.0,1920x1080
+LAP-000233,HP,12th Gen Core i7,16,512,0,Windows,Intel Iris X Graphics,13.3,2880x1800
+LAP-000234,Asus,12th Gen Core i7,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,14.5,2880x1800
+LAP-000235,Dell,AMD Ryzen 3 5425U,8,256,0,Windows,AMD Radeon AMD,14.0,1920x1080
+LAP-000236,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Iris XE Graphic,15.6,1920x1080
+LAP-000237,Dell,AMD Ryzen 3 5425U,8,512,0,Windows,AMD Radeon AMD,14.0,1920x1080
+LAP-000238,Acer,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000239,HP,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000240,Lenovo,Intel Celeron N4020,8,256,0,Windows,Intel Integrated UHD,15.6,1366x768
+LAP-000241,Asus,12th Gen Core i3,8,256,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000242,HP,AMD Ryzen 3 3250U,8,256,0,Windows,AMD Radeon Radeon,15.6,1366x768
+LAP-000243,MSI,11th Gen Core i7,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000244,Asus,Ryzen 7-4800H,16,512,0,Windows,4 GB NVIDIA GeForce GTX 1650 Max Q,15.6,1920x1080
+LAP-000245,Lenovo,AMD Ryzen 5 5500U,8,512,0,Windows,AMD Radeon,15.6,1920x1080
+LAP-000246,Lenovo,Ryzen 7 5800H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000247,Lenovo,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000248,Dell,11th Gen Core i5,8,512,0,Windows,Intel UHD Graphics,13.3,1920x1080
+LAP-000249,MSI,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000250,HP,11th Gen Core i3,8,256,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000251,Asus,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,2880x1800
+LAP-000252,Acer,Ryzen 3 3250U,8,256,0,Windows,AMD Radeon AMD,15.6,1920x1200
+LAP-000253,HP,11th Gen Core i3,8,256,1000,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000254,HP,AMD Athlon 3050U,8,256,0,Windows,AMD Radeon AMD,14.0,1366x768
+LAP-000255,HP,11th Gen Core i3,8,256,1000,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000256,HP,AMD Ryzen 3 3250U,8,512,0,Windows,AMD Radeon,15.6,1920x1080
+LAP-000257,Dell,AMD Ryzen3 5425U,8,512,0,Windows,AMD Radeon Radeon Graphics,15.6,1920x1080
+LAP-000258,Lenovo,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000259,Acer,11th Gen Core i9,64,2000,1000,Windows,16 GB NVIDIA GeForce RTX 3080,17.3,3840x2160
+LAP-000260,Lenovo,Ryzen 7 5800H,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000261,Lenovo,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000262,Dell,Ryzen 5-5625U,8,512,0,Windows,AMD Radeon Graphics,16.0,1920x1200
+LAP-000263,HP,12th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,14.0,2880x1800
+LAP-000264,Dell,12th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,13.4,3840x2400
+LAP-000265,Asus,12th Gen Core i7,32,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,3840x2160
+LAP-000266,Dell,12th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GEFORCE RTX 3050 Ti,15.6,1920x1080
+LAP-000267,HP,12th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000268,HP,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000269,MSI,11th Gen Core i7,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000270,Lenovo,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,2880x1800
+LAP-000271,HP,11th Gen Core i3,8,256,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000272,Lenovo,12th Gen Core i3,8,512,0,Windows,‎Intel UHD Graphics,15.6,1920x1080
+LAP-000273,HP,AMD Ryzen 7 5800H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,16.1,1920x1080
+LAP-000274,Lenovo,11th Gen Core i3,8,256,1000,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000275,Lenovo,11th Gen Core i5,16,256,1000,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000276,Dell,12th Gen Core i3,8,256,0,Windows,Missing,14.0,1920x1200
+LAP-000277,Dell,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1200
+LAP-000278,Dell,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,16.0,1920x1200
+LAP-000279,Dell,12th Gen Core i7,16,512,0,Windows,2 GB NVIDIA GeForce MX550,14.0,1920x1200
+LAP-000280,Asus,Ryzen 7 4800H,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000281,Infinix,10th Gen Core i5,16,512,0,Windows,Intel Integrated UHD Graphics,14.0,1920x1080
+LAP-000282,HP,Ryzen 3 3250U,8,512,0,Windows,AMD Radeon Vega 8 Graphics,15.6,1920x1080
+LAP-000283,Asus,Ryzen 7-5800H,16,512,0,Windows,AMD Radeon Vega 7,16.0,1920x1200
+LAP-000284,HP,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000285,Asus,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,17.3,1920x1080
+LAP-000286,Asus,Ryzen 7 5800H,16,512,0,Windows,AMD Radeon Graphics,14.0,2880x1800
+LAP-000287,Infinix,10th Gen Core i3,8,512,0,Windows,Intel Integrated UHD Graphics,14.0,1920x1080
+LAP-000288,Asus,Ryzen 7 4800H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000289,Asus,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000290,Acer,11th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000291,Apple,Apple M2,8,512,0,Mac,10-Core GPU,13.6,2560x1664
+LAP-000292,Asus,AMD Ryzen 5 4600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000293,Asus,12th Gen Core i5,16,512,0,Windows,Intel Iris XE Graphics,15.6,1920x1080
+LAP-000294,HP,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000295,HP,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000296,Lenovo,10th Gen Core i3,8,512,0,Windows,Intel Integrated,15.6,1920x1080
+LAP-000297,HP,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000298,Samsung,12th Gen Core i5,8,512,0,Windows,4 GB Intel Arc A350M Graphics,15.6,1920x1080
+LAP-000299,Asus,Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000300,Dell,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000301,Asus,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,2880x1800
+LAP-000302,HP,12th Gen Core i5,16,512,0,Windows,2 GB NVIDIA GeForce MX550,15.6,1920x1080
+LAP-000303,Samsung,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000304,Samsung,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000305,Dell,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000306,Lenovo,Celeron N4020,8,256,0,Windows,Intel Integrated UHD,15.6,1366x768
+LAP-000307,Dell,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000308,HP,12th Gen Core i5,16,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000309,Acer,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000310,Asus,Ryzen 9 5900HX,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000311,Lenovo,Celeron N4020,4,256,0,DOS,Intel Integrated UHD,15.6,1920x1080
+LAP-000312,Dell,11th Gen Core i5,16,256,1000,Windows,Intel UHD Graphics,14.0,1366x768
+LAP-000313,Dell,Pentium N5030,8,256,0,Windows,Intel Integrated UHD,15.6,1366x768
+LAP-000314,Dell,Ryzen 5-5625U,16,512,0,Windows,AMD Vega,16.0,1920x1200
+LAP-000315,HP,11th Gen Core i5,8,512,0,Windows,Intel Integrated,14.0,1366x768
+LAP-000316,Lenovo,Athlon Pro 3045B,4,0,1000,DOS,Missing,14.0,1920x1080
+LAP-000317,HP,Ryzen 5 5625U,8,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000318,HP,Ryzen 5,8,512,0,Windows,AMD Radeon Graphics,14.0,1920x1080
+LAP-000319,Samsung,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1080x1920
+LAP-000320,Dell,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000321,Asus,Pentium Quad Core,4,0,1000,Windows,Intel UHD,15.6,1366x768
+LAP-000322,Samsung,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1080x1920
+LAP-000323,Asus,Pentium Silver N6000,8,256,0,Windows,Intel UHD Graphics,13.3,1920x1080
+LAP-000324,Apple,Apple M1,16,512,0,Mac,Apple M1 Integrated Graphics,13.3,2560x1600
+LAP-000325,HP,Ryzen 3 5300U,8,512,0,Windows,AMD Radeon Graphics,14.0,1920x1080
+LAP-000326,HP,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000327,Apple,Apple M1,16,256,0,Mac,Apple M1 Integrated Graphics,13.3,2560x1600
+LAP-000328,HP,Ryzen 3 5300U,8,512,0,Windows,AMD Radeon AMD,15.6,1920x1080
+LAP-000329,Dell,11th Gen Core i5,8,256,1000,Windows,2 GB NVIDIA MX350,15.6,1920x1080
+LAP-000330,Lenovo,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000331,Dell,10th Gen Core i5,8,256,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000332,HP,Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 3050,15.6,1920x1080
+LAP-000333,HP,Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000334,Dell,11th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000335,HP,11th Gen Core i3,8,256,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000336,Lenovo,11th Gen Core i3,8,256,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000337,Infinix,10th Gen Core i7,16,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000338,Asus,11th Gen Core i3,8,256,1000,Windows,Intel UHD Graphics,14.1,1920x1080
+LAP-000339,Asus,10th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000340,HP,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000341,Apple,M1 Max 10-core CPU,32,1000,0,Mac,32-core GPU,16.2,3456x2234
+LAP-000342,Lenovo,Intel Celeron N4020,4,0,1000,DOS,Intel Integrated UHD,15.6,1920x1080
+LAP-000343,Dell,11th Gen Core i3,8,256,1000,Windows,Intel Integrated,15.6,1920x1080
+LAP-000344,HP,Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000345,Asus,11th Gen Core i3,8,256,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000346,Xiaomi,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,3200x2000
+LAP-000347,MSI,Ryzen 5 5600H,8,512,0,Windows,4 GB AMD Radeon RX5500M,15.6,1920x1080
+LAP-000348,Lenovo,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000349,Xiaomi,11th Gen Core i3,8,256,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000350,Realme,11th Gen Core i3,8,256,0,Windows,Intel UHD Graphics,14.0,1440x2160
+LAP-000351,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000352,Acer,Intel Pentium N5030,4,0,1000,Windows,Intel UHD Graphics 605,15.6,768x1366
+LAP-000353,Asus,AMD Ryzen 9,16,1000,0,Windows,4 GB NVIDIA GeForce GTX 1650,13.4,3840x2400
+LAP-000354,Lenovo,11th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,14.0,3840x2160
+LAP-000355,Dell,11th Gen Core i5,8,256,1000,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000356,Apple,Apple M1,8,512,0,Mac,Apple M1 Integrated Graphics,13.3,2560x1600
+LAP-000357,Dell,10th Gen Core i3,4,0,1000,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000358,Microsoft,V4G-00021) Laptop,8,128,0,Windows,AMD Radeon Vega 9,15.0,2496x1664
+LAP-000359,HP,7YY01PA) Laptop,8,512,0,Windows,2 GB Radeon RX 550,14.0,1920x1080
+LAP-000360,Dell,11th Gen Core i5,16,256,0,Windows,Intel UHD Graphics,13.3,1920x1080
+LAP-000361,Lenovo,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000362,Asus,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000363,HP,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000364,HP,AMD Ryzen 3 5300U,8,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000365,Asus,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.0,3840x2400
+LAP-000366,HP,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,16.1,1920x1080
+LAP-000367,HP,AMD Ryzen 5 5600H,8,512,0,Windows,4 GB AMD Radeon RX 6500M Graphics,15.6,1920x1080
+LAP-000368,HP,11th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,16.1,1920x1080
+LAP-000369,Dell,12th Gen Core i9,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000370,HP,AMD Ryzen 5 5600H,16,512,0,Windows,6 GB NVIDIA GeForce RTX3060,16.1,1920x1080
+LAP-000371,Lenovo,AMD Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.0,2560x1600
+LAP-000372,MSI,12th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050Ti,15.6,1920x1080
+LAP-000373,MSI,12th Gen Core i9,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,15.6,2560x1440
+LAP-000374,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000375,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000376,HP,12th Gen Core i7,16,512,0,Windows,Intel Iris X Graphics,15.6,1920x1080
+LAP-000377,HP,AMD Ryzen 7 5800U,16,512,0,Windows,AMD Radeon,14.0,1366x768
+LAP-000378,Apple,M2 Pro 12-core CPU,16,1000,0,Mac,19-core GPU,16.2,3456x2234
+LAP-000379,Apple,M2 Pro 12-core CPU,16,512,0,Mac,19-core GPU,16.2,3456x2234
+LAP-000380,Apple,M2 Max 12-core CPU,32,1000,0,Mac,30-core GPU,14.2,3024x1964
+LAP-000381,Apple,M2 Pro 12-core CPU,16,1000,0,Mac,19-core GPU,14.2,3024x1964
+LAP-000382,Apple,M2 Pro 10-core CPU,16,512,0,Mac,16-core GPU,14.2,3024x1964
+LAP-000383,HP,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,2880x1800
+LAP-000384,Apple,Apple M2,16,256,0,Mac,10 Core GPU,13.3,2560x1600
+LAP-000385,Apple,Apple M2,16,512,0,Mac,10-Core GPU,13.6,2560x1664
+LAP-000386,Apple,Apple M2,16,256,0,Mac,10-Core GPU,13.6,2560x1664
+LAP-000387,Samsung,12th Gen Core i5,16,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000388,Lenovo,12th Gen Core i9,32,1000,0,Windows,16 GB NVIDIA GeForce RTX 3080 Ti,16.0,2560x1600
+LAP-000389,Dell,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.56,1920x1080
+LAP-000390,Dell,AMD Ryzen 3 5425U,8,256,0,Windows,AMD Radeon AMD,14.0,1920x1080
+LAP-000391,HP,AMD Ryzen 3 3250U,8,512,0,DOS,AMD Radeon Graphics,14.0,1366x768
+LAP-000392,MSI,12th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000393,Dell,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000394,HP,11th Gen Core i3,8,256,1000,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000395,Infinix,11th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000396,Dell,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000397,Dell,12th Gen Core i5,16,512,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000398,Dell,12th Gen Core i5,8,256,1000,Windows,2 GB NVIDIA MX550 Graphics,15.6,1920x1080
+LAP-000399,HP,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000400,HP,12th Gen Core i7,16,1000,0,Windows,Intel Integrated Iris Xe,15.6,2880x1800
+LAP-000401,HP,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000402,Dell,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000403,HP,Ryzen 5 5625U,16,512,0,Windows,AMD Radeon Graphics,14.0,1920x1080
+LAP-000404,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000405,HP,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,13.4,1920x1200
+LAP-000406,HP,Ryzen 7 5800U,16,512,0,Windows,AMD Radeon Graphic,13.3,1920x1080
+LAP-000407,Dell,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000408,Asus,AMD Ryzen 7 6800HS,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000409,Dell,12th Gen Core i5,8,512,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000410,Dell,AMD R5-5625U,16,512,0,Windows,AMD Radeon Radeon Graphics,15.6,1920x1080
+LAP-000411,Dell,AMD Ryzen 5-5625U,8,512,0,Windows,AMD Radeon Radeon Graphics,15.6,1920x1080
+LAP-000412,Dell,12th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000413,Asus,AMD Ryzen 9 6900HS,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,15.6,2560x1440
+LAP-000414,MSI,12th Gen Core i7,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000415,MSI,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000416,MSI,12th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000417,Asus,12th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000418,HP,11th Gen Core i5,8,512,0,Windows,Intel Integrated,14.0,1366x768
+LAP-000419,HP,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000420,Lenovo,11th Gen Core i7,16,1000,0,Windows,4 GB Nvidia Quadro T600,15.6,1920x1080
+LAP-000421,Acer,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphic,15.6,1920x1080
+LAP-000422,HP,12th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000423,Dell,Intel Pentium Gold 7505,8,256,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000424,HP,11th Gen Core i3,8,512,0,DOS,Intel Integrated,14.0,1366x768
+LAP-000425,Lenovo,Athlon 3050U,4,0,1000,DOS,AMD Radeon AMD,14.0,1366x768
+LAP-000426,Lenovo,Athlon 3050U,4,256,0,DOS,AMD Radeon AMD,14.0,1366x768
+LAP-000427,MSI,12th Gen Core i7,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000428,Lenovo,AMD Ryzen 5 5500U,16,512,0,Windows,AMD Radeon,14.0,1920x1200
+LAP-000429,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000430,Asus,Ryzen 7 4800H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000431,Asus,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe,14.0,2880x1800
+LAP-000432,Lenovo,12th Gen Core i3,8,512,0,Windows,‎Intel UHD Graphics,14.0,1920x1080
+LAP-000433,Ultimus,Celeron N4020,4,128,0,Windows,Intel Integrated UHD Graphics,14.1,1920x1080
+LAP-000434,HP,12th Gen Core i5,16,512,0,Windows,Intel Integrated UHD Graphics,14.0,1920x1080
+LAP-000435,Ultimus,Celeron N4020,4,128,0,DOS,Intel Integrated UHD Graphics,14.1,1920x1080
+LAP-000436,Ultimus,Celeron N4020,4,256,0,Windows,Intel Integrated UHD Graphics,15.6,1920x1080
+LAP-000437,Lenovo,12th Gen Core i7,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,16.0,2560x1600
+LAP-000438,Acer,12th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000439,MSI,12th Gen Core i7,32,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,15.6,2560x1440
+LAP-000440,HP,AMD Ryzen 5-5600U,8,512,0,Windows,AMD Radeon,13.3,1920x1080
+LAP-000441,Dell,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000442,Acer,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphic,15.6,1920x1080
+LAP-000443,Lenovo,11th Gen Core i5,16,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000444,Gigabyte,12th Gen Core i5,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000445,Gigabyte,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 TI,15.6,1920x1080
+LAP-000446,Gigabyte,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000447,Dell,12th Gen Core i5,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000448,Lenovo,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1200
+LAP-000449,Acer,AMD Ryzen 5 5600H,16,512,1000,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000450,Acer,AMD Ryzen 5 5600H,8,512,1000,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000451,Acer,AMD Ryzen 5 5600H,16,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000452,HP,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1200
+LAP-000453,HP,11th Gen Core i3,8,512,0,Windows,Intel Integrated,14.0,1366x768
+LAP-000454,Lenovo,10th Gen Core i3,4,256,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000455,Lenovo,11th Gen Core i7,16,512,0,Windows,2 GB NVIDIA MX450,14.0,1920x1080
+LAP-000456,HP,12th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000457,Asus,Celeron N4500,4,256,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000458,HP,intel Core i3,8,512,0,Windows,Intel Integrated,14.0,1366x768
+LAP-000459,Lenovo,Ryzen 7 5700U,16,512,0,Windows,AMD Raedon Graphics,14.0,1920x1080
+LAP-000460,Lenovo,11th Gen Core i3,8,256,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000461,Lenovo,11th Gen Core i3,8,256,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000462,Acer,Snapdragon 7c,4,0,128,Chrome,Qualcomm Adreno 618,13.3,1920x1080
+LAP-000463,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel UHD,14.1,1920x1080
+LAP-000464,Dell,12th Gen Core i5,8,512,0,Windows,Intel Integrated Integrated,15.6,1920x1080
+LAP-000465,Asus,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe,14.0,2880x1800
+LAP-000466,Lenovo,10th Gen Core i3,8,256,0,Windows,Intel Integrated,15.6,1920x1080
+LAP-000467,Dell,AMD Ryzen 5 5625U,8,512,0,Windows,AMD Radeon Radeon,15.6,1920x1080
+LAP-000468,Lenovo,11th Gen Core i5,8,512,0,DOS,Intel UHD,14.1,1920x1080
+LAP-000469,Asus,10th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000470,MSI,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,17.3,1920x1080
+LAP-000471,MSI,Ryzen 5 5500U,8,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000472,Lenovo,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1080x1920
+LAP-000473,Dell,11th Gen Core i3,8,512,0,Windows,Intel Integrated,14.0,1920x1080
+LAP-000474,Lenovo,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe,14.0,1920x1080
+LAP-000475,Dell,11th Gen Core i9,32,1000,0,Windows,16 GB NVIDIA GEFORCE RTX 3080,17.3,1920x1080
+LAP-000476,Lenovo,11th Gen Core i3,8,256,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000477,Lenovo,12th Gen Core i7,32,1000,0,Windows,4 GB Nvidia Quadro T1200,15.6,1920x1080
+LAP-000478,Microsoft,12th Gen Core i7,8,256,0,Windows,Intel Iris Xe,13.5,2256x1504
+LAP-000479,Microsoft,12th Gen Core i7,16,256,0,Windows,Intel Iris Xe Graphics,13.0,2880x1920
+LAP-000480,Microsoft,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,13.0,2880x1920
+LAP-000481,Microsoft,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe,15.0,2496x1664
+LAP-000482,Dell,Ryzen 5 5500U,8,512,0,Windows,AMD Radeon AMD,14.0,1920x1080
+LAP-000483,Lenovo,12th Gen Core i7,32,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,16.0,2560x1600
+LAP-000484,Lenovo,10th Gen Core i3,4,256,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000485,Acer,11th Gen Core i5,12,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000486,Asus,Celeron N4500,4,256,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000487,Asus,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000488,Lenovo,11th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000489,Acer,Ryzen 5 5500U,8,512,0,Windows,AMD Radeon 5500U,14.0,1920x1080
+LAP-000490,Lenovo,11th Gen Core i3,8,512,0,DOS,Intel Integrated UHD,15.6,1920x1080
+LAP-000491,Dell,12th Gen Core i7,16,1000,0,Windows,Iris Xe,13.4,1920x1080
+LAP-000492,Dell,Ryzen 7 5700U,16,512,0,Windows,AMD Radeon AMD,14.0,1920x1080
+LAP-000493,HP,AMD Ryzen 7 5800H,8,512,0,Windows,4 GB AMD Radeon RX 5500M Graphics,16.0,1920x1080
+LAP-000494,Asus,Pentium Silver N5030,8,256,0,Windows,Intel Integrated UHD,14.1,1366x768
+LAP-000495,Asus,10th Gen Core i5,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000496,Dell,12th Gen Core i5,8,512,0,Windows,2 GB NVIDIA MX550,15.6,1920x1080
+LAP-000497,Dell,12th Gen Core i7,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000498,Acer,AMD Ryzen 3 3250U,8,0,1000,Windows,AMD Radeon Radeon Graphics,14.0,1366x768
+LAP-000499,HP,11th Gen Core i3,8,256,0,Windows,Intel Integrated,15.6,1920x1080
+LAP-000500,Asus,10th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000501,Lenovo,12th Gen Core i3,8,512,0,Windows,‎Intel UHD Graphics,15.6,1920x1080
+LAP-000502,Acer,Intel Celeron N4020,4,0,32,Chrome,Intel HD,11.6,1366x768
+LAP-000503,Dell,11th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000504,HP,AMD Ryzen 5 4500U,8,512,0,Windows,AMD Radeon,14.0,1920x1080
+LAP-000505,Lenovo,Celeron N4020,4,256,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000506,Dell,AMD Ryzen 5 5625U,16,512,0,Windows,AMD Radeon Graphics,14.0,1920x1080
+LAP-000507,Dell,Ryzen 9-6900HX,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000508,Dell,Ryzen 7 6800H,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000509,Dell,Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3070 Ti,15.6,1920x1080
+LAP-000510,Dell,12th Gen Core i9,16,1000,0,Windows,8 GB NVIDIA GEFORCE RTX 3070 Ti,15.6,2560x1440
+LAP-000511,Dell,12th Gen Core i7,16,512,0,Windows,2 GB NVIDIA GeForce MX550,14.5,2560x1440
+LAP-000512,Acer,12th Gen Core i3,8,512,0,Windows,Intel Integrated,15.6,1920x1080
+LAP-000513,Acer,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD Graphics,15.6,1920x1080
+LAP-000514,Lenovo,AMD Ryzen 5 5625U,16,512,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000515,Asus,AMD Ryzen 5 4600H,8,1000,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000516,Asus,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe,14.0,2880x1800
+LAP-000517,Lenovo,12th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,14.0,1920x1200
+LAP-000518,Asus,12th Gen Core i3,8,512,0,Windows,Intel Iris Xe,14.0,2880x1800
+LAP-000519,Dell,11th Gen Core i7,16,512,0,Windows,6 GB NVIDIA Geforce RTX 3060,15.6,1920x1080
+LAP-000520,Lenovo,11th Gen Core i5,8,256,1000,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000521,Asus,12th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000522,Asus,AMD Ryzen 9 6900HX,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070 Ti,17.3,2560x1440
+LAP-000523,Lenovo,10th Gen Core i5,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000524,Lenovo,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,2880x1800
+LAP-000525,Lenovo,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000526,AGB,11th Gen Core i7,32,1000,0,Windows,2 GB NVIDIA Geforce MX450,15.6,1920x1080
+LAP-000527,Infinix,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000528,Dell,12th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,13.4,3840x2400
+LAP-000529,Lenovo,12th Gen Core i5,8,512,0,Windows,‎Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000530,Asus,Celeron N4500,4,256,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000531,MSI,12th Gen Core i7,32,1000,0,Windows,16 GB NVIDIA GeForce RTX A5500,16.0,2560x1600
+LAP-000532,Lenovo,AMD Ryzen 7 5700U,16,512,0,Windows,AMD Radeon,14.0,1920x1200
+LAP-000533,Dell,12th Gen Core i5,16,512,0,Windows,Iris Xe,13.4,1920x1080
+LAP-000534,Asus,12th Gen Core i7,16,512,0,Windows,Intel Iris XE Graphics,15.6,1920x1080
+LAP-000535,Acer,AMD Ryzen 3 3250U,8,256,0,Windows,AMD Radeon AMD,15.6,1920x1080
+LAP-000536,MSI,12th Gen Core i9,64,2000,0,Windows,12 GB NVIDIA GeForce RTX A3000,17.3,2560x1600
+LAP-000537,Lenovo,Ryzen 5 5500U,16,512,0,Windows,AMD Radeon Graphics,13.3,1920x1080
+LAP-000538,HP,AMD Ryzen 3 3250U,8,256,0,Windows,AMD Radeon AMD,14.0,1920x1080
+LAP-000539,MSI,12th Gen Core i7,32,1000,0,Windows,8 GB NVIDIA GeForce RTX A2000,16.0,2560x1600
+LAP-000540,HP,12th Gen Core i9,32,2000,0,Windows,16 GB NVIDIA GeForce 3080Ti,16.1,2560x1440
+LAP-000541,HP,AMD Ryzen 9 6900HX,32,1000,0,Windows,8 GB AMD Radeon RX 6650M Graphics,16.1,1920x1080
+LAP-000542,Lenovo,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000543,HP,12th Gen Core i7,16,1000,0,Windows,8 GB NVIDIA GeForce 3070Ti,16.1,1920x1080
+LAP-000544,Chuwi,Intel Celeron N5100,8,256,0,Windows,Intel UHD 600 Graphics,14.0,2160x1440
+LAP-000545,HP,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.1,1920x1080
+LAP-000546,Lenovo,12th Gen Core i5,16,512,0,Windows,Iris Xe Graphics,15.6,1920x1080
+LAP-000547,Lenovo,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000548,HP,AMD Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.1,1920x1080
+LAP-000549,Lenovo,12th Gen Core i5,8,512,0,Windows,Intel UHD,14.0,1920x1200
+LAP-000550,HP,AMD Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000551,Dell,12th Gen Core i7,16,512,0,Windows,Iris Xe,13.4,1920x1080
+LAP-000552,HP,AMD Ryzen 7 6800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050Ti,16.0,1920x1080
+LAP-000553,HP,AMD Ryzen 7 6800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,16.0,1920x1080
+LAP-000554,Lenovo,11th Gen Core i5,8,0,1000,DOS,Intel Integrated,14.0,1920x1080
+LAP-000555,Lenovo,Intel Celeron N4020,4,0,1000,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000556,Lenovo,AMD Ryzen 7 5800H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000557,Lenovo,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000558,Lenovo,12th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000559,Lenovo,12th Ge Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,14.0,3840x2160
+LAP-000560,Dell,11th Gen Core i3,16,256,1000,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000561,Acer,AMD Ryzen 5 3500U,16,512,0,Windows,AMD Radeon Radeon Graphics,14.0,1366x768
+LAP-000562,Fujitsu,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000563,HP,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,13.3,2880x1800
+LAP-000564,Gigabyte,11th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000565,Gigabyte,11th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000566,Gigabyte,11th Gen Core i5,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000567,MSI,11th Gen Core i7,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000568,Lenovo,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000569,Lenovo,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Graphics,15.6,1920x1080
+LAP-000570,Dell,11th Gen Core i3,8,256,0,Ubuntu,Intel UHD Graphics,15.6,1366x768
+LAP-000571,Honor,10th Gen Core i5,8,256,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000572,Dell,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000573,HP,11th Gen Core i3,8,256,0,Windows,Intel UHD Graphics,15.6,1366x768
+LAP-000574,Dell,11th Gen Core i3,16,512,1000,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000575,Lenovo,11th Gen Core i5,8,512,0,DOS,Intel UHD Graphics,14.0,1920x1080
+LAP-000576,Dell,11th Gen Core i3,16,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000577,Dell,11th Gen Core i3,16,512,0,Ubuntu,Intel UHD Graphics,14.0,1366x768
+LAP-000578,Fujitsu,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000579,Dell,11th Gen Core i5,16,1000,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000580,Fujitsu,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000581,Acer,Intel Pentium N5030,4,128,0,Windows,UHD Graphics 600,11.6,1366x768
+LAP-000582,Lenovo,10th Gen Core i3,8,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000583,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000584,HP,11th Gen Core i3,8,512,0,Windows,Intel UHD,15.6,1366x768
+LAP-000585,Dell,12th Gen Core i5,16,512,0,Windows,Intel Integrated UMA,13.3,2560x1600
+LAP-000586,HP,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe,14.0,1920x1080
+LAP-000587,HP,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000588,Acer,12th Gen Core i9,32,2000,0,Windows,NVIDIA GeForce RTX 3030,15.6,3840x2160
+LAP-000589,Dell,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,13.4,3840x2400
+LAP-000590,Acer,AMD Ryzen 5 6600H,16,512,1000,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,2560x1440
+LAP-000591,Acer,Ryzen 5 3500U,8,512,0,Windows,AMD Radeon AMD,15.6,1920x1080
+LAP-000592,Asus,AMD Ryzen 7 6800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000593,MSI,10th Gen Core i5,8,512,0,Windows,4 GB NVIDIA Geforce GTX 1650,15.6,1920x1080
+LAP-000594,Acer,Ryzen 5 5500U,8,256,0,Windows,AMD Radeon,15.6,1920x1080
+LAP-000595,Acer,AMD Ryzen 7 6800H,16,1000,0,Windows,Missing,0.0,
+LAP-000596,Lenovo,AMD Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.0,2560x1600
+LAP-000597,HP,AMD Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,16.1,1920x1080
+LAP-000598,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris X Graphics,13.3,2880x1800
+LAP-000599,HP,12th Gen Core i7,32,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,16.1,2560x1440
+LAP-000600,Honor,AMD Ryzen 5 5500U,8,256,0,Windows,AMD Radeon,15.6,1920x1080
+LAP-000601,HP,12th Gen Core i7,16,512,0,Windows,Intel Iris X Graphics,13.3,3840x2400
+LAP-000602,HP,12th Gen Core i9,32,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,3840x2160
+LAP-000603,HP,12th Gen Core i9,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.0,3840x2160
+LAP-000604,Lenovo,AMD Ryzen 7 6800H,32,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070,16.0,2560x1600
+LAP-000605,Lenovo,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,14.0,2880x1800
+LAP-000606,Asus,10th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000607,Lenovo,Ryzen 7 5700U,16,512,0,Windows,AMD Radeon,13.3,1920x1080
+LAP-000608,HP,Celeron N4500,4,0,64,Chrome,Intel Integrated UHD Graphics,14.0,1366x768
+LAP-000609,Lenovo,11th Gen Core i3,8,0,1000,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000610,HP,12th Gen Core i7,16,1000,0,Windows,Intel Iris X Graphics,13.3,2880x1800
+LAP-000611,Gigabyte,12th Gen Core i7,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,15.6,1920x1080
+LAP-000612,Lenovo,10th Gen Core i5,4,256,0,Windows,Intel Integrated UHD,14.0,1366x768
+LAP-000613,Asus,12th Gen Core i5,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000614,Asus,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000615,Asus,12th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000616,Lenovo,11th Gen Core i5,8,512,0,DOS,Intel UHD,14.1,1920x1080
+LAP-000617,Lenovo,Athlon Pro 3045B,4,0,1000,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000618,Dell,11th Gen Core i5,16,512,1000,Windows,Intel UHD Graphics,14.0,1366x768
+LAP-000619,HP,11th Gen Core i3,8,512,0,DOS,Intel Integrated Intel® UHD Graphics,15.6,1366x768
+LAP-000620,Acer,Pentium Gold 7505,4,0,1000,Windows,Intel Integrated,15.6,1366x768
+LAP-000621,HP,11th Gen Core i7,8,512,0,Windows,Graphics & Networking: Intel Iris X Graphics,13.3,
+LAP-000622,MSI,11th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce RTX3050,16.0,2560x1600
+LAP-000623,Lenovo,11th Gen Core i7,16,1000,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000624,Lenovo,11th Gen Core i5,8,512,0,Windows,512 MB Intel Integrated,14.0,1920x1080
+LAP-000625,Huawei,10th Gen Core i5,8,512,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000626,Lenovo,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000627,Asus,Intel Silver N6000,8,256,0,Windows,Intel Integrated Intel UHD,14.1,1366x768
+LAP-000628,Dell,11th Gen Core i3,8,512,1000,Windows,Intel UHD Graphics,15.56,1920x1080
+LAP-000629,Lenovo,11th Gen Core i3,4,256,0,Windows,Intel Integrated UHD,15.0,1920x1080
+LAP-000630,Huawei,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,2160x1440
+LAP-000631,Asus,AMD Ryzen 9 6900HS,16,1000,0,Windows,8 GB AMD Radeon RX 6700S,14.0,1920x1080
+LAP-000632,HP,12th Gen Core i5,8,512,0,Windows,Intel Iris X Graphics,13.3,1920x1080
+LAP-000633,Asus,Ryzen 7 6800HS,16,1000,0,Windows,6 GB AMD Radeon Radeon 680M,16.0,2560x1600
+LAP-000634,Asus,Ryzen 9 6900HS,16,1000,0,Windows,6 GB AMD Radeon Radeon 680M,16.0,2560x1600
+LAP-000635,Lenovo,11th Gen Core i5,8,512,0,DOS,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000636,Avita,10th Gen Core i3,8,256,0,Windows,Intel UHD Graphics 620,14.0,1920x1080
+LAP-000637,Lenovo,11th Gen Core i7,16,512,0,Windows,Intel Integrated Iris Xe,13.0,2560x1600
+LAP-000638,Lenovo,11th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,14.0,1920x1080
+LAP-000639,Lenovo,12th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000640,Lenovo,11th Gen Core i3,8,256,0,Windows,Intel UHD Integrated Graphics,15.6,1920x1080
+LAP-000641,Lenovo,11th Gen Core i5,16,512,0,Windows,Intel Integrated UHD Xe,14.0,1920x1080
+LAP-000642,Dell,Ryzen 5 3450U,8,256,0,Windows,AMD Radeon,14.0,1920x1080
+LAP-000643,Lenovo,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,2880x1800
+LAP-000644,MSI,12th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000645,MSI,11th Gen Core i7,16,512,0,Windows,4 GB Nvidia RTX 3050,17.32,1920x1080
+LAP-000646,MSI,11th Gen Core i7,16,512,0,Windows,4 GB Nvidia RTX 3050 Ti,17.32,1920x1080
+LAP-000647,MSI,12th Gen Core i5,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000648,MSI,12th Gen Core i7,16,1000,0,Windows,6 GB Nvidia GeForce RTX 3060,15.6,1920x1080
+LAP-000649,Acer,Ryzen 5 5600U,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,14.0,1920x1080
+LAP-000650,Lenovo,Celeron N4020,4,256,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000651,HP,AMD Athlon 3050U,4,0,1000,DOS,AMD Radeon Graphics,15.6,1366x768
+LAP-000652,Acer,AMD Ryzen 5 5600U,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,14.0,1920x1080
+LAP-000653,Asus,11th Gen Core i7,8,1000,0,Windows,4 GB ‎NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000654,Dell,11th Gen Core i3,8,0,1000,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000655,Asus,AMD Ryzen 9 6900HS,32,1000,0,Windows,4 GB ‎NVIDIA GeForce RTX 3050,13.4,1920x1200
+LAP-000656,AGB,11th Gen Core i7,16,1000,0,Windows,2 GB NVIDIA Geforce MX450,15.6,1920x1080
+LAP-000657,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000658,Asus,AMD Ryzen 9 6900HS,32,1000,0,Windows,4 GB ‎NVIDIA GeForce RTX 3050 Ti,13.4,1920x1200
+LAP-000659,Gigabyte,12th Gen Core i7,16,512,0,Windows,8 GB NVIDIA GeForce RTX 3070,15.6,2560x1440
+LAP-000660,HP,AMD Ryzen 7 5800H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000661,Lenovo,12th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000662,Lenovo,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000663,Lenovo,Ryzen 5 5600H,16,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1200
+LAP-000664,Lenovo,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000665,Acer,AMD Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000666,Gigabyte,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000667,Lenovo,11th Gen Core i3,4,256,0,DOS,Intel Integrated UHD,14.0,1920x1080
+LAP-000668,Asus,AMD Ryzen 9 6900HX,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070 Ti,17.3,1920x1080
+LAP-000669,MSI,12th Gen Core i7,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070,15.6,2560x1440
+LAP-000670,MSI,12th Gen Core i7,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000671,Lenovo,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.0,1920x1080
+LAP-000672,Lenovo,AMD Ryzen 3 5300U,8,256,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000673,Acer,12th Gen Core i5,16,512,0,Windows,Intel Irix Xe Graphics,14.0,1920x1080
+LAP-000674,Lenovo,AMD Ryzen 7 5800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.0,2560x1600
+LAP-000675,Lenovo,11th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000676,MSI,12th Gen Core i9,32,2000,0,Windows,16 GB NVIDIA GeForce RTX 3080 Ti,17.3,3840x2160
+LAP-000677,MSI,12th Gen Core i7,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070 Ti,17.3,1920x1080
+LAP-000678,MSI,12th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,16.0,2560x1660
+LAP-000679,MSI,Ryzen 7 5800H,8,512,0,Windows,8 GB AMD Radeon RX 6600M,15.6,1920x1080
+LAP-000680,MSI,12th Gen Core i7,16,1000,0,Windows,4 GB NVIDIA GeForce RTX A1000,16.0,2560x1660
+LAP-000681,MSI,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650 Max-Q,15.6,1920x1080
+LAP-000682,Asus,12th Gen Core i9,32,4000,0,Windows,16 GB NVIDIA GeForce RTX 3080Ti,17.3,2560x1440
+LAP-000683,Asus,10th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000684,Chuwi,Intel Celeron N4020,8,256,0,Windows,Intel HD Graphics,14.1,1366x768
+LAP-000685,MSI,12th Gen Core i7,16,1000,0,Windows,6 GB Nvidia GeForce RTX 3060,15.6,1920x1080
+LAP-000686,Asus,12th Gen Core i9,32,1000,0,Windows,16 GB NVIDIA GeForce RTX 3080 Ti,15.6,2560x1440
+LAP-000687,MSI,11th Gen Core i7,16,512,0,Windows,6 GB Nvidia RTX 3060,17.32,1920x1080
+LAP-000688,MSI,AMD Ryzen 7 5800H,16,1000,0,Windows,10 GB AMD Radeon RX 6700M,15.6,1920x1080
+LAP-000689,Asus,11th Gen Core i5,16,256,1000,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000690,Asus,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000691,Lenovo,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000692,Lenovo,Ryzen 3 5300U,4,512,0,DOS,AMD Radeon Graphic,15.6,1920x1080
+LAP-000693,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000694,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000695,Asus,AMD Ryzen 5-5600H,16,512,0,Windows,AMD Radeon Graphics,14.0,1920x1200
+LAP-000696,Lenovo,Ryzen 7 5800H,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000697,Asus,Pentium N6000,8,256,0,Windows,Intel Integrated UHD,14.1,1366x768
+LAP-000698,Lenovo,Celeron N4020,4,0,1000,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000699,Acer,AMD Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000700,HP,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000701,Asus,11th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000702,Xiaomi,12th Gen Core i5,16,512,0,Windows,2 GB Nvidia MX550 Graphics,14.0,2560x1600
+LAP-000703,Asus,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050Ti,15.6,1920x1080
+LAP-000704,Dell,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1200
+LAP-000705,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris X Graphics,13.5,1920x1280
+LAP-000706,Dell,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000707,Gigabyte,12th Gen Core i7,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,15.6,2560x1440
+LAP-000708,HP,12th Gen Core i7,16,1000,0,Windows,4 GB Intel Arc A370M 4GB VRAM Graphics,16.0,3840x2400
+LAP-000709,Asus,AMD Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,17.3,1920x1080
+LAP-000710,HP,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,13.5,3000x2000
+LAP-000711,Gigabyte,12th Gen Core i7,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,15.6,2560x1440
+LAP-000712,Asus,12th Gen Core i9,32,2000,0,Windows,16 GB NVIDIA GeForce RTX 3080 Ti,17.3,2560x1440
+LAP-000713,HP,AMD Ryzen 3,8,0,1000,Windows,Missing,15.6,1920x1080
+LAP-000714,HP,Ryzen 7-5800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,16.1,1920x1080
+LAP-000715,Acer,11th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000716,Acer,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000717,Acer,Intel Core i5,16,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000718,Asus,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000719,Asus,AMD Ryzen 9 6900HS,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000720,Asus,12th Gen Core i7,16,1000,0,Windows,Intel Integrated Iris Xe,14.0,2880x1800
+LAP-000721,Asus,12th Gen Core i9,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.0,3840x2400
+LAP-000722,Asus,AMD Ryzen 9 6900HS,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000723,Asus,12th Gen Core i7,32,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070 Ti,16.0,3840x2400
+LAP-000724,MSI,12th Gen Core i7,32,2000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,17.3,2560x1440
+LAP-000725,Asus,12th Gen Core i9,32,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070,16.0,3840x2400
+LAP-000726,Gigabyte,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000727,Dell,11th Gen Core i3,4,256,0,Ubuntu,Intel UHD Graphics,14.0,1366x768
+LAP-000728,Dell,11th Gen Core i3,4,256,1000,Ubuntu,Intel UHD Graphics,14.0,1366x768
+LAP-000729,HP,11th Gen Core i5,8,0,1000,Windows,Intel Integrated,15.6,1366x768
+LAP-000730,Dell,11th Gen Core i3,4,512,0,Ubuntu,Intel UHD Graphics,14.0,1366x768
+LAP-000731,Lenovo,AMD Ryzen 7-5800H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000732,Acer,Pentium Silver N6000,8,256,0,Windows,Intel Integrated UHD Graphics,14.0,1366x768
+LAP-000733,Asus,10th Gen Core i5,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000734,MSI,12th Gen Core i7,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,15.6,2560x1440
+LAP-000735,Acer,Pentium Silver N6000,4,256,0,Windows,Intel Integrated UHD Graphics,14.0,1366x768
+LAP-000736,MSI,12th Gen Core i7,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,17.3,1920x1080
+LAP-000737,Asus,12th Gen Core i7,16,1000,0,Windows,Intel Integrated Iris Xe,14.5,2880x1800
+LAP-000738,Asus,12th Gen Core i9,32,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,14.5,2880x1800
+LAP-000739,Asus,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.5,2880x1800
+LAP-000740,Dell,AMD Ryzen 3 3250U,8,256,0,Windows,AMD Radeon AMD,15.6,1920x1080
+LAP-000741,Asus,AMD Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000742,Dell,12th Gen Core i7,32,1000,0,Windows,8 GB NVIDIA GEFORCE RTX 3070 Ti,15.6,1920x1080
+LAP-000743,HP,12th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000744,HP,12th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,13.5,3000x2000
+LAP-000745,Lenovo,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000746,Lenovo,AMD Ryzen 5-5600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000747,Asus,11th Gen Core i3,8,512,0,Windows,Intel Integrated Intel UHD,14.0,1920x1080
+LAP-000748,Acer,AMD Ryzen 5 3500U,8,512,0,Windows,AMD Radeon AMD,15.6,1920x1080
+LAP-000749,Acer,AMD Ryzen 3 3250U,8,512,0,Windows,AMD Radeon AMD,15.6,1920x1080
+LAP-000750,Asus,AMD Ryzen 9 6900HX,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070 Ti,15.6,2560x1440
+LAP-000751,Asus,AMD Ryzen 9 6900HX,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3080,15.6,2560x1440
+LAP-000752,Dell,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000753,Lenovo,12th Gen Core i5,8,512,0,Windows,‎Intel UHD Graphics,15.6,1920x1080
+LAP-000754,Acer,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe,15.6,1920x1080
+LAP-000755,Acer,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000756,LG,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1200x1920
+LAP-000757,Dell,12th Gen Core i7,32,1000,0,Windows,8 GB NVIDIA GEFORCE RTX 3070 Ti,17.3,1920x1080
+LAP-000758,Asus,AMD Ryzen 5 4600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,17.3,1920x1080
+LAP-000759,Asus,AMD Ryzen 9 6900HX,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070 Ti,15.6,2560x1440
+LAP-000760,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000761,Asus,Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000762,HP,12th Gen Core i7,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000763,HP,AMD Ryzen 3 3250U,8,256,0,Windows,AMD Radeon Radeon,15.6,1366x768
+LAP-000764,Asus,12th Gen Core i7,16,512,0,Windows,6 GB ‎NVIDIA GeForce RTX 3060,16.0,2560x1600
+LAP-000765,Asus,11th Gen Core i5,8,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000766,Asus,Ryzen 7 5800H,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070,15.6,1920x1080
+LAP-000767,HP,11th Gen Core i3,8,256,0,Windows,Intel Integrated Iris Xe Graphics,14.0,1366x768
+LAP-000768,Lenovo,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD Graphics,15.6,1920x1080
+LAP-000769,Lenovo,11th Gen Core i7,32,1000,0,Windows,4 GB  Nvidia Quadro T500,15.6,1920x1080
+LAP-000770,HP,Intel Celeron N4500,8,256,0,Windows,Intel Integrated UHD Graphics,14.0,1366x768
+LAP-000771,HP,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000772,Asus,AMD Ryzen 5-5600H,16,512,0,Windows,AMD Radeon Graphics,14.0,1920x1200
+LAP-000773,Acer,AMD Ryzen 5-5500U,16,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000774,Acer,AMD 3020e,4,0,1000,Windows,AMD Radeon AMD,14.0,1366x768
+LAP-000775,Dell,AMD Ryzen 3 3250U,8,256,1000,Windows,AMD Radeon Radeon Graphics,15.6,1920x1080
+LAP-000776,Lenovo,11th Gen Core i7,16,512,0,Windows,2 GB NVIDIA MX450,14.0,1920x1080
+LAP-000777,Lenovo,Ryzen 7 5800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000778,Dell,AMD Ryzen 7-5825U,16,512,0,Windows,AMD Radeon,16.0,1920x1200
+LAP-000779,Asus,Ryzen 9 5900HX,16,1000,0,Windows,4 GB NVIDIA GeForce RTX RTX 3050,15.6,1920x1080
+LAP-000780,Lenovo,12th Gen Core i5,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000781,Lenovo,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000782,Fujitsu,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000783,Fujitsu,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000784,Fujitsu,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000785,Fujitsu,11th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000786,Dell,AMD Ryzen 7-5800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050Ti,15.6,1920x1080
+LAP-000787,Lenovo,11th Gen Core i5,8,256,1000,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000788,HP,12th Gen Core i7,16,512,0,Windows,Intel Iris X Graphics,16.0,3072x1920
+LAP-000789,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,2240x1400
+LAP-000790,HP,12th Gen Core i7,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000791,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,2240x1400
+LAP-000792,Lenovo,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,14.0,2880x1800
+LAP-000793,Lenovo,Ryzen 7 5800H,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000794,Acer,12th Gen Core i3,8,512,0,Windows,Intel UHD,15.6,1920x1080
+LAP-000795,Asus,11th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000796,Acer,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000797,Dell,AMD Ryzen7 5825U,8,512,0,Windows,AMD Radeon Radeon Graphics,15.6,1920x1080
+LAP-000798,LG,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,16.0,1600x2560
+LAP-000799,Dell,AMD Ryzen 5 5625U,8,512,0,Windows,AMD Radeon Graphics,14.0,1920x1080
+LAP-000800,Asus,10th Gen Core i5,8,1000,0,Windows,4 GB NVIDIA GeForce GTX GTX-1650,15.6,1920x1080
+LAP-000801,Asus,AMD Ryzen 7 6800HS,16,1000,0,Windows,AMD Radeon AMD,13.4,1920x1200
+LAP-000802,Asus,AMD Ryzen 9 6900HS,32,1000,0,Windows,8 GB AMD Radeon RX 6800S,14.0,2560x1600
+LAP-000803,Asus,AMD Ryzen 7 6800HS,32,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,13.4,1920x1200
+LAP-000804,Asus,AMD Ryzen 7 6800HS,32,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,13.4,3840x2400
+LAP-000805,Asus,AMD Ryzen 7 6800HS,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000806,Asus,AMD Ryzen 7 6800HS,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000807,Asus,AMD 9 6900HX,32,2000,0,Windows,16 GB NVIDIA GeForce RTX 3080 Ti,16.0,3840x2400
+LAP-000808,Asus,AMD Ryzen 9 6900HS,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3080,15.6,2560x1440
+LAP-000809,Asus,AMD 9 6900HX,32,2000,0,Windows,16 GB NVIDIA GeForce RTX 3080 Ti,16.0,1920x1200
+LAP-000810,Asus,AMD Ryzen 7 6800HS,16,1000,0,Windows,8 GB AMD Radeon RX 6700S,14.0,2560x1600
+LAP-000811,Asus,AMD Ryzen 7 6800HS,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000812,Asus,Ryzen 7 6800HS,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,16.0,2560x1600
+LAP-000813,Asus,AMD Ryzen 7 6800H,32,2000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.0,1920x1200
+LAP-000814,Asus,AMD Ryzen 9 6900HS,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070,15.6,2560x1440
+LAP-000815,Asus,Ryzen 7 6800HS,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.0,2560x1600
+LAP-000816,Asus,AMD 9 6900HX,32,2000,0,Windows,16 GB NVIDIA GeForce RTX 3080 Ti,16.0,2560x1600
+LAP-000817,Asus,AMD Ryzen 7 6800HS,16,1000,0,Windows,AMD Radeon AMD,13.4,1920x1200
+LAP-000818,Asus,AMD Ryzen 9 6900HS,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,15.6,2560x1440
+LAP-000819,HP,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000820,Dell,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,16.0,1920x1200
+LAP-000821,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000822,Asus,12th Gen Core i7,16,512,0,Windows,Intel Integrated Iris Xe,14.0,2880x1800
+LAP-000823,Asus,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe Graphics,14.0,1920x1200
+LAP-000824,HP,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000825,Asus,12th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1200
+LAP-000826,HP,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000827,Asus,Ryzen 7 4800H,8,512,0,Windows,4 GB NVIDIA GeForce RTX RTX 3050,17.3,1920x1080
+LAP-000828,Lenovo,11th Gen Core i7,32,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070,16.0,2560x1440
+LAP-000829,Asus,2022) X413EA-EB322WS Laptop,8,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000830,MSI,10th Gen Core i5,8,256,1000,Windows,4 GB Nvidia GTX1650 MaxQ,15.6,1920x1080
+LAP-000831,Dell,11th Gen Core i5,8,256,1000,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000832,Asus,10th Gen Core i5,8,512,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000833,Lenovo,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000834,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000835,Dell,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000836,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Integrated Graphics,14.0,1920x1080
+LAP-000837,MSI,Ryzen 5 5600H,16,512,0,Windows,8 GB AMD Radeon RX6600M,15.6,1920x1080
+LAP-000838,HP,Ryzen 5-5600H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000839,HP,Ryzen 5 5500U,16,512,0,Windows,AMD Radeon Graphics,14.0,1920x1080
+LAP-000840,Asus,10th Gen Core i5,16,512,0,Windows,Intel Integrated Intel UHD,14.0,1920x1080
+LAP-000841,Dell,11th Gen Core i3,8,256,0,Windows,Intel UHD Graphics,14.0,1366x768
+LAP-000842,Dell,12th Gen Core i7,16,512,0,Windows,4 GB NVIDIA Geforce RTX 3050 Ti,15.6,3840x2160
+LAP-000843,HP,Ryzen 7 5700U,16,512,0,Windows,AMD Radeon Graphics,14.0,1920x1080
+LAP-000844,Asus,Ryzen 7 4800H,8,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050,17.3,1920x1080
+LAP-000845,Dell,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe,16.0,1920x1080
+LAP-000846,Lenovo,Ryzen 7 5700U,16,512,0,Windows,AMD Radeon,13.3,1920x1080
+LAP-000847,Dell,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe,16.0,1920x1080
+LAP-000848,Asus,Pentium Silver N6000,4,256,0,Windows,Intel HD Graphics,14.0,1366x768
+LAP-000849,Dell,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,14.0,1366x768
+LAP-000850,Dell,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,13.4,3840x2400
+LAP-000851,HP,Ryzen 5 5600H,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,16.1,1920x1080
+LAP-000852,HP,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000853,LG,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,17.0,1600x2560
+LAP-000854,LG,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,17.0,1600x2560
+LAP-000855,Asus,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000856,MSI,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000857,HP,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000858,HP,Ryzen 5 5600U,8,512,0,Windows,AMD Raedon Graphics,13.3,1920x1080
+LAP-000859,LG,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1200x1920
+LAP-000860,Asus,AMD Ryzen 9 6900HX,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050,17.3,2560x1440
+LAP-000861,LG,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,16.0,1600x2560
+LAP-000862,Asus,Ryzen 7 4800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX3050,15.6,1080x1920
+LAP-000863,LG,12th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,17.0,1600x2560
+LAP-000864,Dell,Ryzen 7 6800H,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000865,Dell,Ryzen 5 6600H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000866,Lenovo,12th Gen Core i5,16,512,0,Windows,‎Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000867,MSI,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000868,MSI,12th Gen Core i7,32,2000,0,Windows,16 GB NVIDIA GeForce RTX RTX 3080 Ti,17.3,3840x2160
+LAP-000869,Dell,Ryzen 7 6800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000870,Dell,Ryzen 5 6600H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000871,Dell,Ryzen 7 6800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000872,Lenovo,11th Gen Core i7,16,512,0,Windows,Intel Integrated Graphics,14.0,1920x1080
+LAP-000873,MSI,11th Gen Core i7,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070,15.6,2560x1440
+LAP-000874,HP,12th Gen Core i7,16,512,0,Windows,Intel Iris X Graphics,13.5,3000x2000
+LAP-000875,MSI,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000876,MSI,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000877,Lenovo,11th Gen Core i9,32,1000,0,Windows,4 GB Nvidia RTX A2000,15.6,1920x1080
+LAP-000878,Asus,AMD Ryzen 9 6900HX,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070 Ti,17.3,2560x1440
+LAP-000879,Microsoft,11th Gen Core i5,8,256,0,Windows,Intel Iris Xe Graphics,12.4,1536x1024
+LAP-000880,Dell,12th Gen Core i3,8,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1200
+LAP-000881,Lenovo,11th Gen Core i3,4,256,0,Windows,Intel Integrated UHD,15.0,1920x1080
+LAP-000882,HP,AMD Ryzen 5 6600H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,16.1,1920x1080
+LAP-000883,HP,AMD Ryzen 7 6800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,16.1,1920x1080
+LAP-000884,HP,AMD Ryzen 7 5800H,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,16.1,1920x1080
+LAP-000885,Microsoft,11th Gen Core i5,8,128,0,Windows,Intel Iris Xe Graphics,12.4,1536x1024
+LAP-000886,Acer,11th Gen Core i3,8,256,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000887,Acer,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000888,Acer,11th Gen Core i3,8,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000889,Acer,11th Gen Core i3,8,256,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000890,Acer,11th Gen Core i5,8,256,1000,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000891,Acer,11th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000892,Lenovo,11th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000893,Lenovo,11th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000894,Acer,12th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000895,Dell,AMD Ryzen7 5825U,8,512,0,Windows,AMD Radeon Radeon Graphics,15.6,1920x1080
+LAP-000896,Asus,12th Gen Core i7,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050,17.3,1920x1080
+LAP-000897,Acer,AMD Ryzen 5 5600H,16,512,1000,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000898,Dell,12th Gen Core i5,8,512,0,Windows,2 GB NVIDIA GeForce MX550,14.0,1920x1200
+LAP-000899,Asus,12th Gen Core i7,16,512,0,Windows,Intel Iris XE Graphics,15.6,1920x1080
+LAP-000900,Lenovo,11th Gen Core i3,8,512,0,DOS,Intel UHD,14.0,1920x1080
+LAP-000901,Asus,AMD Ryzen 7 6800U,16,1000,0,Windows,AMD Radeon AMD,13.3,2880x1800
+LAP-000902,Asus,AMD Ryzen 5 6600U,16,512,0,Windows,AMD Radeon AMD,13.3,2880x1800
+LAP-000903,Asus,12th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050-Ti,15.6,1920x1080
+LAP-000904,Lenovo,10th Gen Core i7,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000905,Lenovo,AMD Ryzen 3 5300U,8,256,0,Windows,AMD Radeon,15.6,1920x1080
+LAP-000906,Asus,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000907,Asus,12th Gen Core i3,8,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-000908,Asus,12th Gen Core i9,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,13.4,3840x2400
+LAP-000909,Asus,12th Gen Core i9,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,13.4,1920x1200
+LAP-000910,Asus,12th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,13.4,1920x1200
+LAP-000911,Asus,12th Gen Core i5,16,512,0,Windows,Intel Iris X Graphics,13.4,1920x1200
+LAP-000912,Asus,12th Gen Core i7,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070,15.6,2560x1440
+LAP-000913,Asus,12th Gen Core i9,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050 Ti,13.4,3840x2400
+LAP-000914,Asus,12th Gen Core i7,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000915,Acer,11th Gen Core i5,8,512,0,Windows,Intel Integrated,15.6,1920x1080
+LAP-000916,MSI,11th Gen Core i7,16,1000,0,Windows,6 GB Nvidia GeForce RTX 3060,15.6,1920x1080
+LAP-000917,Infinix,10th Gen Core i5,8,512,0,Windows,Intel Integrated UHD Graphics,14.0,1920x1080
+LAP-000918,Acer,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000919,Lenovo,AMD Ryzen 5 5500U,8,512,0,Windows,AMD Radeon,15.6,1920x1080
+LAP-000920,Lenovo,11th Gen Core i3,4,256,0,DOS,Intel UHD,14.0,1920x1080
+LAP-000921,Lenovo,10th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000922,Asus,Ryzen 9 5900HX,16,1000,0,Windows,12 GB AMD Radeon RX 6800M,15.6,2560x1440
+LAP-000923,Asus,12th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000924,Infinix,10th Gen Core i3,8,256,0,Windows,Intel Integrated UHD Graphics,14.0,1920x1080
+LAP-000925,Infinix,10th Gen Core i7,16,512,0,Windows,Intel Integrated UHD,14.0,1920x1080
+LAP-000926,Asus,11th Gen Core i7,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,3840x2160
+LAP-000927,Dell,12th Gen Core i7,32,1000,0,Windows,4 GB NVIDIA Geforce RTX 3050 Ti,15.6,3840x2160
+LAP-000928,Dell,Athlon 3050U,8,256,0,Windows,AMD Radeon Graphics,15.6,1366x768
+LAP-000929,Lenovo,11th Gen Core i3,8,256,0,Windows,Intel UHD Graphics,15.6,1920x1080
+LAP-000930,HP,12th Gen Core i7,16,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070Ti,16.1,2560x1440
+LAP-000931,Asus,Ryzen 3 3250U,8,256,0,Windows,AMD Radeon AMD Radeon,15.6,1920x1080
+LAP-000932,Dell,Ryzen 3 3250U,8,256,0,Windows,AMD Radeon Graphics,15.6,1920x1080
+LAP-000933,Asus,Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000934,HP,12th Gen Core i7,16,1000,0,Windows,4 GB NVIDIA GeForce RTX 3050,16.1,1920x1080
+LAP-000935,Asus,Ryzen 7 6800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,17.3,1920x1080
+LAP-000936,Lenovo,11th Gen Core i3,8,512,0,DOS,Intel UHD Graphics,14.0,1920x1080
+LAP-000937,Asus,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD Graphics,15.6,1920x1080
+LAP-000938,Asus,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000939,Asus,12th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,17.3,1920x1080
+LAP-000940,Lenovo,AMD Ryzen 5 5500U,16,512,0,Windows,AMD Radeon,15.6,1920x1080
+LAP-000941,Asus,Ryzen 7 4800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,17.3,1920x1080
+LAP-000942,MSI,11th Gen Core i7,8,512,0,Windows,4 GB NVIDIA Geforce RTX 3050,15.6,1920x1080
+LAP-000943,MSI,12th Gen Core i5,16,1000,0,Windows,4 GB NVIDIA GeForce RTX RTX3050,15.6,1920x1080
+LAP-000944,MSI,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA Geforce RTX 3050,15.6,1920x1080
+LAP-000945,Apple,Apple M2,8,256,0,Mac,10 Core GPU,13.3,2560x1600
+LAP-000946,HP,12th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe Graphics,15.6,1920x1080
+LAP-000947,Lenovo,11th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050 Graphics,15.6,1920x1080
+LAP-000948,HP,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,16.1,1920x1080
+LAP-000949,Asus,Ryzen 7 4800H,8,1000,0,Windows,4 GB NVIDIA GeForce RTX3050,15.6,1080x1920
+LAP-000950,Lenovo,11th Gen Core i3,8,512,0,Windows,Intel Integrated Graphics,15.6,1920x1080
+LAP-000951,Asus,12th Gen Core i7,16,1000,0,Windows,4 GB ‎NVIDIA GeForce RTX 3050 Ti,15.6,1920x1080
+LAP-000952,HP,11th Gen Core i7,16,512,0,Windows,6 GB NVIDIA GeForce RTX RTX 3060,16.1,1920x1080
+LAP-000953,Dell,AMD Ryzen 5 5625U,8,512,0,Windows,AMD Radeon,14.0,1920x1200
+LAP-000954,Acer,11th Gen Core i9,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,2560x1440
+LAP-000955,Dell,AMD Ryzen 7 5825U,16,512,0,Windows,AMD Radeon,14.0,1920x1200
+LAP-000956,Asus,AMD Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,17.3,2560x1440
+LAP-000957,Samsung,12th Gen Core i5,8,256,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000958,HP,12th Gen Core i5,16,512,0,Windows,Intel Iris Xᵉ Graphics,14.0,1920x1080
+LAP-000959,HP,Ryzen 5 5600U,8,512,0,Windows,AMD Raedon Graphics,13.3,1920x1080
+LAP-000960,HP,10th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000961,Lenovo,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000962,HP,12th Gen Core i5,8,512,0,Windows,Intel Integrated Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000963,Asus,Ryzen 3 3250U,8,512,0,Windows,AMD Radeon AMD Radeon,15.6,1920x1080
+LAP-000964,Dell,11th Gen Core i5,8,512,0,Windows,Intel Integrated UHD Graphics,15.6,1920x1080
+LAP-000965,Samsung,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000966,Asus,Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000967,Asus,11th Gen Core i5,8,512,0,Windows,Intel Integrated Iris Xe,15.6,1920x1080
+LAP-000968,Dell,12th Gen Core i7,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-000969,Lenovo,10th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce GTX 1650,15.6,1920x1080
+LAP-000970,Lenovo,Ryzen 5 5500U,8,512,0,Windows,AMD Radeon,14.0,1920x1080
+LAP-000971,Dell,11th Gen Core i5,16,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000972,Dell,Ryzen 3-3250U,8,512,0,Windows,AMD Radeon,14.0,1920x1080
+LAP-000973,Dell,11th Gen Core i5,8,512,0,Windows,2 GB NVIDIA GeForce MX450,15.6,1920x1080
+LAP-000974,Lenovo,11th Gen Core i7,16,512,0,Windows,Intel Integrated,14.0,2304x1400
+LAP-000975,Dell,11th Gen Core i5,8,512,0,Windows,4 GB NVIDIA GeForce RTX 3050,15.6,1920x1080
+LAP-000976,Asus,12th Gen Core i7,16,512,0,Windows,Intel Iris XE Graphics,15.6,1920x1080
+LAP-000977,Lenovo,10th Gen Core i3,8,512,0,Windows,Intel Integrated,15.6,1920x1080
+LAP-000978,Acer,Celeron N4500,4,256,0,Windows,Intel UHD,14.0,1366x768
+LAP-000979,Lenovo,Celeron N4020,8,256,0,Windows,Intel Integrated UHD 600,15.6,1366x768
+LAP-000980,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Iris Xe Graphics,15.6,1920x1080
+LAP-000981,Lenovo,11th Gen Core i3,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000982,Dell,11th Gen Core i5,16,512,0,Windows,2 GB NVIDIA GeForce MX450,13.3,2560x1600
+LAP-000983,Asus,12th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,14.0,2880x1800
+LAP-000984,Asus,12th Gen Core i7,16,1000,0,Windows,Intel Iris Xe,14.0,2880x1800
+LAP-000985,Asus,12th Gen Core i5,16,512,0,Windows,Intel Iris Xe,14.0,2880x1800
+LAP-000986,Lenovo,11th Gen Core i5,8,512,0,Windows,Intel Integrated,15.6,1920x1080
+LAP-000987,Asus,12th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,2880x1800
+LAP-000988,Asus,12th Gen Core i9,32,1000,0,Windows,Intel Iris X Graphics,14.0,2880x1800
+LAP-000989,Lenovo,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,14.0,1920x1080
+LAP-000990,Acer,11th Gen Core i5,8,0,1000,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000991,Asus,Ryzen 7 4800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX3050,15.6,1080x1920
+LAP-000992,Acer,Intel Pentium N5030,4,256,0,Windows,Intel Integrated UHD 605,15.6,1366x768
+LAP-000993,Fujitsu,11th Gen Core i5,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000994,Lenovo,11th Gen Core i3,8,256,0,Windows,Missing,0.0,
+LAP-000995,Lenovo,11th Gen Core i7,16,1000,0,Windows,4 GB Nvidia Quadro T600,15.6,1920x1080
+LAP-000996,Asus,10th Gen Core i5,8,512,0,Windows,Intel Integrated UHD,15.6,1920x1080
+LAP-000997,Fujitsu,11th Gen Core i7,16,1000,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-000998,Lenovo,10th Gen Core i3,8,512,0,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-000999,Asus,11th Gen Core i5,16,512,0,Windows,Intel Integrated Iris Xe,14.0,1920x1080
+LAP-001000,HP,Ryzen 7 5800H,16,512,0,Windows,6 GB NVIDIA GeForce RTX 3060,16.1,1920x1080
+LAP-001001,Asus,Ryzen 7-5800H,16,512,0,Windows,4 GB NVIDIA GeForce RTX RTX 3050,14.0,2880x1800
+LAP-001002,HP,Ryzen 5 5625U,16,512,0,Windows,AMD Radeon AMD,14.0,1920x1080
+LAP-001003,Asus,Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-001004,Asus,10th Gen Core i5,8,0,1000,Windows,Intel UHD Graphics,14.0,1920x1080
+LAP-001005,Asus,Celeron N4020,4,256,0,Windows,Missing,14.0,1366x768
+LAP-001006,HP,Ryzen 7 5825U,16,512,0,Windows,AMD Radeon AMD,14.0,1920x1080
+LAP-001007,HP,11th Gen Core i5,8,512,0,Windows,2 GB NVIDIA GeForce MX450,15.6,1920x1080
+LAP-001008,Asus,Ryzen 7 6800H,16,1000,0,Windows,6 GB NVIDIA GeForce RTX 3060,15.6,1920x1080
+LAP-001009,Asus,Celeron N4500,4,128,0,Windows,Missing,11.6,1366x768
+LAP-001010,Fujitsu,11th Gen Core i7,16,512,0,Windows,Intel Iris Xe Graphics,13.3,1920x1080
+LAP-001011,Asus,Celeron N4500,4,128,0,Windows,Intel UHD Graphics,11.6,1366x768
+LAP-001012,Lenovo,Ryzen 7 5700U,16,1000,0,Windows,AMD Radeon AMD,13.3,1920x1080
+LAP-001013,Asus,Celeron N4500,4,128,0,Windows,Intel Integrated UHD Graphics,11.6,1366x768
+LAP-001014,Asus,12th Gen Core i9,32,1000,0,Windows,8 GB NVIDIA GeForce RTX 3070 Ti,17.3,2560x1440

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -14,27 +15,28 @@ import net.myapplication.myapp.object.product.entity.Product;
 
 @Repository
 public interface ProductRepository
-        extends JpaRepository<Product, Long> {
+                extends JpaRepository<Product, Long>,
+                JpaSpecificationExecutor<Product> {
 
-    List<Product> findByActiveTrue();
+        List<Product> findByActiveTrue();
 
-    Optional<Product> findByIdAndActiveTrue(Long id);
+        Optional<Product> findByIdAndActiveTrue(Long id);
 
-    List<Product> findByCategoryAndActiveTrue(
-            String category);
+        List<Product> findByCategoryAndActiveTrue(
+                        String category);
 
-    // Tránh race condition khi nhiều user cùng mua 1 sản phẩm, cần lock lại để
-    // tránh oversell
+        // Tránh race condition khi nhiều user cùng mua 1 sản phẩm, cần lock lại để
+        // tránh oversell
 
-    @Lock(LockModeType.PESSIMISTIC_WRITE)
-    @Query("""
-                SELECT p
-                FROM Product p
-                WHERE p.id = :id
-            """)
-    Optional<Product> findByIdForUpdate(
-            @Param("id") Long id);
+        @Lock(LockModeType.PESSIMISTIC_WRITE)
+        @Query("""
+                            SELECT p
+                            FROM Product p
+                            WHERE p.id = :id
+                        """)
+        Optional<Product> findByIdForUpdate(
+                        @Param("id") Long id);
 
-    // import use externalId
-    Optional<Product> findByExternalId(String externalId);
+        // import use externalId
+        Optional<Product> findByExternalId(String externalId);
 }

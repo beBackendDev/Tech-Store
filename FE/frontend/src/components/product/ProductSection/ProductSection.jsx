@@ -1,4 +1,7 @@
+import Pagination from "../Pagination/pagination";
 import ProductGrid from "../ProductGrid/ProductGrid";
+import { useState } from "react";
+
 import "./ProductSection.scss";
 
 function ProductSection({
@@ -6,19 +9,26 @@ function ProductSection({
     subtitle,
     products,
     onAddToCart,
-}) {
+}
+) {
 
     return (
         <section className="product-section">
 
             <div className="product-section__header">
 
-                <div>
-                    <h2>{title}</h2>
+                <div className="product-section__heading">
+
+                    <h2>
+                        {title}
+                    </h2>
 
                     {subtitle && (
-                        <p>{subtitle}</p>
+                        <p>
+                            {subtitle}
+                        </p>
                     )}
+
                 </div>
 
                 <button>
@@ -31,7 +41,6 @@ function ProductSection({
                 products={products}
                 onAddToCart={onAddToCart}
             />
-
         </section>
     );
 }

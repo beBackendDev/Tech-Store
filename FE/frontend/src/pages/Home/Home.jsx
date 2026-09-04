@@ -19,12 +19,16 @@ function Home() {
     const navigate = useNavigate();
     const [products, setProducts] =
         useState([]);
-
+    const [featuredProducts, setFeaturedProducts] =
+        useState([]);
+    const [newArrivals, setNewArrivals] =
+        useState([]);
     const [loading, setLoading] =
         useState(true);
 
     const [error, setError] =
         useState(null);
+
     const handleAddToCart = (product) => {
 
         console.log(
@@ -33,7 +37,6 @@ function Home() {
         );
 
     };
-
 
     const handleCategoryClick = (category) => {
 
@@ -47,6 +50,7 @@ function Home() {
         navigate("/categories");
     };
 
+
     useEffect(() => {
 
         const loadProducts = async () => {
@@ -58,8 +62,24 @@ function Home() {
                 const data =
                     await getProducts();
 
-                setProducts(data);
+                setProducts(data.content);
 
+                //featured products
+                const featuredData = await getProducts({
+                    page: 0,
+                    size: 8,
+                    sort: "rating,desc"
+                });
+                console.log("Featured products:", featuredData.content);
+                setFeaturedProducts(featuredData.content);
+                //new arrivals
+                const newArrivalsData = await getProducts({
+                    page: 0,
+                    size: 8,
+                    sort: "createdAt,desc"
+                });
+                console.log("New arrivals:", newArrivalsData.content);
+                setNewArrivals(newArrivalsData.content);
             } catch (error) {
 
                 console.error(
@@ -212,7 +232,7 @@ function Home() {
             <ProductSection
                 title="Featured Products"
                 subtitle="Our most popular products"
-                products={products}
+                products={featuredProducts}
                 onAddToCart={handleAddToCart}
             />
 
@@ -253,7 +273,7 @@ function Home() {
             <ProductSection
                 title="New Arrivals"
                 subtitle="Discover our latest products"
-                products={products}
+                products={newArrivals}
                 // products={mockProducts}
                 onAddToCart={handleAddToCart}
             />
@@ -272,7 +292,10 @@ function Home() {
                     of technology products.
                 </p>
 
-                <button>
+                <button
+                    type="button"
+                    onClick={() => navigate("/products")}
+                >
                     Explore products
                 </button>
 

@@ -1,0 +1,182 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.product-section {
+
+    width: 100%;
+    margin-bottom: 64px;
+
+
+    /* ===============================
+       HEADER
+    ================================= */
+
+    &__header {
+
+        @include flex-between;
+
+        gap: 24px;
+        margin-bottom: 28px;
+
+    }
+
+
+    /* ===============================
+       HEADING
+    ================================= */
+
+    &__heading {
+
+        min-width: 0;
+
+    }
+
+
+    h2 {
+
+        margin: 0;
+
+        font-size: $font-size-xxl;
+        font-weight: 700;
+
+        line-height: 1.2;
+
+        color: $gray-900;
+
+    }
+
+
+    p {
+
+        margin-top: 8px;
+
+        font-size: $font-size-sm;
+        line-height: 1.5;
+
+        color: $gray-600;
+
+    }
+
+
+    /* ===============================
+       VIEW ALL BUTTON
+    ================================= */
+
+    &__header button {
+
+        flex-shrink: 0;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 8px 0;
+
+        border: none;
+        background: transparent;
+
+        color: $primary;
+
+        font-size: $font-size-sm;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition: $transition;
+
+
+        &:hover {
+
+            color: $primary-hover;
+
+            transform: translateX(2px);
+
+        }
+
+
+        &:focus-visible {
+
+            outline: 2px solid $primary;
+            outline-offset: 4px;
+
+            border-radius: $radius-sm;
+
+        }
+
+    }
+
+
+    /* ===============================
+       TABLET
+    ================================= */
+
+    @include tablet {
+
+        margin-bottom: 48px;
+
+
+        &__header {
+
+            align-items: center;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        h2 {
+
+            font-size: $font-size-xl;
+
+        }
+
+
+        p {
+
+            font-size: $font-size-sm;
+
+        }
+
+    }
+
+
+    /* ===============================
+       MOBILE
+    ================================= */
+
+    @include mobile {
+
+        &__header {
+
+            align-items: flex-start;
+
+        }
+
+
+        h2 {
+
+            font-size: $font-size-lg;
+
+        }
+
+
+        p {
+
+            margin-top: 6px;
+
+            font-size: $font-size-xs;
+
+        }
+
+
+        &__header button {
+
+            padding-top: 4px;
+
+            font-size: $font-size-xs;
+
+        }
+
+    }
+
+}

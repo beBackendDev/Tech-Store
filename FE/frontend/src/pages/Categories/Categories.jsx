@@ -54,7 +54,7 @@ function Categories() {
                 const data =
                     await getProducts();
 
-                setProducts(data);
+                setProducts(data.content);
 
             } catch (error) {
 

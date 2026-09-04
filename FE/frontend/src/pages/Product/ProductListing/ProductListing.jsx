@@ -1,4 +1,4 @@
-import { useEffect , useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import ProductGrid
     from "../../../components/product/ProductGrid/ProductGrid";
@@ -18,10 +18,19 @@ import {
     getProducts
 } from "../../../services/productService";
 
+import Pagination from "../../../components/product/Pagination/pagination";
+
 function ProductListing() {
     const [products, setProducts] =
         useState([]);
-
+    const [pagination, setPagination] = useState({
+        page: 0,
+        size: 20,
+        totalElements: 0,
+        totalPages: 0,
+        first: true,
+        last: true,
+    });
     const [loading, setLoading] =
         useState(true);
 
@@ -134,11 +143,12 @@ function ProductListing() {
         return product;
 
     }, [
+        products,
         selectedCategory,
         sort
     ]);
 
-useEffect(() => {
+    useEffect(() => {
 
         const loadProducts = async () => {
 
@@ -147,9 +157,26 @@ useEffect(() => {
                 setLoading(true);
 
                 const data =
-                    await getProducts();
+                    await getProducts(
+                        {
+                            page: pagination.page,
+                            size: pagination.size,
+                            sort: sort === "default" ? "" : sort
+                        }
 
-                setProducts(data);
+                    );
+                console.log("data:", data);
+                console.log("data.content:", data.content);
+                console.log("is array:", Array.isArray(data.content));
+                setProducts(data.content);
+                setPagination({
+                    page: data.page,
+                    size: data.size,
+                    totalElements: data.totalElements,
+                    totalPages: data.totalPages,
+                    first: data.first,
+                    last: data.last,
+                });
 
             } catch (error) {
 
@@ -171,7 +198,7 @@ useEffect(() => {
 
         loadProducts();
 
-    }, []);
+    }, [pagination.page, pagination.size]);
     if (loading) {
 
         return (
@@ -190,6 +217,8 @@ useEffect(() => {
             </main>
         );
     }
+
+
     return (
 
         <main className="product-listing">
@@ -251,7 +280,18 @@ useEffect(() => {
                         products={filteredProducts}
                         onAddToCart={handleAddToCart}
                     />
-
+                    <Pagination
+                        page={pagination.page}
+                        totalPages={pagination.totalPages}
+                        first={pagination.first}
+                        last={pagination.last}
+                        onPageChange={(newPage) => {
+                            setPagination(prev => ({
+                                ...prev,
+                                page: newPage,
+                            }));
+                        }}
+                    />
                 </section>
 
             </div>

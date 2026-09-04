@@ -42,7 +42,7 @@ function ProductDetail() {
 
                 const data = await getProducts();
 
-                setProducts(data);
+                setProducts(data.content);
 
             } catch (error) {
 

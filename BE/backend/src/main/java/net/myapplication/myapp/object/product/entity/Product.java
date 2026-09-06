@@ -3,8 +3,6 @@ package net.myapplication.myapp.object.product.entity;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import com.opencsv.bean.CsvBindByName;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -16,6 +14,7 @@ import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
+import jakarta.persistence.Version;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -54,8 +53,15 @@ public class Product {
     @Column(precision = 15, scale = 2)
     private BigDecimal oldPrice;// price
 
+    @Version
+    private Long version;
+
     @Column(nullable = false)
     private Integer stock; // stock
+
+    @Builder.Default
+    @Column(nullable = false)
+    private Integer reservedStock = 0;
 
     @Column(nullable = true, length = 500)
     private String image;
@@ -98,4 +104,15 @@ public class Product {
             // nullable = false,/* */
             nullable = false, unique = true, length = 50)
     private String externalId;
+
+    public int getAvailableStock() {
+
+        return stock - reservedStock;
+    }
+
+   public boolean hasAvailableStock(
+        int quantity) {
+
+    return getAvailableStock() >= quantity;
+}
 }

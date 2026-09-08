@@ -9,7 +9,7 @@ public enum InventoryTransactionType {
 
     RELEASED, // duoc giai phong de thanh toan
     
-    RETURN,
+    RETURNED,
 
     ADJUSTMENT //admin quan ly de dieu chinh so luong ton kho 
 

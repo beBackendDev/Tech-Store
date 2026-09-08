@@ -135,4 +135,18 @@ public class Order {
 
         item.setOrder(null);
     }
+    public void cancel() {
+
+    if (status == OrderStatus.PROCESSING ||
+            status == OrderStatus.DELIVERED ||
+            status == OrderStatus.COMPLETED ||
+            status == OrderStatus.RETURNED) {
+
+        throw new IllegalStateException(
+                "Order cannot be cancelled"
+        );
+    }
+
+    status = OrderStatus.CANCELLED;
+}
 }

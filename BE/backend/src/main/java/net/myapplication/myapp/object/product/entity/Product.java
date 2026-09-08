@@ -53,8 +53,8 @@ public class Product {
     @Column(precision = 15, scale = 2)
     private BigDecimal oldPrice;// price
 
-    @Version
-    private Long version;
+    // @Version
+    // private Long version;
 
     @Column(nullable = false)
     private Integer stock; // stock
@@ -105,14 +105,103 @@ public class Product {
             nullable = false, unique = true, length = 50)
     private String externalId;
 
+    // INVENTORY METHODS
     public int getAvailableStock() {
 
         return stock - reservedStock;
     }
 
-   public boolean hasAvailableStock(
-        int quantity) {
+    public boolean hasAvailableStock(
+            int quantity) {
 
-    return getAvailableStock() >= quantity;
-}
+        return getAvailableStock() >= quantity;
+    }
+
+    public void reserveStock(
+            Integer quantity) {
+
+        validateQuantity(quantity);
+
+        if (getAvailableStock() < quantity) {
+
+            throw new IllegalStateException(
+                    "Insufficient available stock");
+        }
+
+        reservedStock += quantity;
+    }
+
+    public void releaseReservedStock(
+            Integer quantity) {
+
+        validateQuantity(quantity);
+
+        if (reservedStock < quantity) {
+
+            throw new IllegalStateException(
+                    "Cannot release more than reserved stock");
+        }
+
+        reservedStock -= quantity;
+    }
+
+    public void commitReservedStock(
+            Integer quantity) {
+
+        validateQuantity(quantity);
+
+        if (reservedStock < quantity) {
+
+            throw new IllegalStateException(
+                    "Insufficient reserved stock");
+        }
+
+        stock -= quantity;
+
+        reservedStock -= quantity;
+    }
+
+    public void increaseStock(
+            Integer quantity) {
+
+        validateQuantity(quantity);
+
+        stock += quantity;
+    }
+
+    public void adjustStock(
+            Integer quantity) {
+
+        if (quantity == null || quantity == 0) {
+
+            throw new IllegalArgumentException(
+                    "Adjustment quantity cannot be zero");
+        }
+
+        int newStock = stock + quantity;
+
+        if (newStock < 0) {
+
+            throw new IllegalStateException(
+                    "Stock cannot be negative");
+        }
+
+        if (newStock < reservedStock) {
+
+            throw new IllegalStateException(
+                    "Stock cannot be lower than reserved stock");
+        }
+
+        stock = newStock;
+    }
+
+    private void validateQuantity(
+            Integer quantity) {
+
+        if (quantity == null || quantity <= 0) {
+
+            throw new IllegalArgumentException(
+                    "Quantity must be greater than zero");
+        }
+    }
 }

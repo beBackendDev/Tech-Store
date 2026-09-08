@@ -9,13 +9,16 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import net.myapplication.myapp.object.inventory.enums.InventoryTransactionType;
+import net.myapplication.myapp.object.order.entity.Order;
 import net.myapplication.myapp.object.product.entity.Product;
 
 @Entity
 @Table(name = "inventory_movements", indexes = {
                 @Index(name = "idx_inventory_movement_product", columnList = "product_id"),
 
-                @Index(name = "idx_inventory_movement_created_at", columnList = "created_at")
+                @Index(name = "idx_inventory_movement_created_at", columnList = "created_at"),
+
+                @Index(name = "idx_inventory_transaction_order", columnList = "order_id")
 })
 @Getter
 @Setter
@@ -33,8 +36,13 @@ public class InventoryTransaction {
         @ManyToOne(fetch = FetchType.LAZY, optional = false)
         @JoinColumn(name = "product_id", nullable = false)
         private Product product;
+        // ORDER
 
-        // MOVEMENT TYPE
+        @ManyToOne(fetch = FetchType.LAZY)
+        @JoinColumn(name = "order_id")
+        private Order order;
+
+        // TRANSACTION TYPE
 
         @Enumerated(EnumType.STRING)
         @Column(nullable = false, length = 30)
@@ -52,7 +60,13 @@ public class InventoryTransaction {
 
         @Column(nullable = false, name = "stock_after")
         private Integer stockAfter;
+        // RESERVED STOCK SNAPSHOT
 
+        @Column(nullable = false, name = "reserved_before")
+        private Integer reservedBefore;
+
+        @Column(nullable = false, name = "reserved_after")
+        private Integer reservedAfter;
         // // REFERENCE
 
         // @Column(length = 100)

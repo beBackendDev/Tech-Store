@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 import net.myapplication.myapp.enumpack.PaymentMethod;
@@ -36,12 +37,13 @@ public class CreateOrderRequest {
     @NotBlank
     private String district;
 
-    private String note;
-
     @NotNull
     private PaymentMethod paymentMethod;
 
     @NotEmpty
     @Valid
     private List<OrderItemRequest> items;
+
+    @Size(max = 1000)
+    private String note;
 }

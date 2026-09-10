@@ -2,34 +2,44 @@ package net.myapplication.myapp.object.order.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Pageable;
+
 import net.myapplication.myapp.enumpack.OrderStatus;
 import net.myapplication.myapp.object.order.dto.CreateOrderRequest;
 import net.myapplication.myapp.object.order.dto.OrderResponseDto;
+import net.myapplication.myapp.object.product.dto.PageResponse;
 
 public interface OrderService {
         OrderResponseDto createOrder(
                         CreateOrderRequest request,
                         Long userId);
 
-        List<OrderResponseDto> getMyOrders(Long userId);
+        PageResponse<OrderResponseDto> getMyOrders(Long userId, Pageable pageable);
 
-        public void markPaymentSuccess(
+        void markPaymentSuccess(
                         Long orderId);
 
-        public void markPaymentFailed(
+        void markPaymentFailed(
                         Long orderId,
                         String reason);
 
-        public void completeCodOrder(
+        void completeCodOrder(
                         Long orderId);
 
-        public OrderResponseDto updateOrderStatus(
+        OrderResponseDto updateOrderStatus(
                         Long orderId,
                         OrderStatus newStatus);
 
         OrderResponseDto getOrderById(
                         Long orderId,
                         Long userId);
+
+        OrderResponseDto requestReturn(
+                        Long orderId,
+                        Long userId);
+
+        OrderResponseDto confirmReturn(
+                        Long orderId);
 
         OrderResponseDto cancelOrder(
                         Long orderId,

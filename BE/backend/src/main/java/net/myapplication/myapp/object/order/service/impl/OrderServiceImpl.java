@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +24,7 @@ import net.myapplication.myapp.object.order.mapper.OrderMapper;
 import net.myapplication.myapp.object.order.repository.OrderItemRepository;
 import net.myapplication.myapp.object.order.repository.OrderRepository;
 import net.myapplication.myapp.object.order.service.OrderService;
+import net.myapplication.myapp.object.product.dto.PageResponse;
 import net.myapplication.myapp.object.product.entity.Product;
 import net.myapplication.myapp.object.product.repository.ProductRepository;
 import net.myapplication.myapp.user.entity.User;
@@ -252,13 +255,44 @@ public class OrderServiceImpl implements OrderService {
 
         @Override
         @Transactional(readOnly = true)
-        public List<OrderResponseDto> getMyOrders(Long userId) {
+        public PageResponse<OrderResponseDto> getMyOrders(
+                        Long userId,
+                        Pageable pageable) {
 
-                List<Order> orders = orderRepository.findOrdersByUserId(userId);
+                Page<Order> page = orderRepository
+                                .findByUserId(
+                                                 userId,
+                                                pageable);
 
-                return orders.stream()
-                                .map(orderMapper::toResponseDto)
-                                .toList();
+                return PageResponse
+                                .<OrderResponseDto>builder()
+
+                                .content(
+                                                page.getContent()
+                                                                .stream()
+                                                                .map(
+                                                                                orderMapper::toResponseDto)
+                                                                .toList())
+
+                                .page(
+                                                page.getNumber())
+
+                                .size(
+                                                page.getSize())
+
+                                .totalElements(
+                                                page.getTotalElements())
+
+                                .totalPages(
+                                                page.getTotalPages())
+
+                                .first(
+                                                page.isFirst())
+
+                                .last(
+                                                page.isLast())
+
+                                .build();
         }
 
         @Override
@@ -618,5 +652,89 @@ public class OrderServiceImpl implements OrderService {
                                 throw new IllegalStateException(
                                                 "Order cannot change status");
                 }
+        }
+
+        @Override
+        @Transactional
+        public OrderResponseDto requestReturn(
+                        Long orderId,
+                        Long userId) {
+
+                Order order = orderRepository
+                                .findByIdAndUserId(
+                                                orderId,
+                                                userId)
+                                .orElseThrow(() -> new RuntimeException(
+                                                "Order not found"));
+
+                if (order.getStatus() != OrderStatus.DELIVERED
+
+                                &&
+
+                                order.getStatus() != OrderStatus.COMPLETED) {
+
+                        throw new IllegalStateException(
+                                        "Order cannot be returned");
+                }
+
+                order.setStatus(
+                                OrderStatus.RETURN_REQUESTED);
+
+                return orderMapper.toResponseDto(
+                                order);
+        }
+
+        @Override
+        @Transactional
+        public OrderResponseDto confirmReturn(
+                        Long orderId) {
+
+                Order order = orderRepository
+                                .findById(orderId)
+                                .orElseThrow(() -> new RuntimeException(
+                                                "Order not found"));
+
+                if (order.getStatus() != OrderStatus.RETURN_REQUESTED) {
+
+                        throw new IllegalStateException(
+                                        "Return was not requested");
+                }
+
+                // =========================================================
+                // RESTOCK
+                // =========================================================
+
+                for (OrderItem item : order.getItems()) {
+
+                        inventoryService.returnStock(
+
+                                        item.getProduct().getId(),
+
+                                        item.getQuantity(),
+
+                                        order,
+
+                                        "Product returned by customer");
+                }
+
+                // =========================================================
+                // UPDATE ORDER
+                // =========================================================
+
+                order.setStatus(
+                                OrderStatus.RETURNED);
+
+                // =========================================================
+                // PAYMENT REFUND
+                // =========================================================
+
+                if (order.getPaymentStatus() == PaymentStatus.PAID) {
+
+                        order.setPaymentStatus(
+                                        PaymentStatus.REFUNDED);
+                }
+
+                return orderMapper.toResponseDto(
+                                order);
         }
 }

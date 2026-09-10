@@ -1,8 +1,11 @@
 package net.myapplication.myapp.user.controller;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,71 +21,79 @@ import net.myapplication.myapp.object.order.dto.request.UpdateOrderStatusRequest
 import net.myapplication.myapp.object.order.service.OrderService;
 import net.myapplication.myapp.object.product.dto.PageResponse;
 import net.myapplication.myapp.object.product.service.ProductImportService;
+import net.myapplication.myapp.user.dto.request.AdminOrderFilterRequest;
+import net.myapplication.myapp.user.service.AdminOrderService;
 
 @RestController
-@RequestMapping("/api/dashboard/admin")
+@RequestMapping("/api/public")
 @RequiredArgsConstructor
 public class AdminController {
-    private final ProductImportService productImportService;
+        private final ProductImportService productImportService;
 
-    private final OrderService orderService;
+        private final OrderService orderService;
+        private final AdminOrderService adminOrderService;
 
-    @PostMapping("/import/products")
-    public ResponseEntity<String> importProducts() {
+        @PostMapping("/import/products")
+        public ResponseEntity<String> importProducts() {
 
-        productImportService.importAll();
+                productImportService.importAll();
 
-        return ResponseEntity.ok(
-                "Product import completed successfully.");
-    }
+                return ResponseEntity.ok(
+                                "Product import completed successfully.");
+        }
 
-    // @GetMapping("/orders")
-    // public ResponseEntity<ApiResponseDTO<PageResponse<OrderResponseDto>>> getOrders(
-    //         Pageable pageable) {
+        @GetMapping("/orders")
+        public ResponseEntity<ApiResponseDTO<PageResponse<OrderResponseDto>>> getOrders(
 
-    //     PageResponse<OrderResponseDto> response = orderService.getOrders(
-    //             pageable);
+                        @ModelAttribute AdminOrderFilterRequest filter,
 
-    //     return ResponseEntity.ok(
+                        @PageableDefault(size = 20, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable) {
 
-    //             ApiResponseDTO
-    //                     .<PageResponse<OrderResponseDto>>builder()
+                PageResponse<OrderResponseDto> orders = adminOrderService.getOrders(
+                                filter,
+                                pageable);
 
-    //                     .status("SUCCESS")
+                return ResponseEntity.ok(
 
-    //                     .message(
-    //                             "Orders retrieved successfully")
+                                ApiResponseDTO
+                                                .<PageResponse<OrderResponseDto>>builder()
 
-    //                     .response(response)
+                                                .status("SUCCESS")
 
-    //                     .build());
-    // }
+                                                .message(
+                                                                "Orders retrieved successfully")
 
-    @PatchMapping("/orders/{id}/status")
-    public ResponseEntity<ApiResponseDTO<OrderResponseDto>> updateOrderStatus(
+                                                .response(
+                                                                orders)
 
-            @PathVariable Long id,
+                                                .build());
+        }
 
-            @Valid @RequestBody UpdateOrderStatusRequest request) {
+        @PatchMapping("/orders/{id}/status")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> updateOrderStatus(
 
-        OrderResponseDto response = orderService.updateOrderStatus(
+                        @PathVariable Long id,
 
-                id,
+                        @Valid @RequestBody UpdateOrderStatusRequest request) {
 
-                request.getStatus());
+                OrderResponseDto response = orderService.updateOrderStatus(
 
-        return ResponseEntity.ok(
+                                id,
 
-                ApiResponseDTO
-                        .<OrderResponseDto>builder()
+                                request.getStatus());
 
-                        .status("SUCCESS")
+                return ResponseEntity.ok(
 
-                        .message(
-                                "Order status updated successfully")
+                                ApiResponseDTO
+                                                .<OrderResponseDto>builder()
 
-                        .response(response)
+                                                .status("SUCCESS")
 
-                        .build());
-    }
+                                                .message(
+                                                                "Order status updated successfully")
+
+                                                .response(response)
+
+                                                .build());
+        }
 }

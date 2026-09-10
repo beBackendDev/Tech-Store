@@ -3,6 +3,9 @@ package net.myapplication.myapp.object.order.controller;
 import java.security.Principal;
 import java.util.List;
 
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -22,6 +25,7 @@ import net.myapplication.myapp.object.order.dto.CreateOrderRequest;
 import net.myapplication.myapp.object.order.dto.OrderResponseDto;
 import net.myapplication.myapp.object.order.dto.request.CancelOrderRequest;
 import net.myapplication.myapp.object.order.service.OrderService;
+import net.myapplication.myapp.object.product.dto.PageResponse;
 import net.myapplication.myapp.security.oauth2.service.CurrentUserService;
 import net.myapplication.myapp.user.service.impl.UserDetailsImpl;
 
@@ -33,13 +37,25 @@ public class OrderController {
         private final CurrentUserService currentUserService;
 
         // get orders
-        @GetMapping
-        public List<OrderResponseDto> getMyOrders(
-                        @AuthenticationPrincipal UserDetailsImpl user) {
+@GetMapping
+public ResponseEntity<PageResponse<OrderResponseDto>> getMyOrders(
+        @AuthenticationPrincipal UserDetailsImpl user,
 
-                return orderService.getMyOrders(
-                                user.getId());
-        }
+        @PageableDefault(
+                size = 10,
+                sort = "createdAt",
+                direction = Sort.Direction.DESC
+        )
+        Pageable pageable) {
+
+    PageResponse<OrderResponseDto> response =
+            orderService.getMyOrders(
+                    user.getId(),
+                    pageable
+            );
+
+    return ResponseEntity.ok(response);
+}
 
         // get orders by id
         @GetMapping("/{id}")

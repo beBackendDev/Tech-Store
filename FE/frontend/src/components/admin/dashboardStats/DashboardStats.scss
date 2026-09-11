@@ -1,0 +1,168 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+
+.dashboard-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+
+    /* ================= CARD ================= */
+
+    &__card {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 20px;
+
+        padding: 24px;
+
+        background: $white;
+
+        border: 1px solid $gray-200;
+
+        border-radius: $radius-lg;
+
+        box-shadow: $shadow-sm;
+
+        transition: $transition;
+
+
+        &:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow: $shadow-md;
+
+        }
+
+    }
+
+
+    /* ================= CONTENT ================= */
+
+    &__content {
+
+        min-width: 0;
+
+    }
+
+
+    &__title {
+
+        display: block;
+
+        margin-bottom: 8px;
+
+        font-size: $font-size-sm;
+
+        color: $gray-500;
+
+    }
+
+
+    &__value {
+
+        margin-bottom: 6px;
+
+        font-size: $font-size-xl;
+
+        color: $gray-900;
+
+    }
+
+
+    &__subtitle {
+
+        font-size: $font-size-xs;
+
+        color: $gray-500;
+
+    }
+
+
+    /* ================= ICON ================= */
+
+    &__icon {
+
+        flex-shrink: 0;
+
+        width: 52px;
+
+        height: 52px;
+
+        border-radius: $radius-md;
+
+        @include flex-center;
+
+
+        &--revenue {
+
+            color: $success;
+
+            background:
+                rgba($success, .12);
+
+        }
+
+
+        &--orders {
+
+            color: $primary;
+
+            background:
+                rgba($primary, .12);
+
+        }
+
+
+        &--products {
+
+            color: $warning;
+
+            background:
+                rgba($warning, .12);
+
+        }
+
+
+        &--warning {
+
+            color: $danger;
+
+            background:
+                rgba($danger, .12);
+
+        }
+
+    }
+
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: $desktop) {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    @include mobile {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}

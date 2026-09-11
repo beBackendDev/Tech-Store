@@ -3,11 +3,13 @@ package net.myapplication.myapp.user.service;
 import java.security.Key;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.ExpiredJwtException;
@@ -41,7 +43,7 @@ public class JWTUtils {
     @Value("${myapp.jwtRefreshTokenExpiration}")
     private int jwtRefreshTokenExpiration;
 
-    //generate JWT token
+    // generate JWT token
     public String generateJwtToken(Authentication authentication) {
         UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
         return Jwts.builder()
@@ -53,15 +55,32 @@ public class JWTUtils {
     }
 
     //
-        public String generateJwtToken(UserDetailsImpl userPrincipal) {
+    public String generateJwtToken(UserDetailsImpl userPrincipal) {
+        List<String> roles = userPrincipal.getAuthorities()
+                .stream()
+                .map(GrantedAuthority::getAuthority)
+                .toList();
         return Jwts.builder()
                 .setSubject((userPrincipal.getEmail()))
+                // claim
+                .claim(
+                        "userId",
+                        userPrincipal.getId())
+
+                .claim(
+                        "username",
+                        userPrincipal.getUsername())
+
+                .claim(
+                        "roles",
+                        roles)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date((new Date()).getTime() + jwtAccessTokenExpiration))
                 .signWith(key(), SignatureAlgorithm.HS256)
                 .compact();
     }
-    //generate JWT refresh token
+
+    // generate JWT refresh token
     public String generateRefreshToken(UserDetailsImpl userPrincipal) {
         return Jwts.builder()
                 .setSubject((userPrincipal.getEmail()))
@@ -69,17 +88,18 @@ public class JWTUtils {
                 .setExpiration(new Date((new Date()).getTime() + jwtRefreshTokenExpiration))
                 .signWith(key(), SignatureAlgorithm.HS256)
                 .compact();
-   
+
     }
 
     // private Key key() {
-    //     return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
+    // return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
     // }
     private Key key() {
         return Keys.hmacShaKeyFor(jwtSecret.getBytes());
     }
 
-    //trich xuat thong tin username(email) khi nguoi dung su dung jwt de request tai nguyen he thong
+    // trich xuat thong tin username(email) khi nguoi dung su dung jwt de request
+    // tai nguyen he thong
     public String getUserNameFromJwtToken(String token) {
         return Jwts.parserBuilder().setSigningKey(key()).build()
                 .parseClaimsJws(token).getBody().getSubject();
@@ -102,6 +122,6 @@ public class JWTUtils {
         return false;
     }
 
-    //Refresh Token Service
-    
+    // Refresh Token Service
+
 }

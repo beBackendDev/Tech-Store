@@ -1,0 +1,109 @@
+@use "../../styles/variables" as *;
+
+
+.admin-dashboard {
+
+    max-width: 1600px;
+
+    margin: 0 auto;
+
+
+    /* ================= HEADER ================= */
+
+    &__header {
+
+        margin-bottom: 32px;
+
+    }
+
+
+    &__eyebrow {
+
+        display: inline-block;
+
+        margin-bottom: 8px;
+
+        font-size: $font-size-xs;
+
+        font-weight: 700;
+
+        color: $primary;
+
+        letter-spacing: 1.2px;
+
+    }
+
+
+    &__header h1 {
+
+        margin-bottom: 8px;
+
+        color: $gray-900;
+
+    }
+
+
+    &__header p {
+
+        max-width: 600px;
+
+        font-size: $font-size-md;
+
+        color: $gray-500;
+
+    }
+
+
+    /* ================= CONTENT ================= */
+
+    &__content {
+
+        margin-top: 32px;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 2fr)
+            minmax(300px, 1fr);
+
+        gap: 24px;
+
+        align-items: start;
+
+    }
+
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: $laptop) {
+
+        &__content {
+
+            grid-template-columns:
+                1fr;
+
+        }
+
+    }
+
+
+    @media (max-width: $tablet) {
+
+        &__header {
+
+            margin-bottom: 24px;
+
+        }
+
+
+        &__content {
+
+            margin-top: 24px;
+
+            gap: 20px;
+
+        }
+
+    }
+
+}

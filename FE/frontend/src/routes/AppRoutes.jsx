@@ -6,40 +6,94 @@ import {
 
     Route
 
-}
-
-    from "react-router-dom";
+} from "react-router-dom";
 
 
-import Register from "../pages/Auth/Register";
+/* ===============================
+   AUTH
+================================ */
 
-import Home from "../pages/Home/Home";
+import Login
+    from "../pages/Auth/Login";
 
-import Profile from "../pages/Profile/Profile";
+import Register
+    from "../pages/Auth/Register";
 
-import AdminDashboard from "../pages/AdminDashboard/AdminDashboard";
 
-import ProtectedRoute from "./ProtectedRoute";
+/* ===============================
+   USER PAGES
+================================ */
 
-import Login from "../pages/Auth/Login";
+import Home
+    from "../pages/Home/Home";
 
-import MainLayout from "../layouts/MainLayout/MainLayout";
+import Profile
+    from "../pages/Profile/Profile";
 
-import ProductDetail from "../pages/ProductDetail/ProductDetail";
+import ProductDetail
+    from "../pages/ProductDetail/ProductDetail";
 
-import Categories from "../pages/Categories/Categories";
+import Categories
+    from "../pages/Categories/Categories";
 
-import ProductListing from "../pages/Product/ProductListing/ProductListing";
+import ProductListing
+    from "../pages/Product/ProductListing/ProductListing";
 
-import Cart from "../pages/Cart/Cart";
+import Cart
+    from "../pages/Cart/Cart";
 
-import Checkout from "../pages/Checkout/Checkout";
+import Checkout
+    from "../pages/Checkout/Checkout";
 
-import NotFound from "../pages/Error/NotFound/NotFound";
-import OrderFailed from "../pages/Checkout/OrderFailed/OrderFailed";
-import OrderSuccess from "../pages/Checkout/OrderSuccess/OrderSuccess";
-import OrderHistory from "../pages/orders/OrderHistory/OrderHistory";
-import OrderDetail from "../pages/orders/OrderDetail/OrderDetail";
+import OrderSuccess
+    from "../pages/Checkout/OrderSuccess/OrderSuccess";
+
+import OrderFailed
+    from "../pages/Checkout/OrderFailed/OrderFailed";
+
+import OrderHistory
+    from "../pages/orders/OrderHistory/OrderHistory";
+
+import OrderDetail
+    from "../pages/orders/OrderDetail/OrderDetail";
+
+
+/* ===============================
+   ADMIN
+================================ */
+
+import AdminDashboard
+    from "../pages/adminDashboard/AdminDashboard";
+
+
+/* ===============================
+   ERROR
+================================ */
+
+import NotFound
+    from "../pages/Error/NotFound/NotFound";
+
+
+/* ===============================
+   LAYOUT
+================================ */
+
+import MainLayout
+    from "../layouts/MainLayout/MainLayout";
+
+import AdminLayout
+    from "../layouts/AdminLayout/AdminLayout";
+/* ===============================
+   ROUTES
+================================ */
+
+import ProtectedRoute
+    from "./ProtectedRoute";
+
+import RoleRoute
+    from "./RoleRoute";
+
+
 function AppRoutes() {
 
     return (
@@ -47,105 +101,164 @@ function AppRoutes() {
         <BrowserRouter>
 
             <Routes>
+
+
+                {/* ===============================
+                    PUBLIC AUTH ROUTES
+                ================================ */}
+
                 <Route
-
-                    path="/home"
-
-                    element={<Home />}
-
-                />
-                <Route element={<ProtectedRoute />}>
-
-                    <Route
-
-                        path="/profile"
-
-                        element={<Profile />}
-
-                    />
-
-                    <Route
-
-                        path="/admin"
-
-                        element={<AdminDashboard />}
-
-                    />
-
-                </Route>
-                <Route
-
                     path="/login"
-
                     element={<Login />}
-
                 />
 
                 <Route
-
                     path="/register"
-
                     element={<Register />}
-
                 />
-                <Route element={<MainLayout />}>
 
-                    <Route path="/" element={<Home />} />
 
-                    {/* <Route path="/products" element={<Products />} /> */}
+                {/* ===============================
+                    MAIN USER LAYOUT
+                ================================ */}
 
-                    {/* <Route path="/categories" element={<Categories />} /> */}
+                <Route
+                    element={<MainLayout />}
+                >
+
+                    {/* HOME */}
+
+                    <Route
+                        path="/"
+                        element={<Home />}
+                    />
+
+
+                    {/* PRODUCTS */}
+
+                    <Route
+                        path="/products"
+                        element={<ProductListing />}
+                    />
+
+                    <Route
+                        path="/products/:id"
+                        element={<ProductDetail />}
+                    />
+
+
+                    {/* CATEGORIES */}
+
+                    <Route
+                        path="/categories"
+                        element={<Categories />}
+                    />
+
+
+                    {/* ===============================
+                        PROTECTED USER ROUTES
+                    ================================ */}
+
+                    <Route
+                        element={<ProtectedRoute />}
+                    >
+
+                        {/* PROFILE */}
+
+                        <Route
+                            path="/profile"
+                            element={<Profile />}
+                        />
+
+
+                        {/* CART */}
+
+                        <Route
+                            path="/cart"
+                            element={<Cart />}
+                        />
+
+
+                        {/* CHECKOUT */}
+
+                        <Route
+                            path="/checkout"
+                            element={<Checkout />}
+                        />
+
+
+                        {/* ORDER RESULT */}
+
+                        <Route
+                            path="/order-success"
+                            element={<OrderSuccess />}
+                        />
+
+                        <Route
+                            path="/order-failed"
+                            element={<OrderFailed />}
+                        />
+
+
+                        {/* ORDERS */}
+
+                        <Route
+                            path="/orders"
+                            element={<OrderHistory />}
+                        />
+
+                        <Route
+                            path="/orders/:id"
+                            element={<OrderDetail />}
+                        />
+
+                    </Route>
 
                 </Route>
-                {/*  Route detail product */}
-                <Route
-                    path="/products/:id"
-                    element={<ProductDetail />}
-                />
-                <Route
-                    path="/categories"
-                    element={<Categories />}
-                />
-                {/* Product listing route */}
-                <Route
-                    path="/products"
-                    element={<ProductListing />}
-                />
-                {/* Cart Route */}
-                <Route
-                    path="/cart"
-                    element={<Cart />}
-                />
-                {/* Checkout Route */}
-                <Route
-                    path="/checkout"
-                    element={<Checkout />}
 
 
-                />
-                {/* response checkout-order */}
-                <Route
-                    path="/order-success"
-                    element={<OrderSuccess />}
-                />
+                {/* ===============================
+                    ADMIN ROUTES
+                ================================ */}
 
                 <Route
-                    path="/order-failed"
-                    element={<OrderFailed />}
-                />
+                    element={<ProtectedRoute />}
+                >
+
+                    <Route
+                        element={
+                            <RoleRoute
+                                allowedRoles={["ADMIN"]}
+                            />
+                        }
+                    >
+
+                        <Route
+                            path="/admin"
+                            element={<AdminLayout />}
+                        >
+
+                            {/* DASHBOARD */}
+
+                            <Route
+                                index
+                                element={<AdminDashboard />}
+                            />
+
+                        </Route>
+
+                    </Route>
+
+                </Route>
+
+
+                {/* ===============================
+                    NOT FOUND
+                ================================ */}
+
                 <Route
                     path="*"
                     element={<NotFound />}
-                />
-
-                <Route
-                    path="/orders"
-                    element={<OrderHistory />}
-                />
-
-                <Route
-                    path="/orders/:id"
-                    element={<OrderDetail />}
                 />
 
 
@@ -153,8 +266,8 @@ function AppRoutes() {
 
         </BrowserRouter>
 
-    )
-
+    );
 }
+
 
 export default AppRoutes;

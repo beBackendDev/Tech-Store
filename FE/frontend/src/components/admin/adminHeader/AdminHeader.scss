@@ -1,0 +1,223 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+
+.admin-header {
+
+    height: 72px;
+
+    padding: 0 32px;
+
+    @include flex-between;
+
+    background: $white;
+
+    border-bottom:
+        1px solid $gray-200;
+
+
+    /* ================= SEARCH ================= */
+
+    &__search {
+
+        width: 360px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 10px 14px;
+
+        border-radius: $radius-md;
+
+        background: $gray-100;
+
+        color: $gray-500;
+
+
+        input {
+
+            width: 100%;
+
+            border: none;
+
+            outline: none;
+
+            background: transparent;
+
+            color: $gray-900;
+
+            font-size: $font-size-sm;
+
+
+            &::placeholder {
+
+                color: $gray-400;
+
+            }
+
+        }
+
+    }
+
+
+    /* ================= ACTIONS ================= */
+
+    &__actions {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 24px;
+
+    }
+
+
+    /* ================= NOTIFICATION ================= */
+
+    &__notification {
+
+        position: relative;
+
+        border: none;
+
+        background: transparent;
+
+        color: $gray-600;
+
+        cursor: pointer;
+
+        padding: 6px;
+
+        transition: $transition;
+
+
+        &:hover {
+
+            color: $primary;
+
+        }
+
+    }
+
+
+    &__notification-dot {
+
+        position: absolute;
+
+        top: 4px;
+
+        right: 4px;
+
+        width: 8px;
+
+        height: 8px;
+
+        border-radius: 50%;
+
+        background: $danger;
+
+        border: 2px solid $white;
+
+    }
+
+
+    /* ================= PROFILE ================= */
+
+    &__profile {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+    }
+
+
+    &__avatar {
+
+        width: 40px;
+
+        height: 40px;
+
+        border-radius: 50%;
+
+        background: $primary;
+
+        color: $white;
+
+        @include flex-center;
+
+    }
+
+
+    &__user {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 2px;
+
+
+        strong {
+
+            font-size: $font-size-sm;
+
+            color: $gray-900;
+
+        }
+
+
+        span {
+
+            font-size: $font-size-xs;
+
+            color: $gray-500;
+
+        }
+
+    }
+
+
+    /* ================= RESPONSIVE ================= */
+
+    @include tablet {
+
+        padding: 0 20px;
+
+
+        &__search {
+
+            width: 260px;
+
+        }
+
+    }
+
+
+    @include mobile {
+
+        padding: 0 16px;
+
+
+        &__search {
+
+            display: none;
+
+        }
+
+
+        &__user {
+
+            display: none;
+
+        }
+
+    }
+
+}

@@ -1,0 +1,159 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+
+.admin-sidebar {
+
+    width: 260px;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: $gray-900;
+
+    color: $white;
+
+
+    /* ================= BRAND ================= */
+
+    &__brand {
+
+        padding: 28px 24px;
+
+        font-size: $font-size-lg;
+
+        font-weight: 700;
+
+        letter-spacing: 1px;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, .08);
+
+    }
+
+
+    &__brand-primary {
+
+        color: $primary;
+
+        margin-right: 6px;
+
+    }
+
+
+    /* ================= NAVIGATION ================= */
+
+    &__navigation {
+
+        flex: 1;
+
+        padding: 24px 12px;
+
+    }
+
+
+    &__label {
+
+        display: block;
+
+        padding: 0 12px;
+
+        margin-bottom: 12px;
+
+        font-size: $font-size-xs;
+
+        font-weight: 600;
+
+        color: $gray-500;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    &__menu {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 6px;
+
+    }
+
+
+    /* ================= LINK ================= */
+
+    &__link {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 14px;
+
+        padding: 12px 14px;
+
+        border-radius: $radius-md;
+
+        color: $gray-400;
+
+        transition: $transition;
+
+        font-size: $font-size-sm;
+
+
+        &:hover {
+
+            background:
+                rgba(255, 255, 255, .06);
+
+            color: $white;
+
+        }
+
+
+        &--active {
+
+            background: $primary;
+
+            color: $white;
+
+            box-shadow: $shadow-sm;
+
+        }
+
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    &__footer {
+
+        padding: 16px 12px;
+
+        border-top:
+            1px solid rgba(255, 255, 255, .08);
+
+    }
+
+
+    /* ================= RESPONSIVE ================= */
+
+    @include tablet {
+
+        width: 220px;
+
+    }
+
+
+    @include mobile {
+
+        display: none;
+
+    }
+
+}

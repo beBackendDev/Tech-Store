@@ -1,0 +1,236 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+
+.recent-orders {
+
+    background: $white;
+
+    border: 1px solid $gray-200;
+
+    border-radius: $radius-lg;
+
+    box-shadow: $shadow-sm;
+
+    overflow: hidden;
+
+
+    /* ================= HEADER ================= */
+
+    &__header {
+
+        padding: 24px;
+
+        @include flex-between;
+
+        border-bottom:
+            1px solid $gray-200;
+
+    }
+
+
+    &__header h2 {
+
+        font-size: $font-size-lg;
+
+        margin-bottom: 4px;
+
+    }
+
+
+    &__header p {
+
+        font-size: $font-size-sm;
+
+        color: $gray-500;
+
+    }
+
+
+    &__view-all {
+
+        border: none;
+
+        background: transparent;
+
+        color: $primary;
+
+        font-size: $font-size-sm;
+
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition: $transition;
+
+
+        &:hover {
+
+            color: $primary-hover;
+
+        }
+
+    }
+
+
+    /* ================= TABLE ================= */
+
+    &__table-wrapper {
+
+        overflow-x: auto;
+
+    }
+
+
+    &__table {
+
+        width: 100%;
+
+        border-collapse: collapse;
+
+        min-width: 600px;
+
+    }
+
+
+    th {
+
+        padding: 14px 24px;
+
+        text-align: left;
+
+        background: $gray-50;
+
+        font-size: $font-size-xs;
+
+        font-weight: 600;
+
+        color: $gray-500;
+
+        text-transform: uppercase;
+
+        letter-spacing: .5px;
+
+    }
+
+
+    td {
+
+        padding: 18px 24px;
+
+        border-top:
+            1px solid $gray-100;
+
+        font-size: $font-size-sm;
+
+        color: $gray-700;
+
+    }
+
+
+    tbody tr {
+
+        transition: $transition;
+
+
+        &:hover {
+
+            background: $gray-50;
+
+        }
+
+    }
+
+
+    /* ================= STATUS ================= */
+
+    &__status {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        padding: 5px 10px;
+
+        border-radius: 999px;
+
+        font-size: $font-size-xs;
+
+        font-weight: 600;
+
+
+        &--pending {
+
+            color: $warning;
+
+            background:
+                rgba($warning, .12);
+
+        }
+
+
+        &--confirmed {
+
+            color: $primary;
+
+            background:
+                rgba($primary, .12);
+
+        }
+
+
+        &--processing {
+
+            color: $primary;
+
+            background:
+                rgba($primary, .12);
+
+        }
+
+
+        &--shipped {
+
+            color: $secondary;
+
+            background:
+                rgba($secondary, .12);
+
+        }
+
+
+        &--delivered {
+
+            color: $success;
+
+            background:
+                rgba($success, .12);
+
+        }
+
+
+        &--cancelled {
+
+            color: $danger;
+
+            background:
+                rgba($danger, .12);
+
+        }
+
+    }
+
+
+    /* ================= EMPTY ================= */
+
+    &__empty {
+
+        text-align: center;
+
+        padding: 40px;
+
+        color: $gray-500;
+
+    }
+
+}

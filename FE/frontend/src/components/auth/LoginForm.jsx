@@ -23,6 +23,7 @@ import GoogleLoginButton from "./GoogleLoginButton";
 import AuthFooter from "./AuthFooter";
 import useAuth from "../../hooks/useAuth";
 import { saveAccessToken } from "../../services/tokenService";
+import { getDefaultRouteByRole } from "../../utils/roleUtils";
 
 function LoginForm() {
 
@@ -46,24 +47,33 @@ function LoginForm() {
         try {
 
             const response = await login(email, password);
-
+            console.log("response", response);
             //login thanh cong
             //save accesstoken 
-
-            saveAccessToken(response.response);
+            const redirectPath =
+                getDefaultRouteByRole(
+                    response.roles
+                );
+            saveAccessToken(response.accessToken);
 
             setAuth({
 
-                accessToken: response.response,
+                accessToken: response.accessToken,
 
                 authenticated: true
 
             });
-            navigate("/");
-            console.log("response" + response);
-            // alert(response.message);
+            // REDIRECT BY ROLE
 
-            console.log(response);
+
+                navigate(
+                    redirectPath,
+                    {
+                        replace: true
+                    }
+                );
+
+
 
         } catch (error) {
 

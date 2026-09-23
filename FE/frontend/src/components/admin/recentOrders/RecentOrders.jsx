@@ -1,7 +1,40 @@
+import {
+    formatCurrency
+} from "../../../utils/formatCurrency";
+
 import "./RecentOrders.scss";
 
 
-function RecentOrders({ orders = [] }) {
+const formatOrderStatus = (status) => {
+
+    if (!status) {
+        return "-";
+    }
+
+    return status
+        .toLowerCase()
+        .split("_")
+        .map(word =>
+            word.charAt(0).toUpperCase()
+            + word.slice(1)
+        )
+        .join(" ");
+
+};
+
+
+const getStatusClass = (status) => {
+
+    return status
+        ?.toLowerCase()
+        .replaceAll("_", "-");
+
+};
+
+
+function RecentOrders({
+    orders = []
+}) {
 
     return (
 
@@ -70,14 +103,15 @@ function RecentOrders({ orders = [] }) {
 
                     <tbody>
 
-                        {orders.length === 0 && (
+
+                        {orders.length === 0 ? (
 
                             <tr>
 
                                 <td
                                     colSpan="4"
                                     className="
-                                    recent-orders__empty
+                                        recent-orders__empty
                                     "
                                 >
 
@@ -87,58 +121,76 @@ function RecentOrders({ orders = [] }) {
 
                             </tr>
 
+                        ) : (
+
+                            orders.map(order => (
+
+                                <tr
+                                    key={order.id}
+                                >
+
+                                    {/* ORDER */}
+
+                                    <td>
+
+                                        #{order.id}
+
+                                    </td>
+
+
+                                    {/* CUSTOMER */}
+
+                                    <td>
+
+                                        {order.customerName}
+
+                                    </td>
+
+
+                                    {/* AMOUNT */}
+
+                                    <td>
+
+                                        {formatCurrency(
+                                            order.totalAmount
+                                        )}
+
+                                    </td>
+
+
+                                    {/* STATUS */}
+
+                                    <td>
+
+                                        <span
+                                            className={`
+                                                recent-orders__status
+                                                recent-orders__status--${getStatusClass(
+                                                    order.status
+                                                )}
+                                            `}
+                                        >
+
+                                            {formatOrderStatus(
+                                                order.status
+                                            )}
+
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+                            ))
+
                         )}
-
-
-                        {orders.map(order => (
-
-                            <tr key={order.id}>
-
-                                <td>
-
-                                    #{order.id}
-
-                                </td>
-
-
-                                <td>
-
-                                    {order.customerName}
-
-                                </td>
-
-
-                                <td>
-
-                                    {order.totalAmount}
-
-                                </td>
-
-
-                                <td>
-
-                                    <span
-                                        className={`
-                                        recent-orders__status
-                                        recent-orders__status--${order.status?.toLowerCase()}
-                                        `}
-                                    >
-
-                                        {order.status}
-
-                                    </span>
-
-                                </td>
-
-                            </tr>
-
-                        ))}
 
                     </tbody>
 
                 </table>
 
             </div>
+
 
         </section>
 

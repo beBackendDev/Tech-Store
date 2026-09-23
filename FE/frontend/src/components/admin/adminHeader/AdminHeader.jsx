@@ -1,15 +1,30 @@
 import {
-
     Search,
     Bell,
     User
-
 } from "lucide-react";
 
+
+
 import "./AdminHeader.scss";
+import useAuth from "../../../hooks/useAuth";
 
 
 function AdminHeader() {
+
+    const { auth } = useAuth();
+
+
+    const username =
+        auth?.user?.username
+        || auth?.user?.email
+        || "Admin";
+
+
+    const role =
+        auth?.roles?.[0]
+        || "ADMIN";
+
 
     return (
 
@@ -23,12 +38,8 @@ function AdminHeader() {
                 <Search size={20} />
 
                 <input
-
                     type="text"
-
-                    placeholder="
-                    Search orders, products..."
-
+                    placeholder="Search orders, products..."
                 />
 
             </div>
@@ -49,7 +60,9 @@ function AdminHeader() {
                     <Bell size={21} />
 
                     <span
-                        className="admin-header__notification-dot"
+                        className="
+                            admin-header__notification-dot
+                        "
                     />
 
                 </button>
@@ -69,16 +82,17 @@ function AdminHeader() {
                     <div className="admin-header__user">
 
                         <strong>
-                            Admin
+                            {username}
                         </strong>
 
                         <span>
-                            Administrator
+                            {role}
                         </span>
 
                     </div>
 
                 </div>
+
 
             </div>
 

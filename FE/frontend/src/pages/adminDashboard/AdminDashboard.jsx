@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import DashboardStats
     from "../../components/admin/dashboardStats/DashboardStats";
 
@@ -7,92 +9,166 @@ import RecentOrders
 import InventoryAlert
     from "../../components/admin/inventoryAlert/InventoryAlert";
 
+import useAxiosPrivate
+    from "../../hooks/useAxiosPrivate";
+
+import { getAdminDashboard }
+    from "../../api/adminApi";
+
 import "./AdminDashboard.scss";
 
 
 function AdminDashboard() {
 
+    const axiosPrivate = useAxiosPrivate();
+
+    const [dashboardData, setDashboardData] =
+        useState(null);
+
+    const [loading, setLoading] =
+        useState(true);
+
+    const [error, setError] =
+        useState(null);
+
+
+    useEffect(() => {
+
+        let mounted = true;
+
+
+        const fetchDashboard = async () => {
+
+            try {
+
+                setLoading(true);
+                setError(null);
+
+                const response =
+                    await getAdminDashboard(axiosPrivate);
+
+                if (!mounted) {
+                    return;
+                }
+
+                setDashboardData(
+                    response.data.response
+                );
+
+            } catch (error) {
+
+                if (!mounted) {
+                    return;
+                }
+
+                console.error(
+                    "Failed to fetch admin dashboard:",
+                    error
+                );
+
+                setError(
+                    "Unable to load dashboard data."
+                );
+
+            } finally {
+
+                if (mounted) {
+                    setLoading(false);
+                }
+
+            }
+
+        };
+
+
+        fetchDashboard();
+
+
+        return () => {
+            mounted = false;
+        };
+
+    }, [axiosPrivate]);
+
+
     /*
-     * TEMPORARY MOCK DATA
-     *
-     * Sau này thay bằng:
-     *
-     * GET /api/admin/dashboard
+     * ============================
+     * LOADING
+     * ============================
      */
 
-    const dashboardData = {
+    if (loading) {
 
-        totalRevenue: "₫125,000,000",
+        return (
 
-        totalOrders: 1248,
+            <div className="admin-dashboard">
 
-        totalProducts: 1000,
+                <div className="admin-dashboard__loading">
 
-        lowStockProducts: 12,
+                    Loading dashboard...
 
-        recentOrders: [
+                </div>
 
-            {
-                id: 10001,
+            </div>
 
-                customerName: "Nguyen Van A",
+        );
 
-                totalAmount: "₫2,500,000",
+    }
 
-                status: "PENDING"
-            },
 
-            {
-                id: 10002,
+    /*
+     * ============================
+     * ERROR
+     * ============================
+     */
 
-                customerName: "Tran Van B",
+    if (error) {
 
-                totalAmount: "₫15,000,000",
+        return (
 
-                status: "PROCESSING"
-            },
+            <div className="admin-dashboard">
 
-            {
-                id: 10003,
+                <div className="admin-dashboard__error">
 
-                customerName: "Le Van C",
+                    {error}
 
-                totalAmount: "₫8,500,000",
+                </div>
 
-                status: "SHIPPED"
-            }
+            </div>
 
-        ],
+        );
 
-        lowStockItems: [
+    }
 
-            {
-                id: 1,
 
-                name: "MacBook Air M3",
+    /*
+     * ============================
+     * EMPTY
+     * ============================
+     */
 
-                stock: 2
-            },
+    if (!dashboardData) {
+        return null;
+    }
 
-            {
-                id: 2,
 
-                name: "Samsung SSD 990 Pro",
-
-                stock: 1
-            },
-
-            {
-                id: 3,
-
-                name: "Logitech MX Master 3S",
-
-                stock: 3
-            }
-
-        ]
-
-    };
+    /*
+     * ============================
+     * BACKEND RESPONSE
+     *
+     * dashboardData:
+     *
+     * {
+     *     overview,
+     *     orderStatistics,
+     *     productStatistics,
+     *     inventoryStatistics,
+     *     recentOrders,
+     *     lowStockProducts
+     * }
+     *
+     * ============================
+     */
 
 
     return (
@@ -106,11 +182,7 @@ function AdminDashboard() {
 
                 <div>
 
-                    <span
-                        className="
-                        admin-dashboard__eyebrow
-                        "
-                    >
+                    <span className="admin-dashboard__eyebrow">
 
                         ADMIN PANEL
 
@@ -137,17 +209,22 @@ function AdminDashboard() {
             {/* ================= STATISTICS ================= */}
 
             <DashboardStats
-                stats={dashboardData}
+                overview={
+                    dashboardData.overview
+                }
+
+                productStatistics={
+                    dashboardData.productStatistics
+                }
             />
 
 
             {/* ================= MAIN CONTENT ================= */}
 
-            <section
-                className="
-                admin-dashboard__content
-                "
-            >
+            <section className="admin-dashboard__content">
+
+
+                {/* ================= RECENT ORDERS ================= */}
 
                 <RecentOrders
                     orders={
@@ -156,11 +233,14 @@ function AdminDashboard() {
                 />
 
 
+                {/* ================= INVENTORY ALERT ================= */}
+
                 <InventoryAlert
                     products={
-                        dashboardData.lowStockItems
+                        dashboardData.lowStockProducts
                     }
                 />
+
 
             </section>
 

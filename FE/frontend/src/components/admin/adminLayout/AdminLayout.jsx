@@ -15,12 +15,8 @@ function AdminLayout() {
 
         <div className="admin-layout">
 
-            {/* ================= SIDEBAR ================= */}
-
             <AdminSidebar />
 
-
-            {/* ================= MAIN ================= */}
 
             <div className="admin-layout__main">
 

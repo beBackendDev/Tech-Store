@@ -1,5 +1,6 @@
 package net.myapplication.myapp.object.admin.service.impl;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
@@ -23,7 +24,9 @@ import net.myapplication.myapp.object.admin.dto.dashboard.analytics.RevenueChart
 import net.myapplication.myapp.object.admin.service.AdminDashboardService;
 import net.myapplication.myapp.object.inventory.enums.InventoryTransactionType;
 import net.myapplication.myapp.object.inventory.repository.InventoryTransactionRepository;
+import net.myapplication.myapp.object.order.entity.Order;
 import net.myapplication.myapp.object.order.repository.OrderRepository;
+import net.myapplication.myapp.object.product.entity.Product;
 import net.myapplication.myapp.object.product.repository.ProductRepository;
 import net.myapplication.myapp.user.repository.UserRepo;
 
@@ -39,7 +42,7 @@ public class AdminDashboardServiceImpl implements AdminDashboardService {
 
     private final UserRepo userRepository;
 
-    private static final int LOW_STOCK_THRESHOLD = 10;
+    private static final Integer LOW_STOCK_THRESHOLD = 10;
 
     private static final int RECENT_ORDER_LIMIT = 5;
 
@@ -247,16 +250,79 @@ public class AdminDashboardServiceImpl implements AdminDashboardService {
 
     private List<RecentOrderDto> getRecentOrders() {
 
-    Pageable pageable =
-            PageRequest.of(
-                    0,
-                    RECENT_ORDER_LIMIT
-            );
+        Pageable pageable = PageRequest.of(
+                0,
+                RECENT_ORDER_LIMIT);
 
-    return orderRepository
-            .findByOrderByCreatedAtDesc(pageable)
-            .stream()
-            .map(this::mapToRecentOrderDto)
-            .toList();
-}
+        return orderRepository
+                .findByOrderByCreatedAtDesc(pageable)
+                .stream()
+                .map(this::mapToRecentOrderDto)
+                .toList();
+    }
+
+    private List<LowStockProductDto> getLowStockProducts() {
+
+        Pageable pageable = PageRequest.of(
+                0,
+                LOW_STOCK_PRODUCT_LIMIT);
+
+        return productRepository
+                .findLowStockProducts(
+                        LOW_STOCK_THRESHOLD,
+                        pageable)
+                .stream()
+                .map(this::mapToLowStockProductDto)
+                .toList();
+    }
+
+    // mapper
+    private RecentOrderDto mapToRecentOrderDto(
+            Order order) {
+
+        return RecentOrderDto.builder()
+
+                .orderId(
+                        order.getId())
+
+                .customerName(
+                        order.getCustomerName())
+
+                .totalAmount(
+                        order.getTotalAmount())
+
+                .status(
+                        order.getStatus())
+
+                .paymentStatus(
+                        order.getPaymentStatus())
+
+                .createdAt(
+                        order.getCreatedAt())
+
+                .build();
+    }
+
+    private LowStockProductDto mapToLowStockProductDto(
+            Product product) {
+
+        return LowStockProductDto.builder()
+
+                .productId(
+                        product.getId())
+
+                .productName(
+                        product.getName())
+
+                .image(
+                        product.getImage())
+
+                .stock(
+                        product.getStock())
+
+                .build();
+    }
+
+    // helper
+  
 }

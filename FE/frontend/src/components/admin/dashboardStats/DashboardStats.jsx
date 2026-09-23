@@ -1,48 +1,77 @@
 import {
-
     DollarSign,
     ShoppingCart,
     Package,
     AlertTriangle
-
 } from "lucide-react";
+
+import {
+    formatCurrency
+} from "../../../utils/formatCurrency";
 
 import "./DashboardStats.scss";
 
 
-function DashboardStats({ stats }) {
+function DashboardStats({
+    overview,
+    productStatistics
+}) {
 
     const dashboardStats = [
 
         {
             title: "Total Revenue",
-            value: stats?.totalRevenue ?? "₫0",
+
+            value: formatCurrency(
+                overview?.totalRevenue
+            ),
+
             subtitle: "Revenue overview",
+
             icon: DollarSign,
+
             type: "revenue"
         },
 
+
         {
             title: "Total Orders",
-            value: stats?.totalOrders ?? 0,
+
+            value:
+                overview?.totalOrders ?? 0,
+
             subtitle: "All customer orders",
+
             icon: ShoppingCart,
+
             type: "orders"
         },
 
+
         {
             title: "Products",
-            value: stats?.totalProducts ?? 0,
-            subtitle: "Active products",
+
+            value:
+                overview?.totalProducts ?? 0,
+
+            subtitle: "Total products",
+
             icon: Package,
+
             type: "products"
         },
 
+
         {
             title: "Low Stock",
-            value: stats?.lowStockProducts ?? 0,
-            subtitle: "Needs attention",
+
+            value:
+                productStatistics?.lowStock ?? 0,
+
+            subtitle: "Products need attention",
+
             icon: AlertTriangle,
+
             type: "warning"
         }
 
@@ -57,12 +86,11 @@ function DashboardStats({ stats }) {
 
                 const Icon = stat.icon;
 
+
                 return (
 
                     <article
-                        className="
-                        dashboard-stats__card
-                        "
+                        className="dashboard-stats__card"
                         key={stat.title}
                     >
 
@@ -93,8 +121,8 @@ function DashboardStats({ stats }) {
 
                         <div
                             className={`
-                            dashboard-stats__icon
-                            dashboard-stats__icon--${stat.type}
+                                dashboard-stats__icon
+                                dashboard-stats__icon--${stat.type}
                             `}
                         >
 

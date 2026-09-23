@@ -209,17 +209,17 @@ public class AuthController {
                 return "USER!!!";
         }
 
-        @GetMapping("/dashboard/admin")
-        // hasAuthority thi DB la ADMIN | hasRole thi DB phai ROLE_ADMIN
-        @PreAuthorize("hasAuthority('ADMIN')")
-        public ResponseEntity<ApiResponseDTO<?>> AdminDashboard() {
-                return ResponseEntity
-                                .status(HttpStatus.OK)
-                                .body(ApiResponseDTO.builder()
-                                                .status(String.valueOf(ResponseStatus.SUCCESS))
-                                                .message("Admin dashboard!")
-                                                .build());
-        }
+        // @GetMapping("/dashboard/admin")
+        // // hasAuthority thi DB la ADMIN | hasRole thi DB phai ROLE_ADMIN
+        // @PreAuthorize("hasAuthority('ADMIN')")
+        // public ResponseEntity<ApiResponseDTO<?>> AdminDashboard() {
+        //         return ResponseEntity
+        //                         .status(HttpStatus.OK)
+        //                         .body(ApiResponseDTO.builder()
+        //                                         .status(String.valueOf(ResponseStatus.SUCCESS))
+        //                                         .message("Admin dashboard!")
+        //                                         .build());
+        // }
 
         // Helper: tạo ResponseCookie với đầy đủ thuộc tính bảo mật
         private ResponseCookie buildRefreshCookie(String value, long maxAgeSeconds) {

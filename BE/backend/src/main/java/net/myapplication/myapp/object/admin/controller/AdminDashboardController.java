@@ -12,7 +12,7 @@ import net.myapplication.myapp.object.admin.dto.dashboard.AdminDashboardResponse
 import net.myapplication.myapp.object.admin.service.AdminDashboardService;
 
 @RestController
-@RequestMapping("/api/admin/dashboard")
+@RequestMapping("/api/dashboard/admin")
 @RequiredArgsConstructor
 // hasAuthority thi DB la ADMIN | hasRole thi DB phai ROLE_ADMIN
 @PreAuthorize("hasAuthority('ADMIN')")

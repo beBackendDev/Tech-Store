@@ -1,14 +1,44 @@
 import {
-
     AlertTriangle,
     Package
-
 } from "lucide-react";
 
 import "./InventoryAlert.scss";
 
 
-function InventoryAlert({ products = [] }) {
+const getStockLevel = (stock) => {
+
+    if (stock <= 0) {
+        return "out";
+    }
+
+    if (stock <= 2) {
+        return "critical";
+    }
+
+    return "low";
+
+};
+
+
+const getStockLabel = (stock) => {
+
+    if (stock <= 0) {
+        return "Out of stock";
+    }
+
+    if (stock === 1) {
+        return "1 item left";
+    }
+
+    return `${stock} items left`;
+
+};
+
+
+function InventoryAlert({
+    products = []
+}) {
 
     return (
 
@@ -34,7 +64,7 @@ function InventoryAlert({ products = [] }) {
 
                 <AlertTriangle
                     className="
-                    inventory-alert__header-icon
+                        inventory-alert__header-icon
                     "
                     size={22}
                 />
@@ -47,7 +77,7 @@ function InventoryAlert({ products = [] }) {
             <div className="inventory-alert__list">
 
 
-                {products.length === 0 && (
+                {products.length === 0 ? (
 
                     <div className="inventory-alert__empty">
 
@@ -59,62 +89,81 @@ function InventoryAlert({ products = [] }) {
 
                     </div>
 
-                )}
+                ) : (
+
+                    products.map(product => {
+
+                        const stockLevel =
+                            getStockLevel(
+                                product.stock
+                            );
 
 
-                {products.map(product => (
-
-                    <div
-                        className="inventory-alert__item"
-                        key={product.id}
-                    >
-
-                        <div className="inventory-alert__product">
+                        return (
 
                             <div
-                                className="
-                                inventory-alert__product-icon
-                                "
+                                className="inventory-alert__item"
+                                key={product.id}
                             >
 
-                                <Package size={18} />
+                                <div className="inventory-alert__product">
 
-                            </div>
+                                    <div
+                                        className="
+                                            inventory-alert__product-icon
+                                        "
+                                    >
+
+                                        <Package size={18} />
+
+                                    </div>
 
 
-                            <div>
+                                    <div>
 
-                                <strong>
+                                        <strong>
 
-                                    {product.name}
+                                            {product.name}
 
-                                </strong>
+                                        </strong>
 
 
-                                <span>
+                                        <span
+                                            className={`
+                                                inventory-alert__stock-label
+                                                inventory-alert__stock-label--${stockLevel}
+                                            `}
+                                        >
 
-                                    Low stock
+                                            {getStockLabel(
+                                                product.stock
+                                            )}
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span
+                                    className={`
+                                        inventory-alert__stock
+                                        inventory-alert__stock--${stockLevel}
+                                    `}
+                                >
+
+                                    {product.stock}
 
                                 </span>
 
                             </div>
 
-                        </div>
+                        );
 
+                    })
 
-                        <span
-                            className="
-                            inventory-alert__stock
-                            "
-                        >
-
-                            {product.stock}
-
-                        </span>
-
-                    </div>
-
-                ))}
+                )}
 
             </div>
 
@@ -129,6 +178,7 @@ function InventoryAlert({ products = [] }) {
                 View inventory
 
             </button>
+
 
         </section>
 

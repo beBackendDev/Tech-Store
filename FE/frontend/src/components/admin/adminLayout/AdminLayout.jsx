@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 
 import AdminSidebar
-    from "../AdminSidebar/AdminSidebar";
+    from "../adminSidebar/AdminSidebar";
 
 import AdminHeader
-    from "../AdminHeader/AdminHeader";
+    from "../adminHeader/AdminHeader";
 
 import "./AdminLayout.scss";
 

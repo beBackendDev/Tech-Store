@@ -16,6 +16,8 @@ import { getAdminDashboard }
     from "../../api/adminApi";
 
 import "./AdminDashboard.scss";
+import OrderStatisticsChart from "../../components/admin/chart/OrderStatisticsChart/OrderStatisticsChart";
+import InventoryStatisticsChart from "../../components/admin/chart/InventoryStatisticsChart/InventoryStatisticsChart";
 
 
 function AdminDashboard() {
@@ -46,7 +48,7 @@ function AdminDashboard() {
 
                 const response =
                     await getAdminDashboard(axiosPrivate);
-
+                console.log("Admin Dashboard Response:", response.data.response);
                 if (!mounted) {
                     return;
                 }
@@ -217,8 +219,19 @@ function AdminDashboard() {
                     dashboardData.productStatistics
                 }
             />
+            {/* ================= CHARTS ================= */}
 
+            <section className="admin-dashboard__charts">
 
+                <OrderStatisticsChart
+                    statistics={dashboardData.orderStatistics}
+                />
+
+                <InventoryStatisticsChart
+                    statistics={dashboardData.inventoryStatistics}
+                />
+
+            </section>
             {/* ================= MAIN CONTENT ================= */}
 
             <section className="admin-dashboard__content">

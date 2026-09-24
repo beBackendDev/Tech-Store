@@ -1,50 +1,50 @@
-import {
-    Outlet
-} from "react-router-dom";
+// import {
+//     Outlet
+// } from "react-router-dom";
 
-import AdminSidebar
-    from "../../components/admin/adminSidebar/AdminSidebar";
+// import AdminSidebar
+//     from "../../components/admin/adminSidebar/AdminSidebar";
 
-import AdminHeader
-    from "../../components/admin/adminHeader/AdminHeader";
+// import AdminHeader
+//     from "../../components/admin/adminHeader/AdminHeader";
 
-import "./AdminLayout.scss";
-
-
-function AdminLayout() {
-
-    return (
-
-        <div className="admin-layout">
-
-            {/* SIDEBAR */}
-
-            <AdminSidebar />
+// import "./AdminLayout.scss";
 
 
-            {/* MAIN */}
+// function AdminLayout() {
 
-            <div className="admin-layout__main">
+//     return (
 
-                {/* HEADER */}
+//         <div className="admin-layout">
 
-                <AdminHeader />
+//             {/* SIDEBAR */}
 
-
-                {/* PAGE */}
-
-                <main className="admin-layout__content">
-
-                    <Outlet />
-
-                </main>
-
-            </div>
-
-        </div>
-
-    );
-}
+//             <AdminSidebar />
 
 
-export default AdminLayout;
+//             {/* MAIN */}
+
+//             <div className="admin-layout__main">
+
+//                 {/* HEADER */}
+
+//                 <AdminHeader />
+
+
+//                 {/* PAGE */}
+
+//                 <main className="admin-layout__content">
+
+//                     <Outlet />
+
+//                 </main>
+
+//             </div>
+
+//         </div>
+
+//     );
+// }
+
+
+// export default AdminLayout;

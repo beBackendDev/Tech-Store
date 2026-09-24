@@ -82,7 +82,7 @@ import MainLayout
     from "../layouts/MainLayout/MainLayout";
 
 import AdminLayout
-    from "../layouts/AdminLayout/AdminLayout";
+    from "../components/admin/adminLayout/AdminLayout";
 /* ===============================
    ROUTES
 ================================ */

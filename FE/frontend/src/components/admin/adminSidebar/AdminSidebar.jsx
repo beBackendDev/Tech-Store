@@ -22,7 +22,7 @@ function AdminSidebar() {
 
         {
             label: "Dashboard",
-            path: "/admin",
+            path: "/admin/dashboard",
             icon: LayoutDashboard
         },
 

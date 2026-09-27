@@ -92,6 +92,7 @@ import ProtectedRoute
 
 import RoleRoute
     from "./RoleRoute";
+import AdminProducts from "../pages/admin/products/AdminProducts";
 
 
 function AppRoutes() {
@@ -242,9 +243,15 @@ function AppRoutes() {
 
                             <Route
                                 index
+                                path="dashboard"
                                 element={<AdminDashboard />}
                             />
+                            {/* DASHBOARD */}
 
+                            <Route
+                                path="products"
+                                element={<AdminProducts />}
+                            />
                         </Route>
 
                     </Route>

@@ -17,6 +17,8 @@ public class ProductResponseDto {
 
     private Long id;
 
+    private String externalId;
+    
     private String name;
 
     private String category;

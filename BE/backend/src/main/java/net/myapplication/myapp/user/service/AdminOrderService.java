@@ -4,7 +4,7 @@ import org.springframework.data.domain.Pageable;
 
 import net.myapplication.myapp.enumpack.OrderStatus;
 import net.myapplication.myapp.object.order.dto.OrderResponseDto;
-import net.myapplication.myapp.object.product.dto.PageResponse;
+import net.myapplication.myapp.object.product.dto.response.PageResponse;
 import net.myapplication.myapp.user.dto.request.AdminOrderFilterRequest;
 
 public interface AdminOrderService {

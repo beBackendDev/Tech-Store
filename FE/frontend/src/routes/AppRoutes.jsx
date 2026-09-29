@@ -93,6 +93,7 @@ import ProtectedRoute
 import RoleRoute
     from "./RoleRoute";
 import AdminProducts from "../pages/admin/products/AdminProducts";
+import AdminProductDetail from "../pages/admin/productDetail/AdminProductDetail";
 
 
 function AppRoutes() {
@@ -242,16 +243,33 @@ function AppRoutes() {
                             {/* DASHBOARD */}
 
                             <Route
-                                index
+                                
                                 path="dashboard"
                                 element={<AdminDashboard />}
                             />
-                            {/* DASHBOARD */}
+                            {/* PRODUCTS_LIST */}
 
                             <Route
                                 path="products"
                                 element={<AdminProducts />}
                             />
+
+                            {/* PRODUCT-DETAIL */}
+
+                            <Route
+                                path="products/:id"
+                                element={<AdminProductDetail />}
+                            />
+                            {/* PRODUCT-UPDATE */}
+                            {/* <Route
+                                path="products/:id/edit"
+                                element={<AdminProductForm />}
+                            /> */}
+                            {/* PRODUCT-CREATE */}
+                            {/* <Route
+                                path="products/new"
+                                element={<AdminProductForm />}
+                            /> */}
                         </Route>
 
                     </Route>

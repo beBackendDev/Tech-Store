@@ -25,7 +25,7 @@ import net.myapplication.myapp.object.order.dto.CreateOrderRequest;
 import net.myapplication.myapp.object.order.dto.OrderResponseDto;
 import net.myapplication.myapp.object.order.dto.request.CancelOrderRequest;
 import net.myapplication.myapp.object.order.service.OrderService;
-import net.myapplication.myapp.object.product.dto.PageResponse;
+import net.myapplication.myapp.object.product.dto.response.PageResponse;
 import net.myapplication.myapp.security.oauth2.service.CurrentUserService;
 import net.myapplication.myapp.user.service.impl.UserDetailsImpl;
 

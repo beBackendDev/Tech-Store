@@ -1,4 +1,4 @@
-package net.myapplication.myapp.object.product.dto;
+package net.myapplication.myapp.object.product.dto.response;
 
 import java.util.List;
 

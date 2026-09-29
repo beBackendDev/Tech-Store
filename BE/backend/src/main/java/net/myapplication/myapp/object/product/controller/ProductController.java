@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
 import net.myapplication.myapp.common.ApiResponseDTO;
-import net.myapplication.myapp.object.product.dto.PageResponse;
-import net.myapplication.myapp.object.product.dto.ProductResponseDto;
 import net.myapplication.myapp.object.product.dto.request.ProductFilterRequest;
+import net.myapplication.myapp.object.product.dto.response.PageResponse;
+import net.myapplication.myapp.object.product.dto.response.ProductResponseDto;
 import net.myapplication.myapp.object.product.service.ProductService;
 
 @RestController

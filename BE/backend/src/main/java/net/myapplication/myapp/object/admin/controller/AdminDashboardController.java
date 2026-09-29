@@ -21,15 +21,16 @@ import org.springframework.data.domain.Sort;
 
 import lombok.RequiredArgsConstructor;
 import net.myapplication.myapp.common.ApiResponseDTO;
-import net.myapplication.myapp.object.admin.dto.admin.product.AdminCreateProductRequest;
-import net.myapplication.myapp.object.admin.dto.admin.product.AdminUpdateProductRequest;
-import net.myapplication.myapp.object.admin.dto.admin.product.UpdateProductStatusRequest;
 import net.myapplication.myapp.object.admin.dto.dashboard.AdminDashboardResponseDto;
 import net.myapplication.myapp.object.admin.service.AdminDashboardService;
 import net.myapplication.myapp.object.admin.service.AdminProductService;
-import net.myapplication.myapp.object.product.dto.PageResponse;
-import net.myapplication.myapp.object.product.dto.ProductResponseDto;
+import net.myapplication.myapp.object.product.dto.request.AdminCreateProductRequest;
+import net.myapplication.myapp.object.product.dto.request.AdminUpdateProductRequest;
 import net.myapplication.myapp.object.product.dto.request.ProductFilterRequest;
+import net.myapplication.myapp.object.product.dto.request.UpdateProductStatusRequest;
+import net.myapplication.myapp.object.product.dto.response.AdminProductDetailResponseDto;
+import net.myapplication.myapp.object.product.dto.response.PageResponse;
+import net.myapplication.myapp.object.product.dto.response.ProductResponseDto;
 import net.myapplication.myapp.object.product.service.ProductService;
 
 import org.springframework.web.bind.annotation.RequestParam;
@@ -66,18 +67,14 @@ public class AdminDashboardController {
                                                 .build());
         }
         // ================================PRODUCT-MANAGEMENT========================================
+        // ================================PRODUCT-LIST========================================
 
         @GetMapping("/products")
         public ResponseEntity<ApiResponseDTO<PageResponse<ProductResponseDto>>> getProducts(
 
                         @ModelAttribute ProductFilterRequest filter,
 
-                        @PageableDefault(
-                                page = 0,
-                                size = 20,
-                                sort = "createdAt",
-                                direction = Sort.Direction.DESC) 
-                                Pageable pageable
+                        @PageableDefault(page = 0, size = 20, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable
 
         ) {
 
@@ -94,6 +91,7 @@ public class AdminDashboardController {
 
                 return ResponseEntity.ok(response);
         }
+        // ================================PRODUCT-DETAIL========================================
 
         @GetMapping("/product/{id}")
         @PreAuthorize("hasAuthority('ADMIN')")
@@ -109,23 +107,42 @@ public class AdminDashboardController {
                                 ApiResponseDTO
                                                 .<ProductResponseDto>builder()
                                                 .status("SUCCESS")
-                                                .message("Product retrieved successfully")
+                                                .message("Admin product retrieved successfully")
+                                                .response(product)
+                                                .build());
+        }
+
+        @GetMapping("/products/{id}")
+        @PreAuthorize("hasAuthority('ADMIN')")
+        public ResponseEntity<ApiResponseDTO<AdminProductDetailResponseDto>> getProductsById(
+
+                        @PathVariable Long id
+
+        ) {
+
+                AdminProductDetailResponseDto product = adminProductService.getProductsById(id);
+
+                return ResponseEntity.ok(
+                                ApiResponseDTO
+                                                .<AdminProductDetailResponseDto>builder()
+                                                .status("SUCCESS")
+                                                .message("Admin product retrieved successfully")
                                                 .response(product)
                                                 .build());
         }
 
         // CREATE-PRODUCT
         @PostMapping("/create-product")
-        public ResponseEntity<ApiResponseDTO<ProductResponseDto>> createProduct(
+        public ResponseEntity<ApiResponseDTO<AdminProductDetailResponseDto>> createProduct(
 
                         @Valid @RequestBody AdminCreateProductRequest request
 
         ) {
 
-                ProductResponseDto product = adminProductService.createProduct(request);
+                AdminProductDetailResponseDto product = adminProductService.createProduct(request);
 
-                ApiResponseDTO<ProductResponseDto> response = ApiResponseDTO
-                                .<ProductResponseDto>builder()
+                ApiResponseDTO<AdminProductDetailResponseDto> response = ApiResponseDTO
+                                .<AdminProductDetailResponseDto>builder()
                                 .status("SUCCESS")
                                 .message("Product created successfully")
                                 .response(product)
@@ -138,7 +155,7 @@ public class AdminDashboardController {
 
         // UPDATE PRODUCT
         @PutMapping("/update-product/{id}")
-        public ResponseEntity<ApiResponseDTO<ProductResponseDto>> updateProduct(
+        public ResponseEntity<ApiResponseDTO<AdminProductDetailResponseDto>> updateProduct(
 
                         @PathVariable Long id,
 
@@ -146,13 +163,13 @@ public class AdminDashboardController {
 
         ) {
 
-                ProductResponseDto product = adminProductService.updateProduct(
+                AdminProductDetailResponseDto product = adminProductService.updateProduct(
                                 id,
                                 request);
 
                 return ResponseEntity.ok(
                                 ApiResponseDTO
-                                                .<ProductResponseDto>builder()
+                                                .<AdminProductDetailResponseDto>builder()
                                                 .status("SUCCESS")
                                                 .message("Product updated successfully")
                                                 .response(product)
@@ -161,7 +178,7 @@ public class AdminDashboardController {
 
         // UPDATE PRODUCT STATUS
         @PatchMapping("/update-product/{id}/status")
-        public ResponseEntity<ApiResponseDTO<ProductResponseDto>> updateProductStatus(
+        public ResponseEntity<ApiResponseDTO<AdminProductDetailResponseDto>> updateProductStatus(
 
                         @PathVariable Long id,
 
@@ -169,13 +186,13 @@ public class AdminDashboardController {
 
         ) {
 
-                ProductResponseDto product = adminProductService.updateProductStatus(
+                AdminProductDetailResponseDto product = adminProductService.updateProductStatus(
                                 id,
-                                request.getActive());
+                                request);
 
                 return ResponseEntity.ok(
                                 ApiResponseDTO
-                                                .<ProductResponseDto>builder()
+                                                .<AdminProductDetailResponseDto>builder()
                                                 .status("SUCCESS")
                                                 .message("Product status updated successfully")
                                                 .response(product)

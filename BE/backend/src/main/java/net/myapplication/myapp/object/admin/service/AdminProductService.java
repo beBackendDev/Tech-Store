@@ -2,11 +2,13 @@ package net.myapplication.myapp.object.admin.service;
 
 import org.springframework.data.domain.Pageable;
 
-import net.myapplication.myapp.object.admin.dto.admin.product.AdminCreateProductRequest;
-import net.myapplication.myapp.object.admin.dto.admin.product.AdminUpdateProductRequest;
-import net.myapplication.myapp.object.product.dto.PageResponse;
-import net.myapplication.myapp.object.product.dto.ProductResponseDto;
+import net.myapplication.myapp.object.product.dto.request.AdminCreateProductRequest;
+import net.myapplication.myapp.object.product.dto.request.AdminUpdateProductRequest;
 import net.myapplication.myapp.object.product.dto.request.ProductFilterRequest;
+import net.myapplication.myapp.object.product.dto.request.UpdateProductStatusRequest;
+import net.myapplication.myapp.object.product.dto.response.AdminProductDetailResponseDto;
+import net.myapplication.myapp.object.product.dto.response.PageResponse;
+import net.myapplication.myapp.object.product.dto.response.ProductResponseDto;
 
 public interface AdminProductService {
 
@@ -16,14 +18,17 @@ public interface AdminProductService {
 
         ProductResponseDto getProductById(Long id);
 
-        ProductResponseDto createProduct(
+        AdminProductDetailResponseDto getProductsById(
+                        Long id);//test
+
+        AdminProductDetailResponseDto createProduct(
                         AdminCreateProductRequest request);
 
-        ProductResponseDto updateProduct(
+        AdminProductDetailResponseDto updateProduct(
                         Long id,
                         AdminUpdateProductRequest request);
 
-        ProductResponseDto updateProductStatus(
+        AdminProductDetailResponseDto updateProductStatus(
                         Long id,
-                        Boolean active);
+                        UpdateProductStatusRequest request);
 }

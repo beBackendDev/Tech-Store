@@ -9,9 +9,9 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import net.myapplication.myapp.object.product.dto.PageResponse;
-import net.myapplication.myapp.object.product.dto.ProductResponseDto;
 import net.myapplication.myapp.object.product.dto.request.ProductFilterRequest;
+import net.myapplication.myapp.object.product.dto.response.PageResponse;
+import net.myapplication.myapp.object.product.dto.response.ProductResponseDto;
 import net.myapplication.myapp.object.product.entity.Product;
 import net.myapplication.myapp.object.product.mapper.ProductMapper;
 import net.myapplication.myapp.object.product.repository.ProductRepository;

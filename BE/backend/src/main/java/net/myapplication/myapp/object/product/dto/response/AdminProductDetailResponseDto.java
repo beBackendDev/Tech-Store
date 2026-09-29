@@ -1,25 +1,26 @@
-package net.myapplication.myapp.object.product.dto;
+package net.myapplication.myapp.object.product.dto.response;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductResponseDto {
+public class AdminProductDetailResponseDto {
 
     private Long id;
 
     private String externalId;
-    
+
     private String name;
+
+    private String description;
 
     private String category;
 
@@ -27,17 +28,21 @@ public class ProductResponseDto {
 
     private BigDecimal oldPrice;
 
-    private Integer discount;
+    private Integer stock;
+
+    private String image;
 
     private BigDecimal rating;
 
     private Integer reviewCount;
 
-    private String image;
-
-    private Integer stock;
-
     private boolean isNew;
 
     private boolean active;
+
+    private LocalDateTime createdAt;
+
+    private LocalDateTime updatedAt;
+
+    private LaptopSpecificationResponseDto laptopSpecification;
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useNavigate } from "react";
 
 import useAxiosPrivate
     from "../../../hooks/useAxiosPrivate";
@@ -17,6 +17,8 @@ function AdminProducts() {
 
     const axiosPrivate =
         useAxiosPrivate();
+
+    const navigate = useNavigate();
     // ========================================
     // PRODUCTS
     // ========================================
@@ -303,6 +305,9 @@ function AdminProducts() {
 
                 <button
                     type="button"
+                    onClick={() =>
+                        navigate("/admin/products/new")
+                    }
                 >
                     + Add Product
                 </button>

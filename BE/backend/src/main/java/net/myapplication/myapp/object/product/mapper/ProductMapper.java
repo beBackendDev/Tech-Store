@@ -4,71 +4,143 @@ import java.math.BigDecimal;
 
 import org.springframework.stereotype.Component;
 
-import net.myapplication.myapp.object.product.dto.ProductResponseDto;
+import net.myapplication.myapp.object.product.dto.response.AdminProductDetailResponseDto;
+import net.myapplication.myapp.object.product.dto.response.LaptopSpecificationResponseDto;
+import net.myapplication.myapp.object.product.dto.response.ProductResponseDto;
+import net.myapplication.myapp.object.product.entity.LaptopSpecification;
 import net.myapplication.myapp.object.product.entity.Product;
 
 @Component
 public class ProductMapper {
 
-    public ProductResponseDto toResponseDto(Product product) {
+        public ProductResponseDto toResponseDto(Product product) {
 
-        return ProductResponseDto.builder()
+                return ProductResponseDto.builder()
 
-                .id(product.getId())
+                                .id(product.getId())
 
-                .name(product.getName())
+                                .name(product.getName())
 
-                .category(product.getCategory())
+                                .category(product.getCategory())
 
-                .price(product.getPrice())
+                                .price(product.getPrice())
 
-                .oldPrice(product.getOldPrice())
+                                .oldPrice(product.getOldPrice())
 
-                .discount(
-                        calculateDiscount(
-                                product.getOldPrice(),
-                                product.getPrice()
-                        )
-                )
+                                .discount(
+                                                calculateDiscount(
+                                                                product.getOldPrice(),
+                                                                product.getPrice()))
 
-                .rating(product.getRating())
+                                .rating(product.getRating())
 
-                .reviewCount(product.getReviewCount())
+                                .reviewCount(product.getReviewCount())
 
-                .image(product.getImage())
+                                .image(product.getImage())
 
-                .stock(product.getStock())
+                                .stock(product.getStock())
 
-                .isNew(product.isNew())
-                
-                .active(product.isActive())
+                                .isNew(product.isNew())
 
-                .build();
-    }
+                                .active(product.isActive())
 
-
-    private Integer calculateDiscount(
-            BigDecimal oldPrice,
-            BigDecimal price
-    ) {
-
-        if (
-                oldPrice == null ||
-                price == null ||
-                oldPrice.compareTo(BigDecimal.ZERO) <= 0 ||
-                price.compareTo(oldPrice) >= 0
-        ) {
-            return 0;
+                                .build();
         }
 
-        return oldPrice
-                .subtract(price)
-                .multiply(BigDecimal.valueOf(100))
-                .divide(
-                        oldPrice,
-                        0,
-                        java.math.RoundingMode.HALF_UP
-                )
-                .intValue();
-    }
+        private Integer calculateDiscount(
+                        BigDecimal oldPrice,
+                        BigDecimal price) {
+
+                if (oldPrice == null ||
+                                price == null ||
+                                oldPrice.compareTo(BigDecimal.ZERO) <= 0 ||
+                                price.compareTo(oldPrice) >= 0) {
+                        return 0;
+                }
+
+                return oldPrice
+                                .subtract(price)
+                                .multiply(BigDecimal.valueOf(100))
+                                .divide(
+                                                oldPrice,
+                                                0,
+                                                java.math.RoundingMode.HALF_UP)
+                                .intValue();
+        }
+
+        public AdminProductDetailResponseDto toDetailResponseDto(Product product) {
+
+                LaptopSpecificationResponseDto specification = null;
+
+                if (product.getLaptopSpecification() != null) {
+
+                        LaptopSpecification laptop = product.getLaptopSpecification();
+
+                        specification = LaptopSpecificationResponseDto
+                                        .builder()
+                                        .brand(laptop.getBrand())
+                                        .processor(laptop.getProcessor())
+                                        .ram(laptop.getRam())
+                                        .ssd(laptop.getSsd())
+                                        .hardDisk(laptop.getHardDisk())
+                                        .operatingSystem(
+                                                        laptop.getOperatingSystem())
+                                        .graphics(laptop.getGraphics())
+                                        .screenSize(laptop.getScreenSize())
+                                        .resolution(laptop.getResolution())
+                                        .build();
+                }
+
+                return AdminProductDetailResponseDto
+                                .builder()
+
+                                .id(product.getId())
+
+                                .externalId(
+                                                product.getExternalId())
+
+                                .name(
+                                                product.getName())
+
+                                .description(
+                                                product.getDescription())
+
+                                .category(
+                                                product.getCategory())
+
+                                .price(
+                                                product.getPrice())
+
+                                .oldPrice(
+                                                product.getOldPrice())
+
+                                .stock(
+                                                product.getStock())
+
+                                .image(
+                                                product.getImage())
+
+                                .rating(
+                                                product.getRating())
+
+                                .reviewCount(
+                                                product.getReviewCount())
+
+                                .isNew(
+                                                product.isNew())
+
+                                .active(
+                                                product.isActive())
+
+                                .createdAt(
+                                                product.getCreatedAt())
+
+                                .updatedAt(
+                                                product.getUpdatedAt())
+
+                                .laptopSpecification(
+                                                specification)
+
+                                .build();
+        }
 }

@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import net.myapplication.myapp.enumpack.OrderStatus;
 import net.myapplication.myapp.object.order.dto.CreateOrderRequest;
 import net.myapplication.myapp.object.order.dto.OrderResponseDto;
-import net.myapplication.myapp.object.product.dto.PageResponse;
+import net.myapplication.myapp.object.product.dto.response.PageResponse;
 
 public interface OrderService {
         OrderResponseDto createOrder(

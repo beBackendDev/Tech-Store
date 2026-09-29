@@ -19,7 +19,7 @@ import net.myapplication.myapp.common.ApiResponseDTO;
 import net.myapplication.myapp.object.order.dto.OrderResponseDto;
 import net.myapplication.myapp.object.order.dto.request.UpdateOrderStatusRequest;
 import net.myapplication.myapp.object.order.service.OrderService;
-import net.myapplication.myapp.object.product.dto.PageResponse;
+import net.myapplication.myapp.object.product.dto.response.PageResponse;
 import net.myapplication.myapp.object.product.service.ProductImportService;
 import net.myapplication.myapp.user.dto.request.AdminOrderFilterRequest;
 import net.myapplication.myapp.user.service.AdminOrderService;

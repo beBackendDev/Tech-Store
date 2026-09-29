@@ -24,7 +24,7 @@ import net.myapplication.myapp.object.order.mapper.OrderMapper;
 import net.myapplication.myapp.object.order.repository.OrderItemRepository;
 import net.myapplication.myapp.object.order.repository.OrderRepository;
 import net.myapplication.myapp.object.order.service.OrderService;
-import net.myapplication.myapp.object.product.dto.PageResponse;
+import net.myapplication.myapp.object.product.dto.response.PageResponse;
 import net.myapplication.myapp.object.product.entity.Product;
 import net.myapplication.myapp.object.product.repository.ProductRepository;
 import net.myapplication.myapp.user.entity.User;

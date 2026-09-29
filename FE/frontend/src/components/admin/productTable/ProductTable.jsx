@@ -1,8 +1,10 @@
 import { formatCurrency } from "../../../utils/formatCurrency";
 import "./ProductTable.scss";
+import { useNavigate } from "react-router-dom";
 function ProductTable({
     products = []
 }) {
+    const navigate = useNavigate();
 
     if (products.length === 0) {
 
@@ -106,8 +108,13 @@ function ProductTable({
 
                         <td>
 
-                            <button>
-                                Edit
+                            <button
+                                type="button"
+                                onClick={() =>
+                                    navigate(`/admin/products/${product.id}`)
+                                }
+                            >
+                                View
                             </button>
 
                         </td>

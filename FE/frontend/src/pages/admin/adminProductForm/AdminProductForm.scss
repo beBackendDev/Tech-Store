@@ -1,0 +1,358 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+.admin-product-form {
+    min-height: 100%;
+    padding: 32px;
+
+    // ============================================
+    // HEADER
+    // ============================================
+
+    &__header {
+        margin-bottom: 28px;
+
+        span {
+            display: block;
+            margin-bottom: 6px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+
+            color: $gray-500;
+        }
+
+        h1 {
+            margin: 0;
+
+            font-size: 28px;
+            font-weight: 700;
+
+            color: $gray-900;
+        }
+
+        p {
+            margin: 8px 0 0;
+
+            font-size: 14px;
+
+            color: $gray-500;
+        }
+    }
+
+
+    // ============================================
+    // LOADING
+    // ============================================
+
+    &__loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 400px;
+
+        font-size: 14px;
+
+        color: $gray-500;
+    }
+
+
+    // ============================================
+    // ERROR
+    // ============================================
+
+    &__error {
+        margin-bottom: 20px;
+        padding: 14px 16px;
+
+        border: 1px solid $danger;
+        border-radius: 8px;
+
+        background: $danger;
+
+        color: $danger;
+
+        font-size: 14px;
+    }
+
+
+    // ============================================
+    // FORM
+    // ============================================
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        max-width: 1100px;
+    }
+
+
+    // ============================================
+    // ACTIONS
+    // ============================================
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+
+        padding-top: 8px;
+    }
+}
+
+
+// ============================================
+// FORM SECTION
+// ============================================
+
+.form-section {
+    padding: 24px;
+
+    border: 1px solid $gray-200;
+    border-radius: 12px;
+
+    background: $white;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+
+
+    &__header {
+        margin-bottom: 22px;
+
+        h2 {
+            margin: 0;
+
+            font-size: 18px;
+            font-weight: 650;
+
+            color: $gray-900;
+        }
+
+        p {
+            margin: 6px 0 0;
+
+            font-size: 13px;
+
+            color: $gray-500;
+        }
+    }
+}
+
+
+// ============================================
+// FORM GRID
+// ============================================
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+// ============================================
+// FORM FIELD
+// ============================================
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+
+    &--full {
+        grid-column: 1 / -1;
+    }
+
+
+    label {
+        font-size: 13px;
+        font-weight: 600;
+
+        color: $gray-700;
+    }
+
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+
+        padding: 11px 13px;
+
+        border: 1px solid $gray-300;
+        border-radius: 7px;
+
+        background: $white;
+
+        color: $gray-900;
+
+        font-family: inherit;
+        font-size: 14px;
+
+        outline: none;
+
+        transition:
+            border-color 0.15s ease,
+            box-shadow 0.15s ease;
+
+
+        &:focus {
+            border-color: $primary;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(59, 130, 246, 0.10);
+        }
+
+
+        &::placeholder {
+            color: $gray-400;
+        }
+    }
+
+
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+}
+
+
+// ============================================
+// VALIDATION ERROR
+// ============================================
+
+.field-error {
+    font-size: 12px;
+
+    color: $danger;
+}
+
+
+// ============================================
+// OPTIONS
+// ============================================
+
+.form-options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+.checkbox-field {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    color: $gray-700;
+
+
+    input {
+        width: 16px;
+        height: 16px;
+
+        cursor: pointer;
+    }
+}
+
+
+// ============================================
+// BUTTONS
+// ============================================
+
+.button {
+    min-width: 120px;
+
+    padding: 10px 18px;
+
+    border: 1px solid transparent;
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        opacity 0.15s ease;
+
+
+    &:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+    }
+
+
+    &--primary {
+        border-color: $primary;
+
+        background: $primary;
+        color: $white;
+
+
+        &:hover:not(:disabled) {
+            background: $primary-hover;
+        }
+    }
+
+
+    &--secondary {
+        border-color: $gray-300;
+
+        background: $white;
+        color: $gray-700;
+
+
+        &:hover:not(:disabled) {
+            background: $gray-50;
+        }
+    }
+}
+
+
+// ============================================
+// RESPONSIVE
+// ============================================
+
+@media (max-width: 768px) {
+
+    .admin-product-form {
+        padding: 20px;
+
+
+        &__actions {
+            flex-direction: column-reverse;
+
+
+            .button {
+                width: 100%;
+            }
+        }
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-field--full {
+        grid-column: auto;
+    }
+}

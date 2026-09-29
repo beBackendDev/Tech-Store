@@ -69,7 +69,7 @@ public class Product {
     @Column(precision = 2, scale = 1)
     private BigDecimal rating; // rating
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Integer reviewCount;
 
     @Column(nullable = false)

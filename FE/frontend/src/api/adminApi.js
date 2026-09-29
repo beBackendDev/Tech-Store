@@ -59,10 +59,9 @@ export const createAdminProduct = async (
 
     const response =
         await axiosPrivate.post(
-            ADMIN_PRODUCT_URL + "create-product",
+            `${ADMIN_PRODUCT_URL}/create-product`,
             product
         );
-
     return response.data.response;
 };
 //update

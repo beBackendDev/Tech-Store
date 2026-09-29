@@ -4,7 +4,10 @@
 const ACCESS_TOKEN = "accessToken";
 
 export const saveAccessToken = (token) => {
-
+console.log("🔥 SAVE ACCESS TOKEN");
+    console.log("VALUE:", token);
+    console.log("TYPE:", typeof token);
+    console.trace();
     localStorage.setItem(ACCESS_TOKEN, token);
 };
 

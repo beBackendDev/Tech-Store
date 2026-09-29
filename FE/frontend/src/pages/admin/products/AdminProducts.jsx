@@ -1,4 +1,5 @@
-import { useEffect, useState, useNavigate } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import useAxiosPrivate
     from "../../../hooks/useAxiosPrivate";
@@ -8,7 +9,7 @@ import useAxiosPrivate
 import "./AdminProducts.scss";
 import ProductTable from "../../../components/admin/productTable/ProductTable";
 import ProductPagination from "../../../components/admin/productPagination/ProductPagination";
-import { getAdminProducts } from "../../../api/adminApi";
+import { getAdminProducts, updateAdminProductStatus } from "../../../api/adminApi";
 import useDebounce from "../../../hooks/useDebounce";
 import ProductToolbar from "../../../components/admin/productToolbar/ProductToolbar";
 
@@ -81,90 +82,116 @@ function AdminProducts() {
     const debouncedKeyword =
         useDebounce(keyword, 400);
 
-    useEffect(() => {
-        let cancelled = false;
 
-        const fetchProducts = async () => {
+    let cancelled = false;
+    //STATUS
+    const handleToggleStatus = async (
+        id,
+        currentStatus
+    ) => {
 
-            try {
+        try {
 
-                setLoading(true);
-                setError(null);
+            await updateAdminProductStatus(
+                axiosPrivate,
+                id,
+                !currentStatus
+            );
+
+            await fetchProducts();
+
+        } catch (error) {
+
+            console.error(
+                "Failed to update product status:",
+                error
+            );
+        }
+    };
+    const fetchProducts = async () => {
+
+        try {
+
+            setLoading(true);
+            setError(null);
 
 
-                const data =
-                    await getAdminProducts(
-                        axiosPrivate,
-                        {
-                            page,
-                            size: 20,
-                            keyword:
-                                debouncedKeyword,
+            const data =
+                await getAdminProducts(
+                    axiosPrivate,
+                    {
+                        page,
+                        size: 20,
+                        keyword:
+                            debouncedKeyword,
 
-                            category,
+                        category,
 
-                            brand,
+                        brand,
 
-                            minPrice,
+                        minPrice,
 
-                            maxPrice,
+                        maxPrice,
 
-                            minRating,
+                        minRating,
 
-                            active:
-                                active === ""
-                                    ? undefined
-                                    : active === "true",
-                            sort: "createdAt,desc"
-                        }
-                    );
-                if (cancelled) {
-                    return;
-                }
-
-                setProducts(
-                    data.content
+                        active:
+                            active === ""
+                                ? undefined
+                                : active === "true",
+                        sort: "createdAt,desc"
+                    }
                 );
-
-
-                setPagination({
-                    page: data.page,
-                    size: data.size,
-                    totalElements:
-                        data.totalElements,
-                    totalPages:
-                        data.totalPages,
-                    first:
-                        data.first,
-                    last:
-                        data.last
-                });
-
-
-            } catch (error) {
-                if (cancelled) {
-                    return;
-                }
-                console.error(
-                    "Failed to fetch admin products:",
-                    error
-                );
-
-                setError(
-                    "Unable to load products."
-                );
-
-            } finally {
-
-                if (!cancelled) {
-                    setLoading(false);
-                }
-
+            if (cancelled) {
+                return;
             }
 
-        };
-        fetchProducts();
+            setProducts(
+                data.content
+            );
 
+
+            setPagination({
+                page: data.page,
+                size: data.size,
+                totalElements:
+                    data.totalElements,
+                totalPages:
+                    data.totalPages,
+                first:
+                    data.first,
+                last:
+                    data.last
+            });
+
+
+        } catch (error) {
+            if (cancelled) {
+                return;
+            }
+            console.error(
+                "Failed to fetch admin products:",
+                error
+            );
+
+            setError(
+                "Unable to load products."
+            );
+
+        } finally {
+
+            if (!cancelled) {
+                setLoading(false);
+            }
+
+        }
+
+    };
+
+
+
+    useEffect(() => {
+        fetchProducts();
         return () => {
             cancelled = true;
         };
@@ -276,6 +303,8 @@ function AdminProducts() {
 
             setPage(0);
         };
+
+
     return (
 
         <div className="admin-products">
@@ -401,6 +430,12 @@ function AdminProducts() {
 
                     <ProductTable
                         products={products}
+                        onEdit={(id) =>
+                            navigate(
+                                `/admin/products/${id}/edit`
+                            )
+                        }
+                        onToggleStatus={handleToggleStatus}
                     />
 
                 )}

@@ -94,6 +94,7 @@ import RoleRoute
     from "./RoleRoute";
 import AdminProducts from "../pages/admin/products/AdminProducts";
 import AdminProductDetail from "../pages/admin/productDetail/AdminProductDetail";
+import AdminProductForm from "../pages/admin/adminProductForm/AdminProductForm";
 
 
 function AppRoutes() {
@@ -261,15 +262,15 @@ function AppRoutes() {
                                 element={<AdminProductDetail />}
                             />
                             {/* PRODUCT-UPDATE */}
-                            {/* <Route
+                            <Route
                                 path="products/:id/edit"
                                 element={<AdminProductForm />}
-                            /> */}
+                            />
                             {/* PRODUCT-CREATE */}
-                            {/* <Route
+                            <Route
                                 path="products/new"
                                 element={<AdminProductForm />}
-                            /> */}
+                            />
                         </Route>
 
                     </Route>

@@ -2,7 +2,9 @@ import { formatCurrency } from "../../../utils/formatCurrency";
 import "./ProductTable.scss";
 import { useNavigate } from "react-router-dom";
 function ProductTable({
-    products = []
+    products = [],
+    onEdit,
+    onToggleStatus
 }) {
     const navigate = useNavigate();
 
@@ -88,20 +90,30 @@ function ProductTable({
 
                         <td>
 
-                            <span
-                                className={
-                                    product.active
-                                        ? "status status--active"
-                                        : "status status--inactive"
+                            <button
+                                type="button"
+                                onClick={() =>
+                                    onEdit(product.id)
                                 }
                             >
+                                Edit
+                            </button>
 
-                                {product.active
-                                    ? "Active"
-                                    : "Inactive"
+
+                            <button
+                                type="button"
+                                onClick={() =>
+                                    onToggleStatus(
+                                        product.id,
+                                        product.active
+                                    )
                                 }
-
-                            </span>
+                            >
+                                {product.active
+                                    ? "Deactivate"
+                                    : "Activate"
+                                }
+                            </button>
 
                         </td>
 

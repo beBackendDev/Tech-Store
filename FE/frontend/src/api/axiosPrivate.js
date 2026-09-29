@@ -13,7 +13,14 @@ axiosPrivate.interceptors.request.use(
     (config) => {
 
         const accessToken = getAccessToken();
-
+        console.log("========== AXIOS PRIVATE ==========");
+        console.log("METHOD:", config.method?.toUpperCase());
+        console.log("URL:", config.url);
+        console.log("TOKEN:", accessToken);
+        console.log(
+            "AUTH:",
+            config.headers?.Authorization
+        );
         if (accessToken) {
 
             config.headers.Authorization =

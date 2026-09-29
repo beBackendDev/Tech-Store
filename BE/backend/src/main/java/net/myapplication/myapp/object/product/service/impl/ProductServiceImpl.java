@@ -68,7 +68,9 @@ public class ProductServiceImpl
                                 .and(ProductSpecification.brand(filter.getBrand()))
                                 .and(ProductSpecification.minPrice(filter.getMinPrice()))
                                 .and(ProductSpecification.maxPrice(filter.getMaxPrice()))
-                                .and(ProductSpecification.minRating(filter.getMinRating()));
+                                .and(ProductSpecification.minRating(filter.getMinRating()))
+                                .and(ProductSpecification.active(true));
+                ;
 
                 Page<ProductResponseDto> page = productRepository
                                 .findAll(specification, pageable)

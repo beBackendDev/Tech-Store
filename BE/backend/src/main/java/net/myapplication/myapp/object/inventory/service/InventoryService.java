@@ -1,5 +1,10 @@
 package net.myapplication.myapp.object.inventory.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import net.myapplication.myapp.object.inventory.dto.response.InventoryResponseDto;
+import net.myapplication.myapp.object.inventory.dto.response.InventoryTransactionResponseDto;
 import net.myapplication.myapp.object.order.entity.Order;
 
 public interface InventoryService {
@@ -14,12 +19,12 @@ public interface InventoryService {
                         Integer quantity,
                         String note);
 
-        public void reserveStock(
+        void reserveStock(
                         Long productId,
                         Integer quantity,
                         Order order);
 
-        public void commitReservedStock(
+        void commitReservedStock(
                         Long productId,
                         Integer quantity,
                         Order order);
@@ -29,7 +34,7 @@ public interface InventoryService {
                         Integer quantity,
                         String note);
 
-        public void releaseReservedStock(
+        void releaseReservedStock(
                         Long productId,
                         Integer quantity,
                         Order order,
@@ -44,9 +49,23 @@ public interface InventoryService {
                         Long productId,
                         Integer quantity);
 
-        public void returnStock(
+        void returnStock(
                         Long productId,
                         Integer quantity,
                         Order order,
                         String note);
+                        
+        // =========================================================
+        // QUERY
+        // =========================================================
+
+        InventoryResponseDto getInventory(
+                        Long productId);
+
+        Page<InventoryResponseDto> getInventories(
+                        Pageable pageable);
+
+        Page<InventoryTransactionResponseDto> getHistory(
+                        Long productId,
+                        Pageable pageable);
 }

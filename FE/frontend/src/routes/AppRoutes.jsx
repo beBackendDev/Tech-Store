@@ -95,6 +95,8 @@ import RoleRoute
 import AdminProducts from "../pages/admin/products/AdminProducts";
 import AdminProductDetail from "../pages/admin/productDetail/AdminProductDetail";
 import AdminProductForm from "../pages/admin/adminProductForm/AdminProductForm";
+import AdminInventory from "../pages/admin/adminInventory/AdminInventory";
+import InventoryDetail from "../pages/admin/adminInventory/InventoryDetail";
 
 
 function AppRoutes() {
@@ -244,7 +246,7 @@ function AppRoutes() {
                             {/* DASHBOARD */}
 
                             <Route
-                                
+
                                 path="dashboard"
                                 element={<AdminDashboard />}
                             />
@@ -270,6 +272,17 @@ function AppRoutes() {
                             <Route
                                 path="products/new"
                                 element={<AdminProductForm />}
+                            />
+                            {/* INVENTORY-LIST */}
+                            <Route
+                                path="inventory"
+                                element={<AdminInventory />}
+
+                            />
+
+                            <Route
+                                path="inventory/:productId"
+                                element={<InventoryDetail />}
                             />
                         </Route>
 

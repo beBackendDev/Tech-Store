@@ -1,0 +1,266 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+.admin-inventory {
+    width: 100%;
+    padding: 24px;
+}
+
+.admin-inventory__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.admin-inventory__title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.admin-inventory__subtitle {
+    margin: 6px 0 0;
+    color: $gray-600;
+    font-size: 14px;
+}
+
+.admin-inventory__card {
+    width: 100%;
+    background: $white;
+    border: 1px solid $gray-200;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* =========================
+   TABLE
+   ========================= */
+
+.inventory-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+
+    th,
+    td {
+        padding: 16px 20px;
+        text-align: left;
+        border-bottom: 1px solid $gray-200;
+        white-space: nowrap;
+    }
+
+    th {
+        background: $gray-50;
+        color: $gray-600;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    td {
+        color: $gray-800;
+        font-size: 14px;
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    tbody tr:hover {
+        background: $gray-50;
+    }
+}
+
+/* =========================
+   PRODUCT
+   ========================= */
+
+.inventory-table__product {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 280px;
+}
+
+.inventory-table__image {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $gray-200;
+    border-radius: 8px;
+    overflow: hidden;
+
+    background: $gray-50;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    span {
+        font-size: 9px;
+        color: $gray-500;
+        text-align: center;
+    }
+}
+
+.inventory-table__product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.inventory-table__product-name {
+    max-width: 280px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-weight: 600;
+    color: $gray-900;
+}
+
+.inventory-table__external-id {
+    font-size: 12px;
+    color: $gray-500;
+}
+
+/* =========================
+   STATUS
+   ========================= */
+
+.inventory-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.inventory-status--in-stock {
+    background: $gray-100;
+    color: $gray-700;
+}
+
+.inventory-status--low-stock {
+    background: $warning;
+    color: $warning;
+}
+
+.inventory-status--out-of-stock {
+    background: $danger;
+    color: $danger;
+}
+
+/* =========================
+   ACTION
+   ========================= */
+
+.inventory-table__view-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border: 1px solid $gray-300;
+    border-radius: 6px;
+
+    background: $white;
+    color: $gray-700;
+
+    cursor: pointer;
+
+    &:hover {
+        background: $gray-50;
+    }
+}
+
+/* =========================
+   STATE
+   ========================= */
+
+.inventory-table__state {
+    padding: 60px 24px;
+
+    text-align: center;
+    color: $gray-500;
+    font-size: 14px;
+}
+
+.inventory-table__state--error {
+    color: $danger;
+}
+
+/* =========================
+   PAGINATION
+   ========================= */
+
+.inventory-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 20px;
+
+    border-top: 1px solid $gray-200;
+}
+
+.inventory-pagination__info {
+    font-size: 13px;
+    color: $gray-600;
+}
+
+.inventory-pagination__controls {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.inventory-pagination__button {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $gray-300;
+    border-radius: 6px;
+
+    background: $white;
+    color: $gray-700;
+
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+        background: $gray-50;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.inventory-pagination__button--active {
+    background: $gray-900;
+    border-color: $gray-900;
+    color: $white;
+}

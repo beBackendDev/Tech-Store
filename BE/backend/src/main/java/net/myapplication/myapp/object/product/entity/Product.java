@@ -34,10 +34,15 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    // =========================================================
+    // RELATIONSHIPS
+    // =========================================================
 
     @OneToOne(mappedBy = "product", fetch = FetchType.LAZY)
     private LaptopSpecification laptopSpecification;
-
+    // =========================================================
+    // PRODUCT INFORMATION
+    // =========================================================
     @Column(nullable = false, length = 255)
     private String name; // title
 
@@ -56,8 +61,9 @@ public class Product {
     // @Version
     // private Long version;
 
+    @Builder.Default
     @Column(nullable = false)
-    private Integer stock; // stock
+    private Integer stock = 0; // stock
 
     @Builder.Default
     @Column(nullable = false)

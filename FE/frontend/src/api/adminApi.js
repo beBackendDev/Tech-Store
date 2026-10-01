@@ -1,7 +1,7 @@
 import axiosPrivate from "./axiosPrivate";
 
 const ADMIN_PRODUCT_URL = "/dashboard/admin";
-
+const ADMIN_INVENTORY_URL = "/admin/inventory";
 export const getAdminDashboard = async () => {
     return await axiosPrivate.get(ADMIN_PRODUCT_URL);
 };
@@ -92,6 +92,60 @@ export const updateAdminProductStatus = async (
                 active
             }
         );
+
+    return response.data.response;
+};
+
+//INVENTORY - APIs
+export const getAdminInventory = async (
+    axiosPrivate,
+    {
+        page = 0,
+        size = 20,
+        sort = "name,asc",
+    } = {}
+) => {
+    const response = await axiosPrivate.get(ADMIN_INVENTORY_URL, {
+        params: {
+            page,
+            size,
+            sort,
+        },
+    });
+
+    return response.data.response;
+};
+//INVENTORY DETAIL - API
+export const getAdminInventoryDetail = async (
+    axiosPrivate,
+    productId
+) => {
+    const response = await axiosPrivate.get(
+        `${ADMIN_INVENTORY_URL}/${productId}`
+    );
+
+    return response.data.response;
+};
+//INVENTORY HISTORY - API
+export const getInventoryHistory = async (
+    axiosPrivate,
+    productId,
+    {
+        page = 0,
+        size = 20,
+        sort = "createdAt,desc",
+    } = {}
+) => {
+    const response = await axiosPrivate.get(
+        `${ADMIN_INVENTORY_URL}/${productId}/history`,
+        {
+            params: {
+                page,
+                size,
+                sort,
+            },
+        }
+    );
 
     return response.data.response;
 };

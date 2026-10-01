@@ -1,4 +1,4 @@
-package net.myapplication.myapp.object.product.dto.request;
+package net.myapplication.myapp.object.inventory.dto.request;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;

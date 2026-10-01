@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 
 import net.myapplication.myapp.object.admin.service.AdminProductService;
+import net.myapplication.myapp.object.inventory.service.InventoryService;
 import net.myapplication.myapp.object.product.constants.ProductSortField;
 import net.myapplication.myapp.object.product.dto.request.AdminCreateProductRequest;
 import net.myapplication.myapp.object.product.dto.request.AdminLaptopSpecificationRequest;
@@ -42,6 +43,8 @@ public class AdminProductServiceImpl
         private final ProductRepository productRepository;
 
         private final LaptopSpecificationRepository laptopSpecificationRepository;
+
+        private final InventoryService inventoryService;
 
         private final ProductMapper productMapper;
 
@@ -220,10 +223,12 @@ public class AdminProductServiceImpl
                                 request.getActive() == null
                                                 || request.getActive());
 
-                product.setStock(
-                                request.getInitialStock() == null
-                                                ? 0
-                                                : request.getInitialStock());
+                // product.setStock(
+                // request.getInitialStock() == null
+                // ? 0
+                // : request.getInitialStock());
+                product.setStock(0); // Set initial stock to 0
+                product.setReservedStock(0); // Set initial reserved stock to 0
 
                 Product savedProduct = productRepository.save(product);
 
@@ -269,7 +274,15 @@ public class AdminProductServiceImpl
                         laptopSpecificationRepository.save(
                                         specification);
                 }
-
+                // Initial Stock
+                Integer initialStock = request.getInitialStock();
+                if (initialStock != null && initialStock > 0) {
+                        inventoryService.stockIn(
+                                        savedProduct.getId(),
+                                        initialStock,
+                                        "Initial stock when product was created");
+                }
+                //response 
                 return productMapper.toDetailResponseDto(
                                 savedProduct);
         }

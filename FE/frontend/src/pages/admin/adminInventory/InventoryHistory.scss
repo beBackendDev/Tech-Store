@@ -1,0 +1,248 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+.inventory-history {
+    background: $white;
+
+    border: 1px solid $gray-200;
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.inventory-history__header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 24px;
+
+    border-bottom: 1px solid $gray-200;
+
+    h2 {
+        margin: 0;
+
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    p {
+        margin: 5px 0 0;
+
+        color: $gray-500;
+
+        font-size: 13px;
+    }
+
+    > span {
+        color: $gray-500;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.inventory-history__table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.inventory-history__table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+
+    th,
+    td {
+        padding: 14px 20px;
+
+        border-bottom: 1px solid $gray-200;
+
+        text-align: left;
+
+        white-space: nowrap;
+    }
+
+    th {
+        background: $gray-50;
+
+        color: $gray-600;
+
+        font-size: 11px;
+
+        font-weight: 600;
+
+        text-transform: uppercase;
+    }
+
+    td {
+        color: $gray-700;
+
+        font-size: 13px;
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+}
+
+
+/* =========================
+   TRANSACTION TYPE
+========================= */
+
+.inventory-history__type {
+    display: inline-flex;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.inventory-history__type--stock-in {
+    background: $gray-100;
+    color: $gray-700;
+}
+
+.inventory-history__type--stock-out {
+    background: $danger;
+    color: $danger;
+}
+
+.inventory-history__type--reserved {
+    background: $warning;
+    color: $warning;
+}
+
+.inventory-history__type--released {
+    background: $gray-100;
+    color: $gray-700;
+}
+
+.inventory-history__type--returned {
+    background: $gray-100;
+    color: $gray-700;
+}
+
+.inventory-history__type--adjustment {
+    background: $gray-100;
+    color: $gray-700;
+}
+
+
+/* =========================
+   SNAPSHOT
+========================= */
+
+.inventory-history__snapshot {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: $gray-500;
+
+    strong {
+        color: $gray-900;
+    }
+}
+
+
+/* =========================
+   NOTE
+========================= */
+
+.inventory-history__note {
+    display: block;
+
+    max-width: 240px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    color: $gray-600;
+}
+
+
+/* =========================
+   STATE
+========================= */
+
+.inventory-history__state {
+    padding: 50px 24px;
+
+    text-align: center;
+
+    color: $gray-500;
+
+    font-size: 14px;
+}
+
+.inventory-history__state--error {
+    color: $danger;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.inventory-history__pagination {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    padding: 16px;
+
+    border-top: 1px solid $gray-200;
+
+    button {
+        padding: 7px 12px;
+
+        border: 1px solid $gray-300;
+
+        border-radius: 6px;
+
+        background: $white;
+
+        color: $gray-700;
+
+        cursor: pointer;
+
+        &:hover:not(:disabled) {
+            background: $gray-50;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+    span {
+        color: $gray-600;
+
+        font-size: 13px;
+    }
+}

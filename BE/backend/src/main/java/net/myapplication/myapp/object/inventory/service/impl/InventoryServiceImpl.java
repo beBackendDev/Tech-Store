@@ -60,6 +60,41 @@ public class InventoryServiceImpl
                                 note);
         }
 
+        @Transactional
+        @Override
+        public void stockOut(
+                        Long productId,
+                        Integer quantity,
+                        String note) {
+
+                Product product = getProductForUpdate(productId);
+
+                if (!product.hasAvailableStock(quantity)) {
+                        throw new RuntimeException(
+                                        "Insufficient available stock. " +
+                                                        "Available: " +
+                                                        product.getAvailableStock() +
+                                                        ", requested: " +
+                                                        quantity);
+                }
+
+                int stockBefore = product.getStock();
+
+                int reservedBefore = product.getReservedStock();
+
+                product.adjustStock(-quantity);
+
+                createTransaction(
+                                product,
+                                null,
+                                InventoryTransactionType.STOCK_OUT,
+                                quantity,
+                                stockBefore,
+                                product.getStock(),
+                                reservedBefore,
+                                product.getReservedStock(),
+                                note);
+        }
         // =========================================================
         // RESERVE STOCK
         // =========================================================
@@ -168,11 +203,11 @@ public class InventoryServiceImpl
         @Transactional
         public void adjustStock(
                         Long productId,
-                        Integer quantity,
+                        Integer actualStock,
                         String note) {
 
-                if (quantity == null ||
-                                quantity == 0) {
+                if (actualStock == null ||
+                                actualStock == 0) {
 
                         throw new IllegalArgumentException(
                                         "Adjustment quantity cannot be zero");
@@ -184,13 +219,19 @@ public class InventoryServiceImpl
 
                 int reservedBefore = product.getReservedStock();
 
-                product.adjustStock(quantity);
+                int difference = actualStock - stockBefore;
+
+                if(difference == 0 ){
+                        return ;
+                }
+
+                product.adjustStock(difference);
 
                 createTransaction(
                                 product,
                                 null,
                                 InventoryTransactionType.ADJUSTMENT,
-                                quantity,
+                                Math.abs(difference),
                                 stockBefore,
                                 product.getStock(),
                                 reservedBefore,
@@ -330,11 +371,6 @@ public class InventoryServiceImpl
 
         }
 
-        @Override
-        public void stockOut(Long productId, Integer quantity, String note) {
-                // TODO Auto-generated method stub
-
-        }
         // INVENTORY QUERY
 
         @Override

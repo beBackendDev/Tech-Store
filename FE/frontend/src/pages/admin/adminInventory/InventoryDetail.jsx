@@ -4,12 +4,18 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import {
     getAdminInventoryDetail,
+    stockOut,
+    adjustInventory,
+    stockIn,
 } from "../../../api/adminApi";
 
 import InventoryHistory from "./InventoryHistory";
 
 import "./InventoryDetail.scss";
 import useAxiosPrivate from "../../../hooks/useAxiosPrivate";
+import StockOutModal from "./StockOutModal";
+import AdjustmentModal from "./AdjustmentModal";
+import StockInModal from "./StockInModal";
 
 const InventoryDetail = () => {
     const { productId } = useParams();
@@ -20,6 +26,31 @@ const InventoryDetail = () => {
     const [inventory, setInventory] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    //adjustment 
+    const [adjustmentModalOpen, setAdjustmentModalOpen] =
+        useState(false);
+
+    const [adjustmentLoading, setAdjustmentLoading] =
+        useState(false);
+
+    const [adjustmentError, setAdjustmentError] =
+        useState(null);
+    //stock-out
+    const [stockOutModalOpen, setStockOutModalOpen] =
+        useState(false);
+
+    const [stockOutLoading, setStockOutLoading] =
+        useState(false);
+
+    const [stockOutError, setStockOutError] =
+        useState(null);
+    //stock-in
+    const [stockInModalOpen, setStockInModalOpen] = useState(false);
+    const [stockInLoading, setStockInLoading] = useState(false);
+    const [stockInError, setStockInError] = useState(null);
+
+    const [historyRefreshKey, setHistoryRefreshKey] =
+        useState(0);
 
     const fetchInventoryDetail = useCallback(async () => {
         try {
@@ -51,6 +82,158 @@ const InventoryDetail = () => {
         fetchInventoryDetail();
     }, [fetchInventoryDetail]);
 
+    //handle stock-out
+    const handleOpenStockOut = () => {
+        setStockOutError(null);
+        setStockOutModalOpen(true);
+    };
+
+
+    const handleCloseStockOut = () => {
+        if (stockOutLoading) {
+            return;
+        }
+
+        setStockOutModalOpen(false);
+        setStockOutError(null);
+    };
+
+
+    const handleStockOut = async ({
+        quantity,
+        note,
+    }) => {
+        try {
+            setStockOutLoading(true);
+            setStockOutError(null);
+
+            await stockOut(
+                axiosPrivate,
+                productId,
+                {
+                    quantity,
+                    note,
+                }
+            );
+
+            setStockOutModalOpen(false);
+
+            await fetchInventoryDetail();
+
+            setHistoryRefreshKey(
+                (current) => current + 1
+            );
+
+        } catch (err) {
+            console.error(
+                "Failed to stock out:",
+                err
+            );
+
+            setStockOutError(
+                err?.response?.data?.message ||
+                "Failed to process stock out."
+            );
+
+        } finally {
+            setStockOutLoading(false);
+        }
+    };
+    //handle stock-in
+    const handleOpenStockIn = () => {
+        setStockInError(null);
+        setStockInModalOpen(true);
+    };
+
+    const handleCloseStockIn = () => {
+        if (stockInLoading) {
+            return;
+        }
+
+        setStockInModalOpen(false);
+        setStockInError(null);
+    };
+    const handleStockIn = async (data) => {
+        try {
+            setStockInLoading(true);
+            setStockInError(null);
+
+            await stockIn(
+                axiosPrivate,
+                productId,
+                data
+            );
+
+            setStockInModalOpen(false);
+
+            await fetchInventoryDetail();
+
+            setHistoryRefreshKey(
+                (prev) => prev + 1
+            );
+        } catch (error) {
+            console.error(
+                "Stock in failed:",
+                error
+            );
+
+            const message =
+                error?.response?.data?.message ||
+                "Failed to add stock.";
+
+            setStockInError(message);
+        } finally {
+            setStockInLoading(false);
+        }
+    };
+
+    //handle adjustment 
+    const handleOpenAdjustment = () => {
+        setAdjustmentError(null);
+        setAdjustmentModalOpen(true);
+    };
+
+    const handleCloseAdjustment = () => {
+        if (adjustmentLoading) {
+            return;
+        }
+
+        setAdjustmentModalOpen(false);
+        setAdjustmentError(null);
+    };
+    const handleAdjustment = async (data) => {
+        try {
+            setAdjustmentLoading(true);
+            setAdjustmentError(null);
+
+            await adjustInventory(
+                axiosPrivate,
+                productId,
+                data
+            );
+
+            setAdjustmentModalOpen(false);
+
+            await fetchInventoryDetail();
+
+            setHistoryRefreshKey(
+                (prev) => prev + 1
+            );
+        } catch (error) {
+            console.error(
+                "Adjustment failed:",
+                error
+            );
+
+            const message =
+                error?.response?.data?.message ||
+                "Failed to adjust inventory.";
+
+            setAdjustmentError(message);
+        } finally {
+            setAdjustmentLoading(false);
+        }
+    };
     const handleBack = () => {
         navigate("/admin/inventory");
     };
@@ -190,7 +373,7 @@ const InventoryDetail = () => {
 
                 <button
                     type="button"
-                    disabled
+                    onClick={handleOpenStockIn}
                     className="inventory-detail__action"
                 >
                     + Stock In
@@ -198,7 +381,7 @@ const InventoryDetail = () => {
 
                 <button
                     type="button"
-                    disabled
+                    onClick={handleOpenStockOut}
                     className="inventory-detail__action"
                 >
                     - Stock Out
@@ -206,7 +389,7 @@ const InventoryDetail = () => {
 
                 <button
                     type="button"
-                    disabled
+                    onClick={handleOpenAdjustment}
                     className="inventory-detail__action"
                 >
                     Adjust Stock
@@ -221,8 +404,34 @@ const InventoryDetail = () => {
 
             <InventoryHistory
                 productId={productId}
+                refreshKey={historyRefreshKey}
             />
 
+            <StockInModal
+                isOpen={stockInModalOpen}
+                inventory={inventory}
+                loading={stockInLoading}
+                error={stockInError}
+                onClose={handleCloseStockIn}
+                onSubmit={handleStockIn}
+            />
+
+            <StockOutModal
+                isOpen={stockOutModalOpen}
+                inventory={inventory}
+                loading={stockOutLoading}
+                error={stockOutError}
+                onClose={handleCloseStockOut}
+                onSubmit={handleStockOut}
+            />
+            <AdjustmentModal
+                isOpen={adjustmentModalOpen}
+                inventory={inventory}
+                loading={adjustmentLoading}
+                error={adjustmentError}
+                onClose={handleCloseAdjustment}
+                onSubmit={handleAdjustment}
+            />
         </section>
     );
 };

@@ -1,7 +1,9 @@
 import axiosPrivate from "./axiosPrivate";
 
 const ADMIN_PRODUCT_URL = "/dashboard/admin";
+
 const ADMIN_INVENTORY_URL = "/admin/inventory";
+
 export const getAdminDashboard = async () => {
     return await axiosPrivate.get(ADMIN_PRODUCT_URL);
 };
@@ -148,4 +150,44 @@ export const getInventoryHistory = async (
     );
 
     return response.data.response;
+};
+//INVENTORY STOCK-IN
+export const stockIn = async (
+    axiosPrivate,
+    productId,
+    data
+) => {
+    const response = await axiosPrivate.post(
+        `${ADMIN_INVENTORY_URL}/${productId}/stock-in`,
+        data
+    );
+
+    return response.data;
+};
+// INVENTORY STOCK -OUT 
+export const stockOut = async (
+    axiosPrivate,
+    productId,
+    data
+) => {
+    const response = await axiosPrivate.post(
+        `${ADMIN_INVENTORY_URL}/${productId}/stock-out`,
+        data
+    );
+
+    return response.data;
+};
+
+// INVENTORY ADJUSTMENT
+export const adjustInventory = async (
+    axiosPrivate,
+    productId,
+    data
+) => {
+    const response = await axiosPrivate.post(
+        `${ADMIN_INVENTORY_URL}/${productId}/adjust`,
+        data
+    );
+
+    return response.data;
 };

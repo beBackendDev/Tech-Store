@@ -20,6 +20,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import net.myapplication.myapp.exception.InvalidInventoryAdjustmentException;
 
 @Entity
 @Table(name = "products", uniqueConstraints = {
@@ -178,27 +179,23 @@ public class Product {
     public void adjustStock(
             Integer quantity) {
 
-        if (quantity == null || quantity == 0) {
+        validateAdjustmentQuantity(quantity);
 
-            throw new IllegalArgumentException(
-                    "Adjustment quantity cannot be zero");
-        }
-
-        int newStock = stock + quantity;
+        int newStock = this.stock + quantity;
 
         if (newStock < 0) {
 
-            throw new IllegalStateException(
+            throw new InvalidInventoryAdjustmentException(
                     "Stock cannot be negative");
         }
 
         if (newStock < reservedStock) {
 
-            throw new IllegalStateException(
+            throw new InvalidInventoryAdjustmentException(
                     "Stock cannot be lower than reserved stock");
         }
 
-        stock = newStock;
+        this.stock = newStock;
     }
 
     private void validateQuantity(
@@ -210,4 +207,11 @@ public class Product {
                     "Quantity must be greater than zero");
         }
     }
+    private void validateAdjustmentQuantity(Integer quantity) {
+    if (quantity == null) {
+        throw new IllegalArgumentException(
+            "Adjustment quantity must not be null."
+        );
+    }
+}
 }

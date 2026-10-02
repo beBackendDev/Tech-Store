@@ -42,7 +42,7 @@ public interface InventoryService {
 
         void adjustStock(
                         Long productId,
-                        Integer newStock,
+                        Integer actualStock,
                         String note);
 
         boolean isAvailable(

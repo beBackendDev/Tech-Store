@@ -1,0 +1,393 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.adjustment-modal__overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.adjustment-modal {
+    width: 100%;
+    max-width: 520px;
+
+    background: $white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.adjustment-modal__header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 20px 24px;
+
+    border-bottom: 1px solid $gray-200;
+
+    h2 {
+        margin: 0;
+
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    p {
+        margin: 5px 0 0;
+
+        color: $gray-500;
+
+        font-size: 13px;
+    }
+}
+
+.adjustment-modal__close {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: $gray-500;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    &:hover {
+        color: $gray-900;
+    }
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.adjustment-modal__form {
+    padding: 24px;
+}
+
+
+/* =========================
+   PRODUCT
+========================= */
+
+.adjustment-modal__product {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    margin-bottom: 16px;
+
+    background: $gray-50;
+
+    border: 1px solid $gray-200;
+
+    border-radius: 8px;
+
+    > div:last-child {
+        display: flex;
+        flex-direction: column;
+
+        gap: 4px;
+
+        min-width: 0;
+    }
+
+    strong {
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+
+        color: $gray-900;
+
+        font-size: 14px;
+    }
+
+    span {
+        color: $gray-500;
+
+        font-size: 12px;
+    }
+}
+
+.adjustment-modal__image {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $gray-200;
+
+    border-radius: 6px;
+
+    background: $white;
+
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    span {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================
+   CURRENT STOCK
+========================= */
+
+.adjustment-modal__current {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 14px;
+
+    margin-bottom: 20px;
+
+    border-radius: 7px;
+
+    background: $gray-50;
+}
+
+.adjustment-modal__current-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: $gray-600;
+
+    font-size: 13px;
+
+    strong {
+        color: $gray-900;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================
+   FIELD
+========================= */
+
+.adjustment-modal__field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+
+    label {
+        display: flex;
+
+        gap: 5px;
+
+        color: $gray-700;
+
+        font-size: 13px;
+
+        font-weight: 600;
+    }
+
+    label span {
+        color: $gray-500;
+
+        font-weight: 400;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+
+        padding: 10px 12px;
+
+        border: 1px solid $gray-300;
+
+        border-radius: 7px;
+
+        background: $white;
+
+        color: $gray-900;
+
+        font-size: 14px;
+
+        outline: none;
+
+        &:focus {
+            border-color: $gray-900;
+        }
+
+        &:disabled {
+            background: $gray-100;
+
+            cursor: not-allowed;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+    }
+}
+
+.adjustment-modal__field-error {
+    color: $danger;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   DIFFERENCE
+========================= */
+
+.adjustment-modal__difference {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 14px;
+
+    margin-bottom: 20px;
+
+    border-radius: 7px;
+
+    background: $gray-50;
+
+    span {
+        color: $gray-600;
+
+        font-size: 13px;
+    }
+
+    strong {
+        color: $gray-900;
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.adjustment-modal__error {
+    padding: 10px 12px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid $danger;
+
+    border-radius: 7px;
+
+    background: $danger;
+
+    color: $white;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.adjustment-modal__actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-top: 4px;
+}
+
+.adjustment-modal__cancel,
+.adjustment-modal__submit {
+    padding: 10px 16px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.adjustment-modal__cancel {
+    border: 1px solid $gray-300;
+
+    background: $white;
+
+    color: $gray-700;
+
+    &:hover:not(:disabled) {
+        background: $gray-50;
+    }
+}
+
+.adjustment-modal__submit {
+    border: 1px solid $gray-900;
+
+    background: $gray-900;
+
+    color: $white;
+
+    &:hover:not(:disabled) {
+        opacity: 0.9;
+    }
+
+    &:disabled {
+        opacity: 0.45;
+
+        cursor: not-allowed;
+    }
+}

@@ -12,6 +12,7 @@ const PAGE_SIZE = 10;
 
 const InventoryHistory = ({
     productId,
+    refreshKey,
 }) => {
     const axiosPrivate = useAxiosPrivate();
 
@@ -79,7 +80,7 @@ const InventoryHistory = ({
 
     useEffect(() => {
         fetchHistory(0);
-    }, [fetchHistory]);
+    }, [fetchHistory , refreshKey]);
 
 
     const formatDate = (value) => {

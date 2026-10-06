@@ -200,6 +200,23 @@ public class AdminDashboardController {
         }
         // ================================INVENTORY-MANAGEMENT========================================
         // ================================ORDER-MANAGEMENT========================================
+
+        // @GetMapping("/{id}")
+
+        // @PatchMapping("/{id}/confirm")
+
+        // @PatchMapping("/{id}/process")
+
+        // @PatchMapping("/{id}/ship")
+
+        // @PatchMapping("/{id}/deliver")
+
+        // @PatchMapping("/{id}/complete")
+
+        // @PatchMapping("/{id}/cancel")
+
+        // @PatchMapping("/{id}/complete-return")
+
         // ================================CUSTOMER-MANAGEMENT========================================
         // ================================RETURN-MANAGEMENT========================================
         // ================================ANALYTICS========================================

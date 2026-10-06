@@ -7,6 +7,7 @@ import org.springframework.data.domain.Pageable;
 import net.myapplication.myapp.enumpack.OrderStatus;
 import net.myapplication.myapp.object.order.dto.CreateOrderRequest;
 import net.myapplication.myapp.object.order.dto.OrderResponseDto;
+import net.myapplication.myapp.object.order.entity.Order;
 import net.myapplication.myapp.object.product.dto.response.PageResponse;
 
 public interface OrderService {
@@ -45,4 +46,6 @@ public interface OrderService {
                         Long orderId,
                         Long userId,
                         String reason);
+
+        void shipOrder(Long orderId);
 }

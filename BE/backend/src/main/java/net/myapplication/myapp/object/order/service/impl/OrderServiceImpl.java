@@ -14,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 import net.myapplication.myapp.enumpack.OrderStatus;
 import net.myapplication.myapp.enumpack.PaymentMethod;
 import net.myapplication.myapp.enumpack.PaymentStatus;
+import net.myapplication.myapp.object.inventory.enums.InventoryTransactionType;
 import net.myapplication.myapp.object.inventory.service.InventoryService;
 import net.myapplication.myapp.object.order.dto.CreateOrderRequest;
 import net.myapplication.myapp.object.order.dto.OrderItemRequest;
@@ -177,82 +178,6 @@ public class OrderServiceImpl implements OrderService {
                                 savedOrder);
         }
 
-        // other methods...
-        private void initializeOrderStatus(
-                        Order order) {
-
-                if (order.getPaymentMethod() == PaymentMethod.COD) {
-
-                        order.setStatus(
-                                        OrderStatus.CONFIRMED);
-
-                        order.setPaymentStatus(
-                                        PaymentStatus.PENDING);
-
-                        return;
-                }
-
-                order.setStatus(
-                                OrderStatus.PENDING);
-
-                order.setPaymentStatus(
-                                PaymentStatus.PENDING);
-        }
-
-        private void validateProduct(
-                        Product product,
-                        Integer quantity) {
-
-                if (!product.isActive()) {
-
-                        throw new IllegalStateException(
-                                        "Product is no longer available: "
-                                                        + product.getName());
-                }
-
-                if (quantity == null ||
-                                quantity <= 0) {
-
-                        throw new IllegalArgumentException(
-                                        "Invalid quantity");
-                }
-
-                if (product.getAvailableStock() < quantity) {
-
-                        throw new IllegalStateException(
-                                        "Insufficient stock for product: "
-                                                        + product.getName());
-                }
-        }
-
-        private void reserveOrderInventory(
-                        Order order) {
-
-                for (OrderItem item : order.getItems()) {
-
-                        inventoryService.reserveStock(
-                                        item.getProduct().getId(),
-                                        item.getQuantity(),
-                                        order);
-                }
-        }
-
-        private BigDecimal calculateShippingFee(
-                        BigDecimal subtotal) {
-
-                BigDecimal freeShippingThreshold = BigDecimal.valueOf(
-                                500_000);
-
-                if (subtotal.compareTo(
-                                freeShippingThreshold) >= 0) {
-
-                        return BigDecimal.ZERO;
-                }
-
-                return BigDecimal.valueOf(
-                                30_000);
-        }
-
         @Override
         @Transactional(readOnly = true)
         public PageResponse<OrderResponseDto> getMyOrders(
@@ -261,7 +186,7 @@ public class OrderServiceImpl implements OrderService {
 
                 Page<Order> page = orderRepository
                                 .findByUserId(
-                                                 userId,
+                                                userId,
                                                 pageable);
 
                 return PageResponse
@@ -359,48 +284,6 @@ public class OrderServiceImpl implements OrderService {
                                 order);
         }
 
-        // other method
-        private void validateOrderCanBeCancelled(
-                        Order order) {
-
-                OrderStatus status = order.getStatus();
-
-                if (status == OrderStatus.CANCELLED) {
-
-                        throw new IllegalStateException(
-                                        "Order already cancelled");
-                }
-
-                if (status == OrderStatus.PROCESSING ||
-                                status == OrderStatus.DELIVERED ||
-                                status == OrderStatus.COMPLETED ||
-                                status == OrderStatus.RETURNED) {
-
-                        throw new IllegalStateException(
-                                        "Order cannot be cancelled");
-                }
-        }
-
-        private void releaseOrderInventory(
-                        Order order,
-                        String reason) {
-
-                for (OrderItem item : order.getItems()) {
-
-                        inventoryService
-                                        .releaseReservedStock(
-
-                                                        item.getProduct().getId(),
-
-                                                        item.getQuantity(),
-
-                                                        order,
-
-                                                        "Order cancelled: "
-                                                                        + reason);
-                }
-        }
-
         @Override
         @Transactional
         public void markPaymentSuccess(
@@ -450,23 +333,6 @@ public class OrderServiceImpl implements OrderService {
 
                 order.setStatus(
                                 OrderStatus.CONFIRMED);
-        }
-
-        // other method
-        private void commitOrderInventory(
-                        Order order) {
-
-                for (OrderItem item : order.getItems()) {
-
-                        inventoryService
-                                        .commitReservedStock(
-
-                                                        item.getProduct().getId(),
-
-                                                        item.getQuantity(),
-
-                                                        order);
-                }
         }
 
         @Override
@@ -572,88 +438,6 @@ public class OrderServiceImpl implements OrderService {
                                 order);
         }
 
-        // other methods
-        private void validateStatusTransition(
-                        Order order,
-                        OrderStatus newStatus) {
-
-                OrderStatus current = order.getStatus();
-
-                switch (current) {
-
-                        case PENDING -> {
-
-                                if (newStatus != OrderStatus.CONFIRMED
-
-                                                &&
-
-                                                newStatus != OrderStatus.CANCELLED) {
-
-                                        throw new IllegalStateException(
-                                                        "Invalid order status transition");
-                                }
-                        }
-
-                        case CONFIRMED -> {
-
-                                if (newStatus != OrderStatus.PROCESSING
-
-                                                &&
-
-                                                newStatus != OrderStatus.CANCELLED) {
-
-                                        throw new IllegalStateException(
-                                                        "Invalid order status transition");
-                                }
-                        }
-
-                        case PROCESSING -> {
-
-                                if (newStatus != OrderStatus.SHIPPING) {
-
-                                        throw new IllegalStateException(
-                                                        "Invalid order status transition");
-                                }
-                        }
-
-                        case SHIPPING -> {
-
-                                if (newStatus != OrderStatus.DELIVERED) {
-
-                                        throw new IllegalStateException(
-                                                        "Invalid order status transition");
-                                }
-                        }
-
-                        case DELIVERED -> {
-
-                                if (newStatus != OrderStatus.COMPLETED
-
-                                                &&
-
-                                                newStatus != OrderStatus.RETURN_REQUESTED) {
-
-                                        throw new IllegalStateException(
-                                                        "Invalid order status transition");
-                                }
-                        }
-
-                        case RETURN_REQUESTED -> {
-
-                                if (newStatus != OrderStatus.RETURNED) {
-
-                                        throw new IllegalStateException(
-                                                        "Invalid order status transition");
-                                }
-                        }
-
-                        default ->
-
-                                throw new IllegalStateException(
-                                                "Order cannot change status");
-                }
-        }
-
         @Override
         @Transactional
         public OrderResponseDto requestReturn(
@@ -737,4 +521,258 @@ public class OrderServiceImpl implements OrderService {
                 return orderMapper.toResponseDto(
                                 order);
         }
+
+        @Transactional
+        @Override
+        public void shipOrder(
+                        Long orderId) {
+                Order order = orderRepository
+                                .findById(orderId)
+                                .orElseThrow(() -> new RuntimeException(
+                                                "Order not found"));
+
+                validateCanShip(order);
+
+                for (OrderItem item : order.getItems()) {
+
+                        inventoryService.commitReservedStock(
+                                        item.getProduct().getId(),
+                                        item.getQuantity(),
+                                        order);
+                }
+
+                order.setStatus(OrderStatus.DELIVERED);
+
+                orderRepository.save(order);
+        }
+
+        // helper
+
+        private void validateOrderCanBeCancelled(
+                        Order order) {
+
+                OrderStatus status = order.getStatus();
+
+                if (status == OrderStatus.CANCELLED) {
+
+                        throw new IllegalStateException(
+                                        "Order already cancelled");
+                }
+
+                if (status == OrderStatus.PROCESSING ||
+                                status == OrderStatus.DELIVERED ||
+                                status == OrderStatus.COMPLETED ||
+                                status == OrderStatus.RETURNED) {
+
+                        throw new IllegalStateException(
+                                        "Order cannot be cancelled");
+                }
+        }
+
+        private void validateCanShip(Order order) {
+                if (order.getStatus() != OrderStatus.PROCESSING) {
+                        throw new IllegalStateException(
+                                        "Only processing orders can be shipped.");
+                }
+        }
+
+        private void validateCanReturn(Order order) {
+                if (order.getStatus() != OrderStatus.RETURN_REQUESTED) {
+                        throw new IllegalStateException(
+                                        "Order must be in RETURN_REQUESTED status.");
+                }
+        }
+
+        private void releaseOrderInventory(
+                        Order order,
+                        String reason) {
+
+                for (OrderItem item : order.getItems()) {
+
+                        inventoryService
+                                        .releaseReservedStock(
+
+                                                        item.getProduct().getId(),
+
+                                                        item.getQuantity(),
+
+                                                        order,
+
+                                                        "Order cancelled: "
+                                                                        + reason);
+                }
+        }
+
+        private void validateStatusTransition(
+                        Order order,
+                        OrderStatus newStatus) {
+
+                OrderStatus current = order.getStatus();
+
+                switch (current) {
+
+                        case PENDING -> {
+
+                                if (newStatus != OrderStatus.CONFIRMED
+
+                                                &&
+
+                                                newStatus != OrderStatus.CANCELLED) {
+
+                                        throw new IllegalStateException(
+                                                        "Invalid order status transition");
+                                }
+                        }
+
+                        case CONFIRMED -> {
+
+                                if (newStatus != OrderStatus.PROCESSING
+
+                                                &&
+
+                                                newStatus != OrderStatus.CANCELLED) {
+
+                                        throw new IllegalStateException(
+                                                        "Invalid order status transition");
+                                }
+                        }
+
+                        case PROCESSING -> {
+
+                                if (newStatus != OrderStatus.SHIPPING) {
+
+                                        throw new IllegalStateException(
+                                                        "Invalid order status transition");
+                                }
+                        }
+
+                        case SHIPPING -> {
+
+                                if (newStatus != OrderStatus.DELIVERED) {
+
+                                        throw new IllegalStateException(
+                                                        "Invalid order status transition");
+                                }
+                        }
+
+                        case DELIVERED -> {
+
+                                if (newStatus != OrderStatus.COMPLETED
+
+                                                &&
+
+                                                newStatus != OrderStatus.RETURN_REQUESTED) {
+
+                                        throw new IllegalStateException(
+                                                        "Invalid order status transition");
+                                }
+                        }
+
+                        case RETURN_REQUESTED -> {
+
+                                if (newStatus != OrderStatus.RETURNED) {
+
+                                        throw new IllegalStateException(
+                                                        "Invalid order status transition");
+                                }
+                        }
+
+                        default ->
+
+                                throw new IllegalStateException(
+                                                "Order cannot change status");
+                }
+        }
+
+        private void initializeOrderStatus(
+                        Order order) {
+
+                if (order.getPaymentMethod() == PaymentMethod.COD) {
+
+                        order.setStatus(
+                                        OrderStatus.CONFIRMED);
+
+                        order.setPaymentStatus(
+                                        PaymentStatus.PENDING);
+
+                        return;
+                }
+
+                order.setStatus(
+                                OrderStatus.PENDING);
+
+                order.setPaymentStatus(
+                                PaymentStatus.PENDING);
+        }
+
+        private void validateProduct(
+                        Product product,
+                        Integer quantity) {
+
+                if (!product.isActive()) {
+
+                        throw new IllegalStateException(
+                                        "Product is no longer available: "
+                                                        + product.getName());
+                }
+
+                if (quantity == null ||
+                                quantity <= 0) {
+
+                        throw new IllegalArgumentException(
+                                        "Invalid quantity");
+                }
+
+                if (product.getAvailableStock() < quantity) {
+
+                        throw new IllegalStateException(
+                                        "Insufficient stock for product: "
+                                                        + product.getName());
+                }
+        }
+
+        private void reserveOrderInventory(
+                        Order order) {
+
+                for (OrderItem item : order.getItems()) {
+
+                        inventoryService.reserveStock(
+                                        item.getProduct().getId(),
+                                        item.getQuantity(),
+                                        order);
+                }
+        }
+
+        private BigDecimal calculateShippingFee(
+                        BigDecimal subtotal) {
+
+                BigDecimal freeShippingThreshold = BigDecimal.valueOf(
+                                500_000);
+
+                if (subtotal.compareTo(
+                                freeShippingThreshold) >= 0) {
+
+                        return BigDecimal.ZERO;
+                }
+
+                return BigDecimal.valueOf(
+                                30_000);
+        }
+
+        private void commitOrderInventory(
+                        Order order) {
+
+                for (OrderItem item : order.getItems()) {
+
+                        inventoryService
+                                        .commitReservedStock(
+
+                                                        item.getProduct().getId(),
+
+                                                        item.getQuantity(),
+
+                                                        order);
+                }
+        }
+
 }

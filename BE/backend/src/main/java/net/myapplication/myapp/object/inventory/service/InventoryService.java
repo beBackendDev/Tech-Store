@@ -54,7 +54,7 @@ public interface InventoryService {
                         Integer quantity,
                         Order order,
                         String note);
-                        
+
         // =========================================================
         // QUERY
         // =========================================================

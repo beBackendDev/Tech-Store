@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import net.myapplication.myapp.enumpack.OrderStatus;
 import net.myapplication.myapp.object.inventory.constants.InventoryConstants;
 import net.myapplication.myapp.object.inventory.dto.response.InventoryResponseDto;
 import net.myapplication.myapp.object.inventory.dto.response.InventoryTransactionResponseDto;
@@ -15,6 +16,7 @@ import net.myapplication.myapp.object.inventory.enums.InventoryTransactionType;
 import net.myapplication.myapp.object.inventory.repository.InventoryTransactionRepository;
 import net.myapplication.myapp.object.inventory.service.InventoryService;
 import net.myapplication.myapp.object.order.entity.Order;
+import net.myapplication.myapp.object.order.entity.OrderItem;
 import net.myapplication.myapp.object.product.entity.Product;
 import net.myapplication.myapp.object.product.repository.ProductRepository;
 
@@ -221,8 +223,8 @@ public class InventoryServiceImpl
 
                 int difference = actualStock - stockBefore;
 
-                if(difference == 0 ){
-                        return ;
+                if (difference == 0) {
+                        return;
                 }
 
                 product.adjustStock(difference);
@@ -272,6 +274,7 @@ public class InventoryServiceImpl
                                 product.getReservedStock(),
                                 note);
         }
+
 
         // =========================================================
         // CHECK AVAILABILITY
@@ -464,5 +467,7 @@ public class InventoryServiceImpl
 
                 return InventoryStockStatus.IN_STOCK;
         }
+
+        
 
 }

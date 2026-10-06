@@ -37,25 +37,18 @@ public class OrderController {
         private final CurrentUserService currentUserService;
 
         // get orders
-@GetMapping
-public ResponseEntity<PageResponse<OrderResponseDto>> getMyOrders(
-        @AuthenticationPrincipal UserDetailsImpl user,
+        @GetMapping
+        public ResponseEntity<PageResponse<OrderResponseDto>> getMyOrders(
+                        @AuthenticationPrincipal UserDetailsImpl user,
 
-        @PageableDefault(
-                size = 10,
-                sort = "createdAt",
-                direction = Sort.Direction.DESC
-        )
-        Pageable pageable) {
+                        @PageableDefault(size = 10, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable) {
 
-    PageResponse<OrderResponseDto> response =
-            orderService.getMyOrders(
-                    user.getId(),
-                    pageable
-            );
+                PageResponse<OrderResponseDto> response = orderService.getMyOrders(
+                                user.getId(),
+                                pageable);
 
-    return ResponseEntity.ok(response);
-}
+                return ResponseEntity.ok(response);
+        }
 
         // get orders by id
         @GetMapping("/{id}")

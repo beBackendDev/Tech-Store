@@ -286,6 +286,32 @@ public class OrderServiceImpl implements OrderService {
 
         @Override
         @Transactional
+        public OrderResponseDto requestReturn(
+                        Long orderId,
+                        Long userId) {
+
+                Order order = orderRepository.findByIdAndUserId(
+                                orderId,
+                                userId).orElseThrow(
+                                                () -> new RuntimeException(
+                                                                "Order not found: " + orderId));
+
+                if (order.getStatus() != OrderStatus.COMPLETED) {
+
+                        throw new IllegalStateException(
+                                        "Only completed orders can request a return.");
+                }
+
+                order.setStatus(
+                                OrderStatus.RETURN_REQUESTED);
+
+                return orderMapper.toResponseDto(
+                                orderRepository.save(order));
+        }
+
+        // ADMIN APIs
+        @Override
+        @Transactional
         public void markPaymentSuccess(
                         Long orderId) {
 
@@ -438,98 +464,96 @@ public class OrderServiceImpl implements OrderService {
                                 order);
         }
 
-        @Override
+        // @Override
+        // @Transactional
+        // public OrderResponseDto requestReturn(
+        // Long orderId,
+        // Long userId) {
+
+        // Order order = orderRepository
+        // .findByIdAndUserId(
+        // orderId,
+        // userId)
+        // .orElseThrow(() -> new RuntimeException(
+        // "Order not found"));
+
+        // if (order.getStatus() != OrderStatus.DELIVERED
+
+        // &&
+
+        // order.getStatus() != OrderStatus.COMPLETED) {
+
+        // throw new IllegalStateException(
+        // "Order cannot be returned");
+        // }
+
+        // order.setStatus(
+        // OrderStatus.RETURN_REQUESTED);
+
+        // return orderMapper.toResponseDto(
+        // order);
+        // }
+
+        // @Override
+        // @Transactional
+        // public OrderResponseDto confirmReturn(
+        // Long orderId) {
+
+        // Order order = orderRepository
+        // .findById(orderId)
+        // .orElseThrow(() -> new RuntimeException(
+        // "Order not found"));
+
+        // if (order.getStatus() != OrderStatus.RETURN_REQUESTED) {
+
+        // throw new IllegalStateException(
+        // "Return was not requested");
+        // }
+
+        // // =========================================================
+        // // RESTOCK
+        // // =========================================================
+
+        // for (OrderItem item : order.getItems()) {
+
+        // inventoryService.returnStock(
+
+        // item.getProduct().getId(),
+
+        // item.getQuantity(),
+
+        // order,
+
+        // "Product returned by customer");
+        // }
+
+        // // =========================================================
+        // // UPDATE ORDER
+        // // =========================================================
+
+        // order.setStatus(
+        // OrderStatus.RETURNED);
+
+        // // =========================================================
+        // // PAYMENT REFUND
+        // // =========================================================
+
+        // if (order.getPaymentStatus() == PaymentStatus.PAID) {
+
+        // order.setPaymentStatus(
+        // PaymentStatus.REFUNDED);
+        // }
+
+        // return orderMapper.toResponseDto(
+        // order);
+        // }
+
         @Transactional
-        public OrderResponseDto requestReturn(
-                        Long orderId,
-                        Long userId) {
-
-                Order order = orderRepository
-                                .findByIdAndUserId(
-                                                orderId,
-                                                userId)
-                                .orElseThrow(() -> new RuntimeException(
-                                                "Order not found"));
-
-                if (order.getStatus() != OrderStatus.DELIVERED
-
-                                &&
-
-                                order.getStatus() != OrderStatus.COMPLETED) {
-
-                        throw new IllegalStateException(
-                                        "Order cannot be returned");
-                }
-
-                order.setStatus(
-                                OrderStatus.RETURN_REQUESTED);
-
-                return orderMapper.toResponseDto(
-                                order);
-        }
-
         @Override
-        @Transactional
-        public OrderResponseDto confirmReturn(
+        public OrderResponseDto shipOrder(
                         Long orderId) {
-
-                Order order = orderRepository
-                                .findById(orderId)
-                                .orElseThrow(() -> new RuntimeException(
-                                                "Order not found"));
-
-                if (order.getStatus() != OrderStatus.RETURN_REQUESTED) {
-
-                        throw new IllegalStateException(
-                                        "Return was not requested");
-                }
-
-                // =========================================================
-                // RESTOCK
-                // =========================================================
-
-                for (OrderItem item : order.getItems()) {
-
-                        inventoryService.returnStock(
-
-                                        item.getProduct().getId(),
-
-                                        item.getQuantity(),
-
-                                        order,
-
-                                        "Product returned by customer");
-                }
-
-                // =========================================================
-                // UPDATE ORDER
-                // =========================================================
-
-                order.setStatus(
-                                OrderStatus.RETURNED);
-
-                // =========================================================
-                // PAYMENT REFUND
-                // =========================================================
-
-                if (order.getPaymentStatus() == PaymentStatus.PAID) {
-
-                        order.setPaymentStatus(
-                                        PaymentStatus.REFUNDED);
-                }
-
-                return orderMapper.toResponseDto(
-                                order);
-        }
-
-        @Transactional
-        @Override
-        public void shipOrder(
-                        Long orderId) {
-                Order order = orderRepository
-                                .findById(orderId)
-                                .orElseThrow(() -> new RuntimeException(
-                                                "Order not found"));
+                Order order = getOrder(
+                                orderId);
 
                 validateCanShip(order);
 
@@ -541,9 +565,10 @@ public class OrderServiceImpl implements OrderService {
                                         order);
                 }
 
-                order.setStatus(OrderStatus.DELIVERED);
+                order.setStatus(OrderStatus.SHIPPING);
 
                 orderRepository.save(order);
+                return orderMapper.toResponseDto(order);
         }
 
         // helper
@@ -690,7 +715,7 @@ public class OrderServiceImpl implements OrderService {
                 if (order.getPaymentMethod() == PaymentMethod.COD) {
 
                         order.setStatus(
-                                        OrderStatus.CONFIRMED);
+                                        OrderStatus.PENDING);
 
                         order.setPaymentStatus(
                                         PaymentStatus.PENDING);
@@ -775,4 +800,217 @@ public class OrderServiceImpl implements OrderService {
                 }
         }
 
+        @Override
+        @Transactional
+        public OrderResponseDto cancelOrderByAdmin(
+                        Long orderId,
+                        String reason) {
+
+                Order order = getOrder(
+                                orderId);
+                String note = "CANCELLED BY ADMIN: " + reason;
+                validateCanCancel(order);
+
+                /*
+                 * Only orders that still have reserved inventory
+                 * should release inventory.
+                 */
+                for (OrderItem item : order.getItems()) {
+
+                        inventoryService.releaseStock(
+                                        item.getProduct().getId(),
+                                        item.getQuantity(),
+                                        note);
+                }
+
+                order.setStatus(
+                                OrderStatus.CANCELLED);
+
+                // order.setCancellationReason(reason);
+
+                return orderMapper.toResponseDto(
+                                orderRepository.save(order));
+        }
+
+        @Override
+        @Transactional
+        public OrderResponseDto completeOrder(
+                        Long orderId) {
+                Order order = getOrder(
+                                orderId);
+
+                if (order.getStatus() != OrderStatus.DELIVERED) {
+
+                        throw new IllegalStateException(
+                                        "Only DELIVERED orders can be completed.");
+                }
+
+                order.setStatus(
+                                OrderStatus.COMPLETED);
+
+                return orderMapper.toResponseDto(
+                                orderRepository.save(order));
+        }
+
+        @Override
+        @Transactional
+        public OrderResponseDto completeReturn(
+                        Long orderId) {
+
+                Order order = getOrder(
+                                orderId);
+
+                if (order.getStatus() != OrderStatus.RETURN_REQUESTED) {
+
+                        throw new IllegalStateException(
+                                        "Only RETURN_REQUESTED orders can be completed.");
+                }
+
+                /*
+                 * Returned products re-enter inventory.
+                 */
+                for (OrderItem item : order.getItems()) {
+
+                        inventoryService.returnStock(
+                                        item.getProduct().getId(),
+                                        item.getQuantity(),
+                                        order,
+                                        "Returned from order #" + order.getId());
+                }
+
+                order.setStatus(
+                                OrderStatus.RETURNED);
+
+                return orderMapper.toResponseDto(
+                                orderRepository.save(order));
+        }
+
+        @Override
+        @Transactional
+        public OrderResponseDto confirmOrder(
+                        Long orderId) {
+
+                Order order = getOrder(
+                                orderId);
+
+                if (order.getStatus() != OrderStatus.PENDING) {
+
+                        throw new IllegalStateException(
+                                        "Only PENDING orders can be confirmed.");
+                }
+
+                order.setStatus(
+                                OrderStatus.CONFIRMED);
+
+                return orderMapper.toResponseDto(
+                                orderRepository.save(order));
+        }
+
+        @Override
+        @Transactional
+        public OrderResponseDto deliverOrder(
+                        Long orderId) {
+
+                Order order = getOrder(
+                                orderId);
+
+                if (order.getStatus() != OrderStatus.SHIPPING) {
+
+                        throw new IllegalStateException(
+                                        "Only SHIPPING orders can be marked as delivered.");
+                }
+
+                order.setStatus(
+                                OrderStatus.DELIVERED);
+
+                return orderMapper.toResponseDto(
+                                orderRepository.save(order));
+        }
+
+        @Override
+        @Transactional
+        public OrderResponseDto processOrder(
+                        Long orderId) {
+
+                Order order = getOrder(
+                                orderId);
+
+                if (order.getStatus() != OrderStatus.CONFIRMED) {
+
+                        throw new IllegalStateException(
+                                        "Only CONFIRMED orders can be processed.");
+                }
+
+                order.setStatus(
+                                OrderStatus.PROCESSING);
+
+                return orderMapper.toResponseDto(
+                                orderRepository.save(order));
+        }
+
+        @Override
+        @Transactional(readOnly = true)
+        public Page<OrderResponseDto> getAllOrders(
+                        Pageable pageable) {
+
+                return orderRepository
+                                .findAll(pageable)
+                                .map(orderMapper::toResponseDto);
+        }
+
+        @Override
+        @Transactional(readOnly = true)
+        public OrderResponseDto getOrderByIdForAdmin(
+                        Long orderId) {
+
+                Order order = getOrder(
+                                orderId);
+
+                return orderMapper.toResponseDto(order);
+        }
+
+        // helper
+        private Order getOrder(
+                        Long orderId) {
+
+                return orderRepository.findById(orderId)
+                                .orElseThrow(() -> new RuntimeException(
+                                                "Order not found: " + orderId));
+        }
+
+        private void validateCanCancel(
+                        Order order) {
+
+                OrderStatus status = order.getStatus();
+
+                if (status != OrderStatus.PENDING
+                                && status != OrderStatus.CONFIRMED) {
+
+                        throw new IllegalStateException(
+                                        "Order cannot be cancelled from status: "
+                                                        + status);
+                }
+        }
+
+        private BigDecimal calculateShippingFee(
+                        CreateOrderRequest request) {
+
+                /*
+                 * Implement your actual shipping rule here.
+                 *
+                 * Temporary:
+                 */
+                return BigDecimal.ZERO;
+        }
+
+        private BigDecimal calculateDiscount(
+                        CreateOrderRequest request) {
+
+                /*
+                 * Implement your actual discount rule here.
+                 *
+                 * Temporary:
+                 */
+                return BigDecimal.ZERO;
+        }
 }

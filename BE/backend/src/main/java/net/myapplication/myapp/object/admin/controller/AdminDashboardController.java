@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
@@ -24,6 +25,8 @@ import net.myapplication.myapp.common.ApiResponseDTO;
 import net.myapplication.myapp.object.admin.dto.dashboard.AdminDashboardResponseDto;
 import net.myapplication.myapp.object.admin.service.AdminDashboardService;
 import net.myapplication.myapp.object.admin.service.AdminProductService;
+import net.myapplication.myapp.object.order.dto.OrderResponseDto;
+import net.myapplication.myapp.object.order.service.OrderService;
 import net.myapplication.myapp.object.product.dto.request.AdminCreateProductRequest;
 import net.myapplication.myapp.object.product.dto.request.AdminUpdateProductRequest;
 import net.myapplication.myapp.object.product.dto.request.ProductFilterRequest;
@@ -44,6 +47,7 @@ public class AdminDashboardController {
 
         private final AdminDashboardService adminDashboardService;
         private final AdminProductService adminProductService;
+        private final OrderService orderService;
 
         // ================================DASHBOARD========================================
         @GetMapping
@@ -198,27 +202,114 @@ public class AdminDashboardController {
                                                 .response(product)
                                                 .build());
         }
+
         // ================================INVENTORY-MANAGEMENT========================================
         // ================================ORDER-MANAGEMENT========================================
+        @GetMapping("/orders")
+        public ResponseEntity<Page<OrderResponseDto>> getAllOrders(
+
+                        @PageableDefault(size = 20, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable) {
+
+                return ResponseEntity.ok(
+                                orderService.getAllOrders(pageable));
+        }
 
         // @GetMapping("/{id}")
+        @GetMapping("/orders/{id}")
+        public ResponseEntity<OrderResponseDto> getOrderById(
+                        @PathVariable Long id) {
+
+                return ResponseEntity.ok(
+                                orderService.getOrderByIdForAdmin(id));
+        }
 
         // @PatchMapping("/{id}/confirm")
+        @PatchMapping("/orders/{id}/confirm")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> confirmOrder(
+                        @PathVariable Long id) {
+
+                return success(
+                                "Order confirmed successfully",
+                                orderService.confirmOrder(id));
+        }
 
         // @PatchMapping("/{id}/process")
+        @PatchMapping("/orders/{id}/process")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> processOrder(
+                        @PathVariable Long id) {
+
+                return success(
+                                "Order processing started successfully",
+                                orderService.processOrder(id));
+        }
 
         // @PatchMapping("/{id}/ship")
+        @PatchMapping("/orders/{id}/ship")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> shipOrder(
+                        @PathVariable Long id) {
+
+                return success(
+                                "Order shipped successfully",
+                                orderService.shipOrder(id));
+        }
 
         // @PatchMapping("/{id}/deliver")
+        @PatchMapping("/orders/{id}/deliver")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> deliverOrder(
+                        @PathVariable Long id) {
+
+                return success(
+                                "Order delivered successfully",
+                                orderService.deliverOrder(id));
+        }
 
         // @PatchMapping("/{id}/complete")
+        @PatchMapping("/orders/{id}/complete")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> completeOrder(
+                        @PathVariable Long id) {
 
+                return success(
+                                "Order completed successfully",
+                                orderService.completeOrder(id));
+        }
         // @PatchMapping("/{id}/cancel")
 
-        // @PatchMapping("/{id}/complete-return")
+        @PatchMapping("/orders/{id}/cancel")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> cancelOrder(
+                        @PathVariable Long id,
+                        @RequestParam(required = false) String reason) {
 
+                return success(
+                                "Order cancelled successfully",
+                                orderService.cancelOrderByAdmin(
+                                                id,
+                                                reason));
+        }
+
+        // @PatchMapping("/{id}/complete-return")
+        @PatchMapping("/orders/{id}/complete-return")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> completeReturn(
+                        @PathVariable Long id) {
+
+                return success(
+                                "Return completed successfully",
+                                orderService.completeReturn(id));
+        }
         // ================================CUSTOMER-MANAGEMENT========================================
         // ================================RETURN-MANAGEMENT========================================
         // ================================ANALYTICS========================================
 
+        // COMMON RESPONSE METHOD
+        private ResponseEntity<ApiResponseDTO<OrderResponseDto>> success(
+                        String message,
+                        OrderResponseDto response) {
+
+                return ResponseEntity.ok(
+                                ApiResponseDTO
+                                                .<OrderResponseDto>builder()
+                                                .status("SUCCESS")
+                                                .message(message)
+                                                .response(response)
+                                                .build());
+        }
 }

@@ -108,4 +108,26 @@ public class OrderController {
 
                                                 .build());
         }
+
+        // return - request
+        @PostMapping("/{id}/return-request")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> requestReturn(
+
+                        @PathVariable Long id) {
+
+                Long userId = currentUserService.getCurrentUserId();
+
+                OrderResponseDto response = orderService.requestReturn(
+                                id,
+                                userId);
+
+                return ResponseEntity.ok(
+                                ApiResponseDTO
+                                                .<OrderResponseDto>builder()
+                                                .status("SUCCESS")
+                                                .message(
+                                                                "Return request submitted successfully")
+                                                .response(response)
+                                                .build());
+        }
 }

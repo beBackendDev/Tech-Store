@@ -4,6 +4,8 @@ const ADMIN_PRODUCT_URL = "/dashboard/admin";
 
 const ADMIN_INVENTORY_URL = "/admin/inventory";
 
+const ADMIN_ORDER_URL = "/admin/orders";
+
 export const getAdminDashboard = async () => {
     return await axiosPrivate.get(ADMIN_PRODUCT_URL);
 };
@@ -187,6 +189,137 @@ export const adjustInventory = async (
     const response = await axiosPrivate.post(
         `${ADMIN_INVENTORY_URL}/${productId}/adjust`,
         data
+    );
+
+    return response.data;
+};
+
+//ORDER || PAYMENT - APIs
+export const getAdminOrders = async (
+    axiosPrivate,
+    params = {}
+) => {
+    const response = await axiosPrivate.get(
+        ADMIN_ORDER_URL,
+        { params }
+    );
+
+    return response.data;
+};
+
+export const getAdminOrderById = async (
+    axiosPrivate,
+    orderId
+) => {
+    const response = await axiosPrivate.get(
+        `${ADMIN_ORDER_URL}/${orderId}`
+    );
+
+    return response.data;
+};
+
+export const confirmOrder = async (
+    axiosPrivate,
+    orderId
+) => {
+    const response = await axiosPrivate.patch(
+        `${ADMIN_ORDER_URL}/${orderId}/confirm`
+    );
+
+    return response.data;
+};
+
+export const processOrder = async (
+    axiosPrivate,
+    orderId
+) => {
+    const response = await axiosPrivate.patch(
+        `${ADMIN_ORDER_URL}/${orderId}/process`
+    );
+
+    return response.data;
+};
+
+export const shipOrder = async (
+    axiosPrivate,
+    orderId
+) => {
+    const response = await axiosPrivate.patch(
+        `${ADMIN_ORDER_URL}/${orderId}/ship`
+    );
+
+    return response.data;
+};
+
+export const deliverOrder = async (
+    axiosPrivate,
+    orderId
+) => {
+    const response = await axiosPrivate.patch(
+        `${ADMIN_ORDER_URL}/${orderId}/deliver`
+    );
+
+    return response.data;
+};
+
+export const completeOrder = async (
+    axiosPrivate,
+    orderId
+) => {
+    const response = await axiosPrivate.patch(
+        `${ADMIN_ORDER_URL}/${orderId}/complete`
+    );
+
+    return response.data;
+};
+
+export const cancelAdminOrder = async (
+    axiosPrivate,
+    orderId,
+    reason
+) => {
+    const response = await axiosPrivate.patch(
+        `${ADMIN_ORDER_URL}/${orderId}/cancel`,
+        null,
+        {
+            params: { reason }
+        }
+    );
+
+    return response.data;
+};
+
+//PAYMENT - APIs
+export const markPaymentSuccess = async (
+    axiosPrivate,
+    orderId
+) => {
+    const response = await axiosPrivate.patch(
+        `${ADMIN_ORDER_URL}/${orderId}/payment/success`
+    );
+
+    return response.data;
+};
+
+export const markPaymentFailed = async (
+    axiosPrivate,
+    orderId,
+    reason
+) => {
+    const response = await axiosPrivate.patch(
+        `${ADMIN_ORDER_URL}/${orderId}/payment/failed`,
+        { reason }
+    );
+
+    return response.data;
+};
+
+export const completeCodPayment = async (
+    axiosPrivate,
+    orderId
+) => {
+    const response = await axiosPrivate.patch(
+        `${ADMIN_ORDER_URL}/${orderId}/payment/cod/complete`
     );
 
     return response.data;

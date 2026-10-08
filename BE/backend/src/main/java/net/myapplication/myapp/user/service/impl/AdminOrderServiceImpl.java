@@ -81,15 +81,4 @@ public class AdminOrderServiceImpl
                 .build();
     }
 
-    @Override
-    public OrderResponseDto getOrderById(Long orderId) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public OrderResponseDto updateOrderStatus(Long orderId, OrderStatus status) {
-        // TODO Auto-generated method stub
-        return null;
-    }
 }

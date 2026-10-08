@@ -26,6 +26,7 @@ import net.myapplication.myapp.object.admin.dto.dashboard.AdminDashboardResponse
 import net.myapplication.myapp.object.admin.service.AdminDashboardService;
 import net.myapplication.myapp.object.admin.service.AdminProductService;
 import net.myapplication.myapp.object.order.dto.OrderResponseDto;
+import net.myapplication.myapp.object.order.dto.request.PaymentFailedRequest;
 import net.myapplication.myapp.object.order.service.OrderService;
 import net.myapplication.myapp.object.product.dto.request.AdminCreateProductRequest;
 import net.myapplication.myapp.object.product.dto.request.AdminUpdateProductRequest;
@@ -294,6 +295,38 @@ public class AdminDashboardController {
                 return success(
                                 "Return completed successfully",
                                 orderService.completeReturn(id));
+
+        }
+
+        // ================================PAYMENT-MANAGEMENT========================================
+        @PatchMapping("/orders/{id}/payment/cod/complete")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> completeCodPayment(
+                        @PathVariable Long id) {
+
+                return success(
+                                "COD payment completed successfully",
+                                orderService.completeCodOrder(id));
+        }
+
+        @PatchMapping("/orders/{id}/payment/success")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> markPaymentSuccess(
+                        @PathVariable Long id) {
+
+                return success(
+                                "Payment marked as successful",
+                                orderService.markPaymentSuccess(id));
+        }
+
+        @PatchMapping("/orders/{id}/payment/failed")
+        public ResponseEntity<ApiResponseDTO<OrderResponseDto>> markPaymentFailed(
+                        @PathVariable Long id,
+                        @Valid @RequestBody PaymentFailedRequest request) {
+
+                return success(
+                                "Payment marked as failed",
+                                orderService.markPaymentFailed(
+                                                id,
+                                                request.getReason()));
         }
         // ================================CUSTOMER-MANAGEMENT========================================
         // ================================RETURN-MANAGEMENT========================================

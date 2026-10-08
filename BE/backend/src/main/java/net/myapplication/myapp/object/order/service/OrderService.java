@@ -71,16 +71,16 @@ public interface OrderService {
                         Long orderId);
 
         // =====================================================
-        // PAYMENT
+        // PAYMENT - FLOW
         // =====================================================
 
-        void markPaymentSuccess(
+        OrderResponseDto markPaymentSuccess(
                         Long orderId);
 
-        void markPaymentFailed(
+        OrderResponseDto markPaymentFailed(
                         Long orderId,
                         String reason);
 
-        void completeCodOrder(
+        OrderResponseDto completeCodOrder(
                         Long orderId);
 }

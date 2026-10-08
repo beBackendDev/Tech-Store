@@ -25,6 +25,7 @@ import net.myapplication.myapp.object.order.mapper.OrderMapper;
 import net.myapplication.myapp.object.order.repository.OrderItemRepository;
 import net.myapplication.myapp.object.order.repository.OrderRepository;
 import net.myapplication.myapp.object.order.service.OrderService;
+import net.myapplication.myapp.object.order.service.PaymentStateValidator;
 import net.myapplication.myapp.object.product.dto.response.PageResponse;
 import net.myapplication.myapp.object.product.entity.Product;
 import net.myapplication.myapp.object.product.repository.ProductRepository;
@@ -43,6 +44,8 @@ public class OrderServiceImpl implements OrderService {
         private final InventoryService inventoryService;
 
         private final OrderMapper orderMapper;
+
+        private final PaymentStateValidator paymentStateValidator;
 
         @Override
         @Transactional
@@ -312,7 +315,7 @@ public class OrderServiceImpl implements OrderService {
         // ADMIN APIs
         @Override
         @Transactional
-        public void markPaymentSuccess(
+        public OrderResponseDto markPaymentSuccess(
                         Long orderId) {
 
                 Order order = orderRepository
@@ -321,23 +324,10 @@ public class OrderServiceImpl implements OrderService {
                                                 "Order not found"));
 
                 // =========================================================
-                // IDEMPOTENCY
-                // =========================================================
-
-                if (order.getPaymentStatus() == PaymentStatus.PAID) {
-
-                        return;
-                }
-
-                // =========================================================
                 // VALIDATE
                 // =========================================================
-
-                if (order.getStatus() == OrderStatus.CANCELLED) {
-
-                        throw new IllegalStateException(
-                                        "Cannot pay cancelled order");
-                }
+                paymentStateValidator.validateCanMarkSuccess(
+                                order);
 
                 // =========================================================
                 // PAYMENT SUCCESS
@@ -346,24 +336,15 @@ public class OrderServiceImpl implements OrderService {
                 order.setPaymentStatus(
                                 PaymentStatus.PAID);
 
-                // =========================================================
-                // COMMIT INVENTORY
-                // =========================================================
+            
 
-                commitOrderInventory(
-                                order);
-
-                // =========================================================
-                // UPDATE ORDER
-                // =========================================================
-
-                order.setStatus(
-                                OrderStatus.CONFIRMED);
+               
+                return orderMapper.toResponseDto(orderRepository.save(order));
         }
 
         @Override
         @Transactional
-        public void markPaymentFailed(
+        public OrderResponseDto markPaymentFailed(
                         Long orderId,
                         String reason) {
 
@@ -372,27 +353,19 @@ public class OrderServiceImpl implements OrderService {
                                 .orElseThrow(() -> new RuntimeException(
                                                 "Order not found"));
 
-                if (order.getPaymentStatus() == PaymentStatus.PAID) {
-
-                        throw new IllegalStateException(
-                                        "Order already paid");
-                }
+                paymentStateValidator.validateCanMarkFailed(
+                                order);
 
                 order.setPaymentStatus(
                                 PaymentStatus.FAILED);
 
-                releaseOrderInventory(
-                                order,
-                                "Payment failed: "
-                                                + reason);
-
-                order.setStatus(
-                                OrderStatus.CANCELLED);
+           
+                return orderMapper.toResponseDto(orderRepository.save(order));
         }
 
         @Override
         @Transactional
-        public void completeCodOrder(
+        public OrderResponseDto completeCodOrder(
                         Long orderId) {
 
                 Order order = orderRepository
@@ -400,32 +373,16 @@ public class OrderServiceImpl implements OrderService {
                                 .orElseThrow(() -> new RuntimeException(
                                                 "Order not found"));
 
-                if (order.getPaymentMethod() != PaymentMethod.COD) {
-
-                        throw new IllegalStateException(
-                                        "Order is not COD");
-                }
-
-                if (order.getStatus() != OrderStatus.DELIVERED) {
-
-                        throw new IllegalStateException(
-                                        "Order must be delivered first");
-                }
+                paymentStateValidator.validateCanCompleteCod(
+                                order);
 
                 // Payment
 
                 order.setPaymentStatus(
                                 PaymentStatus.PAID);
 
-                // Commit inventory
-
-                commitOrderInventory(
-                                order);
-
-                // Complete
-
-                order.setStatus(
-                                OrderStatus.DELIVERED);
+             
+                return orderMapper.toResponseDto(orderRepository.save(order));
         }
 
         @Override

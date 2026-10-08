@@ -14,12 +14,4 @@ public interface AdminOrderService {
             Pageable pageable
     );
 
-    OrderResponseDto getOrderById(
-            Long orderId
-    );
-
-    OrderResponseDto updateOrderStatus(
-            Long orderId,
-            OrderStatus status
-    );
 }

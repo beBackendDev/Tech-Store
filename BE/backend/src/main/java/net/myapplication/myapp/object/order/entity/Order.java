@@ -137,14 +137,11 @@ public class Order {
     }
     public void cancel() {
 
-    if (status == OrderStatus.PROCESSING ||
-            status == OrderStatus.DELIVERED ||
-            status == OrderStatus.COMPLETED ||
-            status == OrderStatus.RETURNED) {
+        if (status != OrderStatus.PENDING &&
+        status != OrderStatus.CONFIRMED) {
 
         throw new IllegalStateException(
-                "Order cannot be cancelled"
-        );
+                "Order cannot be cancelled from status: " + status);
     }
 
     status = OrderStatus.CANCELLED;

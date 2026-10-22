@@ -35,7 +35,6 @@ import net.myapplication.myapp.object.product.dto.request.UpdateProductStatusReq
 import net.myapplication.myapp.object.product.dto.response.AdminProductDetailResponseDto;
 import net.myapplication.myapp.object.product.dto.response.PageResponse;
 import net.myapplication.myapp.object.product.dto.response.ProductResponseDto;
-import net.myapplication.myapp.object.product.service.ProductService;
 
 import org.springframework.web.bind.annotation.RequestParam;
 

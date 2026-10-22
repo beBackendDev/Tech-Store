@@ -38,11 +38,12 @@ function OrderHistory() {
 
                 const data =
                     await getOrders(axiosPrivate);
-
+console.log("Orders API response:", data);
+console.log("Response type:", typeof data);
 
                 if (isMounted) {
 
-                    setOrders(data);
+                    setOrders(data.content);
 
                 }
 

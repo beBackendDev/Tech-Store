@@ -97,6 +97,8 @@ import AdminProductDetail from "../pages/admin/productDetail/AdminProductDetail"
 import AdminProductForm from "../pages/admin/adminProductForm/AdminProductForm";
 import AdminInventory from "../pages/admin/adminInventory/AdminInventory";
 import InventoryDetail from "../pages/admin/adminInventory/InventoryDetail";
+import AdminOrders from "../pages/orders/admin/AdminOrders/AdminOrders";
+import AdminOrderDetail from "../pages/orders/admin/AdminOrderDetail/AdminOrderDetail";
 
 
 function AppRoutes() {
@@ -272,6 +274,16 @@ function AppRoutes() {
                             <Route
                                 path="products/new"
                                 element={<AdminProductForm />}
+                            />
+                            {/* ORDER MANAGEMENT */}
+                            <Route
+                                path="orders"
+                                element={<AdminOrders />}
+                            />
+
+                            <Route
+                                path="orders/:id"
+                                element={<AdminOrderDetail />}
                             />
                             {/* INVENTORY-LIST */}
                             <Route

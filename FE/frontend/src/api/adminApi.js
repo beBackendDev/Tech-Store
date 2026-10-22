@@ -4,7 +4,7 @@ const ADMIN_PRODUCT_URL = "/dashboard/admin";
 
 const ADMIN_INVENTORY_URL = "/admin/inventory";
 
-const ADMIN_ORDER_URL = "/admin/orders";
+const ADMIN_ORDER_URL = "/dashboard/admin/orders";
 
 export const getAdminDashboard = async () => {
     return await axiosPrivate.get(ADMIN_PRODUCT_URL);
@@ -200,7 +200,7 @@ export const getAdminOrders = async (
     params = {}
 ) => {
     const response = await axiosPrivate.get(
-        ADMIN_ORDER_URL,
+        `${ADMIN_ORDER_URL}`,
         { params }
     );
 
@@ -322,5 +322,12 @@ export const completeCodPayment = async (
         `${ADMIN_ORDER_URL}/${orderId}/payment/cod/complete`
     );
 
+    return response.data;
+};
+
+export const completeAdminReturn = async (axiosPrivate, orderId) => {
+    const response = await axiosPrivate.patch(
+        `${ADMIN_ORDER_URL}/${orderId}/complete-return`
+    );
     return response.data;
 };

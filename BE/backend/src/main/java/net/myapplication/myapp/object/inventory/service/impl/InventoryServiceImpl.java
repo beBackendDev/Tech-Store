@@ -275,7 +275,6 @@ public class InventoryServiceImpl
                                 note);
         }
 
-
         // =========================================================
         // CHECK AVAILABILITY
         // =========================================================
@@ -369,11 +368,33 @@ public class InventoryServiceImpl
         }
 
         @Override
-        public void releaseStock(Long productId, Integer quantity, String note) {
-                // TODO Auto-generated method stub
+        @Transactional
+        public void releaseStock(
+                        Long productId,
+                        Integer quantity,
+                        String note) {
 
+                validatePositiveQuantity(quantity);
+
+                Product product = getProductForUpdate(productId);
+
+                int stockBefore = product.getStock();
+                int reservedBefore = product.getReservedStock();
+
+                // Product validates that reservedStock is sufficient before mutating it.
+                product.releaseReservedStock(quantity);
+
+                createTransaction(
+                                product,
+                                null,
+                                InventoryTransactionType.RELEASED,
+                                quantity,
+                                stockBefore,
+                                product.getStock(),
+                                reservedBefore,
+                                product.getReservedStock(),
+                                note);
         }
-
         // INVENTORY QUERY
 
         @Override
@@ -467,7 +488,5 @@ public class InventoryServiceImpl
 
                 return InventoryStockStatus.IN_STOCK;
         }
-
-        
 
 }

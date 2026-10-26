@@ -336,9 +336,6 @@ public class OrderServiceImpl implements OrderService {
                 order.setPaymentStatus(
                                 PaymentStatus.PAID);
 
-            
-
-               
                 return orderMapper.toResponseDto(orderRepository.save(order));
         }
 
@@ -359,7 +356,6 @@ public class OrderServiceImpl implements OrderService {
                 order.setPaymentStatus(
                                 PaymentStatus.FAILED);
 
-           
                 return orderMapper.toResponseDto(orderRepository.save(order));
         }
 
@@ -381,7 +377,6 @@ public class OrderServiceImpl implements OrderService {
                 order.setPaymentStatus(
                                 PaymentStatus.PAID);
 
-             
                 return orderMapper.toResponseDto(orderRepository.save(order));
         }
 
@@ -392,7 +387,7 @@ public class OrderServiceImpl implements OrderService {
                         OrderStatus newStatus) {
 
                 Order order = orderRepository
-                                .findById(orderId)
+                                .findByIdForUpdate(orderId)
                                 .orElseThrow(() -> new RuntimeException(
                                                 "Order not found"));
 
@@ -401,19 +396,25 @@ public class OrderServiceImpl implements OrderService {
                                 newStatus);
 
                 // =========================================================
-                // CONFIRMED → PROCESSING
+                // PROCESSING → SHIPPING
                 // =========================================================
 
-                if (order.getStatus() == OrderStatus.CONFIRMED
-
-                                &&
-
-                                newStatus == OrderStatus.PROCESSING) {
-
-                        commitOrderInventory(
-                                        order);
+                if (order.getStatus() == OrderStatus.PROCESSING
+                                && newStatus == OrderStatus.SHIPPING) {
+                        commitOrderInventory(order);
                 }
+                if ((order.getStatus() == OrderStatus.PENDING
+                                || order.getStatus() == OrderStatus.CONFIRMED)
+                                && newStatus == OrderStatus.CANCELLED) {
 
+                        releaseOrderInventory(
+                                        order,
+                                        "Order cancelled through status update");
+
+                        if (order.getPaymentStatus() == PaymentStatus.PENDING) {
+                                order.setPaymentStatus(PaymentStatus.FAILED);
+                        }
+                }
                 order.setStatus(
                                 newStatus);
 
@@ -507,25 +508,10 @@ public class OrderServiceImpl implements OrderService {
 
         @Transactional
         @Override
-        public OrderResponseDto shipOrder(
-                        Long orderId) {
-                Order order = getOrder(
-                                orderId);
-
-                validateCanShip(order);
-
-                for (OrderItem item : order.getItems()) {
-
-                        inventoryService.commitReservedStock(
-                                        item.getProduct().getId(),
-                                        item.getQuantity(),
-                                        order);
-                }
-
-                order.setStatus(OrderStatus.SHIPPING);
-
-                orderRepository.save(order);
-                return orderMapper.toResponseDto(order);
+        public OrderResponseDto shipOrder(Long orderId) {
+                return updateOrderStatus(
+                                orderId,
+                                OrderStatus.SHIPPING);
         }
 
         // helper
@@ -765,23 +751,21 @@ public class OrderServiceImpl implements OrderService {
 
                 Order order = getOrder(
                                 orderId);
-                String note = "CANCELLED BY ADMIN: " + reason;
                 validateCanCancel(order);
 
                 /*
-                 * Only orders that still have reserved inventory
-                 * should release inventory.
+                 * Only PENDING / CONFIRMED orders can be cancelled, so their
+                 * inventory should still be reserved. Keep the Order relation
+                 * on each RELEASED movement for audit traceability.
                  */
-                for (OrderItem item : order.getItems()) {
-
-                        inventoryService.releaseStock(
-                                        item.getProduct().getId(),
-                                        item.getQuantity(),
-                                        note);
-                }
+                releaseOrderInventory(order, reason);
 
                 order.setStatus(
                                 OrderStatus.CANCELLED);
+
+                if (order.getPaymentStatus() == PaymentStatus.PENDING) {
+                        order.setPaymentStatus(PaymentStatus.FAILED);
+                }
 
                 // order.setCancellationReason(reason);
 

@@ -9,9 +9,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import jakarta.persistence.LockModeType;
 import net.myapplication.myapp.enumpack.OrderStatus;
 import net.myapplication.myapp.enumpack.PaymentStatus;
 import net.myapplication.myapp.object.order.entity.Order;
@@ -20,126 +22,132 @@ import net.myapplication.myapp.object.order.repository.projection.DailyRevenuePr
 import net.myapplication.myapp.user.entity.User;
 
 public interface OrderRepository
-        extends JpaRepository<Order, Long>,
-        JpaSpecificationExecutor<Order> {
+                extends JpaRepository<Order, Long>,
+                JpaSpecificationExecutor<Order> {
 
-    // order history
-    List<Order> findByUserOrderByCreatedAtDesc(User user);
+        // order history
+        List<Order> findByUserOrderByCreatedAtDesc(User user);
 
-    @Query("""
-                SELECT o
-                FROM Order o
-                WHERE o.user.id = :userId
-                ORDER BY o.createdAt DESC
-            """)
-    List<Order> findOrdersByUserId(
-            @Param("userId") Long userId);
+        // FIND ORDER BY ID FOR UPDATE
+        @Lock(LockModeType.PESSIMISTIC_WRITE)
+        @Query("SELECT o FROM Order o WHERE o.id = :orderId")
+        Optional<Order> findByIdForUpdate(
+                        @Param("orderId") Long orderId);
 
-    // query to find order by id and user id & order id
-    @Query("""
-                SELECT o
-                FROM Order o
-                WHERE o.id = :orderId
-                AND o.user.id = :userId
-            """)
-    Optional<Order> findByIdAndUserId(
-            @Param("orderId") Long orderId,
-            @Param("userId") Long userId);
+        @Query("""
+                            SELECT o
+                            FROM Order o
+                            WHERE o.user.id = :userId
+                            ORDER BY o.createdAt DESC
+                        """)
+        List<Order> findOrdersByUserId(
+                        @Param("userId") Long userId);
 
-    @Query("""
-                SELECT o
-                FROM Order o
-                WHERE o.user.id = :userId
-                ORDER BY o.createdAt DESC
-            """)
-    Page<Order> findByUserId(
-            @Param("userId") Long userId,
-            Pageable pageable);
+        // query to find order by id and user id & order id
+        @Query("""
+                            SELECT o
+                            FROM Order o
+                            WHERE o.id = :orderId
+                            AND o.user.id = :userId
+                        """)
+        Optional<Order> findByIdAndUserId(
+                        @Param("orderId") Long orderId,
+                        @Param("userId") Long userId);
 
-    Page<Order> findByStatus(
-            @Param("status") OrderStatus status,
-            Pageable pageable);
+        @Query("""
+                            SELECT o
+                            FROM Order o
+                            WHERE o.user.id = :userId
+                            ORDER BY o.createdAt DESC
+                        """)
+        Page<Order> findByUserId(
+                        @Param("userId") Long userId,
+                        Pageable pageable);
 
-    /*
-     * ============================DASHBOARD=============================
-     */
-    long countByStatus(OrderStatus status);
+        Page<Order> findByStatus(
+                        @Param("status") OrderStatus status,
+                        Pageable pageable);
 
-    long countByPaymentStatus(PaymentStatus paymentStatus);
+        /*
+         * ============================DASHBOARD=============================
+         */
+        long countByStatus(OrderStatus status);
 
-    // REVENUE
-    @Query("""
-                SELECT COALESCE(SUM(o.totalAmount), 0)
-                FROM Order o
-                WHERE o.paymentStatus = :paymentStatus
-            """)
-    BigDecimal sumRevenueByPaymentStatus(
-            @Param("paymentStatus") PaymentStatus paymentStatus);
-    /*
-     * RECENT ORDERS
-     * 
-     * Không dùng findAll().
-     * 
-     * Pageable sẽ giới hạn số record lấy từ DB.
-     */
+        long countByPaymentStatus(PaymentStatus paymentStatus);
 
-    List<Order> findByOrderByCreatedAtDesc(
-            Pageable pageable);
+        // REVENUE
+        @Query("""
+                            SELECT COALESCE(SUM(o.totalAmount), 0)
+                            FROM Order o
+                            WHERE o.paymentStatus = :paymentStatus
+                        """)
+        BigDecimal sumRevenueByPaymentStatus(
+                        @Param("paymentStatus") PaymentStatus paymentStatus);
+        /*
+         * RECENT ORDERS
+         * 
+         * Không dùng findAll().
+         * 
+         * Pageable sẽ giới hạn số record lấy từ DB.
+         */
 
-    /*
-     * REVENUE CHART
-     *
-     * MySQL:
-     *
-     * DATE(created_at)
-     *
-     * group revenue theo từng ngày.
-     */
+        List<Order> findByOrderByCreatedAtDesc(
+                        Pageable pageable);
 
-    @Query(value = """
-            SELECT
-                DATE(o.created_at) AS date,
-                COALESCE(SUM(o.total_amount), 0) AS revenue
+        /*
+         * REVENUE CHART
+         *
+         * MySQL:
+         *
+         * DATE(created_at)
+         *
+         * group revenue theo từng ngày.
+         */
 
-            FROM orders o
+        @Query(value = """
+                        SELECT
+                            DATE(o.created_at) AS date,
+                            COALESCE(SUM(o.total_amount), 0) AS revenue
 
-            WHERE o.payment_status = :paymentStatus
-              AND o.created_at >= :start
-              AND o.created_at < :end
+                        FROM orders o
 
-            GROUP BY DATE(o.created_at)
+                        WHERE o.payment_status = :paymentStatus
+                          AND o.created_at >= :start
+                          AND o.created_at < :end
 
-            ORDER BY DATE(o.created_at)
-            """, nativeQuery = true)
-    List<DailyRevenueProjection> findDailyRevenue(
-            @Param("paymentStatus") String paymentStatus,
+                        GROUP BY DATE(o.created_at)
 
-            @Param("start") LocalDateTime start,
+                        ORDER BY DATE(o.created_at)
+                        """, nativeQuery = true)
+        List<DailyRevenueProjection> findDailyRevenue(
+                        @Param("paymentStatus") String paymentStatus,
 
-            @Param("end") LocalDateTime end);
+                        @Param("start") LocalDateTime start,
 
-    /*
-     * =========================================================
-     * ORDER CHART
-     * =========================================================
-     */
+                        @Param("end") LocalDateTime end);
 
-    @Query(value = """
-            SELECT
-                DATE(o.created_at) AS date,
-                COUNT(*) AS orders
+        /*
+         * =========================================================
+         * ORDER CHART
+         * =========================================================
+         */
 
-            FROM orders o
+        @Query(value = """
+                        SELECT
+                            DATE(o.created_at) AS date,
+                            COUNT(*) AS orders
 
-            WHERE o.created_at >= :start
-              AND o.created_at < :end
+                        FROM orders o
 
-            GROUP BY DATE(o.created_at)
+                        WHERE o.created_at >= :start
+                          AND o.created_at < :end
 
-            ORDER BY DATE(o.created_at)
-            """, nativeQuery = true)
-    List<DailyOrderProjection> findDailyOrders(
-            @Param("start") LocalDateTime start,
+                        GROUP BY DATE(o.created_at)
 
-            @Param("end") LocalDateTime end);
+                        ORDER BY DATE(o.created_at)
+                        """, nativeQuery = true)
+        List<DailyOrderProjection> findDailyOrders(
+                        @Param("start") LocalDateTime start,
+
+                        @Param("end") LocalDateTime end);
 }

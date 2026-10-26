@@ -1,0 +1,143 @@
+@use "../../../../styles/variables" as *;
+
+.order-timeline {
+    --timeline-node-size: 42px;
+    position: relative;
+    min-width: 620px;
+    padding: 8px 4px 14px;
+
+    &__track {
+        position: absolute;
+        z-index: 0;
+        top: 28px;
+        left: calc(8.333% + 2px);
+        right: calc(8.333% + 2px);
+        height: 2px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: $gray-200;
+    }
+
+    &__track-fill {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: $primary;
+        transition: width 700ms cubic-bezier(.22, 1, .36, 1);
+    }
+
+    &__steps {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__step {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: $gray-500;
+    }
+
+    &__node {
+        display: grid;
+        width: var(--timeline-node-size);
+        height: var(--timeline-node-size);
+        flex: 0 0 var(--timeline-node-size);
+        place-items: center;
+        border: 1px solid $gray-200;
+        border-radius: 50%;
+        background: $gray-100;
+        color: $gray-600;
+        transition: background-color 350ms ease, border-color 350ms ease, color 350ms ease, box-shadow 350ms ease, transform 350ms ease;
+    }
+
+    &__icon {
+        display: block;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    &__label {
+        max-width: 120px;
+        margin-top: 11px;
+        color: $gray-700;
+        font-size: $font-size-xs;
+        font-weight: 500;
+        line-height: 1.4;
+        transition: color 250ms ease, font-weight 250ms ease;
+    }
+
+    &__date {
+        margin-top: 5px;
+        color: $gray-500;
+        font-size: 11px;
+        line-height: 1.35;
+    }
+
+    &__step.is-complete .order-timeline__node {
+        border-color: rgba($primary, .12);
+        background: rgba($primary, .10);
+        color: $primary;
+    }
+
+    &__step.is-complete .order-timeline__label {
+        color: $gray-800;
+    }
+
+    &__step.is-current .order-timeline__node {
+        border-color: $primary;
+        background: $primary;
+        color: $white;
+        box-shadow: 0 0 0 5px rgba($primary, .12);
+        transform: scale(1.04);
+        animation: order-timeline-current 2s ease-in-out infinite;
+    }
+
+    &__step.is-current .order-timeline__label {
+        color: $primary;
+        font-weight: 700;
+    }
+
+    &__exception {
+        margin: 18px 0 0;
+        padding: 10px 12px;
+        border: 1px solid rgba($danger, .22);
+        border-radius: $radius-sm;
+        background: rgba($danger, .06);
+        color: $danger;
+        font-size: $font-size-sm;
+    }
+}
+
+@keyframes order-timeline-current {
+    0%, 100% { box-shadow: 0 0 0 4px rgba($primary, .10); }
+    50% { box-shadow: 0 0 0 7px rgba($primary, .04); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .order-timeline *,
+    .order-timeline *::before,
+    .order-timeline *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media (max-width: $tablet) {
+    .order-timeline {
+        min-width: 580px;
+        --timeline-node-size: 38px;
+
+        &__track { top: 26px; }
+        &__label { max-width: 92px; font-size: 11px; }
+    }
+}
